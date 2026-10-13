@@ -1,0 +1,62 @@
+---
+// 状元产地南移缩略图（SSG）：各朝籍贯质心连线，点击跳地图页
+// 投影与 GeoMap boundingCoords 对齐：[[73,54.2],[135.8,17.6]]
+import { readFileSync } from 'node:fs';
+
+const geo = JSON.parse(
+  readFileSync(new URL('../../public/data/geo.json', import.meta.url), 'utf8'),
+) as { centroids: { dynasty: string; lat: number; lng: number; count: number; total: number }[] };
+const dynasties = JSON.parse(
+  readFileSync(new URL('../../public/data/dynasties.json', import.meta.url), 'utf8'),
+) as { key: string; name: string; color: string; order: number }[];
+
+const W = 640;
+const H = 360;
+const X = (lng: number) => ((lng - 73) / 62.8) * W;
+const Y = (lat: number) => ((54.2 - lat) / 36.6) * H;
+
+const colorOf = (k: string) => dynasties.find((d) => d.key === k)?.color ?? '#9AA5B1';
+const nameOf = (k: string) => dynasties.find((d) => d.key === k)?.name ?? k;
+
+// 按朝代时序（与 GeoMap 迁移线同序）
+const cents = [...geo.centroids].sort(
+  (a, b) =>
+    (dynasties.find((d) => d.key === a.dynasty)?.order ?? 99) -
+    (dynasties.find((d) => d.key === b.dynasty)?.order ?? 99),
+);
+const path = cents.map((c, i) => `${i === 0 ? 'M' : 'L'}${X(c.lng).toFixed(1)},${Y(c.lat).toFixed(1)}`).join(' ');
+---
+
+<a href="/map" class="group block" title="点击进籍贯地图，拖动时间滑块看完整演变">
+  <svg viewBox={`0 0 ${W} ${H}`} class="w-full rounded-lg border border-jin/15 bg-xuan/40 transition group-hover:border-jin/40" role="img" aria-label="各朝代状元籍贯重心迁移缩略图">
+    <defs>
+      <marker id="sw-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0.5 L7.5,4 L0,7.5 z" fill="#C9A227" />
+      </marker>
+    </defs>
+    {/* 参考经纬网 */}
+    {[90, 105, 120].map((lng) => (
+      <line x1={X(lng)} y1={0} x2={X(lng)} y2={H} stroke="rgba(154,165,177,0.08)" stroke-dasharray="3 5" />
+    ))}
+    {[25, 35, 45].map((lat) => (
+      <line x1={0} y1={Y(lat)} x2={W} y2={Y(lat)} stroke="rgba(154,165,177,0.08)" stroke-dasharray="3 5" />
+    ))}
+    <text x={X(116)} y={Y(34.6)} font-size="11" fill="rgba(154,165,177,0.4)" font-family='"Noto Serif SC",serif'>黄河</text>
+    <text x={X(118.5)} y={Y(29.5)} font-size="11" fill="rgba(154,165,177,0.4)" font-family='"Noto Serif SC",serif'>长江</text>
+    {/* 迁移线 */}
+    <path d={path} fill="none" stroke="#C9A227" stroke-width="1.6" stroke-opacity="0.75" marker-end="url(#sw-arrow)" />
+    {/* 质心点 */}
+    {cents.map((c) => (
+      <g>
+        <circle cx={X(c.lng)} cy={Y(c.lat)} r={5.5} fill={colorOf(c.dynasty)} stroke="#0E1621" stroke-width="1.5" />
+        <text x={X(c.lng) + 9} y={Y(c.lat) + 4} font-size="12" font-weight="bold" fill={colorOf(c.dynasty)} font-family='"Noto Serif SC",serif'>
+          {nameOf(c.dynasty)}
+        </text>
+        <text x={X(c.lng) + 9} y={Y(c.lat) + 17} font-size="9" fill="rgba(154,165,177,0.75)" font-family='"Noto Serif SC",serif'>
+          n={c.count}/{c.total}
+        </text>
+      </g>
+    ))}
+  </svg>
+  <p class="mt-1.5 text-right font-serif text-[11px] text-miDim/70 transition group-hover:text-jin">点击进地图页看完整演变 →</p>
+</a>

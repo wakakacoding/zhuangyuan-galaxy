@@ -1,0 +1,1022 @@
+[
+  {
+    "person": "孔纬",
+    "person_ids": [
+      "z0126(tang859)"
+    ],
+    "mentioned": [
+      {
+        "name": "孔纁",
+        "id": "z0137",
+        "dynasty": "tang",
+        "exam_year": 873
+      },
+      {
+        "name": "孔缄",
+        "id": "z0140",
+        "dynasty": "tang",
+        "exam_year": 876
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |?－895年；孔子四十代孙，孔缄之兄，孔纁堂兄弟",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "孔纁",
+    "person_ids": [
+      "z0137(tang873)"
+    ],
+    "mentioned": [
+      {
+        "name": "孔纬",
+        "id": "z0126",
+        "dynasty": "tang",
+        "exam_year": 859
+      },
+      {
+        "name": "孔缄",
+        "id": "z0140",
+        "dynasty": "tang",
+        "exam_year": 876
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；孔子四十代孙，孔纬、孔缄堂兄弟",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "孔缄",
+    "person_ids": [
+      "z0140(tang876)"
+    ],
+    "mentioned": [
+      {
+        "name": "孔纬",
+        "id": "z0126",
+        "dynasty": "tang",
+        "exam_year": 859
+      },
+      {
+        "name": "孔纁",
+        "id": "z0137",
+        "dynasty": "tang",
+        "exam_year": 873
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；孔子四十代孙，孔纬之弟，孔纁堂兄弟",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "孔振",
+    "person_ids": [
+      "z0130(tang863)"
+    ],
+    "mentioned": [
+      {
+        "name": "孔拯",
+        "id": "z0144",
+        "dynasty": "tang",
+        "exam_year": 883
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；孔子四十代嫡长孙，袭封文宣公，孔拯之兄",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "孔拯",
+    "person_ids": [
+      "z0144(tang883)"
+    ],
+    "mentioned": [
+      {
+        "name": "孔振",
+        "id": "z0130",
+        "dynasty": "tang",
+        "exam_year": 863
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；孔子四十代孙，孔振之弟",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "赵昌翰",
+    "person_ids": [
+      "z0147(tang887)"
+    ],
+    "mentioned": [
+      {
+        "name": "赵蒙",
+        "id": "z0123",
+        "dynasty": "tang",
+        "exam_year": 855
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；奉天（今陝西乾縣）人；状元赵蒙之子",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "安德裕",
+    "person_ids": [
+      "z0199(song969)"
+    ],
+    "mentioned": [
+      {
+        "name": "安守亮",
+        "id": "z0205",
+        "dynasty": "song",
+        "exam_year": 972
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |940年－1002年；河南人；子安守亮後亦中狀元。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "安守亮",
+    "person_ids": [
+      "z0205(song972)"
+    ],
+    "mentioned": [
+      {
+        "name": "安德裕",
+        "id": "z0199",
+        "dynasty": "song",
+        "exam_year": 969
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；河南人；父安德裕亦曾中狀元。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "梁灏",
+    "person_ids": [
+      "z0215(song985)"
+    ],
+    "mentioned": [
+      {
+        "name": "梁固",
+        "id": "z0242",
+        "dynasty": "song",
+        "exam_year": 1009
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |963年－1004年；鄆州須城人；子梁固后亦中状元。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "孙仅",
+    "person_ids": [
+      "z0229(song998)"
+    ],
+    "mentioned": [
+      {
+        "name": "孙何",
+        "id": "z0222",
+        "dynasty": "song",
+        "exam_year": 992
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |969年~1017年；河南汝州人；荊门孙家三凤⺀孙何、孙仅、孙侑",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "梁固",
+    "person_ids": [
+      "z0242(song1009)"
+    ],
+    "mentioned": [
+      {
+        "name": "梁灏",
+        "id": "z0215",
+        "dynasty": "song",
+        "exam_year": 985
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |985年－1017年；鄆州須城人；父梁灏亦曾中状元。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "趙安榮",
+    "person_ids": [
+      "z0332(jin1140)"
+    ],
+    "mentioned": [
+      {
+        "name": "趙安時",
+        "id": "z0350",
+        "dynasty": "jin",
+        "exam_year": 1160
+      }
+    ],
+    "kin_hit": true,
+    "remark": "；陵川（今山西陵川縣）；正隆五年狀元趙安時之弟",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "趙安時",
+    "person_ids": [
+      "z0350(jin1160)"
+    ],
+    "mentioned": [
+      {
+        "name": "趙安榮",
+        "id": "z0332",
+        "dynasty": "jin",
+        "exam_year": 1140
+      }
+    ],
+    "kin_hit": true,
+    "remark": "；天眷三年狀元趙安榮之兄",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "陈䢿",
+    "person_ids": [
+      "z0459(ming1397)"
+    ],
+    "mentioned": [
+      {
+        "name": "韩克忠",
+        "id": "z0460",
+        "dynasty": "ming",
+        "exam_year": 1397
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；福建福州府闽县人；rowspan=\"2\" |当年春季会试，上榜的全是南方考生，状元为福建的陈䢿，北方考生全部落第，后来明太祖罪责考官为胡蓝党，重新发榜，上榜的全是北方人，山东的韩克忠成为状元。两次发榜被称为“南北榜”或“春夏榜”。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "马铎",
+    "person_ids": [
+      "z0465(ming1412)"
+    ],
+    "mentioned": [
+      {
+        "name": "李騏",
+        "id": "z0467",
+        "dynasty": "ming",
+        "exam_year": 1418
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1366年－1423年；福建福州府长乐县人；弟李騏於6年後亦中狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "彭启丰",
+    "person_ids": [
+      "z0574(qing1727)"
+    ],
+    "mentioned": [
+      {
+        "name": "莊培因",
+        "id": "z0585",
+        "dynasty": "qing",
+        "exam_year": 1754
+      }
+    ],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1701年－1784年；江苏省苏州府长洲县人；style=\"background: #FFD700\" |兵部尚書、經筵講官；乾隆十九年狀元莊培因為其女婿",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "梁旲",
+    "person_ids": [
+      "z0010(tang681)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |646年--711年；安定泾川人；授予国子四门博士，迁邺城令、颍川令",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "陳伯玉",
+    "person_ids": [
+      "z0011(tang684)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |661年～702年；梓州遂寧市射洪縣人；唐之詩祖，古文運動的先驅者。因曾任右拾遺，後世稱陳拾遺",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "贺知章",
+    "person_ids": [
+      "z0014(tang695)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |659年~744年；越州永兴人；授予国子四门博士，迁太常博士",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "梁肃",
+    "person_ids": [
+      "z0059(tang782)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |753年－793年；安定乌氏人；唐代古文运动先驱，散文家。召为监察御史，转左补阙、翰林学士、皇太子诸王侍读。卒后赠礼部郎中",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "孔敏行",
+    "person_ids": [
+      "z0081(tang811)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；孔子三十九代孙，孔述睿子",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "裴文德",
+    "person_ids": [
+      "z0104(tang836)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |；孟州济源人；考取状元召为翰林学士，後拜溈山靈祐為師，成為禪門溈仰宗法海禪師。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "崔詹",
+    "person_ids": [
+      "z0164(tang907)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |；}\n\n==五代十国状元==\n{| class=\"wikitable sortable\" width=100%\n!noWrap|西曆\n!noWrap|中曆\n!noWrap|姓名\n!noWrap|生卒年\n!noWrap|籍貫\n!noWrap|備註",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "简文会",
+    "person_ids": [
+      "z0168(wudai920)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "900年~958年；湖北咸宁人；南漢第一位狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "梁嵩",
+    "person_ids": [
+      "z0171(wudai925)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；广西龚州人；南漢狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "费黄裳",
+    "person_ids": [
+      "z0191(wudai965)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；四川广都人；後蜀末代狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "张确",
+    "person_ids": [
+      "z0209(wudai975)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；南唐末代状元；}\n\n==宋朝状元==\n{{Main|宋朝狀元列表}}\n{| class=\"wikitable sortable\" width=\"100%\"\n! nowrap=\"\" |西曆\n! nowrap=\"\" |中曆\n! nowrap=\"\" |姓名\n! nowrap=\"\" |生卒年\n! nowr",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "梁颢",
+    "person_ids": [
+      "z0208(song974)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |892年~976年；润州人；年八十二高中状元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "宋庠",
+    "person_ids": [
+      "z0257(song1024)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |996年~1066年；开封雍丘→湖北安陆人；連中三元。原取宋庠弟宋祁為第一，因「長幼有序」而改取宋庠。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "章衡",
+    "person_ids": [
+      "z0277(song1057)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1025年－1099年；福建浦城人；宰相章惇之侄。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "徐铎",
+    "person_ids": [
+      "z0290(song1076)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |1051年－1105年；福建莆田人；当年的武状元是同样来自莆田的薛奕，宋神宗因而题诗“一方文武魁天下”。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "焦蹈",
+    "person_ids": [
+      "z0295(song1085)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |；安徽芜湖市无为县人；狀元及第後6日急病而死。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "李易",
+    "person_ids": [
+      "z0324(song1128)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |？－1142年；江都人；南宋首位狀元。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "文天祥",
+    "person_ids": [
+      "z0416(song1256)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1236年－1283年；吉州廬陵人；宋末三傑之一。元世祖愛其才欲招降以為相，文天祥峻拒並從容就義。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "王龙泽",
+    "person_ids": [
+      "z0422(song1274)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |；}\n\n\n==辽朝状元==\n{| class=\"wikitable sortable\" width=100%\n!noWrap|西曆\n!noWrap|中曆\n!noWrap|姓名\n!noWrap|生卒年\n!noWrap|籍貫\n!noWrap|備註",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "李球",
+    "person_ids": [
+      "z0319(liao1122)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；}\n\n==西夏狀元==\n{| class=\"wikitable sortable\" width=100%\n!noWrap|西曆\n!noWrap|中曆\n!noWrap|姓名\n!noWrap|生卒年\n!noWrap|籍貫\n!noWrap|備註",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "任忠杰",
+    "person_ids": [
+      "z0351(jin1161)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；天城（山西天鎮縣）；完顏亮朝最后一位状元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "卢亚",
+    "person_ids": [
+      "z0404(jin1227)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；偃師（今河南偃師縣）",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "护都答儿",
+    "person_ids": [
+      "z0423(yuan1315)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；蒙古族；乙卯科右榜進士第一",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "忽都达儿",
+    "person_ids": [
+      "z0425(yuan1318)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "1296年-1350年；蒙古族人；右榜進第一",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "霍希贤",
+    "person_ids": [
+      "z0426(yuan1318)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；湖南澧州；戊午科左榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "泰不华",
+    "person_ids": [
+      "z0427(yuan1321)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "1304年-1352年；蒙古佰牙吾台氏；右榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "捌剌",
+    "person_ids": [
+      "z0429(yuan1324)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；甲子科右榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "张益",
+    "person_ids": [
+      "z0430(yuan1324)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；西河人；甲子科左榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "阿察赤",
+    "person_ids": [
+      "z0431(yuan1327)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；丁卯科右榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "拜住",
+    "person_ids": [
+      "z0437(yuan1342)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；蒙古遜都思氏；壬午科右榜狀元及第",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "普颜不花",
+    "person_ids": [
+      "z0439(yuan1345)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "?-1368年；蒙古人；由國子生登進氏第一",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "朶烈图",
+    "person_ids": [
+      "z0442(yuan1351)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；蒙古人；辛卯科加榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "薛朝晤",
+    "person_ids": [
+      "z0444(yuan1354)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；遼東人；甲午科右榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "牛继志",
+    "person_ids": [
+      "z0445(yuan1354)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；武強人；甲午科左榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "买住",
+    "person_ids": [
+      "z0448(yuan1360)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；庚子科右榜進士第一",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "魏元礼",
+    "person_ids": [
+      "z0449(yuan1360)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；肅寧人；庚子科左榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "杨輗",
+    "person_ids": [
+      "z0451(yuan1363)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；左榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "赫德溥化",
+    "person_ids": [
+      "z0452(yuan1366)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "；丙午科右榜狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "张栋",
+    "person_ids": [
+      "z0453(yuan1366)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "；丙午科左榜進士第一；}\n\n==明朝状元==\n{{Main|明朝状元列表}}\n{| class=\"wikitable sortable\" width=\"100%\"\n! nowrap=\"\" |西曆\n! nowrap=\"\" |中曆\n! nowrap=\"\" |姓名\n! nowrap=\"\" |生卒年\n! n",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "丁显",
+    "person_ids": [
+      "z0455(ming1385)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1367年－；福建建寧府建阳县人；原取花綸，但因明太祖朱元璋夢見殿中有巨釘而取丁显為第一",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "曾棨",
+    "person_ids": [
+      "z0462(ming1404)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1372年－1432年；江西吉安府永丰县人；原取劉子欽，但因劉驕矜自恃，引起主考官解縉不快，解縉遂將考題洩漏給曾棨",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "曾鶴齡",
+    "person_ids": [
+      "z0468(ming1421)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1383年－1441年；江西吉安府泰和县人；原取劉矩，但因明成祖朱棣夢見鶴翼而取曾鶴齡為第一",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "邢宽",
+    "person_ids": [
+      "z0469(ming1424)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |－1454年；南直隸廬州府無為州人；原以孫曰恭為第一，但因其名不為帝喜，遂改取邢宽。邢宽有足疾。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "孫賢",
+    "person_ids": [
+      "z0479(ming1454)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1423年－1477年；河南開封府杞县人；原取士丘濬，因其貌不揚而改取孫賢",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "黎淳",
+    "person_ids": [
+      "z0480(ming1457)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1423年－1492年；湖廣岳州府华容县人",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "王華",
+    "person_ids": [
+      "z0487(ming1481)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1446年－1522年；浙江紹興府余姚县人；傳聞吏部尚書劉珝洩題給黃珣，王華適巧窺見，暗記應試，而黃珣卻得第二。\n王阳明之父。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "杨慎",
+    "person_ids": [
+      "z0497(ming1511)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1488年－1559年；祖籍江西吉安府庐陵县，徙居四川成都府新都县",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "龔用卿",
+    "person_ids": [
+      "z0502(ming1526)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1500年－1563年；祖籍福建泉州府晋江县\n福建福州府怀安县人，一作福清县人",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "茅瓒",
+    "person_ids": [
+      "z0506(ming1538)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1499年－；浙江杭州府钱塘县人；原取陸師道後改袁煒，但因明世宗朱厚熜突然改變心意，臨時改取茅瓒",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "沈坤",
+    "person_ids": [
+      "z0507(ming1541)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1507年－1560年；南直隸淮安府大河卫人，祖籍南直隸蘇州府崑山县",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "張元忭",
+    "person_ids": [
+      "z0517(ming1571)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1538年－1588年；祖籍四川成都府漢州綿竹县，徙居浙江紹興府山阴县",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "張懋修",
+    "person_ids": [
+      "z0520(ming1580)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1555年－1634年；湖廣荊州府江陵县人；原為第三，因為權臣張居正之子而擢為第一",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "楊廷鑒",
+    "person_ids": [
+      "z0540(ming1643)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |1603年－1665年；nowrap=\"\" |南直隸常州府武进县人；}\n\n==大西狀元==\n{| class=\"wikitable sortable\" width=100%\n!noWrap|西曆\n!noWrap|中曆\n!noWrap|姓名\n!noWrap|生卒年\n!n",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "吕宫",
+    "person_ids": [
+      "z0542(qing1647)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1603年－1664年；江南省常州府武进县人；style=\"background: #FFD700\" |太子太保、內翰林弘文院大學士；加科",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "于敏中",
+    "person_ids": [
+      "z0578(qing1737)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1714年－1779年；江苏省镇江府金坛县人；style=\"background: #FFD700\" |太子太保、文華殿大學士、兼管翰林院掌院學士、上書房總師傅；恩科",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "莊有恭",
+    "person_ids": [
+      "z0579(qing1739)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1713年－1767年；籍貫福建省泉州府晋江人，\n出生在广东省广州府番禺县；style=\"background: #FFD700\" |太子少保、協辦大學士、兼刑部尚書",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "梁国治",
+    "person_ids": [
+      "z0582(qing1748)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1723年－1786年；浙江省绍兴府会稽县人；style=\"background: #FFD700\" |太子太保、東閣大學士、軍機大臣、兼戶部尚書",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "莊培因",
+    "person_ids": [
+      "z0585(qing1754)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1723年－1759年；江苏省常州府阳湖县人；style=\"background: #FFE4E1\" |翰林院侍講學士、福建學政；雍正五年狀元彭啟豐的女婿",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "毕沅",
+    "person_ids": [
+      "z0587(qing1760)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1730年－1797年；江苏省太仓直隸州镇洋县人；style=\"background: #FFD700\" |太子太保、湖廣總督",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "王杰",
+    "person_ids": [
+      "z0588(qing1761)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1725年－1805年；陕西省同州府韩城县人；style=\"background: #FFD700\" |太子太師、東閣大學士、軍機大臣、上書房總師傅、管理禮部事務；恩科。為取得江南江北的平衡，遂改取江北人王-{杰}-。",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "戴衢亨",
+    "person_ids": [
+      "z0595(qing1778)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1755年－1811年；江西省南安府大庾县人；style=\"background: #FFD700\" |太子太師、體仁閣大學士、軍機大臣、管理工部事務；原應為邵自昌第一，但因邵之試卷難以拆封見名而改取排第二的戴衢亨",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "钱棨",
+    "person_ids": [
+      "z0597(qing1781)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |1734年－1799年；江苏省苏州府长洲县人；style=\"background: #FFFF00\" |內閣學士兼禮部侍郎；連中三元（六元狀元）",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "潘世恩",
+    "person_ids": [
+      "z0602(qing1793)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1770年－1854年；江苏省苏州府吴县人；style=\"background: #FFD700\" |太傅、武英殿大學士、軍機大臣、上書房總師傅",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "吳其濬",
+    "person_ids": [
+      "z0613(qing1817)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1789年－1847年；河南省光州直隸州固始县人；style=\"background: #FFFF00\" |太子太保、山西巡撫、兼提督鹽政",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "刘绎",
+    "person_ids": [
+      "z0622(qing1835)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1798年－1879年；江西省吉安府永豐縣人；style=\"background: #FFFDD0\" |江西督辦團練大臣（三品京堂銜翰林院修撰）",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "林鸿年",
+    "person_ids": [
+      "z0623(qing1836)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1805年－1885年；福建省福州府侯官县人；style=\"background: #FFFF00\" |雲南巡撫；恩科。相傳原取何紹基，但因何父得罪權貴卓秉恬而被換掉",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "章鋆",
+    "person_ids": [
+      "z0631(qing1852)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1820年－1875年；浙江省宁波府鄞县人；style=\"background: #FFE4E1\" |國子監祭酒、廣東學政；恩科",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "翁同龢",
+    "person_ids": [
+      "z0633(qing1856)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1830年－1904年；江苏省苏州府常熟县人；style=\"background: #FFD700\" |太子太保、協辦大學士、兼戶部尚書、軍機大臣、兼總理各國事務大臣",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "徐郙",
+    "person_ids": [
+      "z0636(qing1862)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1836年－1908年；江苏省太仓直隸州嘉定县人；style=\"background: #FFD700\" |太子少保、協辦大學士、禮部尚書、管理八旗官學大臣、管理國子監事務",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "崇绮",
+    "person_ids": [
+      "z0638(qing1865)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1829年－1900年；正蓝旗蒙古人；style=\"background: #FFD700\" |太子少保、戶部尚書、正紅旗漢軍都統、留京辦事大臣、管理禮部事務；唯一蒙古旗籍狀元",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "陈冕",
+    "person_ids": [
+      "z0645(qing1883)"
+    ],
+    "mentioned": [],
+    "kin_hit": true,
+    "remark": "align=\"center\" |1859年－1893年；京師顺天府宛平县人；style=\"background: #98FB98\" |翰林院修撰",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "骆成骧",
+    "person_ids": [
+      "z0651(qing1895)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |1865年－1926年；四川省资州直隸州人；style=\"background: #FFFDD0\" |山西提學使\n中華民國四川臨時省議會議長；原定状元为喻长霖，而骆成骧列在二甲前列，其卷中对策文中有“主忧臣劳，主辱臣死”之语，正值甲午战争之际，光绪帝深受感动，遂提骆成",
+    "file": "wiki_中国状元列表.txt"
+  },
+  {
+    "person": "刘春霖",
+    "person_ids": [
+      "z0654(qing1904)"
+    ],
+    "mentioned": [],
+    "kin_hit": false,
+    "remark": "align=\"center\" |1872年－1942年；直隶省河間府肃宁縣人；style=\"background: #FFFDD0\" |福建提學使\n中華民國直隸省教育廳廳長；恩科；}\n==太平天国状元==\n{| class=\"wikitable sortable\" width=100%\n!noWra",
+    "file": "wiki_中国状元列表.txt"
+  }
+]

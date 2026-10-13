@@ -1,0 +1,702 @@
+# 清朝状元仕途挖掘产物（来源：维基状元列表最高職位列，B 级 s0018，人工考据 careers.yaml 优先）
+- id: z0541   # 傅以渐（1646）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "少保、武英殿大學士兼兵部尚書"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0542   # 吕宫（1647）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太保、內翰林弘文院大學士"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0543   # 刘子壮（1649）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "內翰林國史院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 44"
+- id: z0544   # 麻勒吉（1652）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "兩江總督，提督九門步軍統領"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0545   # 邹忠倚（1652）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "內翰林祕書院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 31"
+- id: z0546   # 图尔宸（1655）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "工部右侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0547   # 史大成（1655）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部左侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0548   # 孙承恩（1658）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "內翰林國史院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 40"
+- id: z0549   # 徐元文（1659）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "文華殿大學士、兼管翰林院事"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0550   # 马世俊（1661）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0551   # 严我斯（1664）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部左侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0552   # 缪彤（1667）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0553   # 蔡启僔（1670）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "右春坊右贊善"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0554   # 韩菼（1673）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部尚書、經筵講官"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0555   # 彭定求（1676）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0556   # 归允肃（1679）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "詹事府少詹事"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 47"
+- id: z0557   # 蔡升元（1682）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部尚書"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0558   # 陆肯堂（1685）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀學士"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 46"
+- id: z0559   # 沈廷文（1688）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0560   # 戴有祺（1691）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0561   # 胡任輿（1694）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0562   # 李蟠（1697）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0563   # 汪绎（1700）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 35"
+- id: z0564   # 王式丹（1703）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0565   # 王云锦（1706）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰、陝西學政"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0566   # 赵熊诏（1709）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0567   # 王世琛（1712）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講、山東學政"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0568   # 王敬銘（1713）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0569   # 徐陶璋（1715）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0570   # 汪应铨（1718）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "左春坊贊善"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0571   # 邓中岳（1721）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部左侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0572   # 于振（1723）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀學士、日講起居注官"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0573   # 陈德华（1724）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部尚書、入直上書房"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0574   # 彭启丰（1727）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "兵部尚書、經筵講官"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0575   # 周澍（1730）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0576   # 陈倓（1733）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 44"
+- id: z0577   # 金德瑛（1736）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "都察院左都御史"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0578   # 于敏中（1737）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太保、文華殿大學士、兼管翰林院掌院學士、上書房總師傅"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0579   # 庄有恭（1739）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子少保、協辦大學士、兼刑部尚書"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0580   # 金甡（1742）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部左侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0581   # 钱维城（1745）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "刑部左侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0582   # 梁国治（1748）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太保、東閣大學士、軍機大臣、兼戶部尚書"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0583   # 吴鸿（1751）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀，湖南學政"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 38"
+- id: z0584   # 秦大士（1752）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講學士、尚書房行走"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0585   # 庄培因（1754）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講學士、福建學政"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 36"
+- id: z0586   # 蔡以臺（1757）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0587   # 毕沅（1760）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太保、湖廣總督"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0588   # 王杰（1761）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太師、東閣大學士、軍機大臣、上書房總師傅、管理禮部事務"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0589   # 秦大成（1763）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0590   # 张書勳（1766）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "右中允"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0591   # 陈初哲（1769）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "湖北荊宜施道道員、兼管荊關稅務監督"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0592   # 黄軒（1771）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "四川川東道道員、加按察使銜"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0593   # 金榜（1772）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0594   # 吴锡龄（1775）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0595   # 戴衢亨（1778）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太師、體仁閣大學士、軍機大臣、管理工部事務"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0596   # 汪如洋（1780）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰、雲南學政"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 39"
+- id: z0597   # 钱棨（1781）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "內閣學士兼禮部侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0598   # 茹棻（1784）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "兵部尚書"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0599   # 史致光（1787）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "都察院左都御史，雲貴總督"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0600   # 胡长龄（1789）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部尚書"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0601   # 石韫玉（1790）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "山東按察使"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0602   # 潘世恩（1793）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太傅、武英殿大學士、軍機大臣、上書房總師傅"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0603   # 王以銜（1795）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部右侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0604   # 赵文楷（1796）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "山西雁平兵備道道員"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 40"
+- id: z0605   # 姚文田（1799）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部尚書"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0606   # 顧臯（1801）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "戶部左侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0607   # 吴廷琛（1802）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "雲南按察使"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0608   # 彭浚（1805）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "順天府府丞"
+  final_category: 其他
+  source_id: s0018
+- id: z0609   # 吴信中（1808）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀學士"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0610   # 洪瑩（1809）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0611   # 蒋立镛（1811）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "內閣學士兼禮部侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0612   # 龙汝言（1814）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "兵部員外郎"
+  final_category: 其他
+  source_id: s0018
+- id: z0613   # 吳其濬（1817）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太保、山西巡撫、兼提督鹽政"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0614   # 陈沆（1819）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "四川道監察御史"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 41"
+- id: z0615   # 陈继昌（1820）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "江寧布政使"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0616   # 戴蘭芬（1822）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講學士、陝甘學政"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0617   # 林召棠（1823）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0618   # 朱昌颐（1826）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "吏科給事中"
+  final_category: 其他
+  source_id: s0018
+- id: z0619   # 李振鈞（1829）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 45"
+- id: z0620   # 吳鍾駿（1832）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "禮部左侍郎、福建學政"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0621   # 汪鸣相（1833）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 46"
+- id: z0622   # 刘绎（1835）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "江西督辦團練大臣（三品京堂銜翰林院修撰）"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0623   # 林鸿年（1836）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "雲南巡撫"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0624   # 鈕福保（1838）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "詹事府少詹事"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0625   # 李承霖（1840）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講學士"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0626   # 龙啓瑞（1841）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "江西布政使"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 44"
+- id: z0627   # 孙毓溎（1844）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "浙江按察使"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0628   # 萧锦忠（1845）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0629   # 张之萬（1847）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太保、東閣大學士、軍機大臣、管理吏部事務"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0630   # 陆增祥（1850）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "湖南辰永沅靖道道員"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0631   # 章鋆（1852）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "國子監祭酒、廣東學政"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0632   # 孙如僅（1853）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "內閣學士兼禮部侍郎"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0633   # 翁同龢（1856）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子太保、協辦大學士、兼戶部尚書、軍機大臣、兼總理各國事務大臣"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0634   # 孙家鼐（1859）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太傅、武英殿大學士、兼資政院總裁、充學務大臣"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0635   # 钟骏声（1860）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍講學士、日講起居注官、實錄修纂官"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0636   # 徐郙（1862）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子少保、協辦大學士、禮部尚書、管理八旗官學大臣、管理國子監事務"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0637   # 翁曾源（1863）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0638   # 崇绮（1865）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太子少保、戶部尚書、正紅旗漢軍都統、留京辦事大臣、管理禮部事務"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0639   # 洪钧（1868）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "兵部左侍郎、兼總理各國事務大臣"
+  final_category: 部院高官
+  source_id: s0018
+- id: z0640   # 梁耀樞（1871）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "詹事府少詹事、山東學政"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0641   # 陆润庠（1874）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "太傅、東閣大學士、弼德院院長"
+  final_category: 宰辅
+  source_id: s0018
+- id: z0642   # 曹鸿勋（1876）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "陝西巡撫"
+  final_category: 地方大员
+  source_id: s0018
+- id: z0643   # 王仁堪（1877）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "蘇州府知府"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 45"
+- id: z0644   # 黄思永（1880）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院侍讀學士"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0645   # 陈冕（1883）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰"
+  final_category: 早逝
+  source_id: s0018
+  note: "享年 34"
+- id: z0646   # 赵以烱（1886）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰、廣西學政"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0647   # 张建勳（1889）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "黑龍江提學使"
+  final_category: 其他
+  source_id: s0018
+- id: z0648   # 吴鲁（1890）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "署理吉林提學使（四品銜翰林院修撰）"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0649   # 刘福姚（1892）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院秘書郎、兼學部圖書局總務總校"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0650   # 张謇（1894）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "農工商大臣中華民國工商農林部總長"
+  final_category: 其他
+  source_id: s0018
+- id: z0651   # 骆成骧（1895）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "山西提學使中華民國四川臨時省議會議長"
+  final_category: 其他
+  source_id: s0018
+- id: z0652   # 夏同龢（1898）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "翰林院修撰中華民國江西省實業廳長，眾議院議員"
+  final_category: 学政文教
+  source_id: s0018
+- id: z0653   # 王寿彭（1903）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "湖北提學使中華民國山東省教育廳長"
+  final_category: 其他
+  source_id: s0018
+- id: z0654   # 刘春霖（1904）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: "福建提學使中華民國直隸省教育廳廳長"
+  final_category: 其他
+  source_id: s0018

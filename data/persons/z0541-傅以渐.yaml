@@ -1,0 +1,36 @@
+id: z0541
+name: 傅以渐
+zi: 于磐
+hao: 星岩
+dynasty: qing
+exam_year: 1646
+reign: 顺治
+birth_year: 1609
+death_year: 1665
+native_hist: 山东省东昌府聊城县
+native_modern: 山东省聊城市
+ke_ci: 顺治三年丙戌科
+bio_short: 清代开科第一位状元。顺治三年清廷首次会试夺魁，官至武英殿大学士兼兵部尚书，是清初笼络汉族士人的标志性人物。
+tags:
+  - 清代首科
+  - 大学士
+events:
+  - year: 1646
+    type: 夺魁
+    title: 顺治三年丙戌科状元
+    description: 清军入关后首次开科取士，傅以渐为清代第一科状元。
+    source_id: s0002
+    office: 内翰林国史院修撰
+    rank_grade: 6.5
+  - year_label: 顺治年间
+    precision: range
+    type: 升迁
+    title: 官至武英殿大学士
+    description: 历官国史院侍讲、秘书院大学士，终至武英殿大学士兼兵部尚书。
+    source_id: s0005
+    office: 武英殿大学士兼兵部尚书
+    rank_grade: 1
+  - year: 1665
+    type: 卒
+    title: 康熙四年卒
+    source_id: s0005

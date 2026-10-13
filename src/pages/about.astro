@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="关于数据">
+  <main class="mx-auto max-w-2xl px-4 py-8 leading-7">
+    <h1 class="text-2xl font-bold text-jin">关于本站数据</h1>
+
+    <h2 class="mt-8 text-lg font-bold">覆盖范围</h2>
+    <p class="mt-2 text-sm text-miDim">
+      收录自唐武德五年（622 年）孙伏伽至清光绪三十年（1904 年）刘春霖，历代有姓名可考的文状元，
+      含辽、金等政权的科举状元，共 654 人。隋朝虽有进士科之设，然状元名录争议过大，暂未收录；
+      武状元、大西、太平天国科举亦不在本期范围。
+    </p>
+
+    <h2 class="mt-8 text-lg font-bold">可信度三级体系</h2>
+    <div class="mt-3 space-y-2 text-sm">
+      <p><span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-sm border border-jin/50 bg-jin/20 text-[10px] font-bold text-jin">A</span>
+        <span class="text-mi">正史、题名碑、朱卷、登科录</span><span class="text-miDim">——一手史料，铁律：无 A 级出处不得标 A。</span></p>
+      <p><span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-sm border border-[#5DCAA5]/40 bg-teal-400/10 text-[10px] font-bold text-[#5DCAA5]">B</span>
+        <span class="text-mi">地方志、年谱、日记、CBDB、整理名录</span><span class="text-miDim">——二手整理，待交叉核对。</span></p>
+      <p><span class="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-sm border border-miDim/40 bg-miDim/10 text-[10px] font-bold text-miDim">C</span>
+        <span class="text-mi">笔记小说、民间传说</span><span class="text-miDim">——明确标注为传说，与史实物理隔离。</span></p>
+    </div>
+
+    <h2 class="mt-8 text-lg font-bold">主要数据来源</h2>
+    <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-miDim">
+      <li>《登科记考》（清·徐松）—— 唐五代科举</li>
+      <li>《明清进士题名碑录》—— 明清状元姓名籍贯名次</li>
+      <li>二十四史及《清史稿》人物列传</li>
+      <li>CBDB 中国历代人物传记资料库（哈佛/北大/中研院）</li>
+      <li>CHGIS 中国历史地理信息系统 —— 古今地名映射</li>
+      <li>历代状元开放名录（骨架初录，逐条核校中）</li>
+    </ul>
+
+    <h2 class="mt-8 text-lg font-bold">异说并存与勘误</h2>
+    <p class="mt-2 text-sm text-miDim">
+      状元是民间传说的重灾区（如王维是否为状元，正史与笔记说法相左）。本站对有争议的条目采取
+      「异说并存、各挂出处」原则，以<span class="text-zhusha">存疑</span>标记呈现。
+      发现讹误欢迎指正，每条修订均在 Git 中留痕。
+    </p>
+    <div class="mt-3 rounded-lg border border-jin/25 bg-jin/5 p-4 text-sm">
+      <p class="font-bold text-jin">勘误入口</p>
+      <p class="mt-1 text-miDim">
+        本站源数据（YAML 源文件）将全部随公开仓库版本化开放，勘误可通过仓库 issue
+        「人名 / 朝代 / 讹误描述 / 出处依据」模板提交，维护者承诺 7 天内响应。
+        <span class="text-miDim/70">（公开仓库与在线勘误通道随正式版上线开放，当前请以页面底部联系方式反馈。）</span>
+      </p>
+    </div>
+
+    <h2 class="mt-8 text-lg font-bold" id="map-compliance">地图数据来源与合规</h2>
+    <div class="mt-2 space-y-2 text-sm text-miDim">
+      <p>
+        <span class="text-mi">历史政区底图</span>：CHGIS 中国历史地理信息系统 V6 时间序列数据
+        （哈佛大学费正清中国研究中心 / 复旦大学历史地理研究中心，免费学术使用，谨此署名致谢）。
+        本站按朝代切片（唐 741 年 / 五代 960 年 / 宋辽 1111 年 / 金 1189 年 / 元 1330 年 / 明 1582 年 / 清 1820 年）
+        重建历史行政区划轮廓。<strong class="text-mi">历史疆域为学术示意，不作国界依据。</strong>
+      </p>
+      <p>
+        <span class="text-mi">现代对照</span>：本站地图页仅呈现历史政区与籍贯分布，
+        <strong class="text-mi">不叠加任何现代矢量边界层</strong>（此前开发版使用的高德 DataV 无审图号数据已撤除）。
+        现代疆域对照请以
+        <a href="http://bzdt.ch.mnr.gov.cn/" target="_blank" rel="noopener" class="underline hover:text-jin">自然资源部标准地图服务</a>
+        发布的标准地图为准。
+      </p>
+      <p>
+        <span class="text-mi">籍贯坐标</span>：逐条人工考订的古今地名映射表（data/geo/placenames.csv），
+        历史县治已消亡者映射至其现代承继行政区。当前覆盖有籍贯记录者的 97%（409/421）；
+        蒙古、八旗等无固定地理籍贯者按「空值合法」原则不予强配。
+      </p>
+      <p>
+        本站地图遵守《地图管理条例》：历史层不代表古今国界主张；页面固定显示合规标注。
+        正式上线前将按条例要求完成边界自查。
+      </p>
+    </div>
+  </main>
+</BaseLayout>

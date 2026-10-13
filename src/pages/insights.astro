@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AggregateSankey from '../components/viz/AggregateSankey';
+import InsightChart, { type ChartRow } from '../components/viz/InsightChart';
+import SouthwardMini from '../components/viz/SouthwardMini.astro';
+import GuidePopover from '../components/shell/GuidePopover';
+import ShareButton from '../components/shell/ShareButton';
+import { readFileSync } from 'node:fs';
+
+const stats = JSON.parse(
+  readFileSync(new URL('../../public/data/stats.json', import.meta.url), 'utf8'),
+);
+const dynasties = JSON.parse(
+  readFileSync(new URL('../../public/data/dynasties.json', import.meta.url), 'utf8'),
+) as { key: string; name: string; color: string; order: number }[];
+dynasties.sort((a, b) => a.order - b.order);
+const maxDyn = Math.max(...Object.values<number>(stats.by_dynasty));
+const maxSurname = stats.top_surnames[0][1];
+const dynName = (k: string) => dynasties.find((d) => d.key === k)?.name ?? k;
+
+// 年龄直方图行（金色）
+const ageRows: ChartRow[] = stats.age_histogram.buckets.map(
+  (b: { label: string; count: number }) => ({ label: b.label, value: b.count }),
+);
+// 分朝平均年龄折线行（无样本朝代断开）
+const ageDynRows: ChartRow[] = stats.avg_age_by_dynasty.map(
+  (d: { dynasty: string; avg_age: number | null; n: number }) => ({
+    label: dynName(d.dynasty),
+    value: d.avg_age,
+    hint: d.n ? `n=${d.n}` : '无样本',
+  }),
+);
+// 完整度直方图行：bucket 越高越金——低分段暗淡即「淡星」本色
+const compRows: ChartRow[] = stats.completeness_histogram.map(
+  (b: { bucket: number; label: string; count: number }) => ({
+    label: b.label,
+    value: b.count,
+    color: `rgba(201,162,39,${(0.18 + b.bucket * 0.82).toFixed(2)})`,
+  }),
+);
+const compN: number = stats.total;
+---
+
+<BaseLayout title="数据问答">
+  <main class="mx-auto max-w-3xl px-4 py-8">
+    <h1 class="text-2xl font-bold text-jin">数据问答</h1>
+    <p class="mt-1 text-sm text-miDim">
+      用数据直接回答关于状元的高频问题。统计基于当前已收录 {stats.total} 人，随数据回填持续更新；
+      各卡恒定标注样本量 n——史料覆盖不均，诚实即内容。
+    </p>
+
+    {/* q0 总览：朝代分布 */}
+    <section id="q0" class="mt-8 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">哪个朝代状元最多？</h2>
+        <ShareButton client:load anchor="q0" />
+      </div>
+      <div class="space-y-1.5">
+        {dynasties.map((d) => (
+          <div class="flex items-center gap-3 text-sm">
+            <span class="w-16 shrink-0 text-right text-miDim">{d.name}</span>
+            <div class="h-4 rounded-sm" style={`width:${(stats.by_dynasty[d.key] / maxDyn) * 100}%;background:${d.color}`} />
+            <span class="text-mi">{stats.by_dynasty[d.key]}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* q1 最年轻 + 年龄直方图 */}
+    <section id="q1" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">最年轻的状元是谁？</h2>
+        <GuidePopover client:load inline title="年龄直方图怎么读">
+          横轴为夺魁年龄（5 岁分桶），纵轴为人数。峰值在 30 岁上下——金榜题名多是中年事。
+          仅 {stats.age_histogram.n} 人有生年可考（占 {Math.round((stats.age_histogram.n / stats.total) * 100)}%），分布偏向文献丰盈的朝代与名人。
+        </GuidePopover>
+        <ShareButton client:load anchor="q1" />
+      </div>
+      <InsightChart
+        client:visible
+        type="histogram"
+        rows={ageRows}
+        n={stats.age_histogram.n}
+        yName=" 人"
+        ariaLabel="夺魁年龄分布直方图"
+      />
+      <p class="mb-2 mt-4 text-xs text-miDim">最年轻的十位（平均夺魁年龄 {stats.avg_age} 岁）：</p>
+      <ol class="space-y-1.5">
+        {stats.youngest.map((a: { name: string; dynasty: string; age: number }, i: number) => (
+          <li class="flex items-baseline gap-3 text-sm">
+            <span class="w-6 text-right text-jin/70">{i + 1}.</span>
+            <span class="text-mi">{a.name}</span>
+            <span class="text-miDim">{dynName(a.dynasty)} · {a.age} 岁夺魁</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    {/* q2 分朝平均年龄 */}
+    <section id="q2" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">平均夺魁年龄历代如何变化？</h2>
+        <GuidePopover client:load inline title="分朝折线怎么读">
+          各朝平均夺魁年龄总体走高：唐约 30 岁，清已逾 34 岁——殿试层级叠加、应试周期拉长，夺魁越来越是「资深考生」的游戏。无足够生年样本的朝代如实断开，不虚接。
+        </GuidePopover>
+        <ShareButton client:load anchor="q2" />
+      </div>
+      <InsightChart
+        client:visible
+        type="line"
+        rows={ageDynRows}
+        yName=" 岁"
+        ariaLabel="各朝代平均夺魁年龄折线图"
+      />
+    </section>
+
+    {/* q3 姓氏 */}
+    <section id="q3" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">哪个姓氏出状元最多？</h2>
+        <ShareButton client:load anchor="q3" />
+      </div>
+      <div class="grid grid-cols-1 gap-1.5 sm:grid-cols-2 sm:gap-x-8">
+        {stats.top_surnames.slice(0, 10).map(([s, n]: [string, number]) => (
+          <div class="flex items-center gap-3 text-sm">
+            <span class="w-10 shrink-0 text-right text-miDim">{s}</span>
+            <div class="h-3.5 rounded-sm bg-jin/70" style={`width:${(n / maxSurname) * 70}%`} />
+            <span class="text-mi">{n}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* q4 南移缩略图 */}
+    <section id="q4" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">状元产地如何南移？</h2>
+        <GuidePopover client:load inline title="迁移线怎么读">
+          每点为某朝全部状元籍贯的地理重心，金色连线按时序贯穿：唐在黄河中下游，北宋移至江淮，明清沉入江浙。背后是经济重心南移与南方书院的兴起。各点标注 n=有坐标者/该朝总数；辽金元样本稀少，结论需谨慎。
+        </GuidePopover>
+        <ShareButton client:load anchor="q4" />
+      </div>
+      <SouthwardMini />
+    </section>
+
+    {/* q5 三元及第 */}
+    <section id="q5" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">哪些人连中三元？</h2>
+        <ShareButton client:load anchor="q5" />
+      </div>
+      <p class="mb-3 text-xs text-miDim">
+        乡试解元、会试会元、殿试状元连缀一身，千余年间仅 {stats.sanyuan.length} 人：
+      </p>
+      <div class="flex flex-wrap gap-2">
+        {stats.sanyuan.map((p: { id: string; name: string; dynasty: string; exam_year: number }) => (
+          <a href={`/?p=${p.id}`} class="rounded-full border border-jin/40 px-3 py-1 text-sm text-jin hover:bg-jin/10">
+            {p.name} · {dynName(p.dynasty)} · {p.exam_year}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {/* q6 仕途桑基 */}
+    <section id="q6" class="mt-12 scroll-mt-16">
+      <div class="mb-1 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">状元们后来都去哪了？</h2>
+        <GuidePopover client:load inline title="桑基图怎么读">
+          从夺魁后第一站（多为翰林院）到仕途终点：有人直入宰辅，有人外放封疆，有人归隐讲学，有人以身殉国。流量带宽度为人数；样本偏向有完整仕途记载的著名人物——寂寂无闻者的归宿多已不可考。
+        </GuidePopover>
+        <ShareButton client:load anchor="q6" />
+      </div>
+      <p class="mb-3 text-xs text-miDim">
+        从夺魁后的第一站，到仕途终点：有人直入宰辅，有人外放封疆，有人归隐讲学，有人以身殉国。
+      </p>
+      <AggregateSankey client:only="react" />
+    </section>
+
+    {/* q7 诚实的数据：完整度直方图 */}
+    <section id="q7" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">多少状元「史中无痕」？</h2>
+        <GuidePopover client:load inline title="完整度直方图怎么读">
+          横轴为史料丰富度评分（0–1，由基础字段、事件数、关系数、有无传记加权而成），纵轴为人数。集中在左端即「榜上有名，史中无痕」是常态；右端的亮星才是少数。本站不编造任何字段，空白即真相。
+        </GuidePopover>
+        <ShareButton client:load anchor="q7" />
+      </div>
+      <InsightChart
+        client:visible
+        type="histogram"
+        rows={compRows}
+        n={compN}
+        yName=" 人"
+        ariaLabel="史料丰富度分布直方图"
+      />
+      <div class="mt-4 rounded-lg border border-miDim/20 bg-dai/40 p-4">
+        <p class="text-sm leading-7 text-miDim">
+          这 {stats.total} 位状元中，许多人的现存记载只有姓名与科年。
+          当前籍贯坐标覆盖率 {(stats.geo_coverage * 100).toFixed(0)}%，其余正随考证工作流逐步回填。
+          本站不编造任何字段——「史料阙如」本身就是历史的真相。
+        </p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

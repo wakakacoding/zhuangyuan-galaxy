@@ -1,0 +1,135 @@
+---
+// 人物页（SSG 全量生成）：深链/SEO 入口，与人物帖浮层同构
+// 数据不足者呈现「榜上有名，史中无痕」留白页——诚实即内容
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+const root = process.cwd();
+
+export function getStaticPaths() {
+  const index = JSON.parse(readFileSync(join(process.cwd(), 'public/data/person-index.json'), 'utf8'));
+  return index.map((p: { id: string }) => ({ params: { id: p.id } }));
+}
+
+const { id } = Astro.params;
+const person = JSON.parse(readFileSync(join(root, `public/data/person/${id}.json`), 'utf8'));
+const dynasties = JSON.parse(readFileSync(join(root, 'public/data/dynasties.json'), 'utf8'));
+const dyn = dynasties.find((d: any) => d.key === person.dynasty);
+
+const TIER_LABEL: Record<string, string> = { A: '正史/碑录', B: '方志/年谱', C: '笔记/传说' };
+const lifespan = (p: any) => {
+  if (!p.birth_year && !p.death_year) return '生卒不详';
+  const b = p.birth_year ? `${p.birth_circa ? '约' : ''}${p.birth_year}` : '？';
+  const d = p.death_year ? `${p.death_circa ? '约' : ''}${p.death_year}` : '？';
+  return `${b} – ${d}`;
+};
+const sortedEvents = [...(person.events ?? [])].sort((a: any, b: any) => (a.year ?? 0) - (b.year ?? 0));
+const sourceById = new Map((person.sources ?? []).map((s: any) => [s.id, s]));
+const hasDetail = sortedEvents.length > 0 || person.bio_short;
+---
+
+<BaseLayout title={person.name} description={`${person.name}，${dyn?.name ?? ''}${person.exam_year} 年状元。${person.bio_short ?? ''}`}>
+  <main class="mx-auto max-w-2xl px-4 py-8">
+    {/* 题签区 */}
+    <header class="border-b border-jin/20 pb-5">
+      <div class="flex flex-wrap items-baseline gap-3">
+        <h1 class="font-serif text-4xl font-bold text-mi">{person.name}</h1>
+        {(person.zi || person.hao) && (
+          <span class="text-sm text-miDim">
+            {[person.zi && `字${person.zi}`, person.hao && `号${person.hao}`].filter(Boolean).join(' ')}
+          </span>
+        )}
+        {person.disputed && <span class="rounded border border-zhusha/60 px-1.5 py-0.5 text-xs text-zhusha">状元身份存疑</span>}
+      </div>
+      <div class="mt-3 flex flex-wrap items-center gap-2 font-serif text-sm">
+        <span class="rounded px-2 py-0.5" style={`background:${dyn?.color ?? '#666'}33;color:${dyn?.color ?? '#999'}`}>{dyn?.name}</span>
+        <span class="text-mi">{person.ke_ci ?? `${person.exam_year} 年`}</span>
+        {person.ganzhi && <span class="text-miDim">{person.ganzhi}科</span>}
+        {person.reign && <span class="text-miDim">{person.reign}</span>}
+        {person.tags.map((t: string) => (
+          <span class="rounded border border-jin/30 px-1.5 py-0.5 text-xs text-jin/90">{t}</span>
+        ))}
+      </div>
+    </header>
+
+    {/* 档案区 */}
+    <section class="mt-6 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
+      <div>
+        <p class="text-[11px] tracking-widest text-miDim/70">生卒</p>
+        <p class="mt-0.5 font-serif text-mi">{lifespan(person)}</p>
+      </div>
+      <div>
+        <p class="text-[11px] tracking-widest text-miDim/70">籍贯</p>
+        <p class="mt-0.5 font-serif text-mi">{person.native_hist || '不详'}</p>
+        {person.native_modern && <p class="text-xs text-miDim/70">今：{person.native_modern}</p>}
+      </div>
+    </section>
+
+    {person.bio_short && <p class="mt-6 font-serif text-sm leading-7 text-mi/90">{person.bio_short}</p>}
+
+    {/* 仕途行迹（文本详录；品级阶梯图见星图人物帖） */}
+    {sortedEvents.length > 0 && (
+      <section class="mt-8">
+        <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">仕途行迹</h2>
+        <div class="relative ml-2 mt-4 border-l border-jin/25 pl-4">
+          {sortedEvents.map((e: any) => (
+            <div class="relative mb-4">
+              <span class="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai bg-jin/70" />
+              <div class="flex flex-wrap items-baseline gap-2">
+                <span class="font-serif text-xs text-jin/90">{e.year ? `${e.year} 年` : e.year_label}</span>
+                <span class="font-serif text-sm text-mi">{e.title}</span>
+                {e.office && <span class="text-xs text-miDim">{e.office}</span>}
+                {e.source_id && sourceById.get(e.source_id) && (
+                  <span class="rounded border border-miDim/30 px-1 text-[10px] text-miDim" title={(sourceById.get(e.source_id) as any).title}>
+                    {(sourceById.get(e.source_id) as any).tier} 级
+                  </span>
+                )}
+              </div>
+              {e.description && <p class="mt-1 text-xs leading-5 text-miDim">{e.description}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* 留白页 */}
+    {!hasDetail && (
+      <section class="mt-10 rounded-lg border border-dashed border-miDim/25 p-8 text-center">
+        <p class="font-serif text-lg tracking-[0.3em] text-miDim/80">榜上有名 · 史中无痕</p>
+        <p class="mt-3 font-kai text-xs leading-6 text-miDim/60">
+          现存记载仅余姓名与科年。空白不是缺漏，是文献存佚的真实——本站不为任何人编造字段。
+        </p>
+      </section>
+    )}
+
+    {/* 出处 */}
+    {(person.sources ?? []).length > 0 && (
+      <section class="mt-8">
+        <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">史料出处</h2>
+        <ul class="mt-3 space-y-2.5">
+          {person.sources.map((s: any) => (
+            <li class="rounded-lg border border-miDim/15 bg-dai/40 p-3 text-xs">
+              <div class="flex items-center gap-2">
+                <span class={`inline-flex h-4 w-4 items-center justify-center rounded-sm border text-[10px] font-bold ${
+                  s.tier === 'A' ? 'border-jin/50 bg-jin/20 text-jin' : s.tier === 'B' ? 'border-[#5DCAA5]/40 bg-teal-400/10 text-[#5DCAA5]' : 'border-miDim/40 bg-miDim/10 text-miDim'
+                }`}>{s.tier}</span>
+                <span class="font-serif font-bold text-mi">{s.title}{s.juan ? ` · ${s.juan}` : ''}</span>
+                <span class="text-miDim/60">{TIER_LABEL[s.tier] ?? ''}</span>
+              </div>
+              {s.quote && <p class="mt-1.5 font-kai leading-6 text-miDim">{s.quote}</p>}
+              {s.url && <a href={s.url} target="_blank" rel="noopener" class="mt-1 inline-block text-jin/70 underline hover:text-jin">核查原文 →</a>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {/* 回星图（同构浮层入口） */}
+    <div class="mt-10 border-t border-jin/15 pt-5 text-center">
+      <a href={`/?p=${person.id}`} class="inline-block rounded-full border border-jin/50 px-5 py-2 font-serif text-sm text-jin transition hover:bg-jin/10">
+        在星河中打开 {person.name} 的星 →
+      </a>
+    </div>
+  </main>
+</BaseLayout>

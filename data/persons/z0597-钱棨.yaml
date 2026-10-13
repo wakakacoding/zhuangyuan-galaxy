@@ -1,0 +1,36 @@
+id: z0597
+name: 钱棨
+zi: 振威
+hao: 湘舲
+dynasty: qing
+exam_year: 1781
+reign: 乾隆
+birth_year: 1734
+death_year: 1799
+native_hist: 江苏省苏州府长洲县
+native_modern: 江苏省苏州市
+ke_ci: 乾隆四十六年辛丑科
+bio_short: 清代第一位连中三元者（上距明代商辂已三百余年）。苏州"三元坊"地名即因他而立，是江南科举文化鼎盛期的象征。
+tags:
+  - 三元及第
+  - 苏州
+events:
+  - year: 1781
+    type: 夺魁
+    title: 乾隆四十六年辛丑科状元，连中三元
+    description: 清代开国以来首位三元及第，高宗亲赋《三元诗》志庆，苏州府建"三元坊"表其里。
+    source_id: s0002
+  - year: 1781
+    type: 授官
+    title: 授翰林院修撰
+    source_id: s0002
+    office: 翰林院修撰
+    rank_grade: 6.5
+  - year: 1799
+    type: 卒
+    title: 卒于云南学政任上
+    description: 嘉庆四年卒于云南学政任内，年六十六。
+    source_id: s0010
+    office: 内阁学士、云南学政
+    rank_grade: 2.5
+    estimated: true

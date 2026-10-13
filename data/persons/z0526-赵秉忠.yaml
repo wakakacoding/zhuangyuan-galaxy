@@ -1,0 +1,39 @@
+id: z0526
+name: 赵秉忠
+zi: 季卿
+dynasty: ming
+exam_year: 1598
+reign: 万历
+birth_year: 1574
+death_year: 1626
+native_hist: 山东青州府益都县
+native_modern: 山东省潍坊市青州市
+ke_ci: 万历二十六年戊戌科
+bio_short: 万历二十六年状元，官至礼部尚书。其殿试真卷1983年于青州发现，系现存唯一明代状元殿试卷，为国家一级文物——"状元"二字由此从纸面走入实物。
+tags:
+  - 殿试卷存世
+events:
+  - year: 1598
+    type: 夺魁
+    title: 万历二十六年戊戌科状元
+    description: 殿试卷以"第一甲第一名"朱批传世，卷面2460字无一涂改。
+    source_id: s0002
+    office: 翰林院修撰
+    rank_grade: 6.5
+  - year_label: 天启年间
+    precision: circa
+    type: 升迁
+    title: 官至礼部尚书
+    description: 魏忠贤专权期间渐受排挤，不久致仕归乡。
+    source_id: s0004
+    office: 礼部尚书
+    rank_grade: 2
+  - year: 1626
+    type: 卒
+    title: 天启六年卒
+    source_id: s0004
+  - year: 1983
+    type: 轶事
+    title: 殿试卷重现于世
+    description: 其后人将家传384年的殿试真卷捐赠青州博物馆，为海内外孤本。卷首万历帝朱批"第一甲第一名"六字完好如新。
+    source_id: s0014

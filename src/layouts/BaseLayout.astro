@@ -1,0 +1,58 @@
+---
+import '@fontsource/noto-serif-sc/400.css';
+import '@fontsource/noto-serif-sc/700.css';
+import ShareButton from '../components/shell/ShareButton';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = '一眼望尽 1283 年：从唐武德五年到清光绪三十年，654 位状元的人生星河' } = Astro.props;
+const nav = [
+  { href: '/', label: '星图' },
+  { href: '/map', label: '籍贯地图' },
+  { href: '/network', label: '关系网络' },
+  { href: '/insights', label: '数据问答' },
+  { href: '/about', label: '关于数据' },
+];
+const current = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} · 状元星河</title>
+  </head>
+  <body class="min-h-screen bg-xuan font-serif text-mi antialiased">
+    <nav class="flex h-12 items-center gap-1 border-b border-jin/20 bg-xuan/95 px-4 backdrop-blur">
+      <a href="/" class="mr-4 flex items-baseline gap-2">
+        <span class="text-lg font-bold tracking-widest text-jin">状元星河</span>
+        <span class="hidden text-[10px] tracking-[0.3em] text-miDim sm:inline">622 – 1904</span>
+      </a>
+      <div class="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto">
+        {nav.map((n) => (
+          <a
+            href={n.href}
+            class={`whitespace-nowrap rounded px-2.5 py-1.5 text-sm transition-colors sm:px-3 ${
+              current === n.href ? 'bg-jin/15 text-jin' : 'text-miDim hover:text-mi'
+            }`}
+          >
+            {n.label}
+          </a>
+        ))}
+      </div>
+      <ShareButton client:load />
+    </nav>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  ::selection { background: rgba(201, 162, 39, 0.35); }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: rgba(154, 165, 177, 0.25); border-radius: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+</style>

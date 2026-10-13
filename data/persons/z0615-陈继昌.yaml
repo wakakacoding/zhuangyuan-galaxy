@@ -1,0 +1,40 @@
+id: z0615
+name: 陈继昌
+zi: 哲臣
+hao: 莲史
+dynasty: qing
+exam_year: 1820
+reign: 嘉庆
+birth_year: 1791
+death_year: 1849
+native_hist: 广西省桂林府临桂县
+native_modern: 广西桂林市
+ke_ci: 嘉庆二十五年庚辰科
+bio_short: 中国科举史上最后一位连中三元者。桂林正阳门城楼上至今保存着道光年间为其镌刻的"三元及第"石坊题额。
+tags:
+  - 三元及第
+  - 桂林
+events:
+  - year: 1820
+    type: 夺魁
+    title: 嘉庆二十五年庚辰科状元，连中三元
+    description: 自唐代崔元翰、张又新以来，三元及第者代不数人；陈继昌之后科举再无三元。
+    source_id: s0002
+  - year: 1820
+    type: 授官
+    title: 授翰林院修撰
+    source_id: s0002
+    office: 翰林院修撰
+    rank_grade: 6.5
+  - year_label: 道光年间
+    precision: range
+    type: 轶事
+    title: 「三元及第」坊立桂林
+    description: 道光年间于桂林正阳门为其立"三元及第"石坊，今为桂林地标之一。
+    source_id: s0015
+  - year: 1849
+    type: 卒
+    title: 道光二十九年卒
+    source_id: s0010
+    office: 江宁布政使
+    rank_grade: 2.5

@@ -1,0 +1,5181 @@
+{{Expand|time=2008-06-13}}
+{{refimprove|time=2019-04-11}}
+{{noteTA|G1=姓氏}}
+'''中國狀元列表'''，收錄了[[中國]]自[[科舉]]制度開始後，歷朝所有獲得[[狀元]]的人物。
+
+==总览==
+{{main category|中國各地狀元}}
+{| class="wikitable sortable" width=100%
+!noWrap|朝代
+!noWrap|开科次数
+!noWrap|状元人数
+!noWrap|备註
+|-
+|[[隋朝]]
+|align ="center"|
+|align ="center"|7<br />（进士）
+|[[隋代]]国祚短暂，推行[[科举]]考试取得进士资格之制度，此为可稽文字资料的隋朝进士
+|-
+|[[唐朝]]
+|align ="center"|263
+|align ="center"|164
+|唐开科次数一说270
+|-
+|[[五代十国]]
+|align ="center"|47
+|align ="center"|31
+|
+|-
+|[[宋朝]]
+|align ="center"|118
+|align ="center"|119<ref>不计南唐梁颢；宣和六年加开特恩科，因此有2位状元</ref>
+|據[[朱希召]]的《宋歷科狀元錄》。計[[北宋]]70人，[[南宋]]49人。
+|-
+|[[辽朝]]
+|align ="center"|56
+|align ="center"|56
+|
+|-
+|[[西夏]]
+|align ="center"|不详
+|align ="center"|1
+|
+|-
+|[[金朝]]
+|align ="center"|38(约)
+|align ="center"|60
+|
+|-
+|[[元朝]]
+|align ="center"|17
+|align ="center"|33
+|1238年戊戌选试，状元1人，1315年开始，按汉人南人、蒙古人色目人分列左、右榜，故每科取2名状元
+|-
+|[[明朝]]
+|align ="center"|90
+|align ="center"|90
+|不含[[崇祯]]十五年壬午科恩赐[[史惇]]榜
+|-
+|[[大西国]]
+|align ="center"|1
+|align ="center"|1
+|
+|-
+|[[清朝]]
+|align ="center"|112
+|align ="center"|114
+|
+|-
+|[[太平天国]]
+|align ="center"|15(约)
+|align ="center"|15
+|
+|-
+!align ="center"|合计
+!align ="center"|757
+!align ="center"|691
+!
+|}
+
+==隋朝進士==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!noWrap|備註
+|-
+|align ="center"|
+|
+|noWrap|[[张损之]]
+|align ="center"|
+|江苏人
+|
+|-
+|align ="center"|605年
+|[[大業]]元年
+|[[黄凤麟]]
+|align ="center"|555年－626年
+|湖北江夏郡黃州黃岡縣黃鶴鄉仁義村人
+|
+|-
+|align ="center"|
+|
+|[[孙伏伽]]
+|align ="center" style="white-space:nowrap;"|？－658年
+|[[貝州]][[武城]]人
+|
+|-
+|align ="center"|
+|
+|[[侯君素]]
+|align ="center"|
+|魏郡临漳（今河北临漳县）人
+|
+|-
+|align ="center"|
+|
+|[[杨纂 (隋朝)|杨纂]]
+|align ="center"|？~650年
+|华州华阴人(今陕西渭南市华阴)人
+|祖父[[杨俭]]；父永平公[[杨文伟]]
+|-
+|align ="center"|
+|
+|[[房玄龄]]
+|align ="center" noWrap|579年－648年
+|[[齊州]][[臨淄]]人
+|
+|-
+|align ="center"|
+|
+|[[温彦博]]
+|align ="center"|574年--637年
+|太原郡祁人
+|
+|}
+
+==唐朝状元==
+{{Main|唐朝狀元列表}}</noinclude> <noinclude>
+{| class="wikitable sortable" width="100%"
+! nowrap="" |西曆
+! nowrap="" |中曆
+! nowrap="" |姓名
+! nowrap="" |生卒年
+! nowrap="" |籍貫
+! nowrap="" |備註
+|-
+| align="center" nowrap="" |622年
+|[[武德]]五年
+|[[孙伏伽]]
+| align="center" style="white-space:nowrap;" |？－658年
+|[[貝州]][[武城]]人
+|
+|-
+| align="center" nowrap="" |649年
+|[[貞觀]]二十三年
+|[[婁師德]]
+| align="center" style="white-space:nowrap;" |630年－699年
+|郑州原武（今原阳县）人
+|
+|-
+| align="center" nowrap="" |651年
+|[[永徽]]二年
+|[[顏康成]]
+| align="center" style="white-space:nowrap;" |
+|曲阜人
+|
+|-
+| align="center" |653年
+|[[永徽]]四年癸丑科
+|[[员半千]]
+| align="center" |621年～714年
+|齐州全节人
+|唐代将领
+|-
+| align="center" |670年
+|[[總章]]三年
+|[[宋守节]]
+| align="center" |
+|
+|
+|-
+| align="center" |671年
+|[[咸享]]二年
+|[[弓嗣初]]
+| align="center" |
+|
+|
+|-
+| align="center" |674年
+|[[上元 (唐高宗)|上元]]元年甲戌科
+|[[程行谋]]
+| align="center" |644年--726年
+|华州郑县(今陕西华县)人
+|程则，[[御史大夫]]赠右丞相
+|-
+| align="center" |675年
+|[[上元 (唐高宗)|上元]]二年乙亥科
+|[[鄭益 (唐朝進士)|鄭益]]
+| align="center" |
+|
+|
+|-
+| align="center" |680年
+|[[永隆 (唐朝)|永隆]]元年
+|[[许且]]
+| align="center" |
+|
+|
+|-
+| align="center" |681年
+|[[永隆 (唐朝)|永隆]]二年
+|[[梁旲]]
+| align="center" |646年--711年
+|安定泾川人
+|授予[[国子四门]][[博士]]，迁邺城令、颍川令
+|-
+| align="center" |684年
+|[[文明 (唐朝)|文明]]元年甲申科
+|[[陳伯玉]](陈子昂)
+| align="center" |661年～702年
+|梓州遂寧市射洪縣人
+|唐之詩祖，古文運動的先驅者。因曾任右拾遺，後世稱陳拾遺
+|-
+| align="center" |685年
+|[[垂拱]]元年乙酉科
+|[[吴师道]]
+| align="center" |
+|邺县人
+|
+|-
+| align="center" |687年
+|[[垂拱]]三年丁亥科
+|[[郭元振]]
+| align="center" |656年－713年
+|魏州贵乡人
+|唐代将领、宰相
+|-
+| align="center" |695年
+|[[证圣]]元年乙未科
+|[[贺知章]]
+| align="center" |659年~744年
+|[[越州]][[永兴]]人
+|授予国子四门博士，迁太常博士
+|-
+| align="center" |702年
+|[[長安 (年號)|長安]]二年壬寅科
+|[[張九齡]]
+| align="center" |678年－740年
+|广东韶关人
+|
+|-
+| align="center" |706年
+|[[神龍 (年號)|神龍]]二年丙午科
+|[[姚仲豫]]
+| align="center" |
+|
+|
+|-
+| align="center" |712年
+|[[景雲]]三年壬子科
+|[[崔液]]
+| align="center" |约675年~714年
+|[[定州]]安喜人
+|
+|-
+| align="center" |713年
+|[[開元]]元年癸丑科
+|[[常无名]]
+| align="center" |688年－744年
+|[[河内]]温人
+|
+|-
+| align="center" |714年
+|[[開元]]二年甲寅科
+|[[李昂]]
+|
+|
+|-
+| align="center" |715年
+|[[開元]]三年乙卯科
+|[[杨仲昌]]
+| align="center" |668年－741年
+|虢州閺鄉人
+|河阳尉对策，[[唐玄宗]]擢第一，授蒲州法曹参军
+|-
+| align="center" |716年
+|開元四年丙辰科
+|[[范崇凯]]
+| align="center" |
+|四川内江人
+|
+|-
+| align="center" |721年
+|開元九年辛酉科
+|[[王维]]
+| align="center" nowrap="" |701年－761年
+|原籍山西祁县，迁河东蒲州
+|
+|-
+| align="center" |723年
+|開元十一年癸亥科
+|[[源少良]]
+| align="center" |
+|河南安阳人
+|官拜监察御史
+|-
+| align="center" |724年
+|開元十二年甲子科
+|[[杜绾]]
+| align="center" |
+|京兆万年人
+|
+|-
+| align="center" |726年
+|開元十四年丙寅科
+|[[严迪]]
+| align="center" |
+|
+|
+|-
+| align="center" |727年
+|開元十五年丁卯科
+|[[李嶷]]
+| align="center" |
+|赵郡赞皇（今属河北）人
+|
+|-
+| align="center" |728年
+|開元十六年戊辰科
+|[[虞咸]]
+| align="center" |
+|
+|
+|-
+| align="center" |729年
+|開元十七年己巳科
+|[[王正卿]]
+| align="center" |
+|
+|
+|-
+| align="center" |733年
+|開元二十一年癸酉科
+|[[徐徵]]
+| align="center" |700年－765年
+|浙江信安人
+|
+|-
+| align="center" |734年
+|開元二十二年甲戌科
+|[[李琚 (状元)|李琚]]
+| align="center" |694年－748年
+|[[顿丘]]人
+|
+|-
+| align="center" |735年
+|開元二十三年乙亥科
+|[[贾至]]
+| align="center" |728年？－772年
+|洛阳人
+|
+|-
+| align="center" |736年
+|開元二十四年丙子科
+|[[王季友]]
+| align="center" |714年－794年
+|洪州南昌人
+|
+|-
+| align="center" |739年
+|開元二十七年己卯科
+|[[崔曙]]
+| align="center" |？－739年
+|河南商丘人
+|
+|-
+| align="center" |742年
+|[[天寶 (唐朝)|天寶]]元年壬午科
+|[[王阅]]
+| align="center" |
+|
+|
+|-
+| align="center" |743年
+|天寶二年癸未科
+|[[刘单]]
+| align="center" |
+|陕西岐山人
+|
+|-
+| align="center" |744年
+|[[天宝 (唐朝)|天寶]]三載甲申科
+|[[赵岳]]
+| align="center" |
+|
+|
+|-
+| align="center" |746年
+|天寶五載丙戌科
+|[[羊袭吉]]
+| align="center" |
+|
+|
+|-
+| align="center" |747年
+|天寶六載丁亥科
+|[[杨护]]
+| align="center" |
+|
+|
+|-
+| align="center" |748年
+|天寶七載戊子科
+|[[杨誉]]
+| align="center" |
+|
+|
+|-
+| align="center" |751年
+|天寶十載辛卯科
+|[[李巨卿]]
+| align="center" |
+|
+|
+|-
+| align="center" |753年
+|天寶十二載癸巳科
+|[[杨儇]]
+| align="center" |
+|
+|
+|-
+| align="center" |754年
+|天寶十三載甲午科
+|[[杨纮]]
+| align="center" |
+|
+|
+|-
+| align="center" |755年
+|天寶十四載乙未科
+|[[常衮]]
+| align="center" |729年－783年
+|
+|
+|-
+| align="center" |756年
+|天寶十五載丙申科
+|[[卢庚]]
+| align="center" |
+|
+|
+|-
+| align="center" |763年
+|[[寶應 (年號)|寶應]]二年癸卯科
+|[[洪源]]
+| align="center" |
+|
+|
+|-
+| align="center" |764年
+|[[廣德 (唐朝)|廣德]]二年甲辰科
+|[[杨栖梧]]
+| align="center" |
+|
+|
+|-
+| align="center" |765年
+|[[永泰 (唐朝)|永泰]]元年乙巳科
+|[[萧遘]]
+| align="center" |？－887年
+|
+|
+|-
+| align="center" |769年
+|[[大曆]]四年己酉科
+|[[齐映]]
+| align="center" |747年－795年
+|
+|
+|-
+| align="center" |770年
+|大曆五年庚戌科
+|[[李博 (唐朝)|李博]]
+| align="center" |
+|
+|
+|-
+| align="center" |771年
+|大曆六年辛亥科
+|[[王溆]]
+| align="center" |
+|
+|
+|-
+| align="center" |772年
+|大曆七年壬子科
+|[[张式]]
+| align="center" |
+|
+|
+|-
+| align="center" |774年
+|大曆九年甲寅科
+|[[杨凭]]
+| align="center" |
+|
+|
+|-
+| align="center" |776年
+|大曆十一年丙辰科
+|[[黎逢]]
+| align="center" |
+|
+|
+|-
+| align="center" |777年
+|大曆十二年丁巳科
+|[[丁泽]]
+| align="center" |
+|
+|
+|-
+| align="center" |778年
+|大曆十三年戊午科
+|[[杨凝]]
+| align="center" |？－803年
+|
+|
+|-
+| align="center" |779年
+|大曆十四年己未科
+|[[王储]]
+| align="center" |
+|
+|
+|-
+| align="center" |780年
+|[[建中 (唐朝)|建中]]元年庚申科
+|[[魏弘簡 (唐朝狀元)|魏弘簡]]
+| align="center" |757年－804年
+|
+|
+|-
+| align="center" |781年
+|建中二年辛酉科
+|[[崔元翰]]
+| align="center" |729年—795年
+|
+|[[三元及第]]
+|-
+| align="center" |782年
+|[[建中]]三年壬戌科
+|[[梁肃]]
+| align="center" |753年－793年
+|安定乌氏人
+|唐代[[古文运动]]先驱，散文家。召为[[监察御史]]，转左补阙、翰林学士、[[皇太子]]诸王侍读。卒后赠礼部郎中
+|-
+| align="center" |783年
+|建中四年癸亥科
+|[[薛展]]
+| align="center" |？—798年
+|
+|
+|-
+| align="center" |785年
+|[[貞元 (唐朝)|貞元]]元年乙丑科
+|[[郑全济]]
+| align="center" |
+|
+|
+|-
+| align="center" |786年
+|貞元二年丙寅科
+|[[張正甫 (唐朝)|张正甫]]
+| align="center" |751年－834年
+|
+|
+|-
+| align="center" |787年
+|貞元三年丁卯科
+|[[牛锡庶]]
+| align="center" |
+|
+|
+|-
+| align="center" |789年
+|貞元五年己巳科
+|[[卢顼]]
+| align="center" |
+|
+|
+|-
+| align="center" |791年
+|貞元七年辛未科
+|[[尹枢]]
+| align="center" |
+|
+|
+|-
+| align="center" |792年
+|貞元八年壬申科
+|[[贾稜]]
+| align="center" |
+|
+|
+|-
+| align="center" |793年
+|貞元九年癸酉科
+|[[苑论]]
+| align="center" |
+|
+|
+|-
+| align="center" |794年
+|貞元十年甲戌科
+|[[陈讽]]
+| align="center" |
+|
+|
+|-
+| align="center" |796年
+|貞元十二年丙子科
+|[[李程]]
+| align="center" |
+|
+|
+|-
+| align="center" |797年
+|貞元十三年丁丑科
+|[[郑巨源]]
+| align="center" |
+|
+|
+|-
+| align="center" |798年
+|貞元十四年戊寅科{{Anchor|李随}}
+|[[李随]]
+| align="center" |
+|
+|
+|-
+| align="center" |799年
+|貞元十五年己卯科
+|[[封孟绅]]
+| align="center" |
+|
+|
+|-
+| align="center" |800年
+|貞元十六年庚辰科
+|[[陈权]]
+| align="center" |
+|
+|
+|-
+| align="center" |801年
+|貞元十七年辛巳科
+|[[班肃]]
+| align="center" |
+|
+|
+|-
+| align="center" |802年
+|貞元十八年壬午科
+|[[徐晦]]
+| align="center" |760年－838年
+|
+|
+|-
+| align="center" |806年
+|[[元和 (唐朝)|元和]]元年丙戌科
+|[[武翊黄]]
+| align="center" |
+|
+|
+|-
+| align="center" |807年
+|元和二年丁亥科
+|[[王源中]]
+| align="center" |？－838年
+|
+|
+|-
+| align="center" |808年
+|元和三年戊子科
+|[[郑肃]]
+| align="center" |778年－865年
+|
+|
+|-
+| align="center" |809年
+|元和四年己丑科
+|[[韋瓘 (唐朝)|韦瓘]]
+| align="center" |
+|
+|
+|-
+| align="center" |810年
+|元和五年庚寅科
+|[[李顾行]]
+| align="center" |
+|
+|
+|-
+| align="center" |811年
+|元和六年辛卯科
+|[[孔敏行]]
+| align="center" |
+|
+|孔子三十九代孙，[[孔述睿]]子
+|-
+| align="center" |812年
+|元和七年壬辰科
+|[[李固言]]
+| align="center" |782年－860年
+|
+|有[[口吃]]
+|-
+| align="center" |813年
+|元和八年癸巳科
+|[[尹极]]
+| align="center" |
+|
+|
+|-
+| align="center" |814年
+|元和九年甲午科
+|[[张又新]]
+| align="center" |
+|
+|[[三元及第]]
+|-
+| align="center" |815年
+|元和十年乙巳科
+|[[王质]]，字華卿
+| align="center" |？-836年
+|絳州龍門（今山西省河津縣)人
+|歷官侍御史、山南西道節度副使
+|-
+| align="center" |816年
+|元和十一年丙申科
+|[[郑澥]]
+| align="center" |
+|
+|
+|-
+| align="center" |818年
+|元和十三年戊戌科
+|[[独孤樟]]
+| align="center" |
+|
+|
+|-
+| align="center" |819年
+|元和十四年己亥科
+|[[韋諶 (唐朝)|韦谌]]
+| align="center" |
+|
+|
+|-
+| align="center" |820年
+|元和十五年庚子科
+|[[卢储 (唐朝)|卢储]]
+| align="center" |
+|<nowiki>一说庐州合肥人|</nowiki>
+|-
+| align="center" |822年
+|[[長慶]]二年壬寅科
+|[[白敏中]]
+| align="center" |792年－861年
+|
+|
+|-
+| align="center" |823年
+|長慶三年癸卯科
+|[[郑冠]]
+| align="center" |
+|
+|
+|-
+| align="center" |824年
+|長慶四年甲辰科
+|[[李群 (唐朝)|李群]]
+| align="center" |
+|<nowiki>庐州合肥人|</nowiki>
+|-
+| align="center" |825年
+|[[寶曆 (唐朝)|寶曆]]元年乙巳科
+|[[柳璟]]
+| align="center" |
+|
+|
+|-
+| align="center" |826年
+|寶曆二年丙午科
+|[[裴俅]]
+| align="center" |
+|
+|
+|-
+| align="center" |827年
+|[[大和 (唐朝)|大和]]元年丁未科
+|[[李郃]]
+| align="center" |808年－873年
+|
+|
+|-
+| align="center" |828年
+|[[大和 (唐朝)|大和]]二年戊申科
+|[[韦筹]]
+| align="center" |
+|
+|
+|-
+| align="center" |829年
+|大和三年己酉科
+|[[李远]]
+| align="center" |
+|[[云阳]]人
+|
+|-
+| align="center" |830年
+|大和四年庚戌科
+|[[宋刓]]
+| align="center" |
+|
+|
+|-
+| align="center" |831年
+|大和五年辛亥科
+|[[杜陟]]
+| align="center" |
+|
+|
+|-
+| align="center" |832年
+|大和六年壬子科
+|[[李珪 (唐朝)|李珪]]
+| align="center" |
+|
+|
+|-
+| align="center" |833年
+|大和七年癸丑科
+|[[李余]]
+| align="center" |
+|
+|
+|-
+| align="center" |834年
+|大和八年甲寅科
+|[[陳寬 (唐朝)|陈宽]]
+| align="center" |
+|
+|
+|-
+| align="center" |835年
+|大和九年乙卯科
+|[[郑确]]
+| align="center" |
+|
+|
+|-
+| align="center" |836年
+|[[开成]]元年丙辰科
+|[[裴文德]]
+| align="center" |
+|孟州济源人
+|考取状元召为翰林学士，後拜溈山靈祐為師，成為禪門溈仰宗[[法海 (裴文德)|法海禪師]]。
+|-
+| align="center" |837年
+|[[開成]]二年丁巳科
+|[[李肱]]
+| align="center" |
+|
+|
+|-
+| align="center" |838年
+|開成三年戊午科
+|[[裴思谦]]
+| align="center" |
+|
+|
+|-
+| align="center" |839年
+|開成四年己未科
+|[[崔囗]]
+| align="center" |
+|
+|
+|-
+| align="center" |840年
+|開成五年庚申科
+|[[李从实]]
+| align="center" |
+|
+|
+|-
+| align="center" |841年
+|[[会昌 (唐朝)|会昌]]元年辛酉科
+|[[崔岘]]
+| align="center" |
+|
+|
+|-
+| align="center" |842年
+|会昌二年壬戌科
+|[[郑颢]]
+| align="center" |817年—860年
+|
+|
+|-
+| align="center" |843年
+|会昌三年癸亥科
+|[[卢肇]]
+| align="center" |818年－？
+|
+|
+|-
+| align="center" |844年
+|会昌四年甲子科
+|[[郑言 (唐朝状元)|郑言]]
+| align="center" |
+|
+|
+|-
+| align="center" |845年
+|会昌五年乙丑科
+|[[易重]]
+| align="center" |
+|
+|
+|-
+| align="center" |846年
+|会昌六年丙寅科
+|[[狄慎思]]
+| align="center" |
+|
+|
+|-
+| align="center" |847年
+|[[大中 (唐朝)|大中]]元年丁卯科
+|[[顾标]]
+| align="center" |
+|
+|
+|-
+| align="center" |848年
+|大中二年戊辰科
+|[[卢深]]
+| align="center" |？－870年
+|
+|
+|-
+| align="center" |849年
+|大中三年己巳科
+|[[于珪]]
+| align="center" |
+|
+|
+|-
+| align="center" |850年
+|大中四年庚午科
+|[[张温琪]]
+| align="center" |
+|
+|
+|-
+| align="center" |851年
+|大中五年辛未科
+|[[李郜]]
+[[莫宣卿]]
+| align="center" |开元礼科
+
+廷试
+|
+|
+|-
+| align="center" |852年
+|大中六年壬申科
+|[[李超]]
+| align="center" |
+|
+|官拜湖州牧
+|-
+| align="center" |853年
+|大中七年癸酉科
+|[[于瓖]]
+| align="center" |
+|
+|
+|-
+| align="center" |854年
+|大中八年甲戌科
+|[[颜标]]
+| align="center" |
+|
+|
+|-
+| align="center" |855年
+|[[大中 (唐朝)|大中]]九年乙亥科
+|[[赵蒙]]
+| align="center" |
+|奉天（今陝西乾縣）人
+|官拜岭南节度使
+|-
+| align="center" |856年
+|大中十年丙子科
+|[[崔鉶]]
+| align="center" |
+|
+|
+|-
+| align="center" |858年
+|大中十二年戊寅科
+|[[李亿]]
+| align="center" |
+|
+|
+|-
+| align="center" |859年
+|大中十三年己卯科
+|[[孔纬]]
+| align="center" |?－895年
+|
+|孔子四十代孙，孔缄之兄，孔纁堂兄弟
+|-
+| align="center" |860年
+|大中十四年庚辰科
+|[[刘蒙]]
+| align="center" |
+|
+|
+|-
+| align="center" |861年
+|[[咸通]]二年辛巳科
+|[[裴延鲁]]
+| align="center" |
+|
+|
+|-
+| align="center" |862年
+|咸通三年壬午科
+|[[薛迈]]
+| align="center" |
+|
+|
+|-
+| align="center" |863年
+|咸通四年癸未科
+|[[孔振]]
+| align="center" |
+|
+|孔子四十代嫡长孙，袭封文宣公，孔拯之兄
+|-
+| align="center" |866年
+|咸通七年丙戌科
+|[[韩衮]]
+| align="center" |
+|
+|
+|-
+| align="center" |867年
+|咸通八年丁亥科
+|[[郑洪业]]
+| align="center" |
+|
+|
+|-
+| align="center" |868年
+|咸通九年戊子科
+|[[赵峻]]
+| align="center" |？845年－？
+|奉天（今陝西乾縣）人
+|
+|-
+| align="center" |869年
+|咸通十年己丑科
+|[[归仁绍]]
+| align="center" |
+|
+|
+|-
+| align="center" |871年
+|咸通十二年辛卯科
+|[[李筠 (唐朝)|李筠]]
+| align="center" |
+|
+|
+|-
+| align="center" |872年
+|咸通十三年壬辰科
+|[[郑昌图]]
+| align="center" |？－887年
+|
+|
+|-
+| align="center" |873年
+|咸通十四年癸巳科
+|[[孔纁]]
+| align="center" |
+|
+|孔子四十代孙，孔纬、孔缄堂兄弟
+|-
+| align="center" |874年
+|咸通十五年甲午科
+|[[归仁泽]]
+| align="center" |
+|
+|
+|-
+| align="center" |875年
+|[[乾符]]二年乙未科
+|[[郑合敬]]
+| align="center" |
+|
+|
+|-
+| align="center" |876年
+|乾符三年丙申科
+|[[孔缄]]
+| align="center" |
+|
+|孔子四十代孙，孔纬之弟，孔纁堂兄弟
+|-
+| align="center" |878年
+|乾符五年戊戌科
+|[[孙偓]]
+| align="center" |
+|
+|
+|-
+| align="center" |880年
+|[[廣明 (唐朝)|廣明]]元年庚子科
+|[[郑蔼]]
+| align="center" |
+|
+|
+|-
+| align="center" |882年
+|[[中和 (唐朝)|中和]]二年壬寅科
+|[[崔昭纬]]
+| align="center" |？－896年
+|
+|
+|-
+| align="center" |883年
+|中和三年癸卯科
+|[[孔拯 (唐朝)|孔拯]]
+| align="center" |
+|
+|孔子四十代孙，孔振之弟
+|-
+| align="center" |885年
+|[[光啟]]元年乙巳科
+|[[许祐孙]]
+| align="center" |
+|
+|
+|-
+| align="center" |886年
+|[[光啟]]二年丙午科
+|[[陆扆]]
+| align="center" |847年－905年
+|
+|
+|-
+| align="center" |887年
+|[[光啟]]三年丁未科
+|[[赵昌翰]]
+| align="center" |
+|奉天（今陝西乾縣）人
+|状元赵蒙之子
+|-
+| align="center" |888年
+|[[光啟]]四年戊申科
+|[[郑贻矩]]
+| align="center" |
+|
+|
+|-
+| align="center" |889年
+|[[龍紀]]元年己酉科
+|[[李瀚]]
+| align="center" |
+|
+|
+|-
+| align="center" |890年
+|[[大順 (唐朝)|大順]]元年庚戌科
+|[[杨赞禹]]
+| align="center" |
+|
+|
+|-
+| align="center" |891年
+|大順二年辛亥科
+|[[崔昭矩]]
+| align="center" |
+|
+|
+|-
+| align="center" |892年
+|[[景福 (唐朝)|景福]]元年壬子科
+|[[归黯]]
+| align="center" |
+|
+|
+|-
+| align="center" |893年
+|景福二年癸丑科
+|[[崔胶]]
+| align="center" |
+|
+|
+|-
+| align="center" |894年
+|[[乾寧]]元年甲寅科
+|[[苏检]]
+| align="center" |?－903年
+|
+|
+|-
+| align="center" |895年
+|乾寧二年乙卯科
+|[[赵观文]]
+| align="center" |
+|
+|
+|-
+| align="center" |896年
+|乾寧三年丙辰科
+|[[崔谔]]
+| align="center" |
+|
+|
+|-
+| align="center" |897年
+|乾寧四年丁巳科
+|[[杨赞图]]
+| align="center" |
+|
+|
+|-
+| align="center" |898年
+|乾寧五年戊午科
+|[[羊绍素]]
+| align="center" |
+|
+|
+|-
+| align="center" |899年
+|[[光化]]二年己未科
+|[[卢文焕]]
+| align="center" |
+|
+|
+|-
+| align="center" |900年
+|光化三年庚申科
+|[[裴格]]
+| align="center" |
+|
+|
+|-
+| align="center" |901年
+|光化四年申酉科
+|[[归佾]]
+| align="center" |
+|
+|
+|-
+| align="center" |905年
+|[[天祐 (唐朝)|天祐]]二年乙丑科
+|[[归系]]
+| align="center" |
+|
+|
+|-
+| align="center" |906年
+|天祐三年丙寅科
+|[[裴說 (唐朝)|裴说]]
+| align="center" |？－908年
+|
+|
+|-
+| align="center" |907年
+|天祐四年丁卯科
+|[[崔詹]]
+| align="center" |
+|
+|
+|}
+
+==五代十国状元==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!noWrap|備註
+|-
+|align ="center"|908年
+|[[后梁]][[開平 (年號)|开平]]二年
+|[[崔邈]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|909年
+|[[后梁]][[開平 (年號)|开平]]三年
+|[[郑雍]]
+|align ="center"|
+|襄邑(今河南省睢县)人
+|
+|-
+|align ="center"|918年
+|[[后梁]][[贞明 (后梁)|贞明]]四年
+|[[陈逖]]
+|align ="center"|890年~952年
+|福建泉州人
+|
+|-
+|align ="center"|924年
+|[[后唐]][[同光]]二年
+|[[崔光表]]
+|align ="center"|
+|河北清河人
+|
+|-
+|align ="center"|925年
+|[[后唐]][[同光]]三年
+|[[王彻]]
+|align ="center"|
+|琅邪临沂人
+|
+|-
+|align ="center"|926年
+|[[后唐]][[同光]]四年
+|[[王归璞]]
+|align ="center"|
+|四川[[简阳]]人
+|
+|-
+|align ="center"|927年
+|[[后唐]][[天成 (后唐)|天成]]二年
+|[[黄仁颖]]
+|align ="center"|
+|[[三山]][[莆阳]]人
+|
+|-
+|align ="center"|928年
+|[[后唐]][[天成 (后唐)|天成]]三年
+|[[郭晙]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|932年
+|后唐[[长兴 (年号)|长兴]]三年
+|[[卢华]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|943年
+|style="white-space:nowrap;"|[[南唐]][[保大 (南唐)|保大]]元年
+|[[伍乔]]
+|align ="center"|
+|[[廬江]]人
+|
+|-
+|align ="center"|945年
+|[[后晋]][[开运 (后晋)|开运]]二年
+|[[寇湘]]
+|align ="center"|
+|[[华州]][[下邽]]人
+|
+|-
+|align ="center"|948年
+|[[後漢]][[乾祐 (后汉)|乾祐]]元年
+|[[王溥]]
+|align ="center" style="white-space:nowrap;"|922年－982年
+|[[并州]][[祁縣]]人
+|
+|-
+|align ="center"|950年
+|後漢[[乾祐 (后汉)|乾祐]]三年
+|[[王樸 (後周)|王樸]]
+|align ="center"|906年－959年
+|[[東平]]人
+|
+|-
+|align ="center"|952年
+|[[後周]][[廣順]]二年
+|[[扈载]]
+|align ="center"|922年－957年
+|[[幽州]][[安次]]人
+|
+|-
+|align ="center"|920年
+|[[南汉]][[乾亨 (南汉)|乾亨]]四年
+|[[简文会]]
+|align ="center"|900年~958年
+|湖北咸宁人
+|南漢第一位狀元
+|-
+|align ="center"|925年
+|[[南汉]][[白龙 (刘䶮)|白龙]]元年
+|[[梁嵩]]
+|align ="center"|
+|广西[[龚州]]人
+|南漢狀元
+|-
+|align ="center"|952年
+|[[南唐]][[保大 (南唐)|保大]]十年
+|[[王克贞]]
+|align ="center"|
+|江西吉安人
+|
+
+|-
+|align ="center"|959年
+|[[后周]][[显德]]六年
+|[[舒雅]]
+|align ="center"|
+|[[歙州]]人
+|
+
+|-
+|align ="center"|962年
+|[[南唐]][[建隆]]三年
+|[[乐史]]
+|align ="center"|930年~1007年
+|江西[[宜黄]]人
+|
+|-
+|align ="center"|963年
+|[[南唐]][[建隆]]四年
+|[[邱旭]]
+|align ="center"|
+|安徽宣城人
+|
+|-
+
+|align ="center"|964年
+|南唐[[乾德 (北宋)|乾德]]二年
+|[[王崇古 (南唐)|王崇古]]
+|align ="center"|
+|江西[[庐陵]]人
+|
+|-
+|align ="center"|965年
+|南唐[[乾德 (北宋)|乾德]]三年
+|[[费黄裳]]
+|align ="center"|
+|四川[[广都]]人
+|後蜀末代狀元
+|-
+|align ="center"|966年
+|[[南唐]][[乾德 (北宋)|乾德]]四年
+|[[卢郢]]
+|align ="center"|
+|金陵人
+|
+|-
+|align ="center"|967年
+|[[南唐]][[乾德 (北宋)|乾德]]五年
+|[[姚端]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|968年
+|[[南唐]][[乾德 (北宋)|乾德]]六年
+|[[郎粲]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|970年
+|[[南唐]][[后主]]庚午年
+|[[章文谷]]
+|align ="center"|
+|[[浦城]]人
+|
+|-
+|align ="center"|971年
+|[[南唐]][[后主]]辛未年
+|[[邓及]]
+|align ="center"|
+|南昌[[新建]]人
+|
+|-
+|align ="center"|972年
+|[[南唐]][[后主]][[壬申]]年
+|[[杨遂]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|973年
+|[[南唐]][[后主]][[癸酉]]年
+|[[赵绮]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|975年
+|[[南唐]][[后主]][[乙亥]]年<br>[[北宋]][[开宝]]八年
+|[[张确]]
+|align ="center"|
+|
+|南唐末代状元
+|}
+
+==宋朝状元==
+{{Main|宋朝狀元列表}}</noinclude>
+{| class="wikitable sortable" width="100%"
+! nowrap="" |西曆
+! nowrap="" |中曆
+! nowrap="" |姓名
+! nowrap="" |生卒年
+! nowrap="" |籍貫
+! nowrap="" |備註
+|-
+| align="center" |960年
+|[[建隆]]元年
+|[[杨砺]]
+| align="center" |930年－999年
+|[[京兆]][[鄠]]人
+|
+|-
+| align="center" |961年
+|建隆二年
+| style="white-space:nowrap;" |[[张去华]]
+| align="center" |938年－1006年
+|[[開封]][[襄邑]]人
+|
+|-
+| align="center" |962年
+|建隆三年
+|[[马适]]
+| align="center" |
+|[[九江]][[湖口縣|湖口]]人
+|
+|-
+| align="center" |963年
+|建隆四年
+|[[苏德祥]]
+| align="center" |
+|山东潍坊[[青州]]人
+|
+|-
+| align="center" |964年
+|[[乾德 (北宋)|乾德]]二年
+|[[李景阳]]
+| align="center" |
+|
+|
+|-
+| align="center" |965年
+|乾德三年
+|[[刘察]]
+| align="center" |
+|
+|
+|-
+| align="center" |966年
+|乾德四年
+|[[李肃 (北宋)|李肃]]
+| align="center" |
+|[[開封府]]人
+|
+|-
+| align="center" |967年
+|乾德五年
+|[[刘蒙叟]]
+| align="center" |约933年~？
+|[[寧陵]]人
+|
+|-
+| align="center" |968年
+|乾德六年
+|[[柴成务]]
+| align="center" |934年~1004年
+|曹州济阴人
+|
+|-
+| align="center" |969年
+|[[開寶]]二年
+|[[安德裕]]
+| align="center" |940年－1002年
+|[[河南]]人
+|子[[安守亮]]後亦中狀元。
+|-
+| align="center" |970年
+|開寶三年
+|[[张拱]]
+| align="center" |
+|
+|
+|-
+| align="center" |971年
+|開寶四年
+|[[刘寅]]
+| align="center" |
+|
+|
+|-
+| align="center" |972年
+|開寶五年
+|[[安守亮]]
+| align="center" |
+|[[河南]]人
+|父[[安德裕]]亦曾中狀元。
+|-
+| align="center" |973年
+|开宝六年
+|[[宋准]]
+| align="center" |937年~989年
+|开封[[雍丘]]人
+|
+|-
+| align="center" |974年
+|开宝七年，[[赵匡胤]]收复南唐时(甲戌年)
+|梁颢(字正伟)
+| align="center" |892年~976年
+|[[润州]]人
+|年八十二高中状元
+|-
+| align="center" |975年
+|開寶八年
+|[[王嗣宗]]
+| align="center" |944年~1025年
+|山西汾阳人
+|與[[陳識]]同時交卷，後以[[摔角]]分勝負。
+|-
+| align="center" |977年
+| style="white-space:nowrap;" |[[太平興國]]二年
+|[[吕蒙正]]
+| align="center" |946年~1011年
+|[[河南]][[洛陽]]人
+|
+|-
+| align="center" |978年
+|大平興國三年
+|[[胡旦]]
+| align="center" |955年~1034年
+|[[濱州]][[渤海]]人
+|
+|-
+| align="center" |980年
+|太平興國五年
+|[[苏易简]]
+| align="center" |958年－996年
+|[[梓州]][[銅山]]人
+|
+|-
+| align="center" |983年
+|太平興國八年
+|[[王世则]]
+| align="center" |963年~1008年
+|[[桂林]]永福县人
+|
+|-
+| align="center" |985年
+|[[雍熙]]二年
+|[[梁灏]]
+| align="center" |963年－1004年
+|[[鄆州]][[須城]]人
+|子[[梁固]]后亦中状元。
+|-
+| align="center" |988年
+|[[端拱]]元年
+|[[程宿]]
+| align="center" |971年~1000年
+|浙江衢州[[开化县|开化]]人
+|
+|-
+| align="center" |989年
+|端拱二年
+|[[陈尧叟]]
+| align="center" |961年~1017年
+|[[閬州]][[閬中]]人
+|
+|-
+| align="center" |992年
+|[[淳化 (年号)|淳化]]三年
+|[[孙何]]
+| align="center" |961年~1004年
+|？蔡州汝阳人？
+|[[三元及第]]
+|-
+| align="center" |998年
+|[[咸平]]元年
+|[[孙仅]]
+| align="center" |969年~1017年
+|河南[[汝州]]人
+|荊门孙家三凤⺀孙何、孙仅、[[孙侑]]
+|-
+| align="center" |999年
+|咸平二年
+|[[孙暨]]
+| align="center" |
+|河南汝州人
+|
+|-
+| align="center" |1000年
+|咸平三年
+|[[陈尧咨]]
+| align="center" |970年~1034年
+|[[閬州]][[閬中]]人
+|
+|-
+| align="center" |1002年
+|咸平五年
+|[[王曾]]
+| align="center" |977年一1038年
+|福建晋江人
+|[[三元及第]]
+|-
+| align="center" |1005年
+|[[景德]]二年
+|[[李迪]]
+| align="center" |971年~1047年
+|[[濮州]]人
+|
+|-
+| align="center" style="white-space:nowrap;" |1008年
+|[[大中祥符]]元年
+|[[姚晔]]
+| align="center" |958年~？
+|河南[[商水县]]化河乡姚桥村人
+|
+|-
+| align="center" style="white-space:nowrap;" |1009年
+|[[大中祥符]]二年
+|[[梁固]]
+| align="center" |985年－1017年
+|[[鄆州]][[須城]]人
+|父[[梁灏]]亦曾中状元。
+|-
+| align="center" |1011年
+|大中祥符四年
+|[[张师德]]
+| align="center" |978年~1026年
+|开封襄邑人
+|
+|-
+| align="center" |1012年
+|大中祥符五年
+|[[徐奭]]
+| align="center" |？~1030年
+|[[福建]][[建瓯|瓯宁]]人
+|
+|-
+| align="center" |1014年
+|大中祥符七年
+|[[张观 (宋朝)|张观]]
+| align="center" |
+|山西绛县人
+|
+|-
+| align="center" |1015年
+|大中样符八年
+|[[蔡齐]]
+| align="center" |988年~1039年
+|山东平度人
+|
+|-
+| align="center" |1019年
+|天禧三年
+|[[王整]]
+| align="center" |970年~？
+|河北[[大名县]]人
+|
+|-
+| align="center" |1024年
+|[[天聖]]二年
+|[[宋庠]]
+| align="center" |996年~1066年
+|开封雍丘→湖北安陆人
+|[[連中三元]]。原取宋庠弟[[宋祁]]為第一，因「長幼有序」而改取宋庠。
+|-
+| align="center" |1027年
+|天聖五年
+|[[王尧臣]]
+| align="center" style="white-space:nowrap;" |1003年－1058年
+|[[應天府]][[虞城]]人
+|
+|-
+| align="center" |1030年
+|天聖八年
+|[[王拱辰]]
+| align="center" |1012年－1085年
+|[[開封]][[咸平]]人
+|
+|-
+| align="center" |1034年
+|景祐元年
+|[[张唐卿]]
+| align="center" |1010年－1037年
+|[[山東]][[青州]]人
+|
+|-
+| align="center" |1038年
+|寶元元年
+|[[吕溱]]
+| align="center" |1014年~1068年
+|扬州人
+|
+|-
+| align="center" |1042年
+|庆历二年
+|[[楊寘]]
+| align="center" |1014年~？
+|安徽合肥人
+|[[三元及第]]。原為第四，但因第一的[[王安石]]文章犯顏，第二、第三的[[王珪]]、[[韓絳]]已有官職而改擢楊寘。<ref>宋代王銍《默記》</ref>
+|-
+| align="center" |1046年
+|慶歷六年
+|[[贾黯]]
+| align="center" |1022年－1065年
+|河南邓州[[穰县]]人
+|
+|-
+| align="center" |1049年
+|[[皇祐]]元年
+|[[冯京]]
+| align="center" |1021年－1095年
+|[[江夏郡]][[咸寧]]人
+|[[連中三元]]。
+|-
+| align="center" |1053年
+|皇祐五年
+|[[郑獬]]
+| align="center" |1022年－1072年
+|江西[[宁都]]梅江镇西门人
+|
+|-
+| align="center" |1057年
+|[[嘉祐]]二年
+|[[章衡]]
+| align="center" |1025年－1099年
+|[[福建]][[浦城]]人
+|宰相[[章惇]]之侄。
+|-
+| align="center" |1059年
+|嘉祐四年
+|[[劉輝 (宋朝)|劉煇]]
+| align="center" |1030年~1065年
+|江西[[铅山]]人
+|本名「[[劉輝 (宋朝)|劉幾]]」，因得罪主考官[[歐陽修]]而改名「劉煇」應試。
+|-
+| align="center" |1061年
+|[[嘉祐]]六年
+|[[王俊民]]
+| align="center" |
+|山东莱州[[掖县]]人
+|
+|-
+| align="center" |1063年
+|嘉祐八年
+|[[许将]]
+| align="center" |1037年一1111年
+|[[福建]][[闽县]]人
+|
+|-
+| align="center" |1065年
+|[[治平 (北宋)|治平]]二年
+|[[彭汝砺]]
+| align="center" |1042年－1095年
+|[[饒州]][[鄱陽]]人
+|
+|-
+| align="center" |1067年
+|治平四年
+|[[许安世]]
+| align="center" |1040年－1084年
+|[[開封]][[襄邑]]人
+|
+|-
+| align="center" |1070年
+|[[熙宁]]三年
+|[[叶祖洽]]
+| align="center" |1046年~1117年
+|[[福建]][[邵武]]人
+|
+|-
+| align="center" |1073年
+|熙宁六年
+|[[余中]]
+| align="center" |
+|江苏宜兴人
+|
+|-
+| align="center" |1076年
+|熙寧九年
+|[[徐铎 (宋朝)|徐铎]]
+| align="center" |1051年－1105年
+|[[福建]][[莆田]]人
+|当年的武状元是同样来自莆田的薛奕，宋神宗因而题诗“一方文武魁天下”。
+|-
+| align="center" |1079年
+|[[元丰 (北宋)|元丰]]二年
+|[[时彦]]
+| align="center" |？~1107年
+|开封府人
+|
+|-
+| align="center" |1082年
+|[[元丰 (北宋)|元豐]]五年
+|[[黃裳 (北宋)|黃裳]]
+| align="center" |1044年－1130年
+|[[福建]][[延平區|延平]]人
+|
+|-
+| align="center" |1085年
+|元豐八年
+|[[焦蹈]]
+| align="center" |
+|安徽芜湖市无为县人
+|狀元及第後6日急病而死。
+|-
+| align="center" |1088年
+|[[元祐 (年號)|元祐]]三年
+|[[李常宁]]
+| align="center" |1037年~1088年
+|开封延津人
+|
+|-
+| align="center" |1091年
+|元祐六年
+|[[马涓]]
+| align="center" |？~1126年
+|四川阆州南部人
+|
+|-
+| align="center" |1094年
+|绍圣元年
+|[[毕渐]]
+| align="center" |1029年~？
+|湖北潜江人
+|
+|-
+| align="center" |1097年
+|绍圣四年
+|[[何昌言]]
+| align="center" |1067年~1126年
+|江西临江人
+|
+|-
+| align="center" |1100年
+|元符三年
+|[[李崟]]
+| align="center" |
+|
+|
+|-
+| align="center" |1103年
+|[[崇宁]]二年
+|[[霍端友]]
+| align="center" |1066年~1116年
+|江苏武进人
+|
+|-
+| align="center" |1106年
+|崇宁五年
+|[[蔡薿]]
+| align="center" |1067年~1124年
+|开封府人
+|
+|-
+| align="center" |1109年
+|[[大觀 (年號)|大观]]三年
+|[[贾安宅]]
+| align="center" |1088-?
+|[[湖州]][[乌程]]
+|
+|-
+| align="center" |1112年
+|政和二年
+|[[莫俦]]
+| align="center" |1089年~1164年
+|[[慈利县]]人
+|
+|-
+| align="center" |1115年
+|政和五年
+|[[何栗]]
+| align="center" |1089年~1127年
+|四川[[仙井]]人
+|北宋郡馬
+|-
+| align="center" |1118年
+|[[重和]]元年
+|[[王昂]]
+| align="center" |1090年~1132年
+|扬州人
+|
+|-
+| align="center" |1121年
+|[[宣和]]三年
+|[[何焕]]
+| align="center" |
+|浙江金华永康人
+|
+|-
+| align="center" |1124年
+|宣和六年<ref>甲辰科状元</ref>
+|[[沈晦]]
+| align="center" |1084年~1149年
+|杭州钱塘县人
+|
+|-
+| align="center" |1124年
+|宣和六年<ref>[[恩科状元|特恩科状元]]</ref>
+|[[冯时行]]
+| align="center" |1100年~1163年
+|绍兴诸暨县人
+|
+|-
+| align="center" |1128年
+|[[建炎]]二年
+|[[李易 (宋朝)|李易]]
+| align="center" |？－1142年
+|[[江都]]人
+|[[南宋]]首位狀元。
+|-
+| align="center" |1132年
+|[[紹興 (南宋)|紹興]]二年
+|[[张九成]]
+| align="center" |1092年－1159年
+|河南[[开封]]人
+|
+|-
+| align="center" |1135年
+|[[紹興 (南宋)|紹興]]五年
+|[[汪应辰]]
+| align="center" |1118年－1176年
+|江西[[玉山]]人
+|
+|-
+| align="center" |1138年
+|绍兴八年
+|[[黄公度]]
+| align="center" |1109年－1156年
+|[[福建]][[莆田]]人
+|
+|-
+| align="center" |1142年
+|绍兴十二年
+|[[陈诚之]]
+| align="center" |
+|[[福建]][[闽县]]人
+|
+|-
+| align="center" |1145年
+|绍兴十五年
+|[[刘章 (宋朝)|刘章]]
+| align="center" |
+|衢州[[龙游]]人
+|
+|-
+| align="center" |1148年
+|绍兴十八年
+|[[王佐]]
+| align="center" |
+|
+|
+|-
+| align="center" |1151年
+|绍兴二十一年
+|[[赵逵]]
+| align="center" |
+|四川资州[[磐石县]]人
+|
+|-
+| align="center" |1154年
+|绍兴二十四年
+|[[张孝祥]]
+| align="center" |
+|安徽[[乌江]]人
+|
+|-
+| align="center" |1157年
+|绍兴二十七年
+|[[王十朋]]
+| align="center" |
+|温州[[乐清]]人
+|
+|-
+| align="center" |1160年
+|绍兴三十年
+|[[梁克家]]
+| align="center" |
+|[[福建]][[泉州]]人
+|
+|-
+| align="center" |1163年
+|隆兴元年状元
+|[[木待问]]
+| align="center" |
+|温州[[茶山街道]]人
+|
+|-
+| align="center" |1166年
+|[[乾道 (南宋)|乾道]]二年
+|[[萧国梁]]
+| align="center" |
+|[[福建]][[永泰|永福]]人
+|
+|-
+| align="center" |1169年
+|乾道五年
+|[[郑侨 (宋朝)|郑侨]]
+| align="center" |
+|[[福建]][[兴化县 (福建)|兴化县]][[莆田]]人
+|
+|-
+| align="center" |1172年
+|乾道八年
+|[[黄定]]
+| align="center" |
+|[[福建]][[永泰|永福]]人
+|
+|-
+| align="center" |1175年
+|[[淳熙]]二年
+|[[詹骙]]
+| align="center" |
+|浙江遂安人
+|
+|-
+| align="center" |1178年
+|淳熙五年
+|[[姚颖]]
+| align="center" |
+|
+|
+|-
+| align="center" |1181年
+|淳熙八年
+|[[黄由]]
+| align="center" |
+|江苏[[苏州]]人
+|
+|-
+| align="center" |1184年
+|淳熙十一年
+|[[卫泾]]
+| align="center" |
+|江苏[[昆山市|昆山]][[千灯镇]]人
+|
+|-
+| align="center" |1187年
+|淳熙十四年
+|[[王容]]
+| align="center" |
+|
+|
+|-
+| align="center" |1190年
+|[[紹熙]]元年
+|[[余復]]
+| align="center" |
+|[[福建]][[宁德]]人
+|
+|-
+| align="center" |1193年
+|[[紹熙]]四年
+|[[陈亮]]
+| align="center" |1143年－1194年
+|[[浙江]][[永康市|永康]]人
+|
+|-
+| align="center" |1196年
+|[[慶元]]二年
+|[[邹应龙]]
+| align="center" |1172年－1244年
+|[[福建]][[泰宁县|泰宁]]人
+|
+|-
+| align="center" |1199年
+|[[慶元]]五年
+|[[曾从龙]]
+| align="center" |
+|[[福建]][[晋江]]人
+|
+|-
+| align="center" |1202年
+|[[嘉泰]]二年
+|[[傅行简]]
+| align="center" |
+|浙江[[宁波]]人
+|
+|-
+| align="center" |1205年
+|[[開禧]]元年
+|[[毛自知]]
+| align="center" |
+|
+|
+|-
+| align="center" |1208年
+|[[嘉定 (年号)|嘉定]]元年
+|[[郑性之]]
+| align="center" |
+|[[福建]][[侯官县]]人
+|
+|-
+| align="center" |1211年
+|[[嘉定 (年号)|嘉定]]四年
+|[[赵建夫]]
+| align="center" |
+|
+|
+|-
+| align="center" |1214年
+|[[嘉定 (年号)|嘉定]]七年
+|[[袁甫]]
+| align="center" |
+|浙江宁波人
+|
+|-
+| align="center" |1217年
+|[[嘉定 (年号)|嘉定]]十年
+|[[吴潜]]
+| align="center" |
+|乌江人
+|
+|-
+| align="center" |1220年
+|[[嘉定 (年号)|嘉定]]十三年
+|[[刘渭]]
+| align="center" |
+|
+|
+|-
+| align="center" |1223年
+|[[嘉定 (年号)|嘉定]]十六年
+|[[蒋重珍]]
+| align="center" |
+|
+|
+|-
+| align="center" |1226年
+|[[寶慶]]二年
+|[[王会龙]]
+| align="center" |
+|[[台州]]临海人
+|
+|-
+| align="center" |1229年
+|[[紹定]]二年
+|[[黄朴]]
+| align="center" |
+|[[福建]][[侯官]]人
+|
+|-
+| align="center" |1232年
+|[[紹定]]五年
+|[[徐元傑]]
+| align="center" |
+|江西[[上饶]]人
+|
+|-
+| align="center" |1235年
+|[[端平]]二年
+|[[吴叔告]]
+| align="center" |1193年－1266年
+|[[福建]][[莆田]]人
+|
+|-
+| align="center" |1238年
+|[[嘉熙]]二年
+|[[周坦]]
+| align="center" |
+|
+|
+|-
+| align="center" |1241年
+|[[淳祐]]元年
+|[[徐俨夫]]
+| align="center" |
+|
+|
+|-
+| align="center" |1244年
+|[[淳祐]]四年
+|[[留梦炎]]
+| align="center" |
+|[[衢州]]人
+|
+|-
+| align="center" |1247年
+|[[淳祐]]七年
+|[[张渊微]]
+| align="center" |
+|[[黎川縣|新城]]人
+|
+|-
+| align="center" |1250年
+|[[淳祐]]十年
+|[[方逢辰]]
+| align="center" |
+|[[嚴州]][[淳安]]人
+|右足跛、左目眇
+|-
+| align="center" |1253年
+|[[寶祐]]元年
+|[[姚勉]]
+| align="center" |
+|[[宜豐]]人
+|
+|-
+| align="center" |1256年
+|[[寶祐]]四年
+|[[文天祥]]
+| align="center" |1236年－1283年
+|[[吉州]][[廬陵]]人
+|[[宋末三傑]]之一。[[元世祖]]愛其才欲招降以為相，文天祥峻拒並從容就義。
+|-
+| align="center" |1259年
+|[[開慶]]元年
+|[[周震炎]]
+| align="center" |
+|
+|原取[[林公一]]，但周震炎因為權貴[[丁大全]]的親信而掄元。
+|-
+| align="center" |1262年
+|[[景定]]三年
+|[[方山京]]
+| align="center" |
+|[[浙江]][[慈溪]]人
+|
+|-
+| align="center" |1265年
+|[[咸淳]]元年
+|[[阮登炳]]
+| align="center" |
+|[[福建]]宁德县人，一作平江府长洲县人
+|
+|-
+| align="center" |1268年
+|[[咸淳]]四年
+|[[陈文龙]]
+| align="center" |1232年－1277年
+| style="white-space:nowrap;" |[[福建]][[兴化县 (福建)|興化]][[莆田]]人
+|
+|-
+| align="center" |1271年
+|[[咸淳]]七年
+|[[张镇孙]]
+| align="center" |1238年－1278年
+|[[廣東]][[南海]]人
+|
+|-
+| align="center" |1274年
+|[[咸淳]]十年
+|[[王龙泽]]
+| align="center" |
+|
+|
+|}
+<noinclude>
+
+==辽朝状元==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!noWrap|備註
+|-
+|align ="center"|988年
+|[[統和]]六年
+|[[高举]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|989年
+|統和七年
+|[[高正 (遼朝)|高正]]
+|align ="center"|?-1016年
+|
+|
+|-
+|align ="center"|990年
+|統和八年
+|[[郑云从]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|991年
+|統和九年辛卯科
+|[[石用中]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|993年
+|統和十一年癸巳科
+|[[王熙载]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|994年
+|統和十二年甲午科
+|[[吕德懋]]
+|align ="center"|?-1031年
+|
+|
+|-
+|align ="center"|995年
+|統和十三年乙未科
+|[[王用极]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|996年
+|統和十四年丙申科
+|[[張儉 (遼)|张俭]]
+|align ="center"|963年－1053年
+|南京宛平人（今北京市）
+|
+|-
+|align ="center"|997年
+|[[統和]]十五年丁酉科
+|[[陳鼎 (遼朝)|陈鼎]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|998年
+|統和十六年
+|[[杨又玄]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|999年
+|統和十七年己亥科
+|[[初锡]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1000年
+|統和十八年
+|[[南承保]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1002年
+|統和二十年壬寅年科
+|[[邢祥]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1004年
+|統和二十二年甲辰科
+|[[李可封]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1006年
+|統和二十四年丙午科
+|[[杨佶]]
+|align ="center"|
+|南京（今北京市）
+|
+|-
+|align ="center"|1008年
+|統和二十六年戉申科
+|[[史克忠]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1009年
+|統和二十七年己酉科
+|[[刘二宜]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1011年
+|統和二十九年辛亥科
+|[[高承颜]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1012年
+|[[開泰 (遼)|開泰]]元年壬子科
+|[[史简]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1013年
+|開泰二年
+|noWrap|[[鲜于茂昭]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1014年
+|開泰三年甲寅科
+|[[张用行]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1016年
+|開泰五年丙辰科
+|[[孙杰]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1018年
+|開泰七年戉午科
+|[[张克恭]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1020年
+|開泰九年庚申科
+|[[张仲举 (遼朝)|張仲舉]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1022年
+|[[太平 (遼)|太平]]二年壬戌科
+|[[张渐]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1024年
+|太平四年甲子科
+|[[李炯 (宋朝)|李炯]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1025年
+|太平五年
+|[[张昱]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1028年
+|太平八年戉辰科
+|[[张宥]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1029年
+|太平九年
+|[[张仁纪]]
+|align ="center"|
+|沈州（今遼寧沈陽市）
+|
+|-
+|align ="center"|1031年
+|[[景福 (辽朝)|景福]]元年
+|[[劉貞 (遼)|刘贞]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1032年
+|[[重熙]]元年壬申科
+|[[刘师贞]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1036年
+|重熙五年丙子科
+|[[馮立 (遼朝)|馮立]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1038年
+|重熙七年戉寅科
+|[[邢彭年]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1042年
+|重熙十一年壬午科
+|[[王寔]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1046年
+|重熙十五年丙戌科
+|[[王棠 (遼朝)|王棠]]
+|align ="center"|?-1094年
+|涿州新城（今河北新城縣）
+|
+|-
+|align ="center"|1050年
+|重熙十九年庚寅科
+|[[邊貫道]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1055年
+|重熙二十四年乙未科
+|[[张孝杰]]
+|align ="center"|
+|建州永霸縣
+|
+|-
+|align ="center"|1059年
+|[[清宁|清寧]]五年己亥科
+|[[梁援]]
+|align ="center"|1034年~1101年
+|河北[[昌黎县|昌黎]]
+|
+|-
+|align ="center"|1062年
+|清寧八年
+|[[王鼎 (遼朝)|王鼎]]
+|align ="center"|?-1106年
+|涿州
+|
+|-
+|align ="center"|1066年
+|[[咸雍]]二年
+|[[张臻]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1070年
+|咸雍六年
+|[[赵廷睦]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1074年
+|咸雍十年甲寅科
+|[[刘霄]]
+|align ="center"|
+|大興宛平（今北京市）
+|
+|-
+|align ="center"|1079年
+|[[大康]]五年
+|[[刘瓘]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1083年
+|大康九年癸亥科
+|[[李君裕]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1086年
+|[[大安 (遼)|大安]]二年丙寅科
+|[[张毂]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1090年
+|大安六年庚午科
+|[[文充]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1092年
+|大安八年壬申科
+|[[冠尊文]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1095年
+|[[壽昌]]元年乙亥科
+|[[陈衡甫]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1100年
+|壽昌六年庚辰科
+|[[康秉俭]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1103年
+|[[乾統]]三年
+|[[马恭回]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1107年
+|乾統七年丁亥科
+|[[李石 (遼朝)|李石]]
+|align ="center"|?-1176年
+|遼陽
+|
+|-
+|align ="center"|1109年
+|乾統九年
+|[[劉禎 (遼朝)|劉禎]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1112年
+|[[天庆 (辽朝)|天慶]]壬辰科
+|[[韩昉]]
+|align ="center"|1082年-1149年
+|燕京（今北京市）
+|
+|-
+|align ="center"|1118年
+|天慶八年戉戌科
+|[[王翬 (遼朝)|王翚]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1122年
+|[[建福 (北遼)|建福]]元年壬寅科
+|[[李寶信 (遼朝)|李寶信]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1122年
+|[[德興 (年號)|德興]]元年壬寅科
+|[[李球 (遼朝)|李球]]
+|align ="center"|
+|
+|
+|}
+
+==西夏狀元==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!noWrap|備註
+|-
+|align ="center" style="white-space:nowrap;"|1203年
+|style="white-space:nowrap;"|[[天慶 (西夏)|天慶]]十年
+|style="white-space:nowrap;"|[[夏神宗|李遵顼]]
+|align ="center" style="white-space:nowrap;"|1162年－1225年
+|style="width:150px;"|
+|[[西夏]]宗室齊王[[李彥宗]]子。後廢[[夏襄宗]]自立，是為[[夏神宗]]。是[[中國歷史]]上唯一一位成為[[皇帝]]的狀元。
+|}
+
+==金朝状元==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!noWrap|備註
+|-
+|align ="center"|1124年
+|[[天会 (金朝)|天會]]二年
+|[[劉撝]]
+|align ="center"|
+|山西渾源
+|
+|-
+|align ="center"|1127年
+|天會五年
+|[[许必]]
+|align ="center"|
+|真定（今河北正定縣）
+|
+|-
+|align ="center"|1128年
+|天會六年
+|[[赵洞]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1132年
+|天會十年
+|[[胡砺]]
+|align ="center"|1107年-1161年
+|磁州(今河北武安市)
+|
+|-
+|align ="center"|1139年
+|[[天眷]]二年己未科
+|[[石琚]]
+|align ="center"|1111年-1182年
+|定州（今河北定縣）
+|
+|-
+|align ="center"|1139年
+|[[天眷]]二年
+|[[劉彧 (金朝)|劉彧]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1140年
+|[[天眷]]三年庚申科
+|[[趙安榮]]
+|align ="center"|
+|陵川（今山西陵川縣）
+|正隆五年狀元趙安時之弟
+|-
+|align ="center"|1142年
+|[[皇統]]二年壬戌科
+|[[宋端卿]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1142年
+|皇統二年壬戌科
+|[[劉仲淵]]
+|align ="center"|
+|大興府宛平縣（今北京市西南）
+|
+|-
+|align ="center"|1149年
+|皇統九年己巳科
+|[[王堪]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1149年
+|皇統九年己巳科
+|[[王彥潜]]
+|align ="center"|
+|河間（今河北河間縣）
+|
+
+|-
+|align ="center"|1151年
+|天德三年辛未科词赋状元
+|[[常大榮]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1151年
+|[[天德 (金朝)|天德]]三年词义状元
+|[[楊建中 (金朝)|杨建中]]
+|align ="center"|
+|
+|-
+|align ="center"|1152年
+|[[天德 (金朝)|天德]]四年经义状元
+|[[王從龍]]
+|align ="center"|
+|山東密州（今山東諸城縣）
+|
+|-
+|align ="center"|1154年
+|[[貞元 (金朝)|貞元]]二年甲戌科
+|[[吕忠翰]]
+|align ="center"|
+|燕（北京市）
+|
+|-
+|align ="center"|1155年
+||[[貞元 (金朝)|貞元]]三年乙亥科
+|[[武明甫]]
+|align ="center"|
+|陵川（今山西陵川縣）
+|[[完顏亮]]朝
+|-
+|align ="center"|1157年
+|[[正隆]]二年
+|[[鄭子聃]]
+|align ="center"|1126年-1180年
+|大定（今內蒙大名城）
+|
+
+|-
+|align ="center"|1160年
+|正隆五年
+|[[趙安時]]
+|align ="center"|
+|
+|天眷三年狀元趙安榮之兄
+|-
+|align ="center"|1161年
+|大定元年辛巳科状元
+|[[任忠杰]]
+|align ="center"|
+|天城（山西天鎮縣）
+|[[完顏亮]]朝最后一位状元
+|-
+
+|align ="center"|1163年
+|[[大定 (金朝)|大定]]三年
+|[[孟宗献]]
+|align ="center"|
+|開封
+|[[三元及第]]
+|-
+|align ="center"|1170年
+|大定十年
+|[[史詔魚]]
+|align ="center"|
+|定州（河北定縣）
+|
+|-
+|align ="center"|1173年
+|大定十三年
+|[[趙承元]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1173年
+|大定十三年
+|[[徒单镒]]
+|align ="center"|?-1214年
+|
+|
+|-
+|align ="center"|1176年
+|大定十六年
+|[[張璧]]
+|align ="center"|
+|河北[[易州]]人
+|
+|-
+|align ="center"|1179年
+|大定十九年
+|[[张行简]]
+|align ="center"|1146年-1215年
+|莒州日照縣（今山東日照市）
+|
+|-
+|align ="center"|1182年
+|大定二十二年
+|[[張甫]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1185年
+|大定二十五年
+|[[徐韙]]
+|align ="center"|
+|滄州人
+|
+|-
+|align ="center"|1188年
+|大定二十八年戉申科
+|[[李修]]
+|align ="center"|
+|
+|
+|-
+
+|align ="center"|
+|
+|[[鄭時昌]]
+|align ="center"|
+|洪洞（今山西洪洞縣）
+|大定間某科殿試第一
+|-
+|align ="center"|1191年
+|[[明昌]]二年辛亥科詞賦狀元
+|[[王澤(金)|王泽]]
+|align ="center"|?-1220年
+|陽曲（今山西陽曲縣）
+|
+|-
+|align ="center"|1191年
+|明昌二年辛亥科經義狀元
+|[[陳載 (金朝)|陳載]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1193年
+|明昌四年癸丑科
+|[[孫用康]]
+|align ="center"|
+|燕（今北京市）
+|
+
+|-
+|align ="center"|1194年
+|明昌五年甲寅科词赋状元
+|[[張楫]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1194年
+|明昌五年甲寅科经义状元
+|[[杨云翼]]
+|align ="center"|1170年-1228年
+|山西[[昔阳]]
+|
+|-
+|align ="center"|1197年
+|[[承安 (金)|承安]]二年
+|[[呂造]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1197年
+|承安二年
+|[[李著]]
+|align ="center"|?-1220年
+|真定（今河北正定縣）
+|
+|-
+|align ="center"|1197年
+|承安二年
+|noWrap|[[纳兰胡鲁剌]]
+|align ="center"|?-1218年
+|大名路怕魯歡猛安人
+|
+|-
+|align ="center"|1200年
+|承安五年
+|[[閻長言]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1200年
+|[[承安 (金朝)|承安]]五年经义状元
+|[[李俊民 (金朝)|李俊民]]
+|align ="center"|1176年-1260年
+|山西晋城人
+|精通二程理学
+|-
+|align ="center"|1203年
+|[[泰和 (金)|泰和]]三年
+|[[許天明]]
+|align ="center"|
+|
+|
+|-
+
+|align ="center"|1206年
+|泰和六年
+|[[李演]]
+|align ="center"|?-1214年
+|任城（今山東濟寧市）
+|
+|-
+|align ="center"|1209年
+|[[大安 (金)|大安]]元年己巳科
+|[[王綱 (金朝)|王綱]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1213年
+|[[至寧]]元年癸酉科詞賦狀元
+|[[黃裳]]
+|align ="center"|
+|山西
+|
+|-
+|align ="center"|1213年
+|至寧元年策論狀元
+|[[完顏速蘭]]
+|align ="center"|?-1231年
+|
+|
+|-
+|align ="center"|1213年
+|[[贞祐 (金朝)|貞祐]]元年癸酉科
+|[[张本]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1215年
+|[[貞祐 (金朝)|貞祐]]三年
+|[[李献能]]
+|align ="center"|1190年-1232年
+|河中（今山西永濟縣）
+|
+|-
+|align ="center"|1216年
+|貞祐四年丙子科
+|[[程嘉善]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1218年
+|[[興定]]二年戉寅科
+|[[張仲安]]
+|align ="center"|?-1220年
+|燕山（今天津薊縣附近）
+|
+|-
+|align ="center"|1221年
+|興定五年辛巳科詞賦狀元
+|[[劉遇]]
+|align ="center"|?-1222年
+|真定（今河北正定縣）
+|
+|-
+|align ="center"|1221年
+|興定五年辛巳科策論狀元
+|[[斡勒业德]]
+|align ="center"|
+|女真人
+|
+|-
+|align ="center"|1223年
+|[[元光 (金朝)|元光]]二年策论状元
+|[[富珠哩察罕]]
+|align ="center"|
+|女真人
+|
+|-
+|align ="center"|1224年
+|[[正大]]元年甲申科詞賦狀元
+|[[王鄂]]
+|align ="center"|1190年-1273年
+|曹州東明（今山東東明縣）
+|
+|-
+|align ="center"|1224年
+|正大元年甲申科策論進士第一
+|[[孛術論長河]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1227年
+|正大四年丁亥科詞賦狀元
+|[[卢亚]]
+|align ="center"|
+|偃師（今河南偃師縣）
+|
+|-
+|align ="center"|1230年
+|正大七年庚寅科詞賦狀元
+|[[李塘]]
+|align ="center"|
+|
+|
+
+|-
+|align ="center"|
+|
+|[[刘海]]
+|align ="center"|
+|山西興縣人
+|
+|-
+|align ="center"|
+|
+|[[李安]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[张继祖]]
+|align ="center"|
+|山西臨晉人
+|
+|-
+|align ="center"|
+|
+|[[刘文龙]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[元堪]]
+|align ="center"|
+|
+|
+
+|}
+
+==元朝状元==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!備註
+|-
+|align ="center"|1238年
+|元太宗十年
+|[[杨奂]]
+|align ="center"|1186年-1255年
+|陕西乾州人
+|戊戌科進士第一
+|-
+|align ="center"|1315年
+|[[延祐]]二年
+|[[护都答儿]]
+|align ="center"|
+|蒙古族
+|乙卯科右榜進士第一
+|-
+|align ="center"|1315年
+|延祐二年
+|[[张起岩]]
+|align ="center"|1285年-1353年
+|山東評丘人
+|左榜第一名
+|-
+|align ="center"|1318年
+|延祐五年
+|[[忽都达儿]]
+|align ="center"|1296年-1350年
+|蒙古族人
+|右榜進第一
+|-
+|align ="center"|1318年
+|延祐五年
+|[[霍希贤]]
+|align ="center"|
+|湖南澧州
+|戊午科左榜狀元
+|-
+|align ="center"|1321年
+|[[至治 (元朝)|至治]]元年
+|[[泰不华]]
+|align ="center"|1304年-1352年
+|蒙古佰牙吾台氏
+|右榜狀元
+|-
+|align ="center"|1321年
+|至治元年
+|[[宋本]]
+|align ="center"|1281年-1334年
+|大都人
+|左榜第一名進士及第
+|-
+|align ="center"|1324年
+|[[泰定 (元朝)|泰定]]元年
+|[[捌剌]]
+|align ="center"|
+|
+|甲子科右榜狀元
+|-
+|align ="center"|1324年
+|泰定元年
+|[[张益]]
+|align ="center"|
+|西河人
+|甲子科左榜狀元
+|-
+|align ="center"|1327年
+|泰定四年
+|[[阿察赤]]
+|align ="center"|
+|
+|丁卯科右榜狀元
+|-
+|align ="center"|1327年
+|泰定四年
+|[[李黼 (元朝)|李黼]]
+|align ="center"|1298年-1352年
+|穎州人
+|丁卯科左榜進士第一
+|-
+|align ="center"|1330年
+|[[至順]]元年
+|[[笃列图 (天历进士)|笃列图]]
+|align ="center"|1312年-1348年
+|蒙古捏古台氏，燕山人
+|庚午科右榜進士第一
+|-
+|align ="center"|1330年
+|至順元年
+|[[王文烨]]
+|align ="center"|
+|山東鄒平人
+|庚午科左榜進士第一
+|-
+|align ="center"|1333年
+|[[元統 (元朝)|元統]]元年
+|[[同同]]
+|align ="center"|
+|蒙古人
+|右榜進士第一
+|-
+|align ="center"|1333年
+|元統元年
+|[[李齐]]
+|align ="center"|1301年-1353年
+|河北永年人
+|左榜進士第一
+|-
+|align ="center"|1342年
+|[[至正]]二年
+|[[拜住]]
+|align ="center"|
+|蒙古遜都思氏
+|壬午科右榜狀元及第
+|-
+|align ="center"|1342年
+|至正二年
+|[[陈祖仁]]
+|align ="center"|1314年-1368年
+|汴梁人
+|矮小、獨目，左榜進士第一名
+|-
+|align ="center"|1345年
+|至正五年
+|[[普颜不花]]
+|align ="center"|?-1368年
+|蒙古人
+|由國子生登進氏第一
+|-
+|align ="center"|1345年
+|至正五年
+|[[张士坚]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1348年
+|至正八年
+|noWrap|[[阿鲁辉帖木儿]]
+|align ="center"|
+|蒙古人
+|戉子科右榜狀元
+|-
+|align ="center"|1348年
+|至正八年
+|[[王宗哲]]
+|align ="center"|
+|遂州人
+|[[三元及第]]
+|-
+|align ="center"|1351年
+|至正十一年
+|[[朶烈图]]
+|align ="center"|
+|蒙古人
+|辛卯科加榜狀元
+|-
+|align ="center"|1351年
+|至正十一年
+|[[文允中]]
+|align ="center"|
+|成都人
+|辛卯科左榜進士第一
+|-
+|align ="center"|1354年
+|至正十四年
+|[[薛朝晤]]
+|align ="center"|
+|遼東人
+|甲午科右榜狀元
+|-
+|align ="center"|1354年
+|至正十四年
+|[[牛继志]]
+|align ="center"|
+|武強人
+|甲午科左榜狀元
+|-
+|align ="center"|1357年
+|至正十七年
+|[[侻征]]
+|align ="center"|
+|
+|右榜進士宜第一
+|-
+|align ="center"|1357年
+|至正十七年
+|[[王宗嗣]]
+|align ="center"|
+|
+|左榜進士第一
+|-
+|align ="center"|1360年
+|至正二十年
+|[[买住]]
+|align ="center"|
+|
+|庚子科右榜進士第一
+|-
+|align ="center"|1360年
+|至正二十年
+|[[魏元礼]]
+|align ="center"|
+|肅寧人
+|庚子科左榜狀元
+|-
+|align ="center"|1363年
+|至正二十三年
+|[[宝宝 (元朝)|宝宝]]
+|align ="center"|
+|
+|右榜進士第一
+|-
+|align ="center"|1363年
+|至正二十三年
+|[[杨輗]]
+|align ="center"|
+|
+|左榜狀元
+|-
+|align ="center"|1366年
+|至正二十六年
+|[[赫德溥化]]
+|align ="center"|
+|
+|丙午科右榜狀元
+|-
+|align ="center"|1366年
+|至正二十六年
+|[[张栋]]
+|align ="center"|
+|
+|丙午科左榜進士第一
+|}
+
+==明朝状元==
+{{Main|明朝状元列表}}
+{| class="wikitable sortable" width="100%"
+! nowrap="" |西曆
+! nowrap="" |中曆
+! nowrap="" |姓名
+! nowrap="" |生卒年
+! nowrap="" |籍貫
+! nowrap="" |備註
+|-
+| align="center" nowrap="" |1371年
+|[[洪武]]四年
+| nowrap="" |[[吴伯宗]]
+| align="center" |－1384年
+|[[江西]]撫州府金溪县人
+|原取[[郭翀]]，但因其貌醜而改为吴伯宗
+|-
+| align="center" |1385年
+|[[洪武]]十八年
+|[[丁显]]
+| align="center" |1367年－
+|[[福建]]建寧府建阳县人
+|原取[[花綸]]，但因明太祖[[朱元璋]]夢見殿中有巨釘而取丁显為第一
+|-
+| align="center" |1388年
+| nowrap="" |[[洪武]]二十一年
+|[[任亨泰]]
+| align="center" |
+|[[湖廣]]襄陽府襄阳县人
+|
+|-
+| align="center" |1391年
+|[[洪武]]二十四年
+|[[黃觀]]
+| align="center" |1363年－1402年
+|[[南直隸]]池州府贵池县人
+|[[三元及第]]，[[靖難之役]]時為[[建文帝]]殉死，[[明成祖]]即位後摘除其功名
+|-
+| align="center" |1394年
+|[[洪武]]二十七年
+|[[張信 (狀元)|張信]]
+| align="center" |－1397年
+|[[浙江]]寧波府定海县人
+|
+|-
+| align="center" |1397年
+|[[洪武]]三十年
+（春榜）
+|[[陈䢿]]
+| align="center" |
+|[[福建]]福州府闽县人
+| rowspan="2" |当年春季会试，上榜的全是南方考生，状元为福建的[[陈䢿]]，北方考生全部落第，后来[[明太祖]]罪责考官为[[胡蓝党狱|胡蓝党]]，重新发榜，上榜的全是北方人，山东的[[韩克忠]]成为状元。两次发榜被称为“南北榜”或“春夏榜”。
+|-
+| align="center" |1397年
+|[[洪武]]三十年
+（夏榜）
+|[[韩克忠]]
+| align="center" |
+|[[山東]]東昌府武城县人
+|-
+| align="center" |1400年
+|[[建文]]二年
+|[[胡广 (明朝)|胡广]]
+| align="center" |1369年－1418年
+|[[江西]]吉安府吉水县人
+|原內定[[王艮 (建文进士)|王艮]]，但因王艮其貌不揚而改擢胡廣為第一
+|-
+| align="center" |1404年
+|[[永乐]]二年
+|[[曾棨]]
+| align="center" |1372年－1432年
+|[[江西]]吉安府永丰县人
+|原取[[劉子欽]]，但因劉驕矜自恃，引起主考官[[解縉]]不快，解縉遂將考題洩漏給曾棨
+|-
+| align="center" |1406年
+|[[永乐]]四年
+|[[林环]]
+| align="center" |
+|[[福建]]興化府莆田县人
+|
+|-
+| align="center" |1411年
+|[[永乐]]九年
+|[[萧时中]]
+| align="center" |
+|[[江西]]吉安府庐陵县人
+|
+|-
+| align="center" |1412年
+|[[永乐]]十年
+|[[马铎]]
+| align="center" |1366年－1423年
+|[[福建]]福州府长乐县人
+|弟[[李騏]]於6年後亦中狀元
+|-
+| align="center" |1415年
+|[[永乐]]十三年
+|[[陳循]]
+| align="center" |1385年－1462年
+|[[江西]]吉安府泰和县人
+|
+|-
+| align="center" |1418年
+|[[永乐]]十六年
+|[[李騏]]
+| align="center" |1378年－1425年
+|[[福建]]福州府长乐县人
+|本名「李馬」，帝不喜，賜「騏」為名
+|-
+| align="center" |1421年
+|[[永乐]]十九年
+|[[曾鶴齡]]
+| align="center" |1383年－1441年
+|[[江西]]吉安府泰和县人
+|原取[[劉矩]]，但因明成祖[[朱棣]]夢見鶴翼而取曾鶴齡為第一
+|-
+| align="center" |1424年
+|[[永乐]]二十二年
+|[[邢宽]]
+| align="center" |－1454年
+|[[南直隸]]廬州府無為州人
+|原以[[孫曰恭]]為第一，但因其名不為帝喜，遂改取邢宽。邢宽有足疾。
+|-
+| align="center" |1427年
+|[[宣德]]二年
+|[[馬愉]]
+| align="center" |1395年－1447年
+|[[山東]]青州府临朐县人
+|
+|-
+| align="center" |1430年
+|[[宣德]]五年
+|[[林震 (明朝狀元)|林震]]
+| align="center" |
+|[[福建]]漳州府长泰县人
+|
+|-
+| align="center" |1433年
+|[[宣德]]八年
+|[[曹鼐]]
+| align="center" |1402－1449年
+|[[北直隸]]真定府宁晋县人
+|
+|-
+| align="center" |1436年
+|[[正统 (年号)|正统]]元年
+|[[周旋 (狀元)|周旋]]
+| align="center" |1395年－1454年
+|[[浙江]]溫州府永嘉县人
+|
+|-
+| align="center" |1439年
+|[[正统 (年号)|正统]]四年
+|[[施槃]]
+| align="center" |1417年－1440年
+|[[南直隸]]蘇州府吴县人
+|原取[[張和 (正統進士)|張和]]，因張有眼疾而改取施槃
+|-
+| align="center" |1442年
+|[[正统 (年号)|正统]]七年
+|[[劉儼]]
+| align="center" |1394年－1457年
+|[[江西]]吉安府吉水县人
+|
+|-
+| align="center" |1445年
+|[[正统 (年号)|正统]]十年
+|[[商輅]]
+| align="center" |1414年－1486年
+|[[浙江]]嚴州府淳安县人
+|[[三元及第]]
+|-
+| align="center" |1448年
+|[[正统 (年号)|正统]]十三年
+|[[彭時]]
+| align="center" |1416年－1475年
+|[[江西]]吉安府安福县人
+|
+|-
+| align="center" |1451年
+|[[景泰]]二年
+|[[柯潛]]
+| align="center" |1423年－1473年
+|[[福建]]興化府莆田县人
+|
+|-
+| align="center" |1454年
+|[[景泰]]五年
+|[[孫賢]]
+| align="center" |1423年－1477年
+|[[河南]]開封府杞县人
+|原取士[[丘濬]]，因其貌不揚而改取孫賢
+|-
+| align="center" |1457年
+|[[天顺 (明朝)|天顺]]元年
+|[[黎淳]]
+| align="center" |1423年－1492年
+|[[湖廣]]岳州府华容县人
+|
+|-
+| align="center" |1460年
+|[[天顺 (明朝)|天顺]]四年
+|[[王一夔]]
+| align="center" |1425年－1487年
+|[[江西]]南昌府新建县人
+|
+|-
+| align="center" |1464年
+|[[天顺 (明朝)|天顺]]八年
+|[[彭教]]
+| align="center" |1438年－1480年
+|[[江西]]吉安府吉水县人
+|
+|-
+| align="center" |1466年
+|[[成化]]二年
+|[[羅倫 (明朝)|羅倫]]
+| align="center" |1431年－1478年
+|[[江西]]吉安府永丰县人
+|
+|-
+| align="center" |1469年
+|[[成化]]五年
+|[[張昇 (明朝)|張-{昇}-]]
+| align="center" |1442年－1517年
+|[[江西]]建昌府南城县人
+|
+|-
+| align="center" |1472年
+|[[成化]]八年
+|[[吳寬]]
+| align="center" |1435年－1504年
+|[[南直隸]]蘇州府长洲县人
+|
+|-
+| align="center" |1475年
+|[[成化]]十一年
+|[[謝遷]]
+| align="center" |1449年－1531年
+|[[浙江]]紹興府余姚县人
+|
+|-
+| align="center" |1478年
+|[[成化]]十四年
+|[[曾彥 (明朝狀元)|曾彥]]
+| align="center" |1425年－
+|[[江西]]吉安府泰和县人
+|
+|-
+| align="center" |1481年
+|[[成化]]十七年
+|[[王華 (明朝)|王華]]
+| align="center" |1446年－1522年
+|[[浙江]]紹興府余姚县人
+|傳聞吏部尚書[[劉珝]]洩題給[[黃珣]]，王華適巧窺見，暗記應試，而黃珣卻得第二。
+[[王阳明]]之父。
+|-
+| align="center" |1484年
+|[[成化]]二十年
+|[[李旻]]
+| align="center" |1445年－1509年
+|[[浙江]]杭州府钱塘县人
+|
+|-
+| align="center" |1487年
+|[[成化]]二十三年
+|[[費宏]]
+| align="center" |1468年－1535年
+|[[江西]]廣信府铅山县人
+|
+|-
+| align="center" |1490年
+|[[弘治 (明朝)|弘治]]三年
+|[[錢福]]
+| align="center" |1461年－1504年
+|[[南直隸]]松江府华亭县人
+|
+|-
+| align="center" |1493年
+|[[弘治 (明朝)|弘治]]六年
+|[[毛澄]]
+| align="center" |1460年－1523年
+|[[南直隸]]蘇州府崑山县人
+|
+|-
+| align="center" |1496年
+|[[弘治 (明朝)|弘治]]九年
+|[[朱希周]]
+| align="center" |1473年－1557年
+|[[南直隸]]蘇州府崑山县人
+|疑因洩題作弊且名字得上所喜而掄元
+|-
+| align="center" |1499年
+|[[弘治 (明朝)|弘治]]十二年
+|[[倫文敘]]
+| align="center" |1467年－1513年
+|[[廣東]]廣州府南海县人
+|原取[[豐熙]]，因豐腳跛而改取倫文敘
+|-
+| align="center" |1502年
+|[[弘治 (明朝)|弘治]]十五年
+|[[康海]]
+| align="center" |1475年－1540年
+|[[陝西]]西安府武功县人
+|
+|-
+| align="center" |1505年
+|[[弘治 (明朝)|弘治]]十八年
+|[[顧鼎臣]]
+| align="center" |1473年－1540年
+|[[南直隸]]蘇州府崑山县人
+|
+|-
+| align="center" |1508年
+|[[正德 (明朝)|正德]]三年
+|[[呂柟]]
+| align="center" |1479年－1542年
+|[[陝西]]西安府高陵县人
+|原取[[楊慎]]為第一，但楊因試卷為火所焚而落第，不過3年後再試仍掄元
+|-
+| align="center" |1511年
+|[[正德 (明朝)|正德]]六年
+|[[楊慎]]
+| align="center" |1488年－1559年
+|祖籍[[江西]]吉安府庐陵县，徙居[[四川]]成都府新都县
+|
+|-
+| align="center" |1514年
+|[[正德 (明朝)|正德]]九年
+|[[唐皋]]
+| align="center" |
+|[[南直隸]]徽州府歙县人
+|
+|-
+| align="center" |1517年
+|[[正德 (明朝)|正德]]十二年
+|[[舒芬]]
+| align="center" |1484年－1527年
+|[[江西]]南昌府进贤县人
+|
+|-
+| align="center" |1521年
+|[[正德 (明朝)|正德]]十六年
+|[[楊維聰]]
+| align="center" |1500年－
+|[[北直隸]]順天府固安县人
+|
+|-
+| align="center" |1523年
+|[[嘉靖]]二年
+|[[姚淶]]
+| align="center" |－1537年
+|[[浙江]]寧波府慈溪县人
+|
+|-
+| align="center" |1526年
+|[[嘉靖]]五年
+|[[龔用卿]]
+| align="center" |1500年－1563年
+|祖籍[[福建]]泉州府晋江县
+福建福州府怀安县人，一作福清县人
+|
+|-
+| align="center" |1529年
+|[[嘉靖]]八年
+|[[羅洪先]]
+| align="center" |1504年－1564年
+|[[江西]]吉安府吉水县人
+|
+|-
+| align="center" |1532年
+|[[嘉靖]]十一年
+|[[林大钦]]
+| align="center" |1512年－1545年
+|[[廣東]]潮州府海阳县人
+|
+|-
+| align="center" |1535年
+|[[嘉靖]]十四年
+|[[韓應龍]]
+| align="center" |1498年－1536年
+|[[浙江]]紹興府余姚县人
+|
+|-
+| align="center" |1538年
+|[[嘉靖]]十七年
+|[[茅瓒]]
+| align="center" |1499年－
+|[[浙江]]杭州府钱塘县人
+|原取[[陸師道]]後改[[袁煒]]，但因明世宗[[朱厚熜]]突然改變心意，臨時改取茅瓒
+|-
+| align="center" |1541年
+|[[嘉靖]]二十年
+|[[沈坤]]
+| align="center" |1507年－1560年
+|[[南直隸]]淮安府大河卫人，祖籍南直隸蘇州府崑山县
+|
+|-
+| align="center" |1544年
+|[[嘉靖]]二十三年
+|[[秦鸣雷]]
+| align="center" |1518年－1593年
+|[[浙江]]台州府临海县人
+|原取[[吳情]]，但其名不為明世宗[[朱厚熜]]所喜，且因明世宗夢見雷聲，遂改取秦鸣雷
+|-
+| align="center" |1547年
+|[[嘉靖]]二十六年
+|[[李春芳]]
+| align="center" |1510年－1584年
+|[[南直隸]]揚州府兴化县人
+|
+|-
+| align="center" |1550年
+|[[嘉靖]]二十九年
+|[[唐汝楫]]
+| align="center" |1513年－
+|[[浙江]]金華府兰溪县人
+|
+|-
+| align="center" |1553年
+|[[嘉靖]]三十二年
+|[[陳謹]]
+| align="center" |1525年－1566年
+|[[福建]]福州府闽县人
+|
+|-
+| align="center" |1556年
+|[[嘉靖]]三十五年
+|[[諸大綬]]
+| align="center" |1523年－1573年
+|[[浙江]]紹興府山阴县人
+|
+|-
+| align="center" |1559年
+|[[嘉靖]]三十八年
+|[[丁士美]]
+| align="center" |1521年－1577年
+|[[南直隸]]淮安府清河县人
+|
+|-
+| align="center" |1562年
+|[[嘉靖]]四十一年
+|[[申时行]]
+| align="center" |1535年－1614年
+|[[南直隸]]蘇州府长洲县人
+|
+|-
+| align="center" |1565年
+|[[嘉靖]]四十四年
+|[[范应期]]
+| align="center" |1527年－1594年
+|[[浙江]]湖州府乌程县人
+|
+|-
+| align="center" |1568年
+|[[隆庆]]二年
+|[[羅萬化]]
+| align="center" |1536年－1594年
+|[[浙江]]紹興府会稽县人
+|
+|-
+| align="center" |1571年
+|[[隆庆]]五年
+|[[張元忭]]
+| align="center" |1538年－1588年
+|祖籍[[四川]]成都府漢州綿竹县，徙居[[浙江]]紹興府山阴县
+|
+|-
+| align="center" |1574年
+|[[万历]]二年
+|[[孫繼皋]]
+| align="center" |1550年－1610年
+|[[南直隸]]常州府无锡县人
+|
+|-
+| align="center" |1577年
+|[[万历]]五年
+|[[沈懋学]]
+| align="center" |1539年－1582年
+|[[南直隸]]寧國府宣城县人
+|
+|-
+| align="center" |1580年
+|[[万历]]八年
+|[[張懋修]]
+| align="center" |1555年－1634年
+|[[湖廣]]荊州府江陵县人
+|原為第三，因為權臣[[張居正]]之子而擢為第一
+|-
+| align="center" |1583年
+|[[万历]]十一年
+|[[朱國祚]]
+| align="center" |1559年－1624年
+|[[浙江]]嘉興府秀水县人
+|
+|-
+| align="center" |1586年
+|[[万历]]十四年
+|[[唐文獻]]
+| align="center" |1549年－1605年
+|[[南直隸]]松江府华亭县人
+|
+|-
+| align="center" |1589年
+|[[万历]]十七年
+|[[焦竑]]
+| align="center" |1541年－1620年
+|[[南直隸]]應天府江宁县人
+|
+|-
+| align="center" |1592年
+|[[万历]]二十年
+|[[翁正春]]
+| align="center" |1553年－1626年
+|[[福建]]福州府侯官县人
+|
+|-
+| align="center" |1595年
+|[[万历]]二十三年
+|[[朱之蕃]]
+| align="center" |1561年－1626年
+|[[南直隸]]應天府江宁县人，世居[[山東]]東昌府茌平县，后附南直锦衣卫籍
+|
+|-
+| align="center" |1598年
+|[[万历]]二十六年
+|[[趙秉忠]]
+| align="center" |1574年－1626年
+|[[山東]]青州府益都县人
+|
+|-
+| align="center" |1601年
+|[[万历]]二十九年
+|[[張以誠]]
+| align="center" |1568年－1615年
+|[[南直隸]]松江府青浦县人
+|
+|-
+| align="center" |1604年
+|[[万历]]三十二年
+|[[楊守勤]]
+| align="center" |1566年－
+|[[浙江]]寧波府慈溪县人
+|
+|-
+| align="center" |1607年
+|[[万历]]三十五年
+|[[黃士俊]]
+| align="center" |1577年－1661年
+|[[廣東]]廣州府顺德县人
+|
+|-
+| align="center" |1610年
+|[[万历]]三十八年
+|[[韓敬]]
+| align="center" |1580年－
+|[[浙江]]湖州府归安县人
+|為主考官[[湯賓尹]]的門人且行賄通關而掄元
+|-
+| align="center" |1613年
+|[[万历]]四十一年
+|[[周延儒]]
+| align="center" |1593年－1644年
+|[[南直隸]]常州府宜兴县人
+|
+|-
+| align="center" |1616年
+|[[万历]]四十四年
+|[[錢士升]]
+| align="center" |1575年－1652年
+|[[浙江]]嘉興府嘉善县人
+|
+|-
+| align="center" |1619年
+|[[万历]]四十七年
+|[[莊際昌]]
+| align="center" |1584年－1629年
+|[[福建]]泉州府永春县人
+|
+|-
+| align="center" |1622年
+|[[天启]]二年
+|[[文震孟]]
+| align="center" |1574年－1636年
+|[[南直隸]]蘇州府长洲县人
+|
+|-
+| align="center" |1625年
+|[[天启]]五年
+|[[余煌]]
+| align="center" |－1651年
+|[[浙江]]紹興府会稽县人
+|
+|-
+| align="center" |1628年
+|[[崇祯]]元年
+|[[劉若宰]]
+| align="center" |
+|[[南直隸]]安慶府怀宁县人，一作潜山县人
+|貌醜、[[駝背]]
+|-
+| align="center" |1631年
+|[[崇祯]]四年
+|[[陳于泰|陳-{于}-泰]]
+| align="center" |
+|[[南直隸]]常州府宜兴县人
+|原取[[吳偉業]]，但陳於泰因為是主考官周延儒之姻親且行賄通關而掄元
+|-
+| align="center" |1634年
+|[[崇祯]]七年
+|[[劉理順]]
+| align="center" |1582年－1644年
+|[[河南]]開封府杞县人
+|
+|-
+| align="center" |1637年
+|[[崇祯]]十年
+|[[劉同升]]
+| align="center" |1587年－1646年
+|[[江西]]吉安府吉水县人
+|
+|-
+| align="center" |1640年
+|[[崇祯]]十三年
+|[[魏藻德]]
+| align="center" |1605年－1644年
+|[[北直隸]]順天府通州人
+|
+|-
+| align="center" |1643年
+|[[崇祯]]十六年
+|[[楊廷鑒]]
+| align="center" |1603年－1665年
+| nowrap="" |[[南直隸]]常州府武进县人
+|
+|}
+
+==大西狀元==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!noWrap|備註
+|-
+|noWrap|1644年
+|noWrap|[[大顺 (大西)|大顺]]元年
+|noWrap|[[龚济民]]<ref>《状元史话》说状元为龚济民；《科举奇闻》认为状元姓樊，汉州（今[[四川省]][[广汉市]]）人</ref>
+|align ="center"|─
+|[[四川]]人
+|
+|-
+|1644年
+|[[大顺 (大西)|大順]]元年
+|[[陳珏 (状元)|陳珏]]<ref>《明末农民战争史》第187页</ref>
+|align ="center"|─
+|汉阳（今湖北省[[武汉市]][[汉阳区]]）人
+|
+|}
+
+==清朝状元==
+{{Main|清朝状元列表}}</noinclude>
+{| class="wikitable sortable" width="100%"
+! nowrap="" |西曆
+! nowrap="" |中曆
+! nowrap="" |姓名
+! nowrap="" |生卒年
+! nowrap="" |籍貫
+! nowrap="" |最高職位
+! nowrap="" |備註
+|-
+| align="center" nowrap="" |1646年
+|[[顺治]]三年
+| nowrap="" |[[傅以渐]]
+| align="center" nowrap="" |1609年－1665年
+| nowrap="" |[[山东省]][[东昌府]][[聊城县]]人
+| style="background: #FFD700" |[[少保]]、[[武英殿大學士]]兼[[兵部尚書]]
+|
+|-
+| align="center" |1647年
+|[[顺治]]四年
+|[[吕宫]]
+| align="center" |1603年－1664年
+|[[江南省]][[常州府]][[武进县]]人
+| style="background: #FFD700" |[[太子太保]]、內翰林弘文院大學士
+|加科
+|-
+| align="center" |1649年
+|[[顺治]]六年
+|[[刘子壮]]
+| align="center" |1609年－1653年
+|[[湖廣省]][[黄州府]][[黄冈县]]人
+| style="background: #98FB98" |內翰林國史院修撰
+|
+|-
+| align="center" |1652年
+|[[顺治]]九年
+|[[麻勒吉]]
+| align="center" |－1689年
+|[[满洲正黄旗|正黄旗满洲]]人
+| style="background: #FFFF00" |[[兩江總督]]，[[九門提督|提督九門步軍統領]]
+|[[满洲|满]]榜
+|-
+| align="center" |1652年
+|[[顺治]]九年
+|[[邹忠倚]]
+| align="center" |1623年－1654年
+|[[江南省]][[常州府]][[无锡县]]人
+| style="background: #98FB98" |內翰林祕書院修撰
+|汉榜
+|-
+| align="center" |1655年
+|[[顺治]]十二年
+|[[图尔宸]]
+| align="center" |－
+|[[正白旗满洲]]人
+| style="background: #FFFF00" |[[工部右侍郎]]
+|满榜
+|-
+| align="center" |1655年
+|[[顺治]]十二年
+|[[史大成]]
+| align="center" |1621年－1682年
+|[[浙江省]][[寧波府]][[鄞縣]]人
+| style="background: #FFFF00" |[[禮部左侍郎]]
+|漢榜
+|-
+| align="center" |1658年
+|[[顺治]]十五年
+|[[孙承恩 (清朝)|孙承恩]]
+| align="center" |1619年－1659年
+|[[江南省]][[苏州府]][[常熟县]]人
+| style="background: #98FB98" |內翰林國史院修撰
+|
+|-
+| align="center" |1659年
+|[[顺治]]十六年
+|[[徐元文]]
+| align="center" |1634年－1691年
+|[[江南省]][[苏州府]][[崑山县]]人
+| style="background: #FFD700" |[[文華殿大學士]]、兼管翰林院事
+|加科
+|-
+| align="center" |1661年
+|[[顺治]]十八年
+|[[马世俊]]
+| align="center" |1609年－1666年
+|[[江南省]][[镇江府]][[溧阳县]]人
+| style="background: #00FFEF" |翰林院侍讀
+|
+|-
+| align="center" |1664年
+|[[康熙]]三年
+|[[严我斯]]
+| align="center" |1629年－
+|[[浙江省]][[湖州府]][[归安县]]人
+| style="background: #FFFF00" |禮部左侍郎
+|
+|-
+| align="center" |1667年
+|[[康熙]]六年
+|[[缪彤]]
+| align="center" |1627年－1697年
+|[[江南省]][[苏州府]][[吴县]]人
+| style="background: #00FFEF" |翰林院侍講
+|
+|-
+| align="center" |1670年
+|[[康熙]]九年
+|[[蔡启僔]]
+| align="center" |1619年－1683年
+|[[浙江省]][[湖州府]][[德清县]]人
+| style="background: #98FB98" |右春坊右贊善
+|
+|-
+| align="center" |1673年
+|[[康熙]]十二年
+|[[韩菼]]
+| align="center" |1637年－1704年
+|[[江苏省]][[苏州府]][[长洲县]]人
+| style="background: #FFD700" |[[禮部尚書]]、[[經筵講官]]
+|
+|-
+| align="center" |1676年
+|[[康熙]]十五年
+|[[彭定求]]
+| align="center" |1645年－1719年
+|[[江苏省]][[苏州府]][[长洲县]]人
+| style="background: #00FFEF" |翰林院侍講
+|
+|-
+| align="center" |1679年
+|[[康熙]]十八年
+|[[归允肃]]
+| align="center" |1642年－1689年
+|[[江苏省]][[苏州府]][[常熟县]]人
+| style="background: #FFE4E1" |[[詹事府]][[少詹事]]
+|
+|-
+| align="center" |1682年
+| nowrap="" |[[康熙]]二十一年
+|[[蔡升元]]
+| align="center" |1652年－1722年
+|[[浙江省]][[湖州府]][[德清县]]人
+| style="background: #FFD700" |禮部尚書
+|
+|-
+| align="center" |1685年
+|[[康熙]]二十四年
+|[[陆肯堂]]
+| align="center" |1650年－1696年
+|[[江苏省]][[苏州府]][[长洲县]]人
+| style="background: #FFE4E1" |翰林院侍讀學士
+|
+|-
+| align="center" |1688年
+|[[康熙]]二十七年
+|[[沈廷文]]
+| align="center" |－
+|[[浙江省]][[嘉兴府]][[秀水县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1691年
+|[[康熙]]三十年
+|[[戴有祺]]
+| align="center" |－1711年
+|[[江苏省]][[松江府]][[金山卫]]人
+| style="background: #98FB98" |翰林院修撰
+|原取[[吳昺]]，因[[康熙帝]]愛戴有祺書法而取戴為第一
+|-
+| align="center" |1694年
+|[[康熙]]三十三年
+|[[胡任輿]]
+| align="center" |－1704年
+|[[江苏省]][[江宁府]][[上元县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1697年
+|[[康熙]]三十六年
+|[[李蟠]]
+| align="center" |－
+|[[江苏省]][[徐州]][[直隸州]]人
+| style="background: #00FFEF" |翰林院侍讀
+|
+|-
+| align="center" |1700年
+|[[康熙]]三十九年
+|[[汪绎]]
+| align="center" |1671年－1706年
+|[[江苏省]][[苏州府]][[常熟縣]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1703年
+|[[康熙]]四十二年
+|[[王式丹]]
+| align="center" |1645年－1718年
+|[[江苏省]][[扬州府]][[宝应县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1706年
+|[[康熙]]四十五年
+|[[王云锦]]
+| align="center" |1657年－1727年
+|[[江苏省]][[常州府]][[无锡县]]人
+| style="background: #98FB98" |翰林院修撰、陝西學政
+|
+|-
+| align="center" |1709年
+|[[康熙]]四十八年
+|[[赵熊诏]]
+| align="center" |1663年－1721年
+|[[江苏省]][[常州府]][[武进县]]人
+| style="background: #00FFEF" |翰林院侍讀
+|
+|-
+| align="center" |1712年
+|[[康熙]]五十一年
+|[[王世琛]]
+| align="center" |1680年－1729年
+|[[江苏省]][[苏州府]][[长洲县]]人
+| style="background: #00FFEF" |翰林院侍講、山東學政
+|
+|-
+| align="center" |1713年
+|[[康熙]]五十二年
+|[[王敬銘]]
+| align="center" |1668年－1721年
+|[[江苏省]][[蘇州府]][[嘉定县]]人
+| style="background: #98FB98" |翰林院修撰
+|[[恩科]]
+|-
+| align="center" |1715年
+|[[康熙]]五十四年
+|[[徐陶璋]]
+| align="center" |1674年－1738年
+|[[江苏省]][[苏州府]][[崑山县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1718年
+|[[康熙]]五十七年
+|[[汪应铨]]
+| align="center" |1685年－1745年
+|[[江苏省]][[苏州府]][[常熟县]]人
+| style="background: #98FB98" |左春坊贊善
+|
+|-
+| align="center" |1721年
+|[[康熙]]六十年
+|[[邓中岳]]
+| align="center" |－
+|[[山东省]][[東昌府]][[东昌衛]]人
+| style="background: #FFFF00" |禮部左侍郎
+|
+|-
+| align="center" |1723年
+|[[雍正]]元年
+|[[于振]]
+| align="center" |－
+|[[江苏省]][[镇江府]][[金坛县]]人
+| style="background: #FFE4E1" |翰林院侍讀學士、日講起居注官
+|[[恩科]]
+|-
+| align="center" |1724年
+|[[雍正]]二年
+|[[陈德华]]
+| align="center" |1696年－1779年
+|[[直隶省]][[保定府]][[安州]]人
+| style="background: #FFD700" |禮部尚書、入直上書房
+|
+|-
+| align="center" |1727年
+|[[雍正]]五年
+|[[彭启丰]]
+| align="center" |1701年－1784年
+|[[江苏省]][[苏州府]][[长洲县]]人
+| style="background: #FFD700" |[[兵部尚書]]、經筵講官
+|[[乾隆]]十九年狀元[[莊培因]]為其[[女婿]]
+|-
+| align="center" |1730年
+|[[雍正]]八年
+|[[周澍]]
+| align="center" |1684年－
+|[[浙江省]][[杭州府]][[钱塘县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1733年
+|[[雍正]]十一年
+|[[陈倓]]
+| align="center" |1695年－1739年
+|[[江苏省]][[扬州府]][[仪征县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1736年
+|[[乾隆]]元年
+|[[金德瑛]]
+| align="center" |1701年－1762年
+|[[浙江省]][[杭州府]][[仁和县]]人
+| style="background: #FFD700" |[[都察院]][[左都御史]]
+|
+|-
+| align="center" |1737年
+|[[乾隆]]二年
+|[[于敏中]]
+| align="center" |1714年－1779年
+|[[江苏省]][[镇江府]][[金坛县]]人
+| style="background: #FFD700" |太子太保、[[文華殿大學士]]、兼管翰林院[[掌院學士]]、上書房總師傅
+|[[恩科]]
+|-
+| align="center" |1739年
+|[[乾隆]]四年
+|[[莊有恭]]
+| align="center" |1713年－1767年
+|籍貫[[福建省]][[泉州府]][[晋江]]人，
+出生在[[广东省]][[广州府]][[番禺县]]
+| style="background: #FFD700" |[[太子少保]]、[[協辦大學士]]、兼[[刑部尚書]]
+|
+|-
+| align="center" |1742年
+|[[乾隆]]七年
+|[[金甡]]
+| align="center" |1702年－1782年
+|[[浙江省]][[杭州府]][[仁和县]]人
+| style="background: #FFFF00" |禮部左侍郎
+|
+|-
+| align="center" |1745年
+|[[乾隆]]十年
+|[[钱维城]]
+| align="center" |1720年－1772年
+|[[江苏省]][[常州府]][[武进县]]人
+| style="background: #FFFF00" |[[刑部左侍郎]]
+|
+|-
+| align="center" |1748年
+|[[乾隆]]十三年
+|[[梁国治]]
+| align="center" |1723年－1786年
+|[[浙江省]][[绍兴府]][[会稽县]]人
+| style="background: #FFD700" |太子太保、[[東閣大學士]]、[[軍機大臣]]、兼[[戶部尚書]]
+|-
+| align="center" |1751年
+|[[乾隆]]十六年
+|[[吳鴻 (清朝)|吴鸿]]
+| align="center" |1725年－1763年
+|[[浙江省]][[杭州府]][[仁和县]]人
+| style="background: #00FFEF" |翰林院侍讀，湖南學政
+|
+|-
+| align="center" |1752年
+|[[乾隆]]十七年
+|[[秦大士]]
+| align="center" |1715年－1777年
+|[[江苏省]][[江宁府]][[江宁县]]人
+| style="background: #FFE4E1" |翰林院侍講學士、尚書房行走
+|[[恩科]]
+|-
+| align="center" |1754年
+|[[乾隆]]十九年
+|[[莊培因]]
+| align="center" |1723年－1759年
+|[[江苏省]][[常州府]][[阳湖县]]人
+| style="background: #FFE4E1" |翰林院侍講學士、福建學政
+|雍正五年狀元[[彭啟豐]]的女婿
+|-
+| align="center" |1757年
+|[[乾隆]]二十二年
+|[[蔡以臺]]
+| align="center" |－
+|[[浙江省]][[嘉兴府]][[嘉善县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1760年
+|[[乾隆]]二十五年
+|[[毕沅]]
+| align="center" |1730年－1797年
+|[[江苏省]][[太仓直隸州]][[镇洋县]]人
+| style="background: #FFD700" |太子太保、[[湖廣總督]]
+|
+|-
+| align="center" |1761年
+|[[乾隆]]二十六年
+|[[王杰 (乾隆進士)|王杰]]
+| align="center" |1725年－1805年
+|[[陕西省]][[同州府]][[韩城县]]人
+| style="background: #FFD700" |[[太子太師]]、東閣大學士、軍機大臣、上書房總師傅、管理禮部事務
+|[[恩科]]。為取得江南江北的平衡，遂改取江北人王-{杰}-。
+|-
+| align="center" |1763年
+|[[乾隆]]二十八年
+|[[秦大成]]
+| align="center" |1720年－1779年
+|[[江苏省]][[太仓直隸州]][[嘉定县]]人
+| style="background: #98FB98" |翰林院修撰
+|相傳原取[[褚廷璋]]，但因褚得罪某官而被用計換掉
+|-
+| align="center" |1766年
+|[[乾隆]]三十一年
+|[[张書勳]]
+| align="center" |－
+|[[江苏省]][[苏州府]][[吴县]]人
+| style="background: #98FB98" |[[右中允]]
+|
+|-
+| align="center" |1769年
+|[[乾隆]]三十四年
+|[[陈初哲]]
+| align="center" |1736年－1787年
+|[[江苏省]][[苏州府]][[元和县]]人
+| style="background: #FFE4E1" |湖北荊宜施道[[道員]]、兼管荊關稅務監督
+|
+|-
+| align="center" |1771年
+|[[乾隆]]三十六年
+|[[黄轩 (清朝)|黃軒]]
+| align="center" |－
+|[[安徽省]][[徽州府]][[休宁县]]人
+| style="background: #FFFDD0" |四川川東道道員、加[[按察使]]銜
+|[[恩科]]
+|-
+| align="center" |1772年
+|[[乾隆]]三十七年
+|[[金榜 (清朝)|金榜]]
+| align="center" |1735年－1801年
+|[[安徽省]][[徽州府]][[歙县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1775年
+|[[乾隆]]四十年
+|[[吴锡龄]]
+| align="center" |－1776年
+|[[安徽省]][[徽州府]][[休宁县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1778年
+|[[乾隆]]四十三年
+|[[戴衢亨]]
+| align="center" |1755年－1811年
+|[[江西省]][[南安府]][[大庾县]]人
+| style="background: #FFD700" |太子太師、[[體仁閣大學士]]、軍機大臣、管理工部事務
+|原應為[[邵自昌]]第一，但因邵之試卷難以拆封見名而改取排第二的戴衢亨
+|-
+| align="center" |1780年
+|[[乾隆]]四十五年
+|[[汪如洋]]
+| align="center" |1755年－1794年
+|[[浙江省]][[嘉興府]][[秀水县]]人
+| style="background: #98FB98" |翰林院修撰、雲南學政
+|[[恩科]]
+|-
+| align="center" |1781年
+|[[乾隆]]四十六年
+|[[钱棨]]
+| align="center" |1734年－1799年
+|[[江苏省]][[苏州府]][[长洲县]]人
+| style="background: #FFFF00" |[[內閣學士]]兼[[禮部侍郎]]
+|[[連中三元]]（六元狀元）
+|-
+| align="center" |1784年
+|[[乾隆]]四十九年
+|[[茹棻]]
+| align="center" |1755年－1821年
+|[[浙江省]][[绍兴府]][[会稽县]]人
+| style="background: #FFD700" |兵部尚書
+|
+|-
+| align="center" |1787年
+|[[乾隆]]五十二年
+|[[史致光]]
+| align="center" |－1828年
+|[[浙江省]][[绍兴府]][[山阴县 (古代)|山阴县]]人
+| style="background: #FFD700" |都察院左都御史，[[雲貴總督]]
+|
+|-
+| align="center" |1789年
+|[[乾隆]]五十四年
+|[[胡长龄]]
+| align="center" |1758年－1814年
+|[[江苏省]][[通州直隸州]]人
+| style="background: #FFD700" |禮部尚書
+|
+|-
+| align="center" |1790年
+|[[乾隆]]五十五年
+|[[石韫玉]]
+| align="center" |1755年－1837年
+|[[江苏省]][[苏州府]][[吴县]]人
+| style="background: #FFFDD0" |山東按察使
+|[[恩科]]
+|-
+| align="center" |1793年
+|[[乾隆]]五十八年
+|[[潘世恩]]
+| align="center" |1770年－1854年
+|[[江苏省]][[苏州府]][[吴县]]人
+| style="background: #FFD700" |[[太傅]]、[[武英殿大學士]]、軍機大臣、上書房總師傅
+|
+|-
+| align="center" |1795年
+|[[乾隆]]六十年
+|[[王以銜]]
+| align="center" |1761年－1823年
+|[[浙江省]][[湖州府]][[归安县]]人
+| style="background: #FFFF00" |禮部右侍郎
+|[[恩科]]
+|-
+| align="center" |1796年
+|[[嘉庆]]元年
+|[[赵文楷]]
+| align="center" |1761年－1801年
+|[[安徽省]][[安庆府]][[太湖县]]人
+| style="background: #FFE4E1" |山西雁平兵備道道員
+|
+|-
+| align="center" |1799年
+|[[嘉庆]]四年
+|[[姚文田]]
+| align="center" |1758年－1827年
+|[[浙江省]][[湖州府]][[归安县]]人
+| style="background: #FFD700" |禮部尚書
+|
+|-
+| align="center" |1801年
+|[[嘉庆]]六年
+|[[顧臯]]
+| align="center" |1763年－1832年
+|[[江苏省]][[常州府]][[金匱县]]人
+| style="background: #FFFF00" |[[戶部左侍郎]]
+|[[恩科]]
+|-
+| align="center" |1802年
+|[[嘉庆]]七年
+|[[吴廷琛]]
+| align="center" |1773年－1844年
+|[[江苏省]][[苏州府]][[元和县]]人
+| style="background: #FFFDD0" |雲南按察使
+|
+|-
+| align="center" |1805年
+|[[嘉庆]]十年
+|[[彭浚]]
+| align="center" |1769年－1833年
+|[[湖南省]][[衡州府]][[衡山县]]人
+| style="background: #FFE4E1" |[[順天府府丞]]
+|
+|-
+| align="center" |1808年
+|[[嘉庆]]十三年
+|[[吴信中]]
+| align="center" |－
+|[[江苏省]][[苏州府]][[吴县]]人
+| style="background: #FFE4E1" |翰林院侍讀學士
+|
+|-
+| align="center" |1809年
+|[[嘉庆]]十四年
+|[[洪瑩]]
+| align="center" |－
+|[[安徽省]][[徽州府]][[歙县]]人
+| style="background: #98FB98" |翰林院修撰
+|[[恩科]]
+|-
+| align="center" |1811年
+|[[嘉庆]]十六年
+|[[蒋立镛]]
+| align="center" |1782年－1842年
+|[[湖北省]][[安陸府]][[天门縣]]人
+| style="background: #FFFF00" |內閣學士兼禮部侍郎
+|
+|-
+| align="center" |1814年
+|[[嘉庆]]十九年
+|[[龍汝言]]
+| align="center" |－1838年
+|[[安徽省]][[安庆府]][[桐城县]]人
+| style="background: #00FFEF" |[[兵部員外郎]]
+|
+|-
+| align="center" |1817年
+|[[嘉庆]]二十二年
+|[[吳其濬]]
+| align="center" |1789年－1847年
+|[[河南省]][[光州直隸州]][[固始县]]人
+| style="background: #FFFF00" |太子太保、[[山西巡撫]]、兼提督鹽政
+|
+|-
+| align="center" |1819年
+|[[嘉庆]]二十四年
+|[[陈沆]]
+| align="center" |1785年－1826年
+|[[湖北省]][[黃州府]][[蕲水县]]人
+| style="background: #00FFEF" |四川道[[監察御史]]
+|[[恩科]]
+|-
+| align="center" |1820年
+|[[嘉庆]]二十五年
+|[[陈继昌 (清朝)|陈继昌]]
+| align="center" |1791年－1849年
+|[[廣西省 (清朝)|广西省]][[桂林府]][[临桂县]]人
+| style="background: #FFFF00" |[[江寧布政使]]
+|[[三元及第]]。相傳原擬第二，但因考官希望增加清朝「三元」的紀錄而建請[[嘉慶帝]]擢陈继昌為第一
+|-
+| align="center" |1822年
+|[[道光]]二年
+|[[戴蘭芬]]
+| align="center" |1781年－1833年
+|[[安徽省]][[泗州直隸州]][[天长县]]人
+| style="background: #FFE4E1" |翰林院侍講學士、陝甘學政
+|[[恩科]]
+|-
+| align="center" |1823年
+|[[道光]]三年
+|[[林召棠]]
+| align="center" |1786年－1873年
+|[[广东省]][[高州府]][[吴川县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1826年
+|[[道光]]六年
+|[[朱昌颐]]
+| align="center" |1784年－1855年
+|[[浙江省]][[嘉兴府]][[海盐县]]人
+| style="background: #00FFEF" |吏科[[給事中]]
+|
+|-
+| align="center" |1829年
+|[[道光]]九年
+|[[李振鈞 (清朝狀元)|李振鈞]]
+| align="center" |1794年－1839年
+|[[安徽省]][[安庆府]][[太湖县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1832年
+|[[道光]]十二年
+|[[吳鍾駿]]
+| align="center" |1798年－1853年
+|[[江苏省]][[苏州府]][[吴县]]人
+| style="background: #FFFF00" |禮部左侍郎、福建學政
+|[[恩科]]
+|-
+| align="center" |1833年
+|[[道光]]十三年
+|[[汪鸣相]]
+| align="center" |1794年－1840年
+|[[江西省]][[九江府]][[彭泽县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1835年
+|[[道光]]十五年
+|[[劉繹 (道光進士)|刘绎]]
+| align="center" |1798年－1879年
+|[[江西省]][[吉安府]][[永豐縣]]人
+| style="background: #FFFDD0" |江西督辦團練大臣（三品京堂銜翰林院修撰）
+|
+|-
+| align="center" |1836年
+|[[道光]]十六年
+|[[林鸿年]]
+| align="center" |1805年－1885年
+|[[福建省]][[福州府]][[侯官县]]人
+| style="background: #FFFF00" |[[雲南巡撫]]
+|[[恩科]]。相傳原取[[何紹基]]，但因何父得罪權貴[[卓秉恬]]而被換掉
+|-
+| align="center" |1838年
+|[[道光]]十八年
+|[[鈕福保]]
+| align="center" |1805年－1854年
+|[[浙江省]][[湖州府]][[烏程县]]人
+| style="background: #FFE4E1" |詹事府少詹事
+|
+|-
+| align="center" |1840年
+|[[道光]]二十年
+|[[李承霖]]
+| align="center" |1808年－1891年
+|[[江苏省]][[镇江府]][[丹徒县]]人
+| style="background: #FFE4E1" |翰林院侍講學士
+|
+|-
+| align="center" |1841年
+|[[道光]]二十一年
+|[[龍啓瑞]]
+| align="center" |1814年－1858年
+|[[廣西省 (清朝)|广西省]][[桂林府]][[临桂县]]人
+| style="background: #FFFF00" |[[江西布政使]]
+|[[恩科]]
+|-
+| align="center" |1844年
+|[[道光]]二十四年
+|[[孫毓溎]]
+| align="center" |
+|[[山东省]][[濟寧直隸州]]人
+| style="background: #FFFDD0" |浙江按察使
+|
+|-
+| align="center" |1845年
+|[[道光]]二十五年
+|[[萧锦忠]]
+| align="center" |－
+|[[湖南省]][[长沙府]][[茶陵州]]人
+| style="background: #98FB98" |翰林院修撰
+|[[恩科]]
+|-
+| align="center" |1847年
+|[[道光]]二十七年
+|[[张之萬]]
+| align="center" |1811年－1897年
+|[[直隶省]][[天津府]][[南皮縣]]人
+| style="background: #FFD700" |[[太保]]、東閣大學士、軍機大臣、管理吏部事務
+|
+|-
+| align="center" |1850年
+|[[道光]]三十年
+|[[陆增祥]]
+| align="center" |1815年－1882年
+|[[江苏省]][[太仓直隸州]]人
+| style="background: #FFE4E1" |湖南辰永沅靖道道員
+|
+|-
+| align="center" |1852年
+|[[咸丰]]二年
+|[[章鋆]]
+| align="center" |1820年－1875年
+|[[浙江省]][[宁波府]][[鄞县]]人
+| style="background: #FFE4E1" |[[國子監祭酒]]、廣東學政
+|[[恩科]]
+|-
+| align="center" |1853年
+|[[咸丰]]三年
+|[[孙如僅]]
+| align="center" |1820年－1880年
+|[[山东省]][[济宁直隸州]]人
+| style="background: #FFFF00" |內閣學士兼禮部侍郎
+|
+|-
+| align="center" |1856年
+|[[咸丰]]六年
+|[[翁同龢]]
+| align="center" |1830年－1904年
+|[[江苏省]][[苏州府]][[常熟县]]人
+| style="background: #FFD700" |太子太保、[[協辦大學士]]、兼戶部尚書、軍機大臣、兼總理各國事務大臣
+|
+|-
+| align="center" |1859年
+|[[咸丰]]九年
+|[[孙家鼐]]
+| align="center" |1827年－1909年
+|[[安徽省]][[鳳陽府]][[寿州]]人
+| style="background: #FFD700" |太傅、武英殿大學士、兼[[資政院]]總裁、充學務大臣
+|-
+| align="center" |1860年
+|[[咸丰]]十年
+|[[钟骏声]]
+| align="center" |
+|[[浙江省]][[杭州府]][[仁和县]]人
+| style="background: #FFE4E1" |翰林院侍講學士、日講起居注官、實錄修纂官
+|[[恩科]]
+|-
+| align="center" |1862年
+|[[同治]]元年
+|[[徐郙]]
+| align="center" |1836年－1908年
+|[[江苏省]][[太仓直隸州]][[嘉定县]]人
+| style="background: #FFD700" |太子少保、協辦大學士、禮部尚書、管理八旗官學大臣、管理國子監事務
+|
+|-
+| align="center" |1863年
+|[[同治]]二年
+|[[翁曾源]]
+| align="center" |1834年－1887年
+|[[江苏省]][[苏州府]][[常熟县]]人
+| style="background: #98FB98" |翰林院修撰
+|[[恩科]]
+|-
+| align="center" |1865年
+|[[同治]]四年
+|[[崇绮]]
+| align="center" |1829年－1900年
+|[[蒙古正蓝旗|正蓝旗蒙古]]人
+| style="background: #FFD700" |太子少保、戶部尚書、正紅旗漢軍都統、留京辦事大臣、管理禮部事務
+|唯一蒙古旗籍狀元
+|-
+| align="center" |1868年
+|[[同治]]七年
+|[[洪钧]]
+| align="center" |1839年－1893年
+|[[江苏省]][[苏州府]][[吴县]]人
+| style="background: #FFFF00" |兵部左侍郎、兼總理各國事務大臣
+|據傳原取[[王國鈞]]，因其名不為慈禧所喜，遂改取洪钧
+|-
+| align="center" |1871年
+|[[同治]]十年
+|[[梁耀樞]]
+| align="center" |1832年－1888年
+|[[广东省]][[广州府]][[顺德縣]]人
+| style="background: #FFE4E1" |詹事府少詹事、山東學政
+|
+|-
+| align="center" |1874年
+|[[同治]]十三年
+|[[陆润庠]]
+| align="center" |1841年－1915年
+|[[江苏省]][[苏州府]][[元和县]]人
+| style="background: #FFD700" |太傅、東閣大學士、[[弼德院]]院長
+|
+|-
+| align="center" |1876年
+|[[光绪]]二年
+|[[曹鴻勛]]
+| align="center" |1848年－1910年
+|[[山东省]][[萊州府]][[潍县]]人
+| style="background: #FFFF00" |[[陝西巡撫]]
+|[[恩科]]
+|-
+| align="center" |1877年
+|[[光绪]]三年
+|[[王仁堪]]
+| align="center" |1848年－1893年
+|[[福建省]][[福州府]][[闽县]]人
+| style="background: #FFE4E1" |[[蘇州府]][[知府]]
+|
+|-
+| align="center" |1880年
+|[[光绪]]六年
+|[[黄思永]]
+| align="center" |1842年－1914年
+|[[江苏省]][[江宁府]][[江宁县]]人
+| style="background: #FFE4E1" |翰林院侍讀學士
+|
+|-
+| align="center" |1883年
+|[[光绪]]九年
+|[[陈冕]]
+| align="center" |1859年－1893年
+|[[京師]][[顺天府]][[宛平县]]人
+| style="background: #98FB98" |翰林院修撰
+|
+|-
+| align="center" |1886年
+|[[光绪]]十二年
+|[[赵以烱]]
+| align="center" |1857年－1907年
+|[[贵州省]][[貴陽府]][[贵筑縣]]人
+| style="background: #98FB98" |翰林院修撰、廣西學政
+|
+|-
+| align="center" |1889年
+|[[光绪]]十五年
+|[[張建勳]]
+| align="center" |1848年－1913年
+|[[廣西省 (清朝)|广西省]][[桂林府]][[临桂县]]人
+| style="background: #FFFDD0" |黑龍江[[提學使]]
+|原取[[費念慈]]或[[張孝謙]]，但因考官爭執不下而改取张建勋
+|-
+| align="center" |1890年
+|[[光绪]]十六年
+|[[吴鲁]]
+| align="center" |1845年－1912年
+|[[福建省]][[泉州府]][[晋江县]]人
+| style="background: #FFE4E1" |署理吉林提學使（四品銜翰林院修撰）
+|[[恩科]]
+|-
+| align="center" |1892年
+|[[光绪]]十八年
+|[[刘福姚]]
+| align="center" |－
+|[[江西省]][[吉安府]][[庐陵縣]]人，寄籍[[廣西省 (清朝)|广西省]][[桂林府]][[臨桂縣]]
+| style="background: #00FFEF" |翰林院秘書郎、兼學部圖書局總務總校
+|
+|-
+| align="center" |1894年
+|[[光绪]]二十年
+|[[张謇]]
+| align="center" |1853年－1926年
+|[[江苏省]][[通州直隸州]]人
+| style="background: #FFD700" |農工商大臣
+中華民國工商農林部總長
+|[[恩科]]
+|-
+| align="center" |1895年
+|[[光绪]]二十一年
+|[[骆成骧]]
+| align="center" |1865年－1926年
+|[[四川省]][[资州直隸州]]人
+| style="background: #FFFDD0" |山西提學使
+中華民國四川臨時省議會議長
+|原定状元为[[喻长霖]]，而骆成骧列在二甲前列，其卷中对策文中有“主忧臣劳，主辱臣死”之语，正值[[甲午战争]]之际，光绪帝深受感动，遂提骆成骧为状元，喻长霖为榜眼
+|-
+| align="center" |1898年
+|[[光绪]]二十四年
+|[[夏同龢]]
+| align="center" |1868年－1925年
+|[[貴州省]][[都勻府]][[麻哈州]]人
+| style="background: #00FFEF" |翰林院修撰
+中華民國江西省實業廳長，眾議院議員
+|
+|-
+| align="center" |1903年
+|[[光绪]]二十九年
+|[[王寿彭]]
+| align="center" |1875年－1929年
+|[[山东省]][[萊州府]][[潍县]]人
+| style="background: #FFFDD0" |湖北提學使
+中華民國山東省教育廳長
+|
+|-
+| align="center" |1904年
+|[[光绪]]三十年
+|[[刘春霖]]
+| align="center" |1872年－1942年
+|[[直隶省]][[河間府]][[肃宁縣]]人
+| style="background: #FFFDD0" |福建提學使
+中華民國直隸省教育廳廳長
+|[[恩科]]
+|}
+==太平天国状元==
+{| class="wikitable sortable" width=100%
+!noWrap|西曆
+!noWrap|中曆
+!noWrap|姓名
+!noWrap|生卒年
+!noWrap|籍貫
+!noWrap|備註
+|-
+|align ="center"|1853年
+|
+|noWrap|[[武立勋]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[傅善祥]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[杨朝福]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[吴容宽]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[刘闼忠]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[朱世杰 (太平天国状元)|朱世杰]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[乔彦才]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[叶春元]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[刘盛培]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[范朴园]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[沈抡元]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[吴镇坤]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[汪顺祥]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|
+|
+|[[陆培英]]
+|align ="center"|
+|
+|
+|-
+|align ="center"|1862年
+|
+|[[徐首长]]
+|align ="center"|
+|
+|
+|}
+
+==參考書目==
+*[[王定保]]：《[[唐摭言]]》
+
+==注釋==
+<div class="references-small">
+<references />
+</div>
+
+[[Category:中国状元列表|*]]

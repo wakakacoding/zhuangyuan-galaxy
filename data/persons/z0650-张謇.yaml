@@ -1,0 +1,45 @@
+id: z0650
+name: 张謇
+zi: 季直
+hao: 啬庵
+dynasty: qing
+exam_year: 1894
+reign: 光绪
+birth_year: 1853
+death_year: 1926
+native_hist: 江苏省通州直隶州
+native_modern: 江苏省南通市
+ke_ci: 光绪二十年甲午恩科
+bio_short: 四十一岁夺魁的"大器晚成"状元。甲午战败后毅然弃官从商，以"实业救国""教育救国"再造南通一城，创办大生纱厂、通州师范学校等数十项近代事业，被誉为"状元实业家"。
+tags:
+  - 实业家
+  - 教育家
+  - 立宪派
+events:
+  - year: 1894
+    type: 夺魁
+    title: 光绪二十年甲午恩科状元
+    description: 历经二十余年科场坎坷，四十一岁终成状元，授翰林院修撰。同科即逢甲午战败。
+    source_id: s0002
+    office: 翰林院修撰
+    rank_grade: 6.5
+  - year: 1895
+    type: 实业
+    title: 弃官兴办实业
+    description: 目睹国势日蹙，辞官回南通筹办大生纱厂，提出"实业救国"；此后三十年创办工厂、农垦、银行、航运等实业数十家。
+    source_id: s0013
+  - year: 1902
+    type: 实业
+    title: 创办通州师范学校
+    description: 中国近代最早的民立师范学校之一，张謇以"父教育而母实业"为南通城市规划纲领。
+    source_id: s0013
+  - year: 1913
+    type: 授官
+    title: 出任民国农商总长
+    description: 北洋政府时期任农商总长，主持制定一系列工商法规；两年后辞官，全心经营南通地方自治。
+    source_id: s0013
+  - year: 1926
+    type: 卒
+    title: 卒于南通
+    description: 年七十三。胡适称其为"近代中国史上一个很伟大的失败的英雄"。
+    source_id: s0013

@@ -1,0 +1,14 @@
+# 依赖与构建产物
+node_modules/
+dist/
+.astro/
+
+# CHGIS 原始 shp（109MB；下载与处理管线见 data/geo/SOURCES.md，产物已入 public/data/maps/）
+data/geo/chgis/raw/
+
+# 系统与日志
+.DS_Store
+*.log
+
+# Playwright 浏览器缓存（沙箱不可用，857MB）
+.pw-browsers/

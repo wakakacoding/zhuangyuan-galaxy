@@ -1,0 +1,49 @@
+{
+  "name": "zhuangyuan-galaxy",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run build:maps && npm run build:data && npm run build:panorama && astro build",
+    "preview": "astro preview",
+    "build:data": "tsx scripts/build-data.ts",
+    "build:maps": "tsx scripts/build-geo-maps.ts",
+    "build:panorama": "node scripts/render-panorama.mjs"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@fontsource/noto-serif-sc": "^5.2.0",
+    "@nanostores/react": "^0.8.4",
+    "astro": "^5.13.0",
+    "d3-force": "^3.0.0",
+    "d3-quadtree": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
+    "d3-zoom": "^3.0.0",
+    "echarts": "^5.6.0",
+    "js-yaml": "^4.1.0",
+    "nanostores": "^0.11.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/d3-force": "^3.0.10",
+    "@types/d3-quadtree": "^3.0.6",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-zoom": "^3.0.8",
+    "@types/js-yaml": "^4.0.9",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "graphology": "^0.26.0",
+    "graphology-communities-louvain": "^2.0.2",
+    "graphology-types": "^0.24.8",
+    "mapshaper": "^0.7.83",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

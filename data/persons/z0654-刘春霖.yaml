@@ -1,0 +1,42 @@
+id: z0654
+name: 刘春霖
+zi: 润琴
+hao: 石筼
+dynasty: qing
+exam_year: 1904
+reign: 光绪
+birth_year: 1872
+death_year: 1942
+death_circa: true
+native_hist: 直隶省河间府肃宁县
+native_modern: 河北省沧州市肃宁县
+ke_ci: 光绪三十年甲辰恩科
+bio_short: 中国科举史上最后一位状元——"第一人中最后人"。夺魁次年科举即告废止，一甲榜首与千年科举同落幕。善书法，小楷有"楷法冠当世"之誉，时称"大楷学颜，小楷学刘"。
+tags:
+  - 末代状元
+  - 书法家
+  - 寒门
+events:
+  - year: 1904
+    type: 夺魁
+    title: 光绪三十年甲辰恩科状元
+    description: 家境贫寒，由保定莲池书院院长吴汝纶资助进京赶考而夺魁。此为科举史上最后一科殿试。
+    source_id: s0002
+  - year: 1904
+    type: 授官
+    title: 授翰林院修撰
+    description: 次年（1905年）清廷诏废科举，刘春霖遂成末代状元，后赴日本法政大学短期留学。
+    source_id: s0005
+    office: 翰林院修撰
+    rank_grade: 6.5
+  - year_label: 1937–1945
+    precision: range
+    type: 轶事
+    title: 沦陷期间拒附伪政权
+    description: 华北沦陷后闭门谢客，拒绝出任伪职，鬻字为生，保全晚节。
+    source_id: s0010
+  - year: 1942
+    type: 卒
+    title: 卒于北平
+    description: 卒年一说1944年，存两说备考。
+    source_id: s0010

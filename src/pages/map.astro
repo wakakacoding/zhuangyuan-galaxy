@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GeoMap from '../components/viz/GeoMap';
+import RegionPanel from '../components/shell/RegionPanel';
+import FilterBar from '../components/shell/FilterBar';
+import PersonOverlay from '../components/person/PersonOverlay';
+import { readFileSync } from 'node:fs';
+
+const geo = JSON.parse(
+  readFileSync(new URL('../../public/data/geo.json', import.meta.url), 'utf8'),
+);
+---
+
+<BaseLayout title="籍贯地图">
+  <div class="flex h-[calc(100vh-3rem)] flex-col">
+    <FilterBar client:load />
+    <div class="relative flex-1">
+      <GeoMap client:only="react" />
+      <RegionPanel client:only="react" />
+
+      {/* 门面文案（移动端折叠，读图由图内 GuidePopover 承载） */}
+      <div class="absolute left-4 top-4 z-10 hidden max-w-xs rounded-lg border border-jin/20 bg-xuan/85 p-4 backdrop-blur md:block">
+        <h1 class="text-base font-bold text-jin">状元产地的千年南移</h1>
+        <p class="mt-1.5 text-xs leading-6 text-miDim">
+          底图为各朝行政区划（CHGIS 历史切片），点是一位状元的籍贯。
+          唐宋状元多出于黄河流域，明清则为江浙所半壁——拖动下方朝代滑块，
+          看朱色重心如何从北方一步步移向江南。
+        </p>
+        <p class="mt-2 text-[11px] leading-5 text-miDim/70">
+          当前 {geo.points.length}/654 人有坐标（占有籍贯记录者的 97%）；
+          虚线段表示该朝样本不足 8 人，轨迹仅供参考。
+        </p>
+      </div>
+
+      {/* 合规标注（固定，不可关闭） */}
+      <div class="absolute bottom-20 right-3 z-10 rounded bg-xuan/70 px-2.5 py-1.5 text-right text-[10px] leading-4 text-miDim/80 backdrop-blur md:bottom-16">
+        <p>历史疆域示意（CHGIS V6），仅供学术研究，不作国界依据</p>
+        <p>
+          现代对照请以
+          <a href="http://bzdt.ch.mnr.gov.cn/" target="_blank" rel="noopener" class="underline hover:text-jin">自然资源部标准地图</a>
+          为准 · <a href="/about#map-compliance" class="underline hover:text-jin">数据来源与合规</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <PersonOverlay client:load />
+</BaseLayout>
+
+<script>
+  import { initUrlSync } from '../store/filters';
+  import { initSelectionFromUrl } from '../store/selection';
+  initUrlSync();
+  initSelectionFromUrl();
+</script>

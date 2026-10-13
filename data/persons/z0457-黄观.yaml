@@ -1,0 +1,35 @@
+id: z0457
+name: 黄观
+zi: 澜伯
+dynasty: ming
+exam_year: 1391
+reign: 洪武
+birth_year: 1363
+death_year: 1402
+native_hist: 南直隶池州府贵池县
+native_modern: 安徽省池州市
+ke_ci: 洪武二十四年辛未科
+bio_short: 县试、府试、院试、乡试、会试、殿试六试皆第一，世称"六首状元"。靖难之役中效忠建文帝，投江殉国，被朱棣削去状元籍，万历年间始获平反。
+tags:
+  - 三元及第
+  - 殉国
+  - 削籍
+events:
+  - year: 1391
+    type: 夺魁
+    title: 洪武二十四年辛未科状元
+    description: 自大科至殿试六试皆冠，人称"六首状元"，为中国科举史上罕见的全满贯。
+    source_id: s0004
+    office: 翰林院修撰
+    rank_grade: 6.5
+  - year: 1402
+    type: 卒
+    title: 靖难之役投江殉国
+    description: 燕王入南京，黄观时在长江上游募兵，闻变投江殉建文帝，妻女亦殉。朱棣登极后削其状元名籍，时人以讳故不敢称之。
+    source_id: s0004
+  - year_label: 万历年间
+    precision: range
+    type: 升迁
+    title: 平反昭雪
+    description: 万历间诏建表忠祠，黄观名列其中，状元名份获恢复确认。
+    source_id: s0004

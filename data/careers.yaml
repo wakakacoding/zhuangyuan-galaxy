@@ -1,0 +1,275 @@
+# 仕途轻量字段（人工考据，聚合桑基数据源之一，优先级高于 careers-mined-qing.yaml）
+# 字段：first_office/first_category（首授）→ mid_*（中期，可缺）→ final_office/final_category（终点）
+# 铁律：每条挂 source_id；拿不准的字段留空，不硬填
+# ===== 唐 =====
+- id: z0001   # 孙伏伽（622）
+  final_office: 大理寺卿
+  final_category: 部院高官
+  source_id: s0006
+- id: z0002   # 娄师德（649）
+  final_office: 同凤阁鸾台平章事（宰相）
+  final_category: 宰辅
+  source_id: s0006
+- id: z0022   # 王维（731 存疑）
+  final_office: 尚书右丞
+  final_category: 部院高官
+  source_id: s0006
+  note: 状元身份存疑（C 级），仕途本身见于正史
+- id: z0126   # 孔纬（859）
+  final_office: 司空兼门下侍郎同平章事（宰相）
+  final_category: 宰辅
+  source_id: s0006
+# ===== 五代 =====
+- id: z0178   # 王溥（948）
+  final_office: 司空（入宋）
+  final_category: 宰辅
+  source_id: s0003
+# ===== 宋 =====
+- id: z0211   # 吕蒙正（977）
+  first_office: 将作监丞、通判升州
+  first_category: 地方
+  final_office: 中书令（三度拜相）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0235   # 王曾（1018）
+  first_office: 将作监丞、通判济州
+  first_category: 地方
+  final_office: 同中书门下平章事（宰相）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0219   # 陈尧叟（989）
+  first_office: 光禄寺丞、直史馆
+  first_category: 部院
+  final_office: 同平章事（宰相）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0233   # 陈尧咨（1000）
+  first_office: 将作监丞
+  first_category: 部院
+  final_office: 武信军节度使、知天雄军
+  final_category: 地方大员
+  source_id: s0003
+- id: z0222   # 孙何（992）
+  first_office: 节度推官
+  first_category: 地方
+  final_office: 卒年四十四
+  final_category: 早逝
+  source_id: s0003
+- id: z0242   # 梁固（1009）
+  first_office: 将作监丞
+  first_category: 部院
+  final_office: 卒年三十三
+  final_category: 早逝
+  source_id: s0003
+- id: z0215   # 梁灏（985）
+  first_office: 大名府观察推官
+  first_category: 地方
+  final_office: 卒年四十二
+  final_category: 早逝
+  source_id: s0003
+- id: z0257   # 宋庠（1024）
+  first_office: 大理评事
+  first_category: 部院
+  final_office: 同平章事（宰相）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0273   # 冯京（1049）
+  first_office: 将作监丞、通判荆南
+  first_category: 地方
+  final_office: 参知政事（执政）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0326   # 张九成（1132）
+  first_office: 镇东军节度推官
+  first_category: 地方
+  final_office: 礼部侍郎
+  final_category: 部院高官
+  source_id: s0003
+- id: z0328   # 汪应辰（1135）
+  first_office: 签书镇东军节度判官
+  first_category: 地方
+  final_office: 吏部尚书
+  final_category: 部院高官
+  source_id: s0003
+- id: z0347   # 王十朋（1157）
+  first_office: 签书建康军节度判官
+  first_category: 地方
+  final_office: 龙图阁学士、历知四州
+  final_category: 地方大员
+  source_id: s0003
+- id: z0366   # 卫泾（1184）
+  final_office: 参知政事（执政）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0349   # 梁克家（1160）
+  final_office: 右丞相
+  final_category: 宰辅
+  source_id: s0003
+- id: z0355   # 郑侨（1169）
+  final_office: 参知政事（执政）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0387   # 郑性之（1208）
+  final_office: 参知政事（执政）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0393   # 袁甫（1214）
+  final_office: 兵部尚书
+  final_category: 部院高官
+  source_id: s0003
+- id: z0396   # 吴潜（1217）
+  final_office: 左丞相
+  final_category: 宰辅
+  source_id: s0003
+- id: z0412   # 留梦炎（1244）
+  final_office: 右丞相兼枢密使（后降元）
+  final_category: 宰辅
+  source_id: s0003
+- id: z0416   # 文天祥（1256）
+  first_office: 签书宁海军节度判官
+  first_category: 地方
+  final_office: 右丞相兼枢密使，大都就义
+  final_category: 殉国
+  source_id: s0003
+- id: z0420   # 陈文龙（1268）
+  final_office: 参知政事，抗元被俘绝食死
+  final_category: 殉国
+  source_id: s0003
+- id: z0421   # 张镇孙（1271）
+  final_office: 龙图阁待制，抗元殉国
+  final_category: 殉国
+  source_id: s0003
+# ===== 辽 =====
+- id: z0226   # 张俭（996）
+  final_office: 左丞相（辽圣宗、兴宗两朝名臣）
+  final_category: 宰辅
+  source_id: s0017
+# ===== 元 =====
+- id: z0427   # 泰不华（1321）
+  first_office: 集贤殿修撰
+  first_category: 翰林院
+  final_office: 台州路达鲁花赤，战方国珍死
+  final_category: 殉国
+  source_id: s0009
+- id: z0436   # 李齐（1333）
+  final_office: 高邮知府，城陷为张士诚所杀
+  final_category: 殉国
+  source_id: s0009
+- id: z0439   # 普颜不花（1345）
+  final_office: 山东宣慰使，益都拒降明军死
+  final_category: 殉国
+  source_id: s0009
+# ===== 明 =====
+- id: z0454   # 吴伯宗（1371）
+  final_office: 武英殿大学士，后贬终官检讨
+  final_category: 其他
+  source_id: s0004
+- id: z0457   # 黄观（1391）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 右侍中，靖难投江殉国
+  final_category: 殉国
+  source_id: s0004
+- id: z0465   # 马铎（1412）
+  final_office: 翰林院修撰（卒于官）
+  final_category: 学政文教
+  source_id: s0018
+- id: z0466   # 陈循（1415）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 华盖殿大学士（土木后谪戍）
+  final_category: 宰辅
+  source_id: s0004
+- id: z0476   # 商辂（1445）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 谨身殿大学士
+  final_category: 宰辅
+  source_id: s0004
+- id: z0477   # 彭时（1448）
+  final_office: 文渊阁大学士
+  final_category: 宰辅
+  source_id: s0004
+- id: z0484   # 吴宽（1472）
+  final_office: 礼部尚书
+  final_category: 部院高官
+  source_id: s0004
+- id: z0485   # 谢迁（1475）
+  final_office: 文渊阁大学士
+  final_category: 宰辅
+  source_id: s0004
+- id: z0487   # 王华（1481）
+  final_office: 南京吏部尚书
+  final_category: 部院高官
+  source_id: s0004
+- id: z0495   # 顾鼎臣（1505）
+  final_office: 武英殿大学士
+  final_category: 宰辅
+  source_id: s0004
+- id: z0497   # 杨慎（1511）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 大礼议谪戍云南，终老滇南
+  final_category: 其他
+  source_id: s0004
+- id: z0509   # 李春芳（1547）
+  final_office: 首辅（华盖殿大学士）
+  final_category: 宰辅
+  source_id: s0004
+- id: z0514   # 申时行（1562）
+  final_office: 首辅（建极殿大学士）
+  final_category: 宰辅
+  source_id: s0004
+- id: z0531   # 周延儒（1613）
+  final_office: 首辅，崇祯赐死
+  final_category: 其他
+  source_id: s0004
+- id: z0534   # 文震孟（1622）
+  final_office: 东阁大学士（崇祯入阁）
+  final_category: 宰辅
+  source_id: s0004
+# ===== 清（特例覆写挖掘结果；常规者由 careers-mined-qing.yaml 承载） =====
+- id: z0526   # 赵秉忠（1598→明，深档）
+  final_office: 礼部尚书
+  final_category: 部院高官
+  source_id: s0014
+- id: z0597   # 钱棨（1781）
+  final_office: 内阁学士兼礼部侍郎
+  final_category: 部院高官
+  source_id: s0005
+- id: z0615   # 陈继昌（1820）
+  final_office: 江宁布政使
+  final_category: 地方大员
+  source_id: s0005
+- id: z0633   # 翁同龢（1856）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 协办大学士、军机大臣、帝师
+  final_category: 宰辅
+  source_id: s0012
+- id: z0638   # 崇绮（1865）
+  final_office: 庚子事变自缢殉国
+  final_category: 殉国
+  source_id: s0005
+- id: z0650   # 张謇（1894）
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 弃官实业救国（大生纱厂、民国农商总长）
+  final_category: 其他
+  source_id: s0013
+- id: z0654   # 刘春霖（1904）
+  final_office: 末代状元，民国隐居拒伪职
+  final_category: 归隐
+  source_id: s0018
+- id: z0555   # 彭定求（1676）
+  final_office: 翰林院侍讲，辞官归乡讲学
+  final_category: 归隐
+  source_id: s0005
+- id: z0617   # 林召棠（1823）
+  final_office: 辞官主讲端溪书院
+  final_category: 归隐
+  source_id: s0018
+- id: z0644   # 黄思永（1880）
+  final_office: 弃官兴办实业（北京工艺商局）
+  final_category: 其他
+  source_id: s0018

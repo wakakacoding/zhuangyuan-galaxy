@@ -1,0 +1,51 @@
+id: z0022
+name: 王维
+zi: 摩诘
+dynasty: tang
+exam_year: 721
+reign: 开元
+birth_year: 701
+death_year: 761
+native_hist: 河东蒲州（祖籍太原祁县）
+native_modern: 山西省运城市永济市
+ke_ci: 开元九年辛酉科
+bio_short: 盛唐诗人、画家，世称"王右丞"。其状元身份仅见于《集异记》等唐宋笔记，正史仅载进士及第——本案为全站"异说并存"机制的示范条目。
+tags:
+  - 诗人
+  - 画家
+  - 存疑
+disputed: true
+dispute_note: 状元说源自《集异记》等笔记小说（C级）；《旧唐书》《新唐书》仅载"开元九年进士擢第"，未言夺魁（A级）。姑存其说，备考。
+events:
+  - year: 721
+    type: 中举
+    title: 开元九年进士擢第
+    description: 正史仅载进士及第，未载名次。
+    source_id: s0006
+  - year: 721
+    type: 夺魁
+    title: 传为开元九年状元
+    description: 笔记载王维以琵琶曲《郁轮袍》获岐王举荐、玉真公主助力夺魁，情节传奇色彩浓，属传说层级。
+    source_id: s0016
+  - year_label: 开元九年稍后
+    precision: circa
+    type: 贬谪
+    title: 因黄狮子案贬济州司仓参军
+    description: 任太乐丞期间，因伶人舞黄狮子获罪（黄狮子非天子不舞），贬出京城。
+    source_id: s0006
+    office: 济州司仓参军
+    rank_grade: 8.5
+    estimated: true
+  - year: 756
+    type: 贬谪
+    title: 安史之乱中陷贼受伪职
+    description: 长安陷落后被俘，迫受伪署给事中；曾赋"凝碧池"诗明志。乱平后以诗自明，得从宽处理。
+    source_id: s0006
+  - year: 761
+    type: 卒
+    title: 卒于尚书右丞任
+    description: 官至尚书右丞，世称王右丞。诗画双绝，苏轼评"味摩诘之诗，诗中有画；观摩诘之画，画中有诗"。
+    source_id: s0006
+    office: 尚书右丞
+    rank_grade: 4
+    estimated: true

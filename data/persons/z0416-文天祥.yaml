@@ -1,0 +1,54 @@
+id: z0416
+name: 文天祥
+zi: 宋瑞
+hao: 文山
+dynasty: song
+exam_year: 1256
+reign: 宝祐
+birth_year: 1236
+death_year: 1283
+native_hist: 吉州庐陵
+native_modern: 江西省吉安市
+ke_ci: 宝祐四年丙辰科
+bio_short: 南宋末状元、抗元名臣。殿试时理宗见其名曰"此天之祥，乃宋之瑞也"。国破后起兵勤王，兵败被俘，拒降四年，大都就义。"人生自古谁无死，留取丹心照汗青"为千古绝唱。
+tags:
+  - 殉国
+  - 民族英雄
+  - 文学家
+events:
+  - year: 1256
+    type: 夺魁
+    title: 宝祐四年丙辰科状元
+    description: 殿试对策万言，直陈时弊。理宗亲擢第一，赞"此天之祥，乃宋之瑞"，故字宋瑞。
+    source_id: s0003
+    office: 承事郎、签书宁海军节度判官
+    rank_grade: 8.5
+    estimated: true
+  - year: 1275
+    type: 升迁
+    title: 起兵勤王
+    description: 元军渡江南下，文天祥散家财募兵，起兵入卫临安，任右丞相兼枢密使。
+    source_id: s0003
+    office: 右丞相兼枢密使
+    rank_grade: 1
+    estimated: true
+  - year: 1276
+    type: 贬谪
+    title: 出使元营被拘，逃脱南归
+    description: 奉命赴元营议和，被伯颜扣留；押解途中于镇江逃脱，辗转至福建继续抗元。
+    source_id: s0003
+  - year: 1278
+    type: 贬谪
+    title: 五坡岭兵败被俘
+    description: 十二月于广东海丰五坡岭兵败被俘，吞药不死。被押北上途中作《过零丁洋》。
+    source_id: s0003
+  - year: 1282
+    type: 著作
+    title: 狱中作《正气歌》
+    description: 囚于大都兵马司狱，作《正气歌》明志。元人屡劝降，许以宰相之位，皆拒。
+    source_id: s0003
+  - year: 1283
+    type: 卒
+    title: 柴市口就义
+    description: 至元二十年正月（公历1283年1月）于大都柴市就义，年四十七。衣带中留绝笔："孔曰成仁，孟曰取义。"
+    source_id: s0003

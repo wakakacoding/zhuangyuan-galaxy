@@ -1,0 +1,37 @@
+id: z0235
+name: 王曾
+zi: 孝先
+dynasty: song
+exam_year: 1002
+reign: 咸平
+birth_year: 977
+death_year: 1038
+native_hist: 青州益都（侨居福建晋江）
+native_modern: 山东省青州市
+ke_ci: 咸平五年壬寅科
+bio_short: 北宋名臣，乡试、会试、殿试连中三元，为宋代三元及第的代表人物。仁宗朝拜相，谥文正——"文正"为文臣谥号之极。
+tags:
+  - 三元及第
+  - 宰相
+events:
+  - year: 1002
+    type: 夺魁
+    title: 咸平五年壬寅科状元，连中三元
+    description: 解试、省试、殿试皆第一。翰林学士刘子仪戏曰"状元试三场，一生吃著不尽"，王曾正色答"平生之志不在温饱"。
+    source_id: s0003
+    office: 将作监丞、通判济州
+    rank_grade: 8
+    estimated: true
+  - year: 1022
+    type: 升迁
+    title: 拜相
+    description: 乾兴元年仁宗即位，拜同中书门下平章事，辅佐幼主，裁抑权佞。
+    source_id: s0003
+    office: 同中书门下平章事
+    rank_grade: 1
+    estimated: true
+  - year: 1038
+    type: 卒
+    title: 宝元元年卒
+    description: 赠侍中，谥文正。宋代言"文正"者，王曾、范仲淹等寥寥数人。
+    source_id: s0003

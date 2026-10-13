@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StarMapGate from '../components/viz/StarMapGate';
+import FilterBar from '../components/shell/FilterBar';
+import PersonOverlay from '../components/person/PersonOverlay';
+import { readFileSync } from 'node:fs';
+
+const stats = JSON.parse(
+  readFileSync(new URL('../../public/data/stats.json', import.meta.url), 'utf8'),
+);
+---
+
+<BaseLayout title="星图">
+  <div class="flex h-[calc(100vh-3rem)] flex-col">
+    <FilterBar client:load />
+    <div class="relative flex-1">
+      <StarMapGate client:only="react" />
+
+      {/* 门面文案（移动端由静态全景卡片承载，此处隐藏） */}
+      <div class="absolute bottom-4 left-4 z-10 hidden max-w-xs rounded-lg border border-jin/20 bg-xuan/85 p-4 backdrop-blur md:block">
+        <h1 class="text-base font-bold text-jin">一眼望尽 1283 年</h1>
+        <p class="mt-1.5 text-xs leading-6 text-miDim">
+          每一颗星是一位有姓名可考的状元，共 {stats.total} 位。
+          横轴是夺魁之年，纵带是朝代；星光越亮，存世史料越丰。
+          唐宋多淡星，明清渐璀璨——淡不是缺漏，是「榜上有名，史中无痕」的真实。
+          滚轮缩放，拖拽漫游，点击星星读其人；点底部播放键，看星河次第点亮。
+        </p>
+        <p class="mt-2 text-[11px] text-miDim/60">
+          当前已点亮深档案 16 人，数据持续回填中
+        </p>
+      </div>
+    </div>
+  </div>
+  <PersonOverlay client:load />
+</BaseLayout>
+
+<script>
+  import { initUrlSync } from '../store/filters';
+  import { initSelectionFromUrl } from '../store/selection';
+  initUrlSync();
+  initSelectionFromUrl();
+</script>

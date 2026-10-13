@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NetworkGraph from '../components/viz/NetworkGraph';
+import FilterBar from '../components/shell/FilterBar';
+import PersonOverlay from '../components/person/PersonOverlay';
+import { readFileSync } from 'node:fs';
+
+const edges = JSON.parse(
+  readFileSync(new URL('../../public/data/edges.json', import.meta.url), 'utf8'),
+) as { edges: { derived?: boolean }[]; communities: { label: string; size: number }[] };
+const manualCount = edges.edges.filter((e) => !e.derived).length;
+const derivedCount = edges.edges.length - manualCount;
+---
+
+<BaseLayout title="关系网络">
+  <div class="flex min-h-[calc(100vh-3rem)] flex-col">
+    <FilterBar client:load />
+    <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
+      <header class="mb-4">
+        <h1 class="text-2xl font-bold text-jin">状元朋友圈</h1>
+        <p class="mt-1 text-sm text-miDim">
+          科举不只是选官，更是结网——同年、师生、父子、翁婿、政敌，把 1283 年的状元织成一张网。
+          当前收录关系 {edges.edges.length} 条（人工考据 {manualCount} + 同年派生 {derivedCount}），随考据持续增补。
+        </p>
+      </header>
+      <NetworkGraph client:only="react" />
+    </main>
+  </div>
+  <PersonOverlay client:load />
+</BaseLayout>
+
+<script>
+  import { initUrlSync } from '../store/filters';
+  import { initSelectionFromUrl } from '../store/selection';
+  initUrlSync();
+  initSelectionFromUrl();
+</script>
