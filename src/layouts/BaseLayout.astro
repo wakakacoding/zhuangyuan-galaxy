@@ -8,6 +8,7 @@ interface Props {
   description?: string;
 }
 const { title, description = '一眼望尽 1283 年：从唐武德五年到清光绪三十年，654 位状元的人生星河' } = Astro.props;
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 const nav = [
   { href: '/', label: '星图' },
   { href: '/map', label: '籍贯地图' },
@@ -16,6 +17,8 @@ const nav = [
   { href: '/about', label: '关于数据' },
 ];
 const current = Astro.url.pathname;
+const stripBase = (p: string) => (BASE && p.startsWith(BASE) ? p.slice(BASE.length) : p) || '/';
+const currentPath = stripBase(current.replace(/\/$/, '')) || '/';
 ---
 
 <!doctype html>
@@ -28,16 +31,16 @@ const current = Astro.url.pathname;
   </head>
   <body class="min-h-screen bg-xuan font-serif text-mi antialiased">
     <nav class="flex h-12 items-center gap-1 border-b border-jin/20 bg-xuan/95 px-4 backdrop-blur">
-      <a href="/" class="mr-4 flex items-baseline gap-2">
+      <a href={`${BASE}/`} class="mr-4 flex items-baseline gap-2">
         <span class="text-lg font-bold tracking-widest text-jin">状元星河</span>
         <span class="hidden text-[10px] tracking-[0.3em] text-miDim sm:inline">622 – 1904</span>
       </a>
       <div class="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto">
         {nav.map((n) => (
           <a
-            href={n.href}
+            href={`${BASE}${n.href === '/' ? '' : n.href}/`}
             class={`whitespace-nowrap rounded px-2.5 py-1.5 text-sm transition-colors sm:px-3 ${
-              current === n.href ? 'bg-jin/15 text-jin' : 'text-miDim hover:text-mi'
+              currentPath === n.href ? 'bg-jin/15 text-jin' : 'text-miDim hover:text-mi'
             }`}
           >
             {n.label}

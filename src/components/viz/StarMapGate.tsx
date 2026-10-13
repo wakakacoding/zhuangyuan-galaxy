@@ -19,7 +19,7 @@ export default function StarMapGate() {
     return (
       <div className="relative h-full w-full overflow-hidden">
         <img
-          src="/images/starmap-panorama.svg"
+          src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/starmap-panorama.svg`}
           alt="状元星河静态全景：622–1904 年 654 位状元，横轴为夺魁年份，纵带为朝代"
           className="h-full w-full object-cover"
         />

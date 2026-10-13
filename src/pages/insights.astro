@@ -154,7 +154,7 @@ const compN: number = stats.total;
       </p>
       <div class="flex flex-wrap gap-2">
         {stats.sanyuan.map((p: { id: string; name: string; dynasty: string; exam_year: number }) => (
-          <a href={`/?p=${p.id}`} class="rounded-full border border-jin/40 px-3 py-1 text-sm text-jin hover:bg-jin/10">
+          <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/?p=${p.id}`} class="rounded-full border border-jin/40 px-3 py-1 text-sm text-jin hover:bg-jin/10">
             {p.name} · {dynName(p.dynasty)} · {p.exam_year}
           </a>
         ))}

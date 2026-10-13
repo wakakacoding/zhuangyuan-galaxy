@@ -38,7 +38,7 @@ const geo = JSON.parse(
         <p>
           现代对照请以
           <a href="http://bzdt.ch.mnr.gov.cn/" target="_blank" rel="noopener" class="underline hover:text-jin">自然资源部标准地图</a>
-          为准 · <a href="/about#map-compliance" class="underline hover:text-jin">数据来源与合规</a>
+          为准 · <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/about/#map-compliance`} class="underline hover:text-jin">数据来源与合规</a>
         </p>
       </div>
     </div>

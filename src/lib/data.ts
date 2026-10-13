@@ -1,4 +1,6 @@
 // 数据加载器：构建期产物 JSON 的运行时读取（带缓存）
+import { u } from './url';
+
 export interface IndexEntry {
   id: string; name: string; dynasty: string; exam_year: number;
   ganzhi: string; reign?: string;
@@ -40,7 +42,7 @@ export interface PersonDetailData {
 const cache = new Map<string, Promise<unknown>>();
 const load = <T>(url: string): Promise<T> => {
   if (!cache.has(url)) {
-    cache.set(url, fetch(url).then((r) => {
+    cache.set(url, fetch(u(url)).then((r) => {
       if (!r.ok) throw new Error(`加载失败: ${url}`);
       return r.json();
     }));

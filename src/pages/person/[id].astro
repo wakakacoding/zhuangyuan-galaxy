@@ -127,7 +127,7 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
 
     {/* 回星图（同构浮层入口） */}
     <div class="mt-10 border-t border-jin/15 pt-5 text-center">
-      <a href={`/?p=${person.id}`} class="inline-block rounded-full border border-jin/50 px-5 py-2 font-serif text-sm text-jin transition hover:bg-jin/10">
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/?p=${person.id}`} class="inline-block rounded-full border border-jin/50 px-5 py-2 font-serif text-sm text-jin transition hover:bg-jin/10">
         在星河中打开 {person.name} 的星 →
       </a>
     </div>

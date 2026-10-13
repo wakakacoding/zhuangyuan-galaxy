@@ -27,7 +27,7 @@ const cents = [...geo.centroids].sort(
 const path = cents.map((c, i) => `${i === 0 ? 'M' : 'L'}${X(c.lng).toFixed(1)},${Y(c.lat).toFixed(1)}`).join(' ');
 ---
 
-<a href="/map" class="group block" title="点击进籍贯地图，拖动时间滑块看完整演变">
+<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/map/`} class="group block" title="点击进籍贯地图，拖动时间滑块看完整演变">
   <svg viewBox={`0 0 ${W} ${H}`} class="w-full rounded-lg border border-jin/15 bg-xuan/40 transition group-hover:border-jin/40" role="img" aria-label="各朝代状元籍贯重心迁移缩略图">
     <defs>
       <marker id="sw-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
