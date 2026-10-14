@@ -1,0 +1,59 @@
+id: z0014
+name: 贺知章
+zi: 季真
+hao: 四明狂客
+dynasty: tang
+exam_year: 695
+reign: 证圣元年乙未科
+native_hist: 越州永兴
+native_modern: 浙江省杭州市萧山区
+birth_year: 659
+death_year: 744
+birth_circa: true
+ke_ci: 证圣元年乙未科
+bio_short: 浙江历史上第一位有记载的状元。诗人、书法家，「清谈风流」四明狂客，《咏柳》《回乡偶书》妇孺皆知。晚年识李白于微时，一句「谪仙人」成就诗仙名号；八十六岁告老还乡，玄宗亲作诗相送，百官饯行，荣宠一时无两。
+tags:
+  - 浙江首位状元
+  - 饮中八仙
+  - 四明狂客
+events:
+  - year: 695
+    type: 夺魁
+    title: 证圣元年乙未科状元
+    description: 武周证圣元年进士第一，为浙江地区首位有记载的科考状元，授国子四门博士，迁太常博士。
+    source_id: s0001
+  - year_label: 开元年间
+    precision: range
+    type: 升迁
+    title: 历礼部侍郎、工部侍郎，兼集贤院学士
+    description: 开元中迁礼部侍郎兼集贤院学士，后移工部侍郎兼秘书监，时称「贺监」。
+    office: 礼部侍郎兼集贤院学士
+    rank_grade: 4
+    estimated: true
+    source_id: s0006
+  - year_label: 天宝初年（742 前后）
+    precision: circa
+    type: 轶事
+    title: 金龟换酒，呼李白「谪仙人」
+    description: 李白初至长安，贺知章读《蜀道难》未竟而称叹再三，呼为「谪仙人」，解金龟换酒与饮，二人结为忘年交。杜甫《饮中八仙歌》以「知章骑马似乘船，眼花落井水底眠」开篇。
+    source_id: s0006
+  - year: 744
+    type: 致仕
+    title: 天宝三载告老还乡
+    description: 以太子宾客、秘书监（正三品）致仕，自请为道士还越州。玄宗亲赋诗送行，太子百官饯于长安东门，赐鉴湖一曲。还乡作《回乡偶书》：「少小离家老大回，乡音无改鬓毛衰。」
+    office: 太子宾客、秘书监
+    rank_grade: 3
+    estimated: true
+    source_id: s0006
+  - year: 744
+    type: 卒
+    title: 还乡后卒，年八十六
+    description: 归越州不久卒。书法与张旭、怀素并称，草书《孝经》墨迹流传日本；绍兴存《龙瑞宫记》石刻。
+    source_id: s0006
+career:
+  first_office: 国子四门博士
+  first_category: 学政文教
+  mid_office: 礼部侍郎兼集贤院学士
+  mid_category: 学政文教
+  final_office: 太子宾客、秘书监
+  final_category: 归隐

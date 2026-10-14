@@ -1,0 +1,60 @@
+id: z0011
+name: 陳伯玉
+zi: 伯玉
+dynasty: tang
+exam_year: 684
+reign: 文明元年甲申科
+native_hist: 梓州遂寧市射洪縣
+native_modern: 四川省遂宁市射洪市
+birth_year: 661
+death_year: 702
+birth_circa: true
+death_circa: true
+ke_ci: 文明元年甲申科
+bio_short: 即陈子昂（字伯玉），初唐诗文革新领袖，「诗骨」「海内文宗」，《登幽州台歌》千古绝唱。其状元身份是科举史著名悬案：正史仅载进士及第，「状元陈伯玉」与诗人陈子昂是否同一人，至今两说并存。
+tags:
+  - 诗骨
+  - 状元悬案
+disputed: true
+dispute_note: 三方记载互歧：①《唐才子传》载陈子昂为开耀二年（682）许且榜进士（徐松《登科记考》考定从之），非状元；②《玉芝堂谈荟》《登科记考》另载垂拱三年（687）状元「陈伯玉」，或以字行即陈子昂，或另有其人（科考惯例用本名不用字，且时陈子昂已登第授官）；③开放名录系于文明元年（684）。本站两说并存：人物为陈子昂，状元身份存疑。
+events:
+  - year: 682
+    type: 中举
+    title: 开耀二年进士及第（许且榜）
+    description: 二十一岁东入咸京游太学，调露二年（680）赴东都应试落第，开耀二年再举登第。《登科记考》考「射策高第在高宗崩之前」，以《唐才子传》开耀二年为是；赵儋碑、卢藏用别传系年互异，年谱家多有考辨。
+    source_id: s0027
+  - year: 684
+    type: 夺魁
+    title: 名录系文明元年甲申科状元
+    description: 开放名录列此；正史无状元明文。垂拱三年（687）另有状元「陈伯玉」见于《登科记考》引《玉芝堂谈荟》——与本案是否同一人，悬而未决。
+    source_id: s0001
+  - year_label: 垂拱年间
+    precision: range
+    type: 授官
+    title: 授麟台正字，以谏诤名
+    description: 武则天召见金华殿，授麟台正字。上《谏灵驾入京书》谏阻高宗灵驾西归长安，又屡上书言时政得失，直声震动朝野。
+    office: 麟台正字
+    rank_grade: 9
+    estimated: true
+    source_id: s0007
+  - year_label: 万岁通天年间（696–697）
+    precision: range
+    type: 升迁
+    title: 从建安王武攸宜北征契丹
+    description: 以右拾遗从军为参谋，登蓟北楼（幽州台），感燕昭王筑黄金台事，作《登幽州台歌》：「前不见古人，后不见来者。念天地之悠悠，独怆然而涕下。」
+    office: 右拾遗
+    rank_grade: 8
+    estimated: true
+    source_id: s0007
+  - year: 702
+    type: 卒
+    title: 冤死狱中，年四十三
+    description: 圣历初丁父忧归乡守制。县令段简贪暴，闻其家富，罗织罪名下狱，迫取贿赂，久视元年（700，一作长安二年702）死于狱中。生卒年各本互异（659–700/661–702 两说并存）。
+    source_id: s0007
+career:
+  first_office: 麟台正字
+  first_category: 学政文教
+  mid_office: 右拾遗（从武攸宜北征参谋）
+  mid_category: 部院
+  final_office: 右拾遗（冤死狱中）
+  final_category: 早逝

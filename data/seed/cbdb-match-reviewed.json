@@ -1,0 +1,22 @@
+{
+  "_comment": "CBDB 复核队列人工裁定结果（2026-10-14 首轮）。依据两类：① vita —— 名录生卒年与 CBDB 唯一候选精确吻合（同名人中唯一）；② year±2 —— 科年口径差 1–2 年且 CBDB 同名无歧义（或按 index_year 消歧）。confidence 记 0.95（人工复核确认，区别于双键自动 1.0）。",
+  "z0002": { "cbdbId": 31103, "confidence": 0.95, "rationale": "vita：生卒 630–699 唯一吻合" },
+  "z0020": { "cbdbId": 32130, "confidence": 0.95, "rationale": "vita：同名 2 人中生卒唯一吻合（668–741）" },
+  "z0031": { "cbdbId": 32694, "confidence": 0.95, "rationale": "vita：生卒唯一吻合" },
+  "z0057": { "cbdbId": 145439, "confidence": 0.95, "rationale": "vita：同名 2 人中生卒唯一吻合" },
+  "z0058": { "cbdbId": 177502, "confidence": 0.95, "rationale": "vita：生卒 729–795 唯一吻合" },
+  "z0059": { "cbdbId": 94651, "confidence": 0.95, "rationale": "vita：同名 3 人中生卒唯一吻合" },
+  "z0062": { "cbdbId": 189512, "confidence": 0.95, "rationale": "vita：同名 3 人中生卒唯一吻合" },
+  "z0075": { "cbdbId": 189485, "confidence": 0.95, "rationale": "vita：同名 4 人中生卒唯一吻合" },
+  "z0090": { "cbdbId": 32225, "confidence": 0.95, "rationale": "year±2：长庆二年 822 状元，CBDB 进士 821，且 CBDB 无同名" },
+  "z0655": { "cbdbId": 32882, "confidence": 0.95, "rationale": "year±2：名录 857（登科记考），CBDB 进士 858，无同名" },
+  "z0169": { "cbdbId": 17727, "confidence": 0.95, "rationale": "year±2：名录 924，CBDB 进士 923，无同名" },
+  "z0177": { "cbdbId": 19360, "confidence": 0.95, "rationale": "year±2：名录 945，CBDB 进士 944，无同名" },
+  "z0179": { "cbdbId": 40517, "confidence": 0.95, "rationale": "vita：同名 16 人中生卒 906–959 唯一吻合" },
+  "z0185": { "cbdbId": 4141, "confidence": 0.95, "rationale": "vita：生卒 930–1007 唯一吻合" },
+  "z0322": { "cbdbId": 28854, "confidence": 0.95, "rationale": "year±2：名录 1124，CBDB 进士 1123；同名 2 人按 index_year（1093 vs 1035）消歧取 28854" },
+  "z0403": { "cbdbId": 22047, "confidence": 0.95, "rationale": "year±2：名录 1226，CBDB 进士 1225；生年 1192 与状元年岁相容，无同名" },
+  "z0432": { "cbdbId": 35432, "confidence": 0.95, "rationale": "vita：同名 3 人中生卒唯一吻合" },
+  "z0573": { "cbdbId": 82220, "confidence": 0.95, "rationale": "vita：生卒唯一吻合" },
+  "z0632": { "cbdbId": 62395, "confidence": 0.95, "rationale": "year±2：名录 1853，CBDB 进士 1851；生年 1826 相容，无同名" }
+}

@@ -371,3 +371,9 @@
   type: 翁婿
   note: CBDB 亲属：女婿（吕蒙正为孙暨岳父）
   source_id: s0010
+# ===== M5 CBDB 导入（外延人物边，置信度 1.0，source s0010） =====
+- from: z0655   # 归仁翰
+  to: w0001     # 歸融（外延）
+  type: 亲属
+  note: CBDB 亲属：父
+  source_id: s0010

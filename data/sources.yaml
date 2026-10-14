@@ -63,3 +63,37 @@
   title: 历代状元谱（据维基文库状元列表及正史整理）
   tier: B
   note: 用于关系与仕途字段的初录来源，逐条待正史复核
+- id: s0019
+  title: 旧五代史
+  tier: A
+- id: s0020
+  title: 新五代史
+  tier: A
+- id: s0021
+  title: 太平广记（引《稽神录》等）
+  tier: C
+  note: 笔记传说汇编，仅轶事栏使用
+- id: s0022
+  title: 泉州府志、晋江县志
+  tier: B
+- id: s0023
+  title: 佛山市地方志（佛山简史/禅城区志）
+  tier: B
+- id: s0024
+  title: 文苑英华（苏颋《御史大夫赠右丞相程行谋神道碑》等碑志）
+  tier: A
+- id: s0025
+  title: 大唐梁君福墓志（梁旲家族墓志）
+  tier: B
+- id: s0026
+  title: 全唐文（钱珝《授赵昌翰考功郎中制》等制文）
+  tier: A
+- id: s0027
+  title: 唐才子传（元·辛文房）
+  tier: B
+- id: s0028
+  title: 辽代石刻文编（梁援墓志等出土墓志）
+  tier: A
+- id: s0029
+  title: 唐会要（宋·王溥）
+  tier: A

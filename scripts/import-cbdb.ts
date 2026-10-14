@@ -81,9 +81,25 @@ const mapAssoc = (desc: string | undefined): string | null => {
 };
 
 // ---------- 主循环：双键匹配 ----------
+// 人工复核确认队列（cbdb-match-reviewed.json）直接并入 matches，不再进复核队列
+const reviewedPath = join(seedDir, 'cbdb-match-reviewed.json');
+const reviewed = new Map<string, { cbdbId: number; confidence: number; rationale: string }>();
+try {
+  const raw = JSON.parse(readFileSync(reviewedPath, 'utf8'));
+  for (const [k, v] of Object.entries(raw)) {
+    if (k === '_comment') continue;
+    reviewed.set(k, v as { cbdbId: number; confidence: number; rationale: string });
+  }
+} catch { /* 文件不存在 */ }
+if (reviewed.size) console.log(`人工复核已确认 ${reviewed.size} 人并入`);
+
 const matches = new Map<string, { cbdbId: number; confidence: number; via: string }>(); // zid → 匹配结果
+for (const [zid, r] of reviewed) {
+  matches.set(zid, { cbdbId: r.cbdbId, confidence: r.confidence, via: `人工复核：${r.rationale}` });
+}
 const reviewQueue: Array<Record<string, unknown>> = [];
 for (const p of roster) {
+  if (reviewed.has(p.id)) continue; // 已人工确认
   let cands: BiogRow[] = [];
   for (const v of variants(p.name)) cands.push(...(findByName.all(v) as unknown as BiogRow[]));
   // 去重
@@ -122,7 +138,8 @@ for (const p of roster) {
     });
   }
 }
-console.log(`匹配：1.0 自动入 ${matches.size} 人；复核队列 ${reviewQueue.length} 人`);
+const autoCount = [...matches.values()].filter((m) => m.confidence === 1.0).length;
+console.log(`匹配：1.0 自动入 ${autoCount} 人 + 复核确认 ${reviewed.size} 人 = ${matches.size}；复核队列 ${reviewQueue.length} 人`);
 
 // ---------- 关系提取（仅 1.0 匹配者） ----------
 const zidByCbdb = new Map([...matches.entries()].map(([z, m]) => [m.cbdbId, z]));

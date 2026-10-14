@@ -1,0 +1,60 @@
+id: z0002
+name: 婁師德
+zi: 宗仁
+dynasty: tang
+exam_year: 649
+reign: 貞觀二十三年
+native_hist: 郑州原武（今原阳县）
+native_modern: 河南省新乡市原阳县
+birth_year: 630
+death_year: 699
+ke_ci: 贞观二十三年己酉科
+bio_short: 初唐出将入相第一人。弱冠进士擢第，书生请缨抗吐蕃，屯田河西三十年；两度拜相，举荐狄仁杰而不自居，「唾面自干」的器量与「功名始终」的善终在武周酷吏时代堪称奇迹。
+tags:
+  - 出将入相
+  - 唾面自干
+  - 屯田名将
+disputed: true
+dispute_note: 正史仅载「弱冠进士擢第」（《旧唐书》卷93），未明言进士第一；贞观二十三年状元说据后世名录，列 B 级待考。
+events:
+  - year: 649
+    type: 夺魁
+    title: 贞观二十三年进士擢第
+    description: 后世名录列为该科状元；《旧唐书》本传仅载「弱冠，进士擢第」，名次无正史明文。
+    source_id: s0006
+  - year_label: 上元初年（674）
+    precision: circa
+    type: 升迁
+    title: 书生请缨，抗表为猛士
+    description: 吐蕃犯塞，朝廷募猛士，时任监察御史的娄师德抗表请行，高宗特假朝散大夫从军，频有战功，迁殿中侍御史兼河源军司马，并知营田事。
+    source_id: s0006
+  - year: 692
+    type: 升迁
+    title: 长寿元年拜相
+    description: 召拜夏官侍郎、判尚书事，次年同凤阁鸾台平章事。长期兼领河源、积石、怀远等军检校营田大使。
+    office: 同凤阁鸾台平章事
+    rank_grade: 3
+    estimated: true
+    source_id: s0006
+  - year: 695
+    type: 贬谪
+    title: 素罗汗山战败贬原州
+    description: 与王孝杰讨吐蕃，战于素罗汗山，官军败绩，贬原州员外司马；万岁通天二年（697）即复入为凤阁侍郎、同平章事。
+    source_id: s0006
+  - year: 697
+    type: 轶事
+    title: 荐狄仁杰而不言
+    description: 师德尝荐狄仁杰为相，仁杰不知，数排之。则天出师德旧表示仁杰，仁杰大惭：「吾为娄公所含如此，方知不逮娄公远矣。」其弟授代州刺史，师德诫以「唾面自干」之忍。
+    source_id: s0006
+  - year: 699
+    type: 卒
+    title: 圣历二年九月卒于军旅
+    description: 突厥入寇，以七十高龄检校并州长史、充天兵军大总管，是岁九月卒。赠凉州都督，谥曰贞。
+    source_id: s0006
+career:
+  first_office: 江都尉
+  first_category: 地方
+  mid_office: 殿中侍御史兼河源军司马（营田）
+  mid_category: 军职
+  final_office: 纳言、天兵军大总管（赠凉州都督，谥贞）
+  final_category: 宰辅

@@ -1,0 +1,39 @@
+id: z0123
+name: 赵蒙
+dynasty: tang
+exam_year: 855
+reign: 大中九年乙亥科
+native_hist: 奉天（今陝西乾縣）
+native_modern: 陕西省咸阳市乾县
+ke_ci: 大中九年乙亥科
+bio_short: 京兆奉天赵氏「一烈士、三状元、五宰相、六御史、九进士」中的第一位状元。祖父赵植朱泚之乱率家守奉天城有功，父赵存约殉难于兴元兵乱；赵蒙大中九年夺魁，其子赵昌翰三十二年后（887）再中状元——父子状元，唐代科举佳话。
+tags:
+  - 奉天赵氏
+  - 父子状元
+events:
+  - year: 855
+    type: 夺魁
+    title: 大中九年乙亥科状元
+    description: 宣宗大中九年进士第一。曾祖赵植以德宗朝守奉天城、输家财赏军起家，官至岭南节度使；父赵存约长庆元年进士，大和三年随节度使李绛拒贼殉难——「烈士」之后。
+    source_id: s0001
+  - year_label: 大中年后
+    precision: range
+    type: 升迁
+    title: 历官御史中丞、谏议大夫、给事中
+    description: 世系文献载其官至御史中丞、谏议大夫、给事中，为家族「六御史」之一。
+    office: 御史中丞
+    rank_grade: 4.5
+    estimated: true
+    source_id: s0007
+  - year: 887
+    type: 轶事
+    title: 子赵昌翰再中状元
+    description: 光启三年丁未科，赵蒙之子赵昌翰进士第一——父子相隔三十二年先后夺魁。同榜进士中有后来名诗人郑谷（困科场十六年后此榜及第）。
+    source_id: s0001
+career:
+  first_office: 御史台系统（推定）
+  first_category: 部院
+  mid_office: 御史中丞
+  mid_category: 部院
+  final_office: 给事中
+  final_category: 部院高官

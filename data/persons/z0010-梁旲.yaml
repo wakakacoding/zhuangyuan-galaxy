@@ -1,0 +1,44 @@
+id: z0010
+name: 梁旲
+zi: 司懿
+dynasty: tang
+exam_year: 681
+reign: 永隆二年
+native_hist: 安定泾川
+native_modern: 甘肃省平凉市泾川县
+birth_year: 646
+death_year: 711
+ke_ci: 永隆二年辛巳科
+bio_short: 又名达，字司懿，原籍安定乌氏，生于洛州嵩县陆浑。永隆二年进士第一，官至邺城令、颍川令。家世将门（祖梁玄栗官右金吾大将军、封宜春郡公），本人却「志逸风云，情驰物表」，无意干禄——状元中的隐逸型人物。
+tags:
+  - 将门文魁
+  - 恬退
+events:
+  - year: 681
+    type: 夺魁
+    title: 永隆二年进士第一
+    description: 后世名录列为该科状元；家族墓志载「以进士科擢第」。
+    source_id: s0001
+  - year_label: 夺魁后
+    precision: range
+    type: 授官
+    title: 授国子四门博士，迁邺城令、颍川令
+    description: 名录载其初授国子四门博士，后迁邺城令、颍川令；家族墓志载其早年曾任邺城县丞，擢第后升邺城、颍川两县令。
+    source_id: s0025
+  - year_label: 仕宦期间
+    precision: range
+    type: 轶事
+    title: 将门之后，恬退不竞
+    description: 祖父梁玄栗为唐紫金光禄大夫、右金吾大将军、宜春郡公；梁旲却以「志逸风云，情驰物表，丘园纵性，高上为怀」自处，墓志评其「无意好於恬虚，无心干乎禄仕」。
+    source_id: s0025
+  - year: 711
+    type: 卒
+    title: 景云二年卒
+    source_id: s0025
+career:
+  first_office: 国子四门博士
+  first_category: 学政文教
+  mid_office: 邺城令
+  mid_category: 地方
+  final_office: 颍川令
+  final_category: 其他

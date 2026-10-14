@@ -5,10 +5,11 @@
    "name": "歸融",
    "index_year": 782,
    "links": [
+    "z0655",
     "z0134",
     "z0138"
    ],
-   "link_count": 2,
+   "link_count": 3,
    "rel_descs": [
     "亲属:父"
    ]
@@ -212,17 +213,18 @@
    ]
   }
  ],
- "pool_total": 1511,
+ "pool_total": 1568,
  "all": [
   {
    "cbdb_id": 32880,
    "name": "歸融",
    "index_year": 782,
    "links": [
+    "z0655",
     "z0134",
     "z0138"
    ],
-   "link_count": 2,
+   "link_count": 3,
    "rel_descs": [
     "亲属:父"
    ]
@@ -423,6 +425,719 @@
    "rel_descs": [
     "同年友",
     "友"
+   ]
+  },
+  {
+   "cbdb_id": 31104,
+   "name": "婁思潁",
+   "index_year": 660,
+   "links": [
+    "z0002"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 32129,
+   "name": "楊元琰",
+   "birth": 640,
+   "death": 718,
+   "index_year": 640,
+   "links": [
+    "z0020"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 140604,
+   "name": "楊祁麗",
+   "birth": 686,
+   "death": 736,
+   "index_year": 686,
+   "links": [
+    "z0020"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:姊"
+   ]
+  },
+  {
+   "cbdb_id": 169108,
+   "name": "楊輪",
+   "death": 778,
+   "index_year": 715,
+   "links": [
+    "z0020"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 32693,
+   "name": "賈曾",
+   "death": 727,
+   "index_year": 664,
+   "links": [
+    "z0031"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 190765,
+   "name": "魏萬成",
+   "death": 780,
+   "index_year": 717,
+   "links": [
+    "z0057"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 177501,
+   "name": "崔良佐",
+   "death": 758,
+   "index_year": 695,
+   "links": [
+    "z0058"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 177503,
+   "name": "崔文輿",
+   "death": 832,
+   "index_year": 769,
+   "links": [
+    "z0058"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 92517,
+   "name": "呂渭",
+   "birth": 735,
+   "death": 800,
+   "index_year": 735,
+   "links": [
+    "z0059"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:表弟"
+   ]
+  },
+  {
+   "cbdb_id": 189513,
+   "name": "張泚",
+   "death": 774,
+   "index_year": 711,
+   "links": [
+    "z0062"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 189516,
+   "name": "張毅夫",
+   "death": 848,
+   "index_year": 785,
+   "links": [
+    "z0062"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 32220,
+   "name": "白溫",
+   "index_year": 676,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:曾祖"
+   ]
+  },
+  {
+   "cbdb_id": 32222,
+   "name": "白鏻",
+   "index_year": 706,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:祖父"
+   ]
+  },
+  {
+   "cbdb_id": 32224,
+   "name": "白季康",
+   "death": 833,
+   "index_year": 770,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 167775,
+   "name": "崔寬",
+   "index_year": 765,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:岳父"
+   ]
+  },
+  {
+   "cbdb_id": 167778,
+   "name": "韋同靖",
+   "index_year": 765,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:岳父"
+   ]
+  },
+  {
+   "cbdb_id": 167772,
+   "name": "敬氏(白敏中母)",
+   "index_year": 765,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:母"
+   ]
+  },
+  {
+   "cbdb_id": 32227,
+   "name": "白居易",
+   "birth": 772,
+   "death": 846,
+   "index_year": 772,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:從兄弟;堂兄弟"
+   ]
+  },
+  {
+   "cbdb_id": 167769,
+   "name": "薛氏(白敏中妻)",
+   "index_year": 795,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:妻子"
+   ]
+  },
+  {
+   "cbdb_id": 167774,
+   "name": "崔氏(白敏中妻)",
+   "index_year": 795,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:妻子"
+   ]
+  },
+  {
+   "cbdb_id": 167777,
+   "name": "韋氏(白敏中妻)",
+   "index_year": 795,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:妻子"
+   ]
+  },
+  {
+   "cbdb_id": 167784,
+   "name": "崔氏(白敏中妻)",
+   "index_year": 795,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:妻子"
+   ]
+  },
+  {
+   "cbdb_id": 144932,
+   "name": "白氏(白敏中女)",
+   "birth": 840,
+   "death": 858,
+   "index_year": 840,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:女兒"
+   ]
+  },
+  {
+   "cbdb_id": 167783,
+   "name": "白錦兒",
+   "index_year": 822,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:女兒"
+   ]
+  },
+  {
+   "cbdb_id": 167770,
+   "name": "白闡",
+   "index_year": 822,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 167771,
+   "name": "白幼父",
+   "index_year": 822,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 167779,
+   "name": "白徵復",
+   "index_year": 822,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 167780,
+   "name": "白崇儒",
+   "index_year": 822,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 184560,
+   "name": "白順求",
+   "death": 888,
+   "index_year": 825,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 184561,
+   "name": "白崇嗣",
+   "death": 888,
+   "index_year": 825,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 184562,
+   "name": "白傅規",
+   "death": 888,
+   "index_year": 825,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 185253,
+   "name": "白可久",
+   "death": 888,
+   "index_year": 825,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 144979,
+   "name": "皇甫煒",
+   "birth": 813,
+   "death": 865,
+   "index_year": 813,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:女婿"
+   ]
+  },
+  {
+   "cbdb_id": 167782,
+   "name": "張溫士",
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:女婿"
+   ]
+  },
+  {
+   "cbdb_id": 186275,
+   "name": "張温士",
+   "death": 877,
+   "index_year": 814,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:女婿"
+   ]
+  },
+  {
+   "cbdb_id": 167785,
+   "name": "白承孫",
+   "index_year": 852,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:孫"
+   ]
+  },
+  {
+   "cbdb_id": 195519,
+   "name": "白夷道",
+   "death": 925,
+   "index_year": 862,
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:孫"
+   ]
+  },
+  {
+   "cbdb_id": 167773,
+   "name": "敬某琬",
+   "links": [
+    "z0090"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:伯叔母"
+   ]
+  },
+  {
+   "cbdb_id": 17726,
+   "name": "崔休",
+   "links": [
+    "z0169"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:十二世祖"
+   ]
+  },
+  {
+   "cbdb_id": 17728,
+   "name": "崔周度",
+   "index_year": 923,
+   "links": [
+    "z0169"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 19359,
+   "name": "寇延良",
+   "index_year": 884,
+   "links": [
+    "z0177"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 898,
+   "name": "寇準",
+   "birth": 961,
+   "death": 1023,
+   "index_year": 961,
+   "links": [
+    "z0177"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 3436,
+   "name": "寇隨",
+   "index_year": 974,
+   "links": [
+    "z0177"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:孫"
+   ]
+  },
+  {
+   "cbdb_id": 11944,
+   "name": "樂黃庭",
+   "index_year": 968,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 11945,
+   "name": "樂黃中",
+   "index_year": 968,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 11943,
+   "name": "樂黃裳",
+   "index_year": 968,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:長子; 第一子"
+   ]
+  },
+  {
+   "cbdb_id": 2114,
+   "name": "樂黃目",
+   "index_year": 962,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:次子"
+   ]
+  },
+  {
+   "cbdb_id": 4140,
+   "name": "樂許國",
+   "index_year": 990,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:孫"
+   ]
+  },
+  {
+   "cbdb_id": 11946,
+   "name": "樂富國",
+   "index_year": 990,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:孫"
+   ]
+  },
+  {
+   "cbdb_id": 11947,
+   "name": "樂賓國",
+   "index_year": 1008,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:孫"
+   ]
+  },
+  {
+   "cbdb_id": 11950,
+   "name": "樂韶武",
+   "index_year": 1070,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:玄孫;四世孫"
+   ]
+  },
+  {
+   "cbdb_id": 24241,
+   "name": "樂甫",
+   "index_year": 1202,
+   "links": [
+    "z0185"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:十一世孫"
+   ]
+  },
+  {
+   "cbdb_id": 28861,
+   "name": "劉濬",
+   "index_year": 1123,
+   "links": [
+    "z0322"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
+   ]
+  },
+  {
+   "cbdb_id": 28880,
+   "name": "王元節",
+   "index_year": 1121,
+   "links": [
+    "z0322"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:女婿"
+   ]
+  },
+  {
+   "cbdb_id": 35433,
+   "name": "李守中",
+   "birth": 1270,
+   "death": 1342,
+   "index_year": 1270,
+   "links": [
+    "z0432"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:父"
+   ]
+  },
+  {
+   "cbdb_id": 35438,
+   "name": "李秉昭",
+   "birth": 1324,
+   "death": 1352,
+   "index_year": 1324,
+   "links": [
+    "z0432"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:從子;姪子"
+   ]
+  },
+  {
+   "cbdb_id": 35440,
+   "name": "李秉方",
+   "index_year": 1328,
+   "links": [
+    "z0432"
+   ],
+   "link_count": 1,
+   "rel_descs": [
+    "亲属:子"
    ]
   },
   {
@@ -3293,736 +4008,6 @@
    "link_count": 1,
    "rel_descs": [
     "亲属:長子; 第一子"
-   ]
-  },
-  {
-   "cbdb_id": 97840,
-   "name": "王周老",
-   "index_year": 1033,
-   "links": [
-    "z0259"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:次子"
-   ]
-  },
-  {
-   "cbdb_id": 563238,
-   "name": "王朋老",
-   "index_year": 1033,
-   "links": [
-    "z0259"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:三子"
-   ]
-  },
-  {
-   "cbdb_id": 3030,
-   "name": "戚師道",
-   "death": 1061,
-   "index_year": 998,
-   "links": [
-    "z0259"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:長女婿"
-   ]
-  },
-  {
-   "cbdb_id": 38685,
-   "name": "仇公著",
-   "birth": 1036,
-   "death": 1096,
-   "index_year": 1036,
-   "links": [
-    "z0259"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:舅表弟"
-   ]
-  },
-  {
-   "cbdb_id": 8064,
-   "name": "胡宿",
-   "birth": 996,
-   "death": 1067,
-   "index_year": 996,
-   "links": [
-    "z0259"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "遭到Y的反對/攻訐"
-   ]
-  },
-  {
-   "cbdb_id": 12850,
-   "name": "王代恕",
-   "birth": 973,
-   "death": 1041,
-   "index_year": 973,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 803,
-   "name": "薛奎",
-   "birth": 967,
-   "death": 1034,
-   "index_year": 967,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:第一任妻父",
-    "亲属:第二任妻父"
-   ]
-  },
-  {
-   "cbdb_id": 5209,
-   "name": "李氏(王代恕妻)",
-   "birth": 979,
-   "death": 1031,
-   "index_year": 979,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:母"
-   ]
-  },
-  {
-   "cbdb_id": 45904,
-   "name": "李氏(王代恕妻)",
-   "birth": 979,
-   "death": 1031,
-   "index_year": 979,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:母"
-   ]
-  },
-  {
-   "cbdb_id": 22236,
-   "name": "王拱安",
-   "birth": 1012,
-   "index_year": 1012,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:兄"
-   ]
-  },
-  {
-   "cbdb_id": 37628,
-   "name": "薛氏(王拱辰妻)",
-   "index_year": 1015,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:妻子"
-   ]
-  },
-  {
-   "cbdb_id": 45905,
-   "name": "薛氏(王拱辰妻)",
-   "index_year": 1015,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:妻子"
-   ]
-  },
-  {
-   "cbdb_id": 1314,
-   "name": "呂公著",
-   "birth": 1018,
-   "death": 1089,
-   "index_year": 1018,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:女婿"
-   ]
-  },
-  {
-   "cbdb_id": 3648,
-   "name": "呂希亞",
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:女婿"
-   ]
-  },
-  {
-   "cbdb_id": 24469,
-   "name": "王正甫",
-   "index_year": 1042,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:長子; 第一子"
-   ]
-  },
-  {
-   "cbdb_id": 22014,
-   "name": "王端甫",
-   "index_year": 1042,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:次子"
-   ]
-  },
-  {
-   "cbdb_id": 7039,
-   "name": "李格非",
-   "index_year": 1054,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:孫女婿"
-   ]
-  },
-  {
-   "cbdb_id": 22015,
-   "name": "王湘",
-   "birth": 1092,
-   "death": 1164,
-   "index_year": 1092,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:曾孫; 重孫"
-   ]
-  },
-  {
-   "cbdb_id": 12761,
-   "name": "鄭條",
-   "index_year": 1000,
-   "links": [
-    "z0262"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "同年友"
-   ]
-  },
-  {
-   "cbdb_id": 3161,
-   "name": "張思",
-   "birth": 974,
-   "death": 1037,
-   "index_year": 974,
-   "links": [
-    "z0265"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 295,
-   "name": "張唐民",
-   "index_year": 1004,
-   "links": [
-    "z0265"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:弟"
-   ]
-  },
-  {
-   "cbdb_id": 428,
-   "name": "鄭文寶",
-   "birth": 953,
-   "death": 1013,
-   "index_year": 953,
-   "links": [
-    "z0268"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:岳母之父"
-   ]
-  },
-  {
-   "cbdb_id": 15516,
-   "name": "呂士元",
-   "birth": 969,
-   "death": 1033,
-   "index_year": 969,
-   "links": [
-    "z0268"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 34,
-   "name": "陳執中",
-   "birth": 990,
-   "death": 1059,
-   "index_year": 990,
-   "links": [
-    "z0268"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "反對/攻訐"
-   ]
-  },
-  {
-   "cbdb_id": 1994,
-   "name": "楊察",
-   "birth": 1011,
-   "death": 1056,
-   "index_year": 1011,
-   "links": [
-    "z0270"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:兄"
-   ]
-  },
-  {
-   "cbdb_id": 15860,
-   "name": "賈汶",
-   "index_year": 986,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 807,
-   "name": "薛紳",
-   "index_year": 1010,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:岳父"
-   ]
-  },
-  {
-   "cbdb_id": 809,
-   "name": "薛顏",
-   "birth": 953,
-   "death": 1025,
-   "index_year": 953,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:岳父"
-   ]
-  },
-  {
-   "cbdb_id": 120122,
-   "name": "任遜",
-   "birth": 1005,
-   "death": 1068,
-   "index_year": 1005,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:第二任妻父"
-   ]
-  },
-  {
-   "cbdb_id": 119343,
-   "name": "陳氏(賈黯母)",
-   "index_year": 989,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:母"
-   ]
-  },
-  {
-   "cbdb_id": 3864,
-   "name": "蔡旻",
-   "death": 1091,
-   "index_year": 1028,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:女婿"
-   ]
-  },
-  {
-   "cbdb_id": 11764,
-   "name": "賈士彥",
-   "death": 1075,
-   "index_year": 1012,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:唯一幸存的兒子"
-   ]
-  },
-  {
-   "cbdb_id": 119449,
-   "name": "史氏(賈黯母)",
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:嗣母"
-   ]
-  },
-  {
-   "cbdb_id": 24101,
-   "name": "譚必",
-   "index_year": 1016,
-   "links": [
-    "z0272"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "同年友"
-   ]
-  },
-  {
-   "cbdb_id": 48292,
-   "name": "馮碧",
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:曾祖"
-   ]
-  },
-  {
-   "cbdb_id": 48294,
-   "name": "馮禹謀",
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:祖父"
-   ]
-  },
-  {
-   "cbdb_id": 4223,
-   "name": "馮式",
-   "index_year": 991,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 1879,
-   "name": "王絲",
-   "birth": 989,
-   "death": 1049,
-   "index_year": 989,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:第一任妻父"
-   ]
-  },
-  {
-   "cbdb_id": 628,
-   "name": "富弼",
-   "birth": 1004,
-   "death": 1083,
-   "index_year": 1004,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:第二任妻父",
-    "亲属:第三任妻父"
-   ]
-  },
-  {
-   "cbdb_id": 5031,
-   "name": "朱氏(馮京母)",
-   "birth": 995,
-   "death": 1066,
-   "index_year": 995,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:母"
-   ]
-  },
-  {
-   "cbdb_id": 48296,
-   "name": "富氏(馮京妻)",
-   "index_year": 1024,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:妻子"
-   ]
-  },
-  {
-   "cbdb_id": 48297,
-   "name": "馮襄",
-   "birth": 1009,
-   "death": 1051,
-   "index_year": 1009,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:長兄"
-   ]
-  },
-  {
-   "cbdb_id": 8130,
-   "name": "蔡懋",
-   "index_year": 1059,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:女婿"
-   ]
-  },
-  {
-   "cbdb_id": 3315,
-   "name": "馮諶",
-   "index_year": 1051,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:長子; 第一子"
-   ]
-  },
-  {
-   "cbdb_id": 16468,
-   "name": "馮詢",
-   "index_year": 1051,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:四子"
-   ]
-  },
-  {
-   "cbdb_id": 48293,
-   "name": "李氏(馮碧妻)",
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:曾祖母"
-   ]
-  },
-  {
-   "cbdb_id": 48295,
-   "name": "吳氏(馮禹謀妻)",
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:祖母"
-   ]
-  },
-  {
-   "cbdb_id": 48298,
-   "name": "朱氏(馮襄妻)",
-   "birth": 1009,
-   "death": 1051,
-   "index_year": 1009,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:兄弟之妻"
-   ]
-  },
-  {
-   "cbdb_id": 4058,
-   "name": "姚闢",
-   "index_year": 1019,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "同年友"
-   ]
-  },
-  {
-   "cbdb_id": 301,
-   "name": "張璪",
-   "death": 1093,
-   "index_year": 1030,
-   "links": [
-    "z0273"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "被Y彈劾"
-   ]
-  },
-  {
-   "cbdb_id": 13377,
-   "name": "鄭紆",
-   "birth": 1001,
-   "death": 1056,
-   "index_year": 1001,
-   "links": [
-    "z0275"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 42323,
-   "name": "呂逢時",
-   "index_year": 1023,
-   "links": [
-    "z0275"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "友"
-   ]
-  },
-  {
-   "cbdb_id": 15014,
-   "name": "魯有開",
-   "index_year": 1023,
-   "links": [
-    "z0275"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "同年友"
-   ]
-  },
-  {
-   "cbdb_id": 12963,
-   "name": "章訢",
-   "index_year": 1016,
-   "links": [
-    "z0277"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 11962,
-   "name": "許拯",
-   "birth": 1015,
-   "death": 1083,
-   "index_year": 1015,
-   "links": [
-    "z0285"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:父"
-   ]
-  },
-  {
-   "cbdb_id": 1435,
-   "name": "邵亢",
-   "birth": 1014,
-   "death": 1074,
-   "index_year": 1014,
-   "links": [
-    "z0285"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:岳父"
-   ]
-  },
-  {
-   "cbdb_id": 11979,
-   "name": "許昌齡",
-   "links": [
-    "z0285"
-   ],
-   "link_count": 1,
-   "rel_descs": [
-    "亲属:族父"
    ]
   }
  ]
