@@ -1,0 +1,53 @@
+id: z0244
+name: 张师德
+zi: 尚贤
+dynasty: song
+exam_year: 1011
+reign: 大中祥符四年
+native_hist: 开封襄邑
+native_modern: 河南省商丘市睢县
+birth_year: 978
+death_year: 1026
+ke_ci: 大中祥符四年辛亥科
+bio_short: 张去华第十子，大中祥符四年状元，距父夺魁整五十年。早年朝廷授荫补官，断然推辞，立志凭才学考取——张去华断言「此儿必继吾志」，果然应验。主三司欠账事务时上疏赦免无力偿债的贫民；契丹、高丽使臣入朝，皆由他主持接待。曾两谒宰相王旦求进，王旦反刻意缓其升迁以戒跑官之风。
+tags:
+  - 父子状元
+  - 辞荫应试
+events:
+  - year: 1011
+    type: 夺魁
+    title: 大中祥符四年辛亥科状元
+    description: 真宗赴汾阴祭后土，张师德献《汾阴大礼颂》受荐举，是科进士第一。距父张去华建隆二年（961）夺魁整五十年，魏野贺诗「封禅汾阴连岁榜，状元俱是状元儿」。
+    source_id: s0003
+  - year_label: 夺魁前
+    precision: range
+    type: 轶事
+    title: 辞荫立志
+    description: 朝廷授荫补官职，断然推辞，立志科举正途。父张去华十子中最器重他：「此儿必继吾志。」
+    source_id: s0003
+  - year_label: 真宗朝
+    precision: range
+    type: 升迁
+    title: 三司理欠，疏赦贫弱
+    description: 历耀州通判、三司都理欠凭由司。见孤苦贫弱无力偿官债者长年系狱，上疏恳请赦免，真宗悉数采纳。迁知制诰、左谏议大夫；契丹、高丽使臣入朝皆委其接待，真宗称「朕未登基时便闻你父亲大名，今又见你一身才干」。
+    office: 左谏议大夫
+    rank_grade: 4
+    estimated: true
+    source_id: s0003
+  - year_label: 真宗朝
+    precision: range
+    type: 轶事
+    title: 两谒王旦，跑官被缓
+    description: 曾两次拜谒宰相王旦意在谋求升迁，王旦刻意暂缓提拔，以此磨砺其心性、警示群臣戒跑官求官之风——成为宋代官箴著名案例。
+    source_id: s0003
+  - year: 1026
+    type: 卒
+    title: 天圣四年卒，年四十八
+    source_id: s0003
+career:
+  first_office: 耀州通判
+  first_category: 地方
+  mid_office: 三司都理欠凭由司、知制诰
+  mid_category: 部院
+  final_office: 左谏议大夫
+  final_category: 部院高官

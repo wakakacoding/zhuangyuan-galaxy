@@ -1,0 +1,26 @@
+id: z0205
+name: 安守亮
+dynasty: song
+exam_year: 972
+reign: 開寶五年
+native_hist: 河南
+native_modern: 河南省洛阳市
+ke_ci: 开宝五年壬申科
+bio_short: 开宝五年状元，父安德裕为开宝二年状元——父子状元仅隔三年、相距两科，为科举史间隔最短的父子夺魁。祖父即后晋叛将安重荣，三代之间从叛臣之家到连中二元，是宋初科举「不问家世」的鲜活注脚。惜其仕履记载零散，余事不详。
+tags:
+  - 父子状元
+events:
+  - year: 972
+    type: 夺魁
+    title: 开宝五年壬申科状元
+    description: 父安德裕三年前（969）夺魁，安守亮紧随其后再登榜首，世称「父子状元」。家本河南显贵，经祖父安重荣叛败之变后，以科第重振门声。
+    source_id: s0018
+  - year_label: 其后
+    precision: range
+    type: 轶事
+    title: 余事不详
+    description: 仕履失载，诚实留白。
+    source_id: s0018
+career:
+  first_category: 其他
+  final_category: 其他

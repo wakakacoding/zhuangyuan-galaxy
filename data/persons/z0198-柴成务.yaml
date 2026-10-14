@@ -1,0 +1,56 @@
+id: z0198
+name: 柴成务
+zi: 宝臣
+dynasty: song
+exam_year: 968
+reign: 乾德六年
+native_hist: 曹州济阴
+native_modern: 山东省菏泽市（一说浙江江山）
+birth_year: 934
+death_year: 1004
+ke_ci: 乾德六年戊辰科
+bio_short: 乾德六年状元——府试第一早被开封府尹赵光义预定，次年殿试大魁。出使高丽不辱使命，黄河决口时奏免灾区租税，晚年主修《太宗实录》。因杖责傲慢属吏被劾，愤而辞官居家数年而终。
+tags:
+  - 出使高丽
+  - 修实录
+events:
+  - year: 968
+    type: 夺魁
+    title: 乾德六年戊辰科状元
+    description: 967 年开封府试已列第一（府尹赵光义早知其才），次年省试、殿试连捷，为宋朝第九位状元。父柴自牧官兵部员外郎，家学渊源。
+    source_id: s0003
+  - year: 991
+    type: 升迁
+    title: 淳化二年出使高丽
+    description: 高丽俗信鬼神，宋使至须择吉日始得接见。柴成务滞留月余，致书高丽王明析利害，次日即获接见受命，不辱使命。
+    office: 光禄少卿
+    rank_grade: 5.5
+    estimated: true
+    source_id: s0003
+  - year_label: 淳化年间
+    precision: range
+    type: 升迁
+    title: 河决宋州，奏免灾区租税
+    description: 任京东路转运使，黄河决于宋州，上表「河水所经之地肥沃，愿免其租税，劝民种艺」，太宗采纳，赐钱三十万，召为司封郎中、知制诰。吕蒙正为相时，成务以姻亲关系自请辞职避嫌，太宗不许。
+    source_id: s0003
+  - year_label: 咸平年间
+    precision: range
+    type: 著作
+    title: 与钱若水同修《太宗实录》
+    description: 真宗即位迁给事中，知青州时上疏请待太宗永熙陵封土后再赴任；旋奉诏修《太宗实录》，书成知扬州，力破十年前府库被盗积案。入为刑部尚书。
+    office: 刑部尚书
+    rank_grade: 3
+    estimated: true
+    source_id: s0003
+  - year: 1004
+    type: 卒
+    title: 景德元年卒，年七十一
+    description: 因杖责傲慢属吏被弹劾，叹「忝为长官，杖一小吏而遭劾，有何面目生在大堂上断案」，愤而辞职，居家数年卒，谥忠文。有文集二十卷。
+    source_id: s0003
+career:
+  first_office: 陕州军事推官
+  first_category: 地方
+  mid_office: 司封郎中、知制诰
+  mid_category: 部院
+  final_office: 刑部尚书（辞官居家，谥忠文）
+  final_category: 部院高官

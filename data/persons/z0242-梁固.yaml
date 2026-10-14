@@ -1,0 +1,49 @@
+id: z0242
+name: 梁固
+zi: 仲坚
+dynasty: song
+exam_year: 1009
+reign: 大中祥符二年
+native_hist: 鄆州須城
+native_modern: 山东省泰安市东平县
+birth_year: 985
+death_year: 1017
+ke_ci: 大中祥符二年己酉科
+bio_short: 史上唯一「父子状元」之子——生于父亲梁灏夺魁当日，二十四年后自己夺魁。朝廷依荫补欲授其官，他断然辞谢，坚持凭真才实学应试。断狱公正，时称「平审」。惜与父同命：三十二岁英年早逝。
+tags:
+  - 父子状元
+  - 辞荫应试
+  - 早逝
+events:
+  - year: 1009
+    type: 夺魁
+    title: 大中祥符二年己酉科状元
+    description: 父梁灏 985 年夺魁之日，梁固呱呱坠地；二十四年后父子同登榜首，魏野诗「状元俱是状元儿」。一说大中祥符元年词科第一，名录系二年进士第一，两说并存。
+    source_id: s0003
+  - year_label: 夺魁前
+    precision: range
+    type: 轶事
+    title: 辞荫补，凭本事应试
+    description: 以父荫可免试赐进士出身，梁固认为靠父荫算不得真本事，亲赴官府陈情恳请收回成命，坚持参加科举——终以进士第一自证。幼著《汉春秋》，深得其父赏识。
+    source_id: s0003
+  - year_label: 真宗朝
+    precision: range
+    type: 升迁
+    title: 密州监丞、著作郎、户部判官
+    description: 受命断狱，判案公正，时称「平审」。
+    office: 户部判官
+    rank_grade: 6.5
+    estimated: true
+    source_id: s0003
+  - year: 1017
+    type: 卒
+    title: 天禧元年卒，年三十二
+    description: 与父梁灏同为短寿（父四十二）。父子两代状元皆早逝，东平「父子状元」坊千载叹惋。
+    source_id: s0003
+career:
+  first_office: 密州监丞
+  first_category: 地方
+  mid_office: 著作郎
+  mid_category: 学政文教
+  final_office: 户部判官（早逝）
+  final_category: 早逝

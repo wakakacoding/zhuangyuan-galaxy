@@ -1,0 +1,52 @@
+id: z0219
+name: 陈尧叟
+zi: 唐夫
+dynasty: song
+exam_year: 989
+reign: 端拱二年
+native_hist: 閬州閬中
+native_modern: 四川省南充市阆中市
+birth_year: 961
+death_year: 1017
+ke_ci: 端拱二年己丑科
+bio_short: 阆中陈氏「一门四进士、兄弟双状元、父子双宰相」之长兄。端拱二年状元，与弟尧佐同年登科；弟尧咨十一年后再夺魁。仕至同中书门下平章事——把中原医术带入岭南、引种苎麻木棉、出使交趾妥善处理黎桓政权，功在南疆开发。
+tags:
+  - 兄弟状元
+  - 阆中三陈
+  - 开发岭南
+events:
+  - year: 989
+    type: 夺魁
+    title: 端拱二年己丑科状元
+    description: 与二弟陈尧佐同榜登进士，尧叟高居榜首。父陈省华（进士，官左谏议大夫，赠秦国公），母冯氏「烧夜香」督课三子苦读，为宋代著名「严母」。司马光《陈氏四令公祠堂记》：「当世称衣冠之盛者，推陈氏。」
+    source_id: s0003
+  - year_label: 太宗末至真宗初
+    precision: range
+    type: 升迁
+    title: 两广转运使、安抚使，开发岭南
+    description: 任广南西路转运使、安抚使期间，把中原医术传给岭南民众，引种苎麻、木棉等经济作物；奉命出使交州，妥善处理与黎桓政权关系，南疆晏然。
+    office: 广南西路转运使、安抚使
+    rank_grade: 4
+    estimated: true
+    source_id: s0003
+  - year_label: 大中祥符年间
+    precision: range
+    type: 升迁
+    title: 官至同中书门下平章事
+    description: 入朝拜相，与其父陈省华「父子双宰相」。弟尧佐治水筑「陈公堤」，晚年同平章事；弟尧咨善射（欧阳修《卖油翁》「陈康肃公」即其人），官节度使。
+    office: 同中书门下平章事
+    rank_grade: 2
+    estimated: true
+    source_id: s0003
+  - year: 1017
+    type: 卒
+    title: 天禧元年卒，年五十七
+    description: 谥文忠。父子四人皆卒葬河南新郑郭店镇，墓地为「宰相陈村」，后裔守墓成村至今。
+    source_id: s0003
+career:
+  first_office: 州县幕职（推定）
+  first_category: 地方
+  mid_office: 广南西路转运使、安抚使
+  mid_category: 地方
+  final_office: 同中书门下平章事（谥文忠）
+  final_category: 宰辅
