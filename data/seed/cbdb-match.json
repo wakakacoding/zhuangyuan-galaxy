@@ -1,0 +1,1392 @@
+{
+ "z0015": {
+  "cbdbId": 3130,
+  "confidence": 1,
+  "via": "entry 702 0"
+ },
+ "z0048": {
+  "cbdbId": 27051,
+  "confidence": 1,
+  "via": "entry 769 1"
+ },
+ "z0111": {
+  "cbdbId": 92366,
+  "confidence": 1,
+  "via": "entry 843 1"
+ },
+ "z0113": {
+  "cbdbId": 17000,
+  "confidence": 1,
+  "via": "entry 845 1"
+ },
+ "z0134": {
+  "cbdbId": 32884,
+  "confidence": 1,
+  "via": "entry 869 0"
+ },
+ "z0138": {
+  "cbdbId": 32885,
+  "confidence": 1,
+  "via": "entry 874 1"
+ },
+ "z0146": {
+  "cbdbId": 33726,
+  "confidence": 1,
+  "via": "entry 886 1"
+ },
+ "z0178": {
+  "cbdbId": 8152,
+  "confidence": 1,
+  "via": "entry 948 甲科"
+ },
+ "z0184": {
+  "cbdbId": 185,
+  "confidence": 1,
+  "via": "entry 961 1"
+ },
+ "z0188": {
+  "cbdbId": 52941,
+  "confidence": 1,
+  "via": "entry 963 "
+ },
+ "z0190": {
+  "cbdbId": 531337,
+  "confidence": 1,
+  "via": "entry 964 "
+ },
+ "z0192": {
+  "cbdbId": 531333,
+  "confidence": 1,
+  "via": "entry 965 "
+ },
+ "z0196": {
+  "cbdbId": 18391,
+  "confidence": 1,
+  "via": "entry 967 "
+ },
+ "z0199": {
+  "cbdbId": 39364,
+  "confidence": 1,
+  "via": "entry 969 甲科"
+ },
+ "z0201": {
+  "cbdbId": 46692,
+  "confidence": 1,
+  "via": "entry 970 "
+ },
+ "z0203": {
+  "cbdbId": 51754,
+  "confidence": 1,
+  "via": "entry 971 "
+ },
+ "z0205": {
+  "cbdbId": 39363,
+  "confidence": 1,
+  "via": "entry 972 "
+ },
+ "z0210": {
+  "cbdbId": 1880,
+  "confidence": 1,
+  "via": "entry 975 1"
+ },
+ "z0211": {
+  "cbdbId": 8101,
+  "confidence": 1,
+  "via": "entry 977 1"
+ },
+ "z0212": {
+  "cbdbId": 828,
+  "confidence": 1,
+  "via": "entry 978 1"
+ },
+ "z0213": {
+  "cbdbId": 8115,
+  "confidence": 1,
+  "via": "entry 980 "
+ },
+ "z0217": {
+  "cbdbId": 15781,
+  "confidence": 1,
+  "via": "entry 988 1"
+ },
+ "z0219": {
+  "cbdbId": 97,
+  "confidence": 1,
+  "via": "entry 989 1"
+ },
+ "z0222": {
+  "cbdbId": 1525,
+  "confidence": 1,
+  "via": "entry 992 1"
+ },
+ "z0231": {
+  "cbdbId": 7342,
+  "confidence": 1,
+  "via": "entry 999 1"
+ },
+ "z0233": {
+  "cbdbId": 99,
+  "confidence": 1,
+  "via": "entry 1000 1"
+ },
+ "z0235": {
+  "cbdbId": 1901,
+  "confidence": 1,
+  "via": "entry 1002 1"
+ },
+ "z0237": {
+  "cbdbId": 1096,
+  "confidence": 1,
+  "via": "entry 1005 1"
+ },
+ "z0240": {
+  "cbdbId": 24285,
+  "confidence": 1,
+  "via": "entry 1008 1"
+ },
+ "z0242": {
+  "cbdbId": 1135,
+  "confidence": 1,
+  "via": "entry 1009 1"
+ },
+ "z0244": {
+  "cbdbId": 280,
+  "confidence": 1,
+  "via": "entry 1011 1"
+ },
+ "z0246": {
+  "cbdbId": 764,
+  "confidence": 1,
+  "via": "entry 1012 1"
+ },
+ "z0250": {
+  "cbdbId": 1646,
+  "confidence": 1,
+  "via": "entry 1015 1"
+ },
+ "z0253": {
+  "cbdbId": 37821,
+  "confidence": 1,
+  "via": "entry 1019 1"
+ },
+ "z0257": {
+  "cbdbId": 8119,
+  "confidence": 1,
+  "via": "entry 1024 "
+ },
+ "z0259": {
+  "cbdbId": 1919,
+  "confidence": 1,
+  "via": "entry 1027 1"
+ },
+ "z0262": {
+  "cbdbId": 1847,
+  "confidence": 1,
+  "via": "entry 1030 1"
+ },
+ "z0265": {
+  "cbdbId": 13972,
+  "confidence": 1,
+  "via": "entry 1034 1"
+ },
+ "z0268": {
+  "cbdbId": 1292,
+  "confidence": 1,
+  "via": "entry 1038 1"
+ },
+ "z0270": {
+  "cbdbId": 22420,
+  "confidence": 1,
+  "via": "entry 1042 1"
+ },
+ "z0272": {
+  "cbdbId": 449,
+  "confidence": 1,
+  "via": "entry 1046 1"
+ },
+ "z0273": {
+  "cbdbId": 607,
+  "confidence": 1,
+  "via": "entry 1049 1"
+ },
+ "z0275": {
+  "cbdbId": 13378,
+  "confidence": 1,
+  "via": "entry 1053 1"
+ },
+ "z0277": {
+  "cbdbId": 12964,
+  "confidence": 1,
+  "via": "entry 1057 1"
+ },
+ "z0280": {
+  "cbdbId": 37918,
+  "confidence": 1,
+  "via": "entry 1061 "
+ },
+ "z0285": {
+  "cbdbId": 778,
+  "confidence": 1,
+  "via": "entry 1067 1"
+ },
+ "z0287": {
+  "cbdbId": 14584,
+  "confidence": 1,
+  "via": "entry 1070 1"
+ },
+ "z0288": {
+  "cbdbId": 4133,
+  "confidence": 1,
+  "via": "entry 1073 一甲第一名"
+ },
+ "z0292": {
+  "cbdbId": 1473,
+  "confidence": 1,
+  "via": "entry 1079 1"
+ },
+ "z0293": {
+  "cbdbId": 853,
+  "confidence": 1,
+  "via": "entry 1082 1"
+ },
+ "z0295": {
+  "cbdbId": 49027,
+  "confidence": 1,
+  "via": "entry 1085 "
+ },
+ "z0297": {
+  "cbdbId": 27128,
+  "confidence": 1,
+  "via": "entry 1088 1"
+ },
+ "z0299": {
+  "cbdbId": 25031,
+  "confidence": 1,
+  "via": "entry 1091 1"
+ },
+ "z0303": {
+  "cbdbId": 673,
+  "confidence": 1,
+  "via": "entry 1097 紹聖四年進士第一"
+ },
+ "z0307": {
+  "cbdbId": 19485,
+  "confidence": 1,
+  "via": "entry 1103 1"
+ },
+ "z0308": {
+  "cbdbId": 13649,
+  "confidence": 1,
+  "via": "entry 1106 1"
+ },
+ "z0311": {
+  "cbdbId": 434,
+  "confidence": 1,
+  "via": "entry 1109 1"
+ },
+ "z0314": {
+  "cbdbId": 531955,
+  "confidence": 1,
+  "via": "entry 1115 "
+ },
+ "z0316": {
+  "cbdbId": 1763,
+  "confidence": 1,
+  "via": "entry 1118 1"
+ },
+ "z0320": {
+  "cbdbId": 18705,
+  "confidence": 1,
+  "via": "entry 1124 1"
+ },
+ "z0321": {
+  "cbdbId": 13893,
+  "confidence": 1,
+  "via": "entry 1124 "
+ },
+ "z0324": {
+  "cbdbId": 33311,
+  "confidence": 1,
+  "via": "entry 1128 1"
+ },
+ "z0326": {
+  "cbdbId": 12431,
+  "confidence": 1,
+  "via": "entry 1132 1"
+ },
+ "z0328": {
+  "cbdbId": 1759,
+  "confidence": 1,
+  "via": "entry 1135 1"
+ },
+ "z0329": {
+  "cbdbId": 11110,
+  "confidence": 1,
+  "via": "entry 1138 1"
+ },
+ "z0336": {
+  "cbdbId": 1183,
+  "confidence": 1,
+  "via": "entry 1145 1"
+ },
+ "z0337": {
+  "cbdbId": 13477,
+  "confidence": 1,
+  "via": "entry 1148 1甲第1"
+ },
+ "z0340": {
+  "cbdbId": 50115,
+  "confidence": 1,
+  "via": "entry 1151 "
+ },
+ "z0344": {
+  "cbdbId": 3144,
+  "confidence": 1,
+  "via": "entry 1154 1"
+ },
+ "z0347": {
+  "cbdbId": 10598,
+  "confidence": 1,
+  "via": "entry 1157 0"
+ },
+ "z0349": {
+  "cbdbId": 10900,
+  "confidence": 1,
+  "via": "entry 1160 1"
+ },
+ "z0354": {
+  "cbdbId": 25115,
+  "confidence": 1,
+  "via": "entry 1166 "
+ },
+ "z0357": {
+  "cbdbId": 14159,
+  "confidence": 1,
+  "via": "entry 1172 1"
+ },
+ "z0364": {
+  "cbdbId": 18954,
+  "confidence": 1,
+  "via": "entry 1181 1"
+ },
+ "z0368": {
+  "cbdbId": 38389,
+  "confidence": 1,
+  "via": "entry 1187 1"
+ },
+ "z0370": {
+  "cbdbId": 41917,
+  "confidence": 1,
+  "via": "entry 1190 一甲第一名"
+ },
+ "z0373": {
+  "cbdbId": 3075,
+  "confidence": 1,
+  "via": "entry 1193 1"
+ },
+ "z0377": {
+  "cbdbId": 49959,
+  "confidence": 1,
+  "via": "entry 1196 "
+ },
+ "z0380": {
+  "cbdbId": 3911,
+  "confidence": 1,
+  "via": "entry 1199 1"
+ },
+ "z0382": {
+  "cbdbId": 29144,
+  "confidence": 1,
+  "via": "entry 1200 0"
+ },
+ "z0383": {
+  "cbdbId": 42407,
+  "confidence": 1,
+  "via": "entry 1202 第一名"
+ },
+ "z0385": {
+  "cbdbId": 38535,
+  "confidence": 1,
+  "via": "entry 1205 1"
+ },
+ "z0387": {
+  "cbdbId": 38224,
+  "confidence": 1,
+  "via": "entry 1208 "
+ },
+ "z0393": {
+  "cbdbId": 10296,
+  "confidence": 1,
+  "via": "entry 1214 "
+ },
+ "z0396": {
+  "cbdbId": 1959,
+  "confidence": 1,
+  "via": "entry 1217 0"
+ },
+ "z0398": {
+  "cbdbId": 41261,
+  "confidence": 1,
+  "via": "entry 1220 一甲第一名"
+ },
+ "z0401": {
+  "cbdbId": 45079,
+  "confidence": 1,
+  "via": "entry 1223 1"
+ },
+ "z0405": {
+  "cbdbId": 545588,
+  "confidence": 1,
+  "via": "entry 1229 "
+ },
+ "z0407": {
+  "cbdbId": 22002,
+  "confidence": 1,
+  "via": "entry 1232 1"
+ },
+ "z0408": {
+  "cbdbId": 25818,
+  "confidence": 1,
+  "via": "entry 1235 1"
+ },
+ "z0409": {
+  "cbdbId": 42666,
+  "confidence": 1,
+  "via": "entry 1238 進士第一"
+ },
+ "z0413": {
+  "cbdbId": 47213,
+  "confidence": 1,
+  "via": "entry 1247 "
+ },
+ "z0414": {
+  "cbdbId": 3294,
+  "confidence": 1,
+  "via": "entry 1250 1"
+ },
+ "z0415": {
+  "cbdbId": 27644,
+  "confidence": 1,
+  "via": "entry 1253 1"
+ },
+ "z0416": {
+  "cbdbId": 19123,
+  "confidence": 1,
+  "via": "entry 1256 第一甲第一人"
+ },
+ "z0417": {
+  "cbdbId": 42537,
+  "confidence": 1,
+  "via": "entry 1259 "
+ },
+ "z0418": {
+  "cbdbId": 38467,
+  "confidence": 1,
+  "via": "entry 1262 1"
+ },
+ "z0419": {
+  "cbdbId": 686671,
+  "confidence": 1,
+  "via": "entry 1265 "
+ },
+ "z0420": {
+  "cbdbId": 15213,
+  "confidence": 1,
+  "via": "entry 1268 1"
+ },
+ "z0421": {
+  "cbdbId": 47345,
+  "confidence": 1,
+  "via": "entry 1271 "
+ },
+ "z0422": {
+  "cbdbId": 38426,
+  "confidence": 1,
+  "via": "entry 1274 第1"
+ },
+ "z0427": {
+  "cbdbId": 116823,
+  "confidence": 1,
+  "via": "entry 1321 "
+ },
+ "z0428": {
+  "cbdbId": 28626,
+  "confidence": 1,
+  "via": "entry 1321 1"
+ },
+ "z0430": {
+  "cbdbId": 106599,
+  "confidence": 1,
+  "via": "entry 1324 "
+ },
+ "z0434": {
+  "cbdbId": 101105,
+  "confidence": 1,
+  "via": "entry 1330 "
+ },
+ "z0435": {
+  "cbdbId": 117264,
+  "confidence": 1,
+  "via": "entry 1333 "
+ },
+ "z0436": {
+  "cbdbId": 103003,
+  "confidence": 1,
+  "via": "entry 1333 "
+ },
+ "z0437": {
+  "cbdbId": 113908,
+  "confidence": 1,
+  "via": "entry 1342 "
+ },
+ "z0438": {
+  "cbdbId": 28643,
+  "confidence": 1,
+  "via": "entry 1342 1"
+ },
+ "z0439": {
+  "cbdbId": 114370,
+  "confidence": 1,
+  "via": "entry 1345 "
+ },
+ "z0441": {
+  "cbdbId": 101234,
+  "confidence": 1,
+  "via": "entry 1348 "
+ },
+ "z0443": {
+  "cbdbId": 100509,
+  "confidence": 1,
+  "via": "entry 1351 "
+ },
+ "z0444": {
+  "cbdbId": 116536,
+  "confidence": 1,
+  "via": "entry 1354 "
+ },
+ "z0445": {
+  "cbdbId": 100621,
+  "confidence": 1,
+  "via": "entry 1354 "
+ },
+ "z0447": {
+  "cbdbId": 101235,
+  "confidence": 1,
+  "via": "entry 1357 "
+ },
+ "z0451": {
+  "cbdbId": 109448,
+  "confidence": 1,
+  "via": "entry 1363 "
+ },
+ "z0455": {
+  "cbdbId": 344176,
+  "confidence": 1,
+  "via": "entry 1385 第1甲第1名"
+ },
+ "z0456": {
+  "cbdbId": 349761,
+  "confidence": 1,
+  "via": "entry 1388 第1甲第1名"
+ },
+ "z0457": {
+  "cbdbId": 66580,
+  "confidence": 1,
+  "via": "entry 1391 一甲一名"
+ },
+ "z0458": {
+  "cbdbId": 345464,
+  "confidence": 1,
+  "via": "entry 1394 第1甲第1名"
+ },
+ "z0459": {
+  "cbdbId": 371748,
+  "confidence": 1,
+  "via": "entry 1397 第1甲第1名"
+ },
+ "z0460": {
+  "cbdbId": 361986,
+  "confidence": 1,
+  "via": "entry 1397 第1甲第1名"
+ },
+ "z0461": {
+  "cbdbId": 34471,
+  "confidence": 1,
+  "via": "entry 1400 第一甲第一名"
+ },
+ "z0462": {
+  "cbdbId": 131251,
+  "confidence": 1,
+  "via": "entry 1404 第1名"
+ },
+ "z0464": {
+  "cbdbId": 133336,
+  "confidence": 1,
+  "via": "entry 1411 第1名"
+ },
+ "z0466": {
+  "cbdbId": 67330,
+  "confidence": 1,
+  "via": "entry 1415 一甲第一名"
+ },
+ "z0467": {
+  "cbdbId": 359187,
+  "confidence": 1,
+  "via": "entry 1418 第1甲第1名"
+ },
+ "z0468": {
+  "cbdbId": 131259,
+  "confidence": 1,
+  "via": "entry 1421 第1名"
+ },
+ "z0469": {
+  "cbdbId": 348295,
+  "confidence": 1,
+  "via": "entry 1424 第1甲第1名"
+ },
+ "z0470": {
+  "cbdbId": 33867,
+  "confidence": 1,
+  "via": "entry 1427 0"
+ },
+ "z0471": {
+  "cbdbId": 204653,
+  "confidence": 1,
+  "via": "entry 1430 第一甲第一名"
+ },
+ "z0472": {
+  "cbdbId": 67222,
+  "confidence": 1,
+  "via": "entry 1433 第一甲第一名"
+ },
+ "z0473": {
+  "cbdbId": 372728,
+  "confidence": 1,
+  "via": "entry 1436 第1甲第1名"
+ },
+ "z0474": {
+  "cbdbId": 128997,
+  "confidence": 1,
+  "via": "entry 1439 第一甲第一名"
+ },
+ "z0475": {
+  "cbdbId": 66822,
+  "confidence": 1,
+  "via": "entry 1442 第一甲第一名"
+ },
+ "z0476": {
+  "cbdbId": 226627,
+  "confidence": 1,
+  "via": "entry 1445 第一甲第一名"
+ },
+ "z0477": {
+  "cbdbId": 33919,
+  "confidence": 1,
+  "via": "entry 1448 第一甲第一名"
+ },
+ "z0478": {
+  "cbdbId": 34515,
+  "confidence": 1,
+  "via": "entry 1451 第一甲第一名"
+ },
+ "z0479": {
+  "cbdbId": 129782,
+  "confidence": 1,
+  "via": "entry 1454 第一甲第一名"
+ },
+ "z0480": {
+  "cbdbId": 67331,
+  "confidence": 1,
+  "via": "entry 1457 第一甲第一名"
+ },
+ "z0481": {
+  "cbdbId": 67326,
+  "confidence": 1,
+  "via": "entry 1460 "
+ },
+ "z0482": {
+  "cbdbId": 131324,
+  "confidence": 1,
+  "via": "entry 1464 第一甲第一名"
+ },
+ "z0483": {
+  "cbdbId": 34531,
+  "confidence": 1,
+  "via": "entry 1466 第一甲第一名"
+ },
+ "z0484": {
+  "cbdbId": 33465,
+  "confidence": 1,
+  "via": "entry 1472 第一甲第一名"
+ },
+ "z0485": {
+  "cbdbId": 34576,
+  "confidence": 1,
+  "via": "entry 1475 第一甲第一名"
+ },
+ "z0486": {
+  "cbdbId": 131244,
+  "confidence": 1,
+  "via": "entry 1478 第一甲第一名"
+ },
+ "z0487": {
+  "cbdbId": 30373,
+  "confidence": 1,
+  "via": "entry 1481 第1甲第1名"
+ },
+ "z0488": {
+  "cbdbId": 359043,
+  "confidence": 1,
+  "via": "entry 1484 第1甲第1名"
+ },
+ "z0489": {
+  "cbdbId": 68133,
+  "confidence": 1,
+  "via": "entry 1487 第一甲第一名"
+ },
+ "z0490": {
+  "cbdbId": 133132,
+  "confidence": 1,
+  "via": "entry 1490 第一甲第一名"
+ },
+ "z0491": {
+  "cbdbId": 68094,
+  "confidence": 1,
+  "via": "entry 1493 第一甲第一名"
+ },
+ "z0492": {
+  "cbdbId": 28807,
+  "confidence": 1,
+  "via": "entry 1496 第1甲第1名"
+ },
+ "z0494": {
+  "cbdbId": 34645,
+  "confidence": 1,
+  "via": "entry 1502 第一甲第一名"
+ },
+ "z0495": {
+  "cbdbId": 68210,
+  "confidence": 1,
+  "via": "entry 1505 第一甲第一名"
+ },
+ "z0496": {
+  "cbdbId": 33860,
+  "confidence": 1,
+  "via": "entry 1508 一甲一名"
+ },
+ "z0497": {
+  "cbdbId": 34657,
+  "confidence": 1,
+  "via": "entry 1511 第一甲第一名"
+ },
+ "z0499": {
+  "cbdbId": 67743,
+  "confidence": 1,
+  "via": "entry 1517 第一甲第一名"
+ },
+ "z0500": {
+  "cbdbId": 131857,
+  "confidence": 1,
+  "via": "entry 1521 第一甲第一名"
+ },
+ "z0501": {
+  "cbdbId": 65816,
+  "confidence": 1,
+  "via": "entry 1523 第1甲第1名"
+ },
+ "z0502": {
+  "cbdbId": 340383,
+  "confidence": 1,
+  "via": "entry 1526 第1甲第1名"
+ },
+ "z0503": {
+  "cbdbId": 34702,
+  "confidence": 1,
+  "via": "entry 1529 第一甲第一名"
+ },
+ "z0505": {
+  "cbdbId": 202810,
+  "confidence": 1,
+  "via": "entry 1535 第一甲第一名"
+ },
+ "z0506": {
+  "cbdbId": 69565,
+  "confidence": 1,
+  "via": "entry 1538 第一甲第一名"
+ },
+ "z0507": {
+  "cbdbId": 203254,
+  "confidence": 1,
+  "via": "entry 1541 第一甲第一名"
+ },
+ "z0509": {
+  "cbdbId": 68213,
+  "confidence": 1,
+  "via": "entry 1547 第一甲第一名"
+ },
+ "z0510": {
+  "cbdbId": 68336,
+  "confidence": 1,
+  "via": "entry 1550 第一甲第一名"
+ },
+ "z0511": {
+  "cbdbId": 131030,
+  "confidence": 1,
+  "via": "entry 1553 第一甲第一名"
+ },
+ "z0512": {
+  "cbdbId": 132981,
+  "confidence": 1,
+  "via": "entry 1556 第一甲第一名"
+ },
+ "z0513": {
+  "cbdbId": 34287,
+  "confidence": 1,
+  "via": "entry 1559 第一甲第一名"
+ },
+ "z0514": {
+  "cbdbId": 123973,
+  "confidence": 1,
+  "via": "entry 1562 "
+ },
+ "z0515": {
+  "cbdbId": 129176,
+  "confidence": 1,
+  "via": "entry 1565 第一甲第一名"
+ },
+ "z0516": {
+  "cbdbId": 133542,
+  "confidence": 1,
+  "via": "entry 1568 第一甲第一名"
+ },
+ "z0518": {
+  "cbdbId": 34739,
+  "confidence": 1,
+  "via": "entry 1574 第1甲第1名"
+ },
+ "z0520": {
+  "cbdbId": 206482,
+  "confidence": 1,
+  "via": "entry 1580 第一甲第一名"
+ },
+ "z0521": {
+  "cbdbId": 30142,
+  "confidence": 1,
+  "via": "entry 1583 第一甲第一名"
+ },
+ "z0522": {
+  "cbdbId": 123861,
+  "confidence": 1,
+  "via": "entry 1586 第一甲第一名"
+ },
+ "z0523": {
+  "cbdbId": 65804,
+  "confidence": 1,
+  "via": "entry 1589 "
+ },
+ "z0524": {
+  "cbdbId": 123782,
+  "confidence": 1,
+  "via": "entry 1592 第一甲第第一名"
+ },
+ "z0525": {
+  "cbdbId": 127227,
+  "confidence": 1,
+  "via": "entry 1595 "
+ },
+ "z0526": {
+  "cbdbId": 366220,
+  "confidence": 1,
+  "via": "entry 1598 第1甲第1名"
+ },
+ "z0527": {
+  "cbdbId": 130359,
+  "confidence": 1,
+  "via": "entry 1601 第1甲第1名"
+ },
+ "z0528": {
+  "cbdbId": 131760,
+  "confidence": 1,
+  "via": "entry 1604 "
+ },
+ "z0529": {
+  "cbdbId": 64943,
+  "confidence": 1,
+  "via": "entry 1607 第1甲第1名"
+ },
+ "z0530": {
+  "cbdbId": 133263,
+  "confidence": 1,
+  "via": "entry 1610 第一甲第一名"
+ },
+ "z0531": {
+  "cbdbId": 125416,
+  "confidence": 1,
+  "via": "entry 1613 第1甲第1名"
+ },
+ "z0532": {
+  "cbdbId": 86453,
+  "confidence": 1,
+  "via": "entry 1616 第1甲第1名"
+ },
+ "z0533": {
+  "cbdbId": 361037,
+  "confidence": 1,
+  "via": "entry 1619 第1甲第1名"
+ },
+ "z0534": {
+  "cbdbId": 34682,
+  "confidence": 1,
+  "via": "entry 1622 第1甲第1名"
+ },
+ "z0535": {
+  "cbdbId": 128364,
+  "confidence": 1,
+  "via": "entry 1625 第1甲第1名"
+ },
+ "z0536": {
+  "cbdbId": 370118,
+  "confidence": 1,
+  "via": "entry 1628 第1甲第1名"
+ },
+ "z0537": {
+  "cbdbId": 132825,
+  "confidence": 1,
+  "via": "entry 1634 第1甲第1名"
+ },
+ "z0538": {
+  "cbdbId": 123769,
+  "confidence": 1,
+  "via": "entry 1637 第1甲第1名"
+ },
+ "z0539": {
+  "cbdbId": 351405,
+  "confidence": 1,
+  "via": "entry 1640 第1甲第1名"
+ },
+ "z0545": {
+  "cbdbId": 353294,
+  "confidence": 1,
+  "via": "entry 1652 第1甲第1名"
+ },
+ "z0547": {
+  "cbdbId": 73306,
+  "confidence": 1,
+  "via": "entry 1655 "
+ },
+ "z0548": {
+  "cbdbId": 347449,
+  "confidence": 1,
+  "via": "entry 1658 第1甲第1名"
+ },
+ "z0549": {
+  "cbdbId": 61226,
+  "confidence": 1,
+  "via": "entry 1659 1甲第1名"
+ },
+ "z0550": {
+  "cbdbId": 368955,
+  "confidence": 1,
+  "via": "entry 1661 第1甲第1名"
+ },
+ "z0551": {
+  "cbdbId": 368431,
+  "confidence": 1,
+  "via": "entry 1664 第1甲第1名"
+ },
+ "z0552": {
+  "cbdbId": 33899,
+  "confidence": 1,
+  "via": "entry 1667 第1甲第1名"
+ },
+ "z0554": {
+  "cbdbId": 34139,
+  "confidence": 1,
+  "via": "entry 1673 第1甲第1名"
+ },
+ "z0555": {
+  "cbdbId": 33917,
+  "confidence": 1,
+  "via": "entry 1676 第1甲第1名"
+ },
+ "z0556": {
+  "cbdbId": 73037,
+  "confidence": 1,
+  "via": "entry 1679 第1甲第1名"
+ },
+ "z0557": {
+  "cbdbId": 90982,
+  "confidence": 1,
+  "via": "entry 1682 第1甲第1名"
+ },
+ "z0558": {
+  "cbdbId": 370724,
+  "confidence": 1,
+  "via": "entry 1685 第1甲第1名"
+ },
+ "z0559": {
+  "cbdbId": 35192,
+  "confidence": 1,
+  "via": "entry 1688 第1甲第1名"
+ },
+ "z0560": {
+  "cbdbId": 360465,
+  "confidence": 1,
+  "via": "entry 1691 第1甲第1名"
+ },
+ "z0561": {
+  "cbdbId": 365587,
+  "confidence": 1,
+  "via": "entry 1694 第1甲第1名"
+ },
+ "z0562": {
+  "cbdbId": 358940,
+  "confidence": 1,
+  "via": "entry 1697 第1甲第1名"
+ },
+ "z0564": {
+  "cbdbId": 35053,
+  "confidence": 1,
+  "via": "entry 1703 第1甲第1名"
+ },
+ "z0567": {
+  "cbdbId": 67711,
+  "confidence": 1,
+  "via": "entry 1712 "
+ },
+ "z0568": {
+  "cbdbId": 72046,
+  "confidence": 1,
+  "via": "entry 1713 第1甲第1名"
+ },
+ "z0569": {
+  "cbdbId": 354080,
+  "confidence": 1,
+  "via": "entry 1715 第1甲第1名"
+ },
+ "z0570": {
+  "cbdbId": 354839,
+  "confidence": 1,
+  "via": "entry 1718 第1甲第1名"
+ },
+ "z0572": {
+  "cbdbId": 344463,
+  "confidence": 1,
+  "via": "entry 1723 第1甲第1名"
+ },
+ "z0576": {
+  "cbdbId": 371520,
+  "confidence": 1,
+  "via": "entry 1733 第1甲第1名"
+ },
+ "z0577": {
+  "cbdbId": 56818,
+  "confidence": 1,
+  "via": "entry 1736 第1甲第1名"
+ },
+ "z0578": {
+  "cbdbId": 57033,
+  "confidence": 1,
+  "via": "entry 1737 一甲一名"
+ },
+ "z0579": {
+  "cbdbId": 58635,
+  "confidence": 1,
+  "via": "entry 1739 "
+ },
+ "z0580": {
+  "cbdbId": 57079,
+  "confidence": 1,
+  "via": "entry 1742 一甲一名"
+ },
+ "z0582": {
+  "cbdbId": 55817,
+  "confidence": 1,
+  "via": "entry 1748 第1甲第1名"
+ },
+ "z0583": {
+  "cbdbId": 59690,
+  "confidence": 1,
+  "via": "entry 1751 一甲一名"
+ },
+ "z0584": {
+  "cbdbId": 85691,
+  "confidence": 1,
+  "via": "entry 1752 第1甲第1名"
+ },
+ "z0585": {
+  "cbdbId": 74707,
+  "confidence": 1,
+  "via": "entry 1754 第1甲第1名"
+ },
+ "z0586": {
+  "cbdbId": 363285,
+  "confidence": 1,
+  "via": "entry 1757 第1甲第1名"
+ },
+ "z0587": {
+  "cbdbId": 34013,
+  "confidence": 1,
+  "via": "entry 1760 第1甲第1名"
+ },
+ "z0589": {
+  "cbdbId": 367033,
+  "confidence": 1,
+  "via": "entry 1763 第1甲第1名"
+ },
+ "z0590": {
+  "cbdbId": 346584,
+  "confidence": 1,
+  "via": "entry 1766 第1甲第1名"
+ },
+ "z0591": {
+  "cbdbId": 68818,
+  "confidence": 1,
+  "via": "entry 1769 一甲一名"
+ },
+ "z0592": {
+  "cbdbId": 362996,
+  "confidence": 1,
+  "via": "entry 1771 第1甲第1名"
+ },
+ "z0593": {
+  "cbdbId": 83020,
+  "confidence": 1,
+  "via": "entry 1772 第1甲第1名"
+ },
+ "z0594": {
+  "cbdbId": 352343,
+  "confidence": 1,
+  "via": "entry 1775 第1甲第1名"
+ },
+ "z0595": {
+  "cbdbId": 58394,
+  "confidence": 1,
+  "via": "entry 1778 一甲一名"
+ },
+ "z0596": {
+  "cbdbId": 61199,
+  "confidence": 1,
+  "via": "entry 1780 一甲一名"
+ },
+ "z0597": {
+  "cbdbId": 65909,
+  "confidence": 1,
+  "via": "entry 1781 1甲1名"
+ },
+ "z0598": {
+  "cbdbId": 54021,
+  "confidence": 1,
+  "via": "entry 1784 一甲一名"
+ },
+ "z0599": {
+  "cbdbId": 57231,
+  "confidence": 1,
+  "via": "entry 1787 一甲一名"
+ },
+ "z0602": {
+  "cbdbId": 54483,
+  "confidence": 1,
+  "via": "entry 1793 第1甲第1名"
+ },
+ "z0603": {
+  "cbdbId": 69103,
+  "confidence": 1,
+  "via": "entry 1795 一甲一名"
+ },
+ "z0604": {
+  "cbdbId": 84178,
+  "confidence": 1,
+  "via": "entry 1796 第1甲第1名"
+ },
+ "z0605": {
+  "cbdbId": 56364,
+  "confidence": 1,
+  "via": "entry 1799 一甲一名"
+ },
+ "z0607": {
+  "cbdbId": 351645,
+  "confidence": 1,
+  "via": "entry 1802 第1甲第1名"
+ },
+ "z0608": {
+  "cbdbId": 63549,
+  "confidence": 1,
+  "via": "entry 1805 一甲一名"
+ },
+ "z0609": {
+  "cbdbId": 78488,
+  "confidence": 1,
+  "via": "entry 1808 一甲一名"
+ },
+ "z0610": {
+  "cbdbId": 356716,
+  "confidence": 1,
+  "via": "entry 1809 第1甲第1名"
+ },
+ "z0611": {
+  "cbdbId": 89606,
+  "confidence": 1,
+  "via": "entry 1811 第1甲第1名"
+ },
+ "z0612": {
+  "cbdbId": 340116,
+  "confidence": 1,
+  "via": "entry 1814 第1甲第1名"
+ },
+ "z0613": {
+  "cbdbId": 58874,
+  "confidence": 1,
+  "via": "entry 1817 一甲一名"
+ },
+ "z0614": {
+  "cbdbId": 81343,
+  "confidence": 1,
+  "via": "entry 1819 第1甲第1名"
+ },
+ "z0615": {
+  "cbdbId": 56510,
+  "confidence": 1,
+  "via": "entry 1820 第1甲第1名"
+ },
+ "z0616": {
+  "cbdbId": 65167,
+  "confidence": 1,
+  "via": "entry 1822 一甲一名"
+ },
+ "z0617": {
+  "cbdbId": 82599,
+  "confidence": 1,
+  "via": "entry 1823 "
+ },
+ "z0619": {
+  "cbdbId": 77783,
+  "confidence": 1,
+  "via": "entry 1829 "
+ },
+ "z0620": {
+  "cbdbId": 60728,
+  "confidence": 1,
+  "via": "entry 1832 一甲一名"
+ },
+ "z0623": {
+  "cbdbId": 59254,
+  "confidence": 1,
+  "via": "entry 1836 "
+ },
+ "z0624": {
+  "cbdbId": 125162,
+  "confidence": 1,
+  "via": "entry 1838 第1甲第1名"
+ },
+ "z0625": {
+  "cbdbId": 65248,
+  "confidence": 1,
+  "via": "entry 1840 一甲一名"
+ },
+ "z0627": {
+  "cbdbId": 60577,
+  "confidence": 1,
+  "via": "entry 1844 一甲一名"
+ },
+ "z0629": {
+  "cbdbId": 54432,
+  "confidence": 1,
+  "via": "entry 1847 第1甲第1名"
+ },
+ "z0630": {
+  "cbdbId": 81286,
+  "confidence": 1,
+  "via": "entry 1850 第1甲第1名"
+ },
+ "z0631": {
+  "cbdbId": 62580,
+  "confidence": 1,
+  "via": "entry 1852 一甲一名"
+ },
+ "z0633": {
+  "cbdbId": 54104,
+  "confidence": 1,
+  "via": "entry 1856 第1甲第1名"
+ },
+ "z0634": {
+  "cbdbId": 62350,
+  "confidence": 1,
+  "via": "entry 1859 一甲一名"
+ },
+ "z0636": {
+  "cbdbId": 64961,
+  "confidence": 1,
+  "via": "entry 1862 第一名"
+ },
+ "z0637": {
+  "cbdbId": 374312,
+  "confidence": 1,
+  "via": "entry 1863 第1甲第1名"
+ },
+ "z0639": {
+  "cbdbId": 64994,
+  "confidence": 1,
+  "via": "entry 1868 一甲一名"
+ },
+ "z0642": {
+  "cbdbId": 61368,
+  "confidence": 1,
+  "via": "entry 1876 "
+ },
+ "z0643": {
+  "cbdbId": 55786,
+  "confidence": 1,
+  "via": "entry 1877 第1甲第1名"
+ },
+ "z0644": {
+  "cbdbId": 363029,
+  "confidence": 1,
+  "via": "entry 1880 第1甲第1名"
+ },
+ "z0645": {
+  "cbdbId": 372190,
+  "confidence": 1,
+  "via": "entry 1883 第1甲第1名"
+ },
+ "z0646": {
+  "cbdbId": 366297,
+  "confidence": 1,
+  "via": "entry 1886 第1甲第1名"
+ },
+ "z0647": {
+  "cbdbId": 64614,
+  "confidence": 1,
+  "via": "entry 1889 一甲一名"
+ },
+ "z0648": {
+  "cbdbId": 61855,
+  "confidence": 1,
+  "via": "entry 1890 "
+ },
+ "z0649": {
+  "cbdbId": 369779,
+  "confidence": 1,
+  "via": "entry 1892 第1甲第1名"
+ },
+ "z0650": {
+  "cbdbId": 80172,
+  "confidence": 1,
+  "via": "entry 1894 第1甲第1名"
+ },
+ "z0652": {
+  "cbdbId": 344361,
+  "confidence": 1,
+  "via": "entry 1898 第1甲第1名"
+ },
+ "z0653": {
+  "cbdbId": 343030,
+  "confidence": 1,
+  "via": "entry 1903 第1甲第1名"
+ },
+ "z0654": {
+  "cbdbId": 370239,
+  "confidence": 1,
+  "via": "entry 1904 第1甲第1名"
+ }
+}

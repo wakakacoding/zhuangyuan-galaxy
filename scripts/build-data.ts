@@ -5,9 +5,9 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import yaml from 'js-yaml';
 import {
-  PersonSchema, DynastySchema, SourceSchema, RelationSchema, CareerSchema,
+  PersonSchema, DynastySchema, SourceSchema, RelationSchema, CareerSchema, ExternalSchema,
   RELATION_TYPES, CAREER_STAGE_CATEGORIES, CAREER_FINAL_CATEGORIES,
-  type Person, type Dynasty, type Source, type Relation, type PersonIndexEntry,
+  type Person, type Dynasty, type Source, type Relation, type PersonIndexEntry, type External,
   type EdgesFile, type Community,
 } from '../src/lib/schema';
 
@@ -97,12 +97,24 @@ console.log(`✓ 仕途回填 ${careerCount} 条记录（挖掘+人工）`);
 // ---------- 5. 关系（人工考据 + 同年自动派生） ----------
 const manualRelations = (yaml.load(readFileSync(join(dataDir, 'relations.yaml'), 'utf8')) as unknown[])
   .map((r) => RelationSchema.parse(r));
+
+// 外延人物（M5 T4）：stub 档案，仅作关系图节点，不入星图/统计
+const externals: External[] = existsSync(join(dataDir, 'externals.yaml'))
+  ? (yaml.load(readFileSync(join(dataDir, 'externals.yaml'), 'utf8')) as unknown[] ?? [])
+      .map((e) => ExternalSchema.parse(e))
+  : [];
+const externalById = new Map(externals.map((e) => [e.id, e]));
+if (externals.length) console.log(`✓ 外延人物 ${externals.length}`);
+
 for (const r of manualRelations) {
-  if (!personById.has(r.from)) err(`关系 from=${r.from} 不存在`);
-  if (!personById.has(r.to)) err(`关系 to=${r.to} 不存在`);
+  const fromOk = personById.has(r.from) || externalById.has(r.from);
+  const toOk = personById.has(r.to) || externalById.has(r.to);
+  if (!fromOk) err(`关系 from=${r.from} 不存在`);
+  if (!toOk) err(`关系 to=${r.to} 不存在`);
   if (r.source_id && !sourceById.has(r.source_id)) err(`关系 ${r.from}→${r.to} 引用了不存在的出处 ${r.source_id}`);
-  if (r.source_id === undefined) warn(`关系 ${r.from}→${r.to}（${personById.get(r.from)?.name}→${personById.get(r.to)?.name}）缺出处`);
+  if (r.source_id === undefined) warn(`关系 ${r.from}→${r.to}（${personById.get(r.from)?.name ?? externalById.get(r.from)?.name}→${personById.get(r.to)?.name ?? externalById.get(r.to)?.name}）缺出处`);
 }
+const nameOf = (id: string) => personById.get(id)?.name ?? externalById.get(id)?.name;
 
 // 同年自动派生：同朝同科年（dynasty+exam_year）的两两连边，derived 标记，与人工边去重
 const pairKey = (a: string, b: string, type: string) => [a, b].sort().join('|') + '#' + type;
@@ -338,13 +350,24 @@ const communities: Community[] = [...commGroups.entries()]
 const edgesFile: EdgesFile = {
   edges: relations.map((r) => ({
     ...r,
-    from_name: personById.get(r.from)?.name,
-    to_name: personById.get(r.to)?.name,
+    from_name: nameOf(r.from),
+    to_name: nameOf(r.to),
   })),
   communities,
   types: [...RELATION_TYPES],
+  externals: externals.map((e) => ({
+    id: e.id, name: e.name, birth_year: e.birth_year, death_year: e.death_year,
+    index_year: e.index_year, note: e.note, kind: 'external' as const,
+  })),
 };
 writeFileSync(join(outDir, 'edges.json'), JSON.stringify(edgesFile));
+// 外延人物独立索引（不进主 person-index，避免稀释搜索）
+if (externals.length) {
+  writeFileSync(join(outDir, 'externals-index.json'), JSON.stringify(externals.map((e) => ({
+    id: e.id, name: e.name, birth_year: e.birth_year, death_year: e.death_year,
+    index_year: e.index_year, note: e.note, cbdb_id: e.cbdb_id,
+  }))));
+}
 console.log(`✓ 社区发现：${commGroups.size} 个社区，标注 ${communities.length} 个（≥3 人）`);
 
 // ---------- 9d. career.json（仕途桑基聚合） ----------

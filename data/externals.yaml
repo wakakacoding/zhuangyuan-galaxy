@@ -1,0 +1,103 @@
+# 外延人物表（M5 T4）：非状元但与 ≥2 名状元有 CBDB 记录关系者；stub 档案，不入星图/统计分母
+- id: w0001
+  name: 歸融
+  cbdb_id: 32880
+  index_year: 782
+  note: 与状元 归仁绍、归仁泽 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0002
+  name: 張師顏
+  cbdb_id: 282
+  index_year: 968
+  note: 与状元 张去华、张师德 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0003
+  name: 張景憲
+  cbdb_id: 205
+  birth_year: 1004
+  death_year: 1080
+  index_year: 1004
+  note: 与状元 张去华、张师德 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0004
+  name: 張立
+  cbdb_id: 699339
+  birth_year: 1047
+  death_year: 1062
+  index_year: 1047
+  note: 与状元 张去华、张师德 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0005
+  name: 陳省華
+  cbdb_id: 3083
+  birth_year: 939
+  death_year: 1006
+  index_year: 939
+  note: 与状元 陈尧叟、陈尧咨 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0006
+  name: 馮氏(陳堯叟母)
+  cbdb_id: 118924
+  index_year: 942
+  note: 与状元 陈尧叟、陈尧咨 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0007
+  name: 陳堯佐
+  cbdb_id: 98
+  birth_year: 963
+  death_year: 1044
+  index_year: 963
+  note: 与状元 陈尧叟、陈尧咨 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0008
+  name: 陳漸
+  cbdb_id: 14384
+  index_year: 962
+  note: 与状元 陈尧叟、陈尧咨 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0009
+  name: 孫鎰
+  cbdb_id: 17911
+  index_year: 891
+  note: 与状元 孙何、孙暨 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0010
+  name: 李沆
+  cbdb_id: 8076
+  birth_year: 947
+  death_year: 1004
+  index_year: 947
+  note: 与状元 王曾、张师德 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0011
+  name: 章惇
+  cbdb_id: 333
+  birth_year: 1035
+  death_year: 1105
+  index_year: 1035
+  note: 与状元 李迪、章衡 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0012
+  name: 蔡京
+  cbdb_id: 1649
+  birth_year: 1047
+  death_year: 1126
+  index_year: 1047
+  note: 与状元 马涓、蔡薿 有彈劾/恩主是Y关系（CBDB）
+  source_id: s0010
+- id: w0013
+  name: 姚希孟
+  cbdb_id: 56535
+  birth_year: 1579
+  death_year: 1636
+  index_year: 1579
+  note: 与状元 周延儒、文震孟 有友/亲属关系（CBDB）
+  source_id: s0010
+- id: w0014
+  name: 錢大昕
+  cbdb_id: 29876
+  birth_year: 1728
+  death_year: 1804
+  index_year: 1728
+  note: 与状元 莊培因、毕沅 有同年友/友关系（CBDB）
+  source_id: s0010

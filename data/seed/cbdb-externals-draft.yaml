@@ -1,0 +1,146 @@
+# 外延人物草稿（0 新增 + 28 边）——复核后 --apply 入库
+externals:
+  []
+  
+edges:
+  - from: z0134
+    to: w0001
+    type: 亲属
+    note: CBDB 亲属：父
+    source_id: s0010
+  - from: z0138
+    to: w0001
+    type: 亲属
+    note: CBDB 亲属：父
+    source_id: s0010
+  - from: z0184
+    to: w0002
+    type: 亲属
+    note: CBDB 亲属：子
+    source_id: s0010
+  - from: z0184
+    to: w0003
+    type: 亲属
+    note: CBDB 亲属：孫
+    source_id: s0010
+  - from: z0184
+    to: w0004
+    type: 亲属
+    note: CBDB 亲属：曾孫; 重孫
+    source_id: s0010
+  - from: z0219
+    to: w0005
+    type: 亲属
+    note: CBDB 亲属：父
+    source_id: s0010
+  - from: z0219
+    to: w0006
+    type: 亲属
+    note: CBDB 亲属：母
+    source_id: s0010
+  - from: z0219
+    to: w0007
+    type: 亲属
+    note: CBDB 亲属：弟
+    source_id: s0010
+  - from: z0219
+    to: w0008
+    type: 亲属
+    note: CBDB 亲属：從子;姪子
+    source_id: s0010
+  - from: z0222
+    to: w0009
+    type: 亲属
+    note: CBDB 亲属：祖父
+    source_id: s0010
+  - from: z0231
+    to: w0009
+    type: 亲属
+    note: CBDB 亲属：族父
+    source_id: s0010
+  - from: z0233
+    to: w0005
+    type: 亲属
+    note: CBDB 亲属：父
+    source_id: s0010
+  - from: z0233
+    to: w0006
+    type: 亲属
+    note: CBDB 亲属：母
+    source_id: s0010
+  - from: z0233
+    to: w0007
+    type: 亲属
+    note: CBDB 亲属：兄
+    source_id: s0010
+  - from: z0233
+    to: w0008
+    type: 亲属
+    note: CBDB 亲属：從子;姪子
+    source_id: s0010
+  - from: z0235
+    to: w0010
+    type: 亲属
+    note: CBDB 亲属：第一任妻父
+    source_id: s0010
+  - from: z0237
+    to: w0011
+    type: 亲属
+    note: CBDB 亲属：外孫
+    source_id: s0010
+  - from: z0244
+    to: w0010
+    type: 翁婿
+    note: CBDB 亲属：岳父
+    source_id: s0010
+  - from: z0244
+    to: w0002
+    type: 亲属
+    note: CBDB 亲属：兄弟
+    source_id: s0010
+  - from: z0244
+    to: w0003
+    type: 亲属
+    note: CBDB 亲属：次子
+    source_id: s0010
+  - from: z0244
+    to: w0004
+    type: 亲属
+    note: CBDB 亲属：孫
+    source_id: s0010
+  - from: z0277
+    to: w0011
+    type: 亲属
+    note: CBDB 亲属：從父;伯叔父
+    source_id: s0010
+  - from: z0299
+    to: w0012
+    type: 政敌
+    note: CBDB：彈劾
+    source_id: s0010
+  - from: z0308
+    to: w0012
+    type: 师生
+    note: CBDB：恩主是Y（1123）
+    source_id: s0010
+  - from: z0531
+    to: w0013
+    type: 同僚
+    note: CBDB：友
+    source_id: s0010
+  - from: z0534
+    to: w0013
+    type: 亲属
+    note: CBDB 亲属：外甥
+    source_id: s0010
+  - from: z0585
+    to: w0014
+    type: 同年
+    note: CBDB：同年友
+    source_id: s0010
+  - from: z0587
+    to: w0014
+    type: 同僚
+    note: CBDB：友
+    source_id: s0010
+  

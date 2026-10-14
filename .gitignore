@@ -12,3 +12,4 @@ data/geo/chgis/raw/
 
 # Playwright 浏览器缓存（沙箱不可用，857MB）
 .pw-browsers/
+data/cbdb/

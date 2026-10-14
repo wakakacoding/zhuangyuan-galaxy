@@ -76,7 +76,11 @@ export interface EdgeItem {
   derived?: boolean; from_name?: string; to_name?: string;
 }
 export interface CommunityItem { id: number; label: string; members: string[]; size: number }
-export interface EdgesData { edges: EdgeItem[]; communities: CommunityItem[]; types: string[] }
+export interface ExternalItem {
+  id: string; name: string; birth_year?: number; death_year?: number;
+  index_year?: number; note?: string; kind: 'external';
+}
+export interface EdgesData { edges: EdgeItem[]; communities: CommunityItem[]; types: string[]; externals?: ExternalItem[] }
 export const loadEdges = () => load<EdgesData>('/data/edges.json');
 
 export interface CareerData {

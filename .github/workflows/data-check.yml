@@ -1,0 +1,22 @@
+name: Data Check
+
+# 数据校验：数据/脚本/schema 变更时跑全量构建校验，坏数据拦截在合并前
+on:
+  pull_request:
+    paths: ['data/**', 'scripts/**', 'src/lib/schema.ts']
+  push:
+    branches: [main]
+    paths: ['data/**', 'scripts/**', 'src/lib/schema.ts']
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:data

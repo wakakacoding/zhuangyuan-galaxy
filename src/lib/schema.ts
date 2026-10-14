@@ -105,6 +105,19 @@ export const RelationSchema = z.object({
 });
 export type Relation = z.infer<typeof RelationSchema>;
 
+// ============ 外延人物（M5 T4：非状元但与状元有关系者；stub 档案，不入星图/统计分母） ============
+export const ExternalSchema = z.object({
+  id: z.string().regex(/^w\d{4}$/),
+  name: z.string(),
+  cbdb_id: z.number().optional(),
+  birth_year: z.number().optional(),
+  death_year: z.number().optional(),
+  index_year: z.number().optional(), // CBDB 指数年（生平中点估计）
+  note: z.string().optional(),
+  source_id: z.string().optional(),
+});
+export type External = z.infer<typeof ExternalSchema>;
+
 // ============ 关系图编译产物（edges.json v2） ============
 export interface Edge {
   from: string;
@@ -128,6 +141,17 @@ export interface EdgesFile {
   edges: Edge[];
   communities: Community[]; // 按 size 降序；成员 <3 的碎片社区不入列
   types: string[];
+  externals?: ExternalIndexEntry[]; // 外延人物节点（M5）：网络图可选渲染
+}
+
+export interface ExternalIndexEntry {
+  id: string;
+  name: string;
+  birth_year?: number;
+  death_year?: number;
+  index_year?: number;
+  note?: string;
+  kind: 'external';
 }
 
 // ============ 地名映射 ============

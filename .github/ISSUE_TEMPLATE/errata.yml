@@ -1,0 +1,52 @@
+name: 数据勘误
+description: 人物、科年、籍贯、关系等数据讹误指正（铁律：须附出处依据）
+title: "[勘误] "
+labels: ["勘误", "待核实"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: 涉及条目
+      description: 人物编号（如 z0633）或姓名+朝代；涉及关系边请写双方姓名
+      placeholder: 如 z0655 归仁翰（唐·大中十一年）
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 现行记载
+      description: 网站/数据里现在是怎么写的（可直接粘贴页面原文）
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 建议修正为
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: 证据等级
+      description: A=正史/题名碑/朱卷/登科录；B=地方志/年谱/日记/整理名录；C=笔记小说/民间传说
+      options:
+        - A 级（正史、碑录、朱卷、登科录）
+        - B 级（地方志、年谱、日记、整理名录）
+        - C 级（笔记小说、民间传说）
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 出处依据
+      description: A/B 级须给出书名+卷次+原文摘录；C 级请说明来源。无出处的修改不会被采纳
+      placeholder: 如《登科记考》卷二十二：「大中十一年丁丑科，状元归仁翰……」
+    validations:
+      required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: 附图（可选）
+      description: 书影、碑拓照片等，可直接拖拽上传
+    validations:
+      required: false

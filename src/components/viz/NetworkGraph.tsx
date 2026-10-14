@@ -29,6 +29,7 @@ export default function NetworkGraph() {
   const [offTypes, setOffTypes] = useState<Set<string>>(new Set()); // 被关闭的关系类型
   const [egoId, setEgoId] = useState<string | null>(null);
   const [activeComm, setActiveComm] = useState<number | null>(null);
+  const [showExternals, setShowExternals] = useState(false); // 默认「仅状元」，外延人物按需展开
 
   const dynFilter = useStore(selectedDynasties);
   const query = useStore(searchQuery);
@@ -49,6 +50,10 @@ export default function NetworkGraph() {
   }, []);
 
   const personById = useMemo(() => new Map(index.map((p) => [p.id, p])), [index]);
+  const externalById = useMemo(
+    () => new Map((data?.externals ?? []).map((e) => [e.id, e])),
+    [data],
+  );
   const dynColor = useMemo(() => new Map(dynasties.map((d) => [d.key, d.color])), [dynasties]);
   const dynName = useMemo(() => new Map(dynasties.map((d) => [d.key, d.name])), [dynasties]);
 
@@ -60,6 +65,7 @@ export default function NetworkGraph() {
     if (t) setOffTypes(new Set(t.split(',').filter(Boolean)));
     const ego = params.get('ego');
     if (ego) setEgoId(ego);
+    if (params.get('nx') === '1') setShowExternals(true);
   }, []);
 
   // URL 同步
@@ -68,14 +74,17 @@ export default function NetworkGraph() {
     const params = new URLSearchParams(window.location.search);
     if (offTypes.size) params.set('nt', [...offTypes].join(',')); else params.delete('nt');
     if (egoId) params.set('ego', egoId); else params.delete('ego');
+    if (showExternals) params.set('nx', '1'); else params.delete('nx');
     const url = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
     window.history.replaceState(null, '', url);
-  }, [offTypes, egoId]);
+  }, [offTypes, egoId, showExternals]);
 
   // ---------- 图数据加工 ----------
   const activeEdges = useMemo(
-    () => (data?.edges ?? []).filter((e) => !offTypes.has(e.type)),
-    [data, offTypes],
+    () => (data?.edges ?? []).filter((e) =>
+      !offTypes.has(e.type) &&
+      (showExternals || (personById.has(e.from) && personById.has(e.to)))),
+    [data, offTypes, showExternals, personById],
   );
   const connectedIds = useMemo(() => {
     const s = new Set<string>();
@@ -120,7 +129,7 @@ export default function NetworkGraph() {
       };
       chartRef.current.on('click', (p) => {
         const id = pickId(p);
-        if (id) selectPerson(id);
+        if (id && !id.startsWith('w')) selectPerson(id); // 外延人物无人物帖，点击不跳转
       });
       chartRef.current.on('dblclick', (p) => {
         const id = pickId(p);
@@ -130,6 +139,7 @@ export default function NetworkGraph() {
     const chart = chartRef.current;
 
     const pass = (id: string): boolean => {
+      if (externalById.has(id)) return true; // 外延人物不受朝代/搜索筛选影响
       const p = personById.get(id);
       if (!p) return false;
       if (dynFilter.length && !dynFilter.includes(p.dynasty)) return false;
@@ -141,6 +151,24 @@ export default function NetworkGraph() {
     };
 
     const nodes = [...connectedIds].map((id) => {
+      const ext = externalById.get(id);
+      if (ext) {
+        // 外延节点：小圆点、灰调、虚线描边，视觉降级以区分主线
+        const dim = focusSet ? !focusSet.has(id) : false;
+        return {
+          id,
+          name: ext.name,
+          symbolSize: 6,
+          itemStyle: {
+            color: '#8B93A1',
+            borderColor: 'rgba(242,234,216,0.55)',
+            borderWidth: 1,
+            borderType: 'dashed' as const,
+            opacity: dim ? DIM : 0.9,
+          },
+          label: { color: '#B9C0CC', fontSize: 10 },
+        };
+      }
       const p = personById.get(id)!;
       const dim = !pass(id) || (focusSet ? !focusSet.has(id) : false);
       const deep = p.event_count >= 3;
@@ -183,7 +211,11 @@ export default function NetworkGraph() {
             return `${d.relType}：${String(d.note ?? '')}`;
           }
           const p = personById.get(String(d.id));
-          if (!p) return String(d.name ?? '');
+          if (!p) {
+            const ext = externalById.get(String(d.id));
+            if (ext) return `${ext.name}<br/><span style="opacity:.7">外延人物（非状元）${ext.note ? '：' + ext.note : ''}</span>`;
+            return String(d.name ?? '');
+          }
           return `${p.name} · ${dynName.get(p.dynasty) ?? ''} · ${p.exam_year} 年${p.event_count >= 3 ? '<br/>有深度档案' : ''}`;
         },
       },
@@ -200,7 +232,7 @@ export default function NetworkGraph() {
         scaleLimit: { min: 0.4, max: 6 },
       }],
     }, { notMerge: true });
-  }, [data, index, dynasties, connectedIds, activeEdges, dynFilter, query, focusSet, personById, dynColor, dynName]);
+  }, [data, index, dynasties, connectedIds, activeEdges, dynFilter, query, focusSet, personById, externalById, dynColor, dynName]);
 
   // 自适应
   useEffect(() => {
@@ -238,6 +270,16 @@ export default function NetworkGraph() {
             </button>
           );
         })}
+        {(data.externals?.length ?? 0) > 0 && (
+          <button
+            onClick={() => setShowExternals((v) => !v)}
+            className={`rounded-full border px-2.5 py-1 font-serif text-xs transition-opacity ${showExternals ? '' : 'opacity-35'}`}
+            style={{ borderColor: '#8B93A166', color: '#8B93A1' }}
+            title="外延人物：非状元但与多名状元有记录关系者（如座主、名臣亲属），数据来自 CBDB"
+          >
+            外延人物 {data.externals!.length}
+          </button>
+        )}
         <span className="ml-auto font-serif text-[11px] text-miDim/70">
           已收录关系 {data.edges.length} 条 · 覆盖 {coverage}/{index.length} 人
         </span>

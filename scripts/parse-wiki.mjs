@@ -1,6 +1,7 @@
-// 解析维基状元列表 wikitext → roster.tsv
+// 解析维基状元列表 wikitext → wiki-parsed.tsv（不含 id，供 roster-diff.mjs 比对用）
+// ⚠️ M5 起 id 冻结：roster.tsv 为主名录且追加式维护，本脚本不得再直写 roster.tsv
 // 输入：data/seed/wiki_*.txt（唐/宋/明/清独立页 + 中国状元列表总页的五代/辽/金/元章节）
-// 输出：data/seed/roster.tsv  列：id name dynasty exam_year reign birth death native_hist tags
+// 输出：data/seed/wiki-parsed.tsv  列：name dynasty exam_year reign birth death native_hist tags
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -128,10 +129,9 @@ const order = { tang: 0, wudai: 1, liao: 2, song: 3, jin: 4, yuan: 5, ming: 6, q
 deduped.sort((a, b) => a.exam_year - b.exam_year || order[a.dynasty] - order[b.dynasty]);
 
 const esc = (s) => String(s ?? '').replace(/\t/g, ' ');
-const lines = ['id\tname\tdynasty\texam_year\treign\tbirth\tdeath\tnative_hist\ttags'];
-deduped.forEach((r, i) => {
-  const id = `z${String(i + 1).padStart(4, '0')}`;
-  lines.push([id, r.name, r.dynasty, r.exam_year, esc(r.reign), r.birth, r.death, esc(r.native_hist), r.tags].join('\t'));
+const lines = ['name\tdynasty\texam_year\treign\tbirth\tdeath\tnative_hist\ttags'];
+deduped.forEach((r) => {
+  lines.push([r.name, r.dynasty, r.exam_year, esc(r.reign), r.birth, r.death, esc(r.native_hist), r.tags].join('\t'));
 });
-writeFileSync(join(seedDir, 'roster.tsv'), lines.join('\n'));
-console.log(`TOTAL: ${deduped.length} → data/seed/roster.tsv`);
+writeFileSync(join(seedDir, 'wiki-parsed.tsv'), lines.join('\n'));
+console.log(`TOTAL: ${deduped.length} → data/seed/wiki-parsed.tsv`);
