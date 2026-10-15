@@ -101,3 +101,37 @@
   index_year: 1728
   note: 与状元 莊培因、毕沅 有同年友/友关系（CBDB）
   source_id: s0010
+- id: w0015
+  name: 張泚
+  cbdb_id: 189513
+  death_year: 774
+  index_year: 711
+  note: 与状元 张正甫、张式 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0016
+  name: 孔溫孺
+  cbdb_id: 184775
+  death_year: 847
+  index_year: 784
+  note: 与状元 孔纬、孔缄 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0017
+  name: 孔策
+  cbdb_id: 184751
+  death_year: 865
+  index_year: 802
+  note: 与状元 孔振、孔拯 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0018
+  name: 崔璙
+  cbdb_id: 176961
+  death_year: 859
+  index_year: 796
+  note: 与状元 崔昭纬、崔昭矩 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0019
+  name: 史詔
+  cbdb_id: 10379
+  index_year: 1064
+  note: 与状元 史简、史大成 有亲属关系（CBDB）
+  source_id: s0010

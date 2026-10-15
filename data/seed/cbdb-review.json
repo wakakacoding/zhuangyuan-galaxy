@@ -44,49 +44,6 @@
   ]
  },
  {
-  "id": "z0008",
-  "name": "鄭益",
-  "exam_year": 675,
-  "reason": "同名 5 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 182910,
-    "birth": null,
-    "death": 797,
-    "index_year": 734,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 183539,
-    "birth": null,
-    "death": 770,
-    "index_year": 707,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 486307,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 540128,
-    "birth": null,
-    "death": null,
-    "index_year": 1166,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 545895,
-    "birth": null,
-    "death": null,
-    "index_year": 1199,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0012",
   "name": "吴师道",
   "exam_year": 685,
@@ -104,21 +61,6 @@
     "birth": 1283,
     "death": 1344,
     "index_year": 1283,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0013",
-  "name": "郭元振",
-  "exam_year": 687,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 32589,
-    "birth": 0,
-    "death": 722,
-    "index_year": 659,
     "vita_match": false
    }
   ]
@@ -148,21 +90,6 @@
     "birth": null,
     "death": 604,
     "index_year": 541,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0018",
-  "name": "常无名",
-  "exam_year": 713,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 33070,
-    "birth": 0,
-    "death": 0,
-    "index_year": 695,
     "vita_match": false
    }
   ]
@@ -203,43 +130,6 @@
    },
    {
     "cbdbId": 118781,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0023",
-  "name": "源少良",
-  "exam_year": 723,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 184068,
-    "birth": null,
-    "death": 709,
-    "index_year": 646,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0025",
-  "name": "严迪",
-  "exam_year": 726,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 163756,
-    "birth": null,
-    "death": null,
-    "index_year": 684,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 597222,
     "birth": null,
     "death": null,
     "index_year": null,
@@ -480,21 +370,6 @@
   ]
  },
  {
-  "id": "z0044",
-  "name": "卢庚",
-  "exam_year": 756,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 178778,
-    "birth": null,
-    "death": 842,
-    "index_year": 779,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0045",
   "name": "洪源",
   "exam_year": 763,
@@ -539,28 +414,6 @@
   ]
  },
  {
-  "id": "z0049",
-  "name": "李博",
-  "exam_year": 770,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 56341,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 173599,
-    "birth": null,
-    "death": 819,
-    "index_year": 756,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0050",
   "name": "王溆",
   "exam_year": 771,
@@ -571,49 +424,6 @@
     "birth": null,
     "death": null,
     "index_year": 1166,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0051",
-  "name": "张式",
-  "exam_year": 772,
-  "reason": "同名 10 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 41666,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 45682,
-    "birth": 989,
-    "death": 1050,
-    "index_year": 989,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 45684,
-    "birth": null,
-    "death": null,
-    "index_year": 997,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 79944,
-    "birth": 1794,
-    "death": 1850,
-    "index_year": 1794,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 106495,
-    "birth": null,
-    "death": null,
-    "index_year": null,
     "vita_match": false
    }
   ]
@@ -895,116 +705,6 @@
   ]
  },
  {
-  "id": "z0077",
-  "name": "王源中",
-  "exam_year": 807,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 175500,
-    "birth": null,
-    "death": 838,
-    "index_year": 775,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0078",
-  "name": "郑肃",
-  "exam_year": 808,
-  "reason": "同名 6 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 12750,
-    "birth": 0,
-    "death": 0,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 15340,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1164,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 157642,
-    "birth": null,
-    "death": null,
-    "index_year": 775,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 296963,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 375605,
-    "birth": null,
-    "death": null,
-    "index_year": 1637,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0081",
-  "name": "孔敏行",
-  "exam_year": 811,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 193385,
-    "birth": 786,
-    "death": 835,
-    "index_year": 786,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0082",
-  "name": "李固言",
-  "exam_year": 812,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 169062,
-    "birth": 776,
-    "death": 852,
-    "index_year": 776,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0084",
-  "name": "张又新",
-  "exam_year": 814,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 30977,
-    "birth": null,
-    "death": null,
-    "index_year": 774,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 238930,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0086",
   "name": "郑澥",
   "exam_year": 816,
@@ -1094,57 +794,6 @@
     "birth": 779,
     "death": 848,
     "index_year": 779,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0093",
-  "name": "柳璟",
-  "exam_year": 825,
-  "reason": "同名 4 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 178206,
-    "birth": null,
-    "death": 845,
-    "index_year": 782,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 382286,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 437724,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 449225,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0094",
-  "name": "裴俅",
-  "exam_year": 826,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 32000,
-    "birth": 0,
-    "death": 0,
-    "index_year": 791,
     "vita_match": false
    }
   ]
@@ -1322,42 +971,6 @@
   ]
  },
  {
-  "id": "z0101",
-  "name": "李余",
-  "exam_year": 833,
-  "reason": "同名 4 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 448254,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 92943,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 188190,
-    "birth": null,
-    "death": 922,
-    "index_year": 859,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 224579,
-    "birth": null,
-    "death": null,
-    "index_year": 1527,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0102",
   "name": "陈宽",
   "exam_year": 834,
@@ -1411,64 +1024,6 @@
     "birth": null,
     "death": 465,
     "index_year": 402,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0105",
-  "name": "李肱",
-  "exam_year": 837,
-  "reason": "同名 4 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 92974,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 160316,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 173847,
-    "birth": null,
-    "death": 994,
-    "index_year": 931,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 185743,
-    "birth": null,
-    "death": 868,
-    "index_year": 805,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0106",
-  "name": "裴思谦",
-  "exam_year": 838,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 94939,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 171263,
-    "birth": null,
-    "death": 843,
-    "index_year": 780,
     "vita_match": false
    }
   ]
@@ -1613,49 +1168,6 @@
   ]
  },
  {
-  "id": "z0120",
-  "name": "李超",
-  "exam_year": 852,
-  "reason": "同名 11 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 40771,
-    "birth": null,
-    "death": null,
-    "index_year": 895,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 41270,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 60511,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 142954,
-    "birth": 662,
-    "death": 713,
-    "index_year": 662,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 146227,
-    "birth": null,
-    "death": 705,
-    "index_year": 642,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0122",
   "name": "颜标",
   "exam_year": 854,
@@ -1673,50 +1185,6 @@
     "birth": null,
     "death": null,
     "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0123",
-  "name": "赵蒙",
-  "exam_year": 855,
-  "reason": "同名 3 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 50165,
-    "birth": null,
-    "death": 1075,
-    "index_year": 1012,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 179641,
-    "birth": null,
-    "death": 876,
-    "index_year": 813,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 464429,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0124",
-  "name": "崔鉶",
-  "exam_year": 856,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 177755,
-    "birth": null,
-    "death": 878,
-    "index_year": 815,
     "vita_match": false
    }
   ]
@@ -1765,21 +1233,6 @@
   ]
  },
  {
-  "id": "z0126",
-  "name": "孔纬",
-  "exam_year": 859,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 184776,
-    "birth": null,
-    "death": 895,
-    "index_year": 832,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0127",
   "name": "刘蒙",
   "exam_year": 860,
@@ -1816,50 +1269,6 @@
   ]
  },
  {
-  "id": "z0128",
-  "name": "裴延鲁",
-  "exam_year": 861,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 171193,
-    "birth": null,
-    "death": 885,
-    "index_year": 822,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 381235,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0130",
-  "name": "孔振",
-  "exam_year": 863,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 184752,
-    "birth": null,
-    "death": 895,
-    "index_year": 832,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 264330,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0131",
   "name": "韩衮",
   "exam_year": 866,
@@ -1877,42 +1286,6 @@
     "birth": null,
     "death": 840,
     "index_year": 777,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0133",
-  "name": "赵峻",
-  "exam_year": 868,
-  "reason": "同名 4 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 20954,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1052,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 179803,
-    "birth": null,
-    "death": 876,
-    "index_year": 813,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 462521,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 660316,
-    "birth": null,
-    "death": null,
-    "index_year": null,
     "vita_match": false
    }
   ]
@@ -1961,58 +1334,6 @@
   ]
  },
  {
-  "id": "z0137",
-  "name": "孔纁",
-  "exam_year": 873,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 184774,
-    "birth": null,
-    "death": 884,
-    "index_year": 821,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0139",
-  "name": "郑合敬",
-  "exam_year": 875,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 93827,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 183579,
-    "birth": null,
-    "death": 871,
-    "index_year": 808,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0140",
-  "name": "孔缄",
-  "exam_year": 876,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 184779,
-    "birth": null,
-    "death": 884,
-    "index_year": 821,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0141",
   "name": "孙偓",
   "exam_year": 878,
@@ -2037,51 +1358,6 @@
     "birth": null,
     "death": null,
     "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0143",
-  "name": "崔昭纬",
-  "exam_year": 882,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 176964,
-    "birth": null,
-    "death": 896,
-    "index_year": 833,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0144",
-  "name": "孔拯",
-  "exam_year": 883,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 184754,
-    "birth": null,
-    "death": 895,
-    "index_year": 832,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0147",
-  "name": "赵昌翰",
-  "exam_year": 887,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 179642,
-    "birth": null,
-    "death": 913,
-    "index_year": 850,
     "vita_match": false
    }
   ]
@@ -2130,21 +1406,6 @@
   ]
  },
  {
-  "id": "z0151",
-  "name": "崔昭矩",
-  "exam_year": 891,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 176965,
-    "birth": null,
-    "death": 896,
-    "index_year": 833,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0152",
   "name": "归黯",
   "exam_year": 892,
@@ -2152,28 +1413,6 @@
   "candidates": [
    {
     "cbdbId": 447082,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0154",
-  "name": "苏检",
-  "exam_year": 894,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 181608,
-    "birth": null,
-    "death": 925,
-    "index_year": 862,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 383081,
     "birth": null,
     "death": null,
     "index_year": null,
@@ -2199,28 +1438,6 @@
     "birth": null,
     "death": 843,
     "index_year": 780,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0164",
-  "name": "崔詹",
-  "exam_year": 907,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 144846,
-    "birth": 843,
-    "death": 907,
-    "index_year": 843,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 319081,
-    "birth": null,
-    "death": null,
-    "index_year": 1527,
     "vita_match": false
    }
   ]
@@ -2379,43 +1596,6 @@
   ]
  },
  {
-  "id": "z0181",
-  "name": "王克贞",
-  "exam_year": 952,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 39043,
-    "birth": 930,
-    "death": 989,
-    "index_year": 930,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0182",
-  "name": "舒雅",
-  "exam_year": 959,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 49210,
-    "birth": null,
-    "death": 1009,
-    "index_year": 946,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 450415,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0189",
   "name": "王崇古",
   "exam_year": 964,
@@ -2469,49 +1649,6 @@
     "birth": null,
     "death": 850,
     "index_year": 787,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0194",
-  "name": "李肃",
-  "exam_year": 966,
-  "reason": "同名 10 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 19768,
-    "birth": null,
-    "death": null,
-    "index_year": 930,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 24840,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1151,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 141400,
-    "birth": 761,
-    "death": 804,
-    "index_year": 761,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 165100,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 241539,
-    "birth": null,
-    "death": null,
-    "index_year": 1429,
     "vita_match": false
    }
   ]
@@ -2830,49 +1967,6 @@
   ]
  },
  {
-  "id": "z0245",
-  "name": "史简",
-  "exam_year": 1012,
-  "reason": "同名 5 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 10378,
-    "birth": 1034,
-    "death": 1058,
-    "index_year": 1034,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 33253,
-    "birth": 0,
-    "death": 0,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 200269,
-    "birth": 1453,
-    "death": null,
-    "index_year": 1453,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 334925,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 337979,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0251",
   "name": "孙杰",
   "exam_year": 1016,
@@ -2996,49 +2090,6 @@
   ]
  },
  {
-  "id": "z0258",
-  "name": "张昱",
-  "exam_year": 1025,
-  "reason": "同名 22 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 28408,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 96558,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 141746,
-    "birth": 778,
-    "death": 859,
-    "index_year": 778,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 176206,
-    "birth": null,
-    "death": 749,
-    "index_year": 686,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 246384,
-    "birth": null,
-    "death": null,
-    "index_year": 1445,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0260",
   "name": "张宥",
   "exam_year": 1028,
@@ -3147,92 +2198,6 @@
    },
    {
     "cbdbId": 462504,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0269",
-  "name": "王寔",
-  "exam_year": 1042,
-  "reason": "同名 5 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 22124,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1050,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 175942,
-    "birth": null,
-    "death": 763,
-    "index_year": 700,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 279061,
-    "birth": null,
-    "death": null,
-    "index_year": 1481,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 477733,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 705011,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0271",
-  "name": "王棠",
-  "exam_year": 1046,
-  "reason": "同名 8 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 22138,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1079,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 35626,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1144,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 60986,
-    "birth": null,
-    "death": 1748,
-    "index_year": 1685,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 274257,
-    "birth": null,
-    "death": null,
-    "index_year": 1471,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 461135,
     "birth": null,
     "death": null,
     "index_year": null,
@@ -3429,49 +2394,6 @@
   ]
  },
  {
-  "id": "z0309",
-  "name": "李石",
-  "exam_year": 1107,
-  "reason": "同名 5 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 10830,
-    "birth": 1108,
-    "death": 0,
-    "index_year": 1108,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 149388,
-    "birth": null,
-    "death": null,
-    "index_year": 596,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 187576,
-    "birth": null,
-    "death": 845,
-    "index_year": 782,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 437582,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 447762,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0310",
   "name": "劉禎",
   "exam_year": 1109,
@@ -3540,64 +2462,6 @@
     "birth": 1632,
     "death": 1717,
     "index_year": 1632,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0317",
-  "name": "何焕",
-  "exam_year": 1121,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 550042,
-    "birth": null,
-    "death": null,
-    "index_year": 1133,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0319",
-  "name": "李球",
-  "exam_year": 1122,
-  "reason": "同名 9 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 19295,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1018,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 166577,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 173769,
-    "birth": null,
-    "death": 789,
-    "index_year": 726,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 187980,
-    "birth": null,
-    "death": 679,
-    "index_year": 616,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 188820,
-    "birth": null,
-    "death": 955,
-    "index_year": 892,
     "vita_match": false
    }
   ]
@@ -3758,28 +2622,6 @@
     "birth": null,
     "death": null,
     "index_year": 1532,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0343",
-  "name": "王從龍",
-  "exam_year": 1152,
-  "reason": "同名 2 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 414539,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 688221,
-    "birth": null,
-    "death": null,
-    "index_year": 1199,
     "vita_match": false
    }
   ]
@@ -3958,92 +2800,6 @@
   ]
  },
  {
-  "id": "z0371",
-  "name": "王泽",
-  "exam_year": 1191,
-  "reason": "同名 40 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 1900,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1064,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 22037,
-    "birth": 0,
-    "death": 0,
-    "index_year": 0,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 35682,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1149,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 37827,
-    "birth": 0,
-    "death": 0,
-    "index_year": 1067,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 71113,
-    "birth": 1759,
-    "death": 1842,
-    "index_year": 1759,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0372",
-  "name": "陳載",
-  "exam_year": 1191,
-  "reason": "同名 5 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 126193,
-    "birth": null,
-    "death": null,
-    "index_year": 1159,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 198551,
-    "birth": 1432,
-    "death": null,
-    "index_year": 1432,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 246280,
-    "birth": null,
-    "death": null,
-    "index_year": 1441,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 496757,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 504529,
-    "birth": null,
-    "death": null,
-    "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
   "id": "z0375",
   "name": "張楫",
   "exam_year": 1194,
@@ -4205,49 +2961,6 @@
     "birth": null,
     "death": 922,
     "index_year": 859,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0388",
-  "name": "王綱",
-  "exam_year": 1209,
-  "reason": "同名 45 人待消歧",
-  "candidates": [
-   {
-    "cbdbId": 21993,
-    "birth": 1073,
-    "death": 1127,
-    "index_year": 1073,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 22212,
-    "birth": 0,
-    "death": 0,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 37902,
-    "birth": 0,
-    "death": 0,
-    "index_year": null,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 61063,
-    "birth": 1613,
-    "death": 1669,
-    "index_year": 1613,
-    "vita_match": false
-   },
-   {
-    "cbdbId": 67770,
-    "birth": null,
-    "death": null,
-    "index_year": null,
     "vita_match": false
    }
   ]
@@ -4592,21 +3305,6 @@
     "birth": null,
     "death": null,
     "index_year": null,
-    "vita_match": false
-   }
-  ]
- },
- {
-  "id": "z0544",
-  "name": "麻勒吉",
-  "exam_year": 1652,
-  "reason": "仅姓名命中",
-  "candidates": [
-   {
-    "cbdbId": 88875,
-    "birth": 1653,
-    "death": 1689,
-    "index_year": 1653,
     "vita_match": false
    }
   ]

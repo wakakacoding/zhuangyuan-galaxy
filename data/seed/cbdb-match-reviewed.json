@@ -1,22 +1,343 @@
 {
-  "_comment": "CBDB 复核队列人工裁定结果（2026-10-14 首轮）。依据两类：① vita —— 名录生卒年与 CBDB 唯一候选精确吻合（同名人中唯一）；② year±2 —— 科年口径差 1–2 年且 CBDB 同名无歧义（或按 index_year 消歧）。confidence 记 0.95（人工复核确认，区别于双键自动 1.0）。",
-  "z0002": { "cbdbId": 31103, "confidence": 0.95, "rationale": "vita：生卒 630–699 唯一吻合" },
-  "z0020": { "cbdbId": 32130, "confidence": 0.95, "rationale": "vita：同名 2 人中生卒唯一吻合（668–741）" },
-  "z0031": { "cbdbId": 32694, "confidence": 0.95, "rationale": "vita：生卒唯一吻合" },
-  "z0057": { "cbdbId": 145439, "confidence": 0.95, "rationale": "vita：同名 2 人中生卒唯一吻合" },
-  "z0058": { "cbdbId": 177502, "confidence": 0.95, "rationale": "vita：生卒 729–795 唯一吻合" },
-  "z0059": { "cbdbId": 94651, "confidence": 0.95, "rationale": "vita：同名 3 人中生卒唯一吻合" },
-  "z0062": { "cbdbId": 189512, "confidence": 0.95, "rationale": "vita：同名 3 人中生卒唯一吻合" },
-  "z0075": { "cbdbId": 189485, "confidence": 0.95, "rationale": "vita：同名 4 人中生卒唯一吻合" },
-  "z0090": { "cbdbId": 32225, "confidence": 0.95, "rationale": "year±2：长庆二年 822 状元，CBDB 进士 821，且 CBDB 无同名" },
-  "z0655": { "cbdbId": 32882, "confidence": 0.95, "rationale": "year±2：名录 857（登科记考），CBDB 进士 858，无同名" },
-  "z0169": { "cbdbId": 17727, "confidence": 0.95, "rationale": "year±2：名录 924，CBDB 进士 923，无同名" },
-  "z0177": { "cbdbId": 19360, "confidence": 0.95, "rationale": "year±2：名录 945，CBDB 进士 944，无同名" },
-  "z0179": { "cbdbId": 40517, "confidence": 0.95, "rationale": "vita：同名 16 人中生卒 906–959 唯一吻合" },
-  "z0185": { "cbdbId": 4141, "confidence": 0.95, "rationale": "vita：生卒 930–1007 唯一吻合" },
-  "z0322": { "cbdbId": 28854, "confidence": 0.95, "rationale": "year±2：名录 1124，CBDB 进士 1123；同名 2 人按 index_year（1093 vs 1035）消歧取 28854" },
-  "z0403": { "cbdbId": 22047, "confidence": 0.95, "rationale": "year±2：名录 1226，CBDB 进士 1225；生年 1192 与状元年岁相容，无同名" },
-  "z0432": { "cbdbId": 35432, "confidence": 0.95, "rationale": "vita：同名 3 人中生卒唯一吻合" },
-  "z0573": { "cbdbId": 82220, "confidence": 0.95, "rationale": "vita：生卒唯一吻合" },
-  "z0632": { "cbdbId": 62395, "confidence": 0.95, "rationale": "year±2：名录 1853，CBDB 进士 1851；生年 1826 相容，无同名" }
+ "_comment": "CBDB 复核队列人工裁定结果（2026-10-14 首轮）。依据两类：① vita —— 名录生卒年与 CBDB 唯一候选精确吻合（同名人中唯一）；② year±2 —— 科年口径差 1–2 年且 CBDB 同名无歧义（或按 index_year 消歧）。confidence 记 0.95（人工复核确认，区别于双键自动 1.0）。",
+ "z0002": {
+  "cbdbId": 31103,
+  "confidence": 0.95,
+  "rationale": "vita：生卒 630–699 唯一吻合"
+ },
+ "z0020": {
+  "cbdbId": 32130,
+  "confidence": 0.95,
+  "rationale": "vita：同名 2 人中生卒唯一吻合（668–741）"
+ },
+ "z0031": {
+  "cbdbId": 32694,
+  "confidence": 0.95,
+  "rationale": "vita：生卒唯一吻合"
+ },
+ "z0057": {
+  "cbdbId": 145439,
+  "confidence": 0.95,
+  "rationale": "vita：同名 2 人中生卒唯一吻合"
+ },
+ "z0058": {
+  "cbdbId": 177502,
+  "confidence": 0.95,
+  "rationale": "vita：生卒 729–795 唯一吻合"
+ },
+ "z0059": {
+  "cbdbId": 94651,
+  "confidence": 0.95,
+  "rationale": "vita：同名 3 人中生卒唯一吻合"
+ },
+ "z0062": {
+  "cbdbId": 189512,
+  "confidence": 0.95,
+  "rationale": "vita：同名 3 人中生卒唯一吻合"
+ },
+ "z0075": {
+  "cbdbId": 189485,
+  "confidence": 0.95,
+  "rationale": "vita：同名 4 人中生卒唯一吻合"
+ },
+ "z0090": {
+  "cbdbId": 32225,
+  "confidence": 0.95,
+  "rationale": "year±2：长庆二年 822 状元，CBDB 进士 821，且 CBDB 无同名"
+ },
+ "z0655": {
+  "cbdbId": 32882,
+  "confidence": 0.95,
+  "rationale": "year±2：名录 857（登科记考），CBDB 进士 858，无同名"
+ },
+ "z0169": {
+  "cbdbId": 17727,
+  "confidence": 0.95,
+  "rationale": "year±2：名录 924，CBDB 进士 923，无同名"
+ },
+ "z0177": {
+  "cbdbId": 19360,
+  "confidence": 0.95,
+  "rationale": "year±2：名录 945，CBDB 进士 944，无同名"
+ },
+ "z0179": {
+  "cbdbId": 40517,
+  "confidence": 0.95,
+  "rationale": "vita：同名 16 人中生卒 906–959 唯一吻合"
+ },
+ "z0185": {
+  "cbdbId": 4141,
+  "confidence": 0.95,
+  "rationale": "vita：生卒 930–1007 唯一吻合"
+ },
+ "z0322": {
+  "cbdbId": 28854,
+  "confidence": 0.95,
+  "rationale": "year±2：名录 1124，CBDB 进士 1123；同名 2 人按 index_year（1093 vs 1035）消歧取 28854"
+ },
+ "z0403": {
+  "cbdbId": 22047,
+  "confidence": 0.95,
+  "rationale": "year±2：名录 1226，CBDB 进士 1225；生年 1192 与状元年岁相容，无同名"
+ },
+ "z0432": {
+  "cbdbId": 35432,
+  "confidence": 0.95,
+  "rationale": "vita：同名 3 人中生卒唯一吻合"
+ },
+ "z0573": {
+  "cbdbId": 82220,
+  "confidence": 0.95,
+  "rationale": "vita：生卒唯一吻合"
+ },
+ "z0632": {
+  "cbdbId": 62395,
+  "confidence": 0.95,
+  "rationale": "year±2：名录 1853，CBDB 进士 1851；生年 1826 相容，无同名"
+ },
+ "z0008": {
+  "cbdbId": 183539,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：5 个同名候选中唯一与科年 675 存活区间相容"
+ },
+ "z0013": {
+  "cbdbId": 32589,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 687 相容"
+ },
+ "z0018": {
+  "cbdbId": 33070,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 713 相容"
+ },
+ "z0023": {
+  "cbdbId": 184068,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 723 相容"
+ },
+ "z0025": {
+  "cbdbId": 163756,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 726 存活区间相容"
+ },
+ "z0044": {
+  "cbdbId": 178778,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 756 相容"
+ },
+ "z0049": {
+  "cbdbId": 173599,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 770 存活区间相容"
+ },
+ "z0051": {
+  "cbdbId": 189517,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：10 个同名候选中唯一与科年 772 存活区间相容"
+ },
+ "z0077": {
+  "cbdbId": 175500,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 807 相容"
+ },
+ "z0078": {
+  "cbdbId": 157642,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：6 个同名候选中唯一与科年 808 存活区间相容"
+ },
+ "z0081": {
+  "cbdbId": 193385,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 811 相容"
+ },
+ "z0082": {
+  "cbdbId": 169062,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 812 相容"
+ },
+ "z0084": {
+  "cbdbId": 30977,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 814 存活区间相容"
+ },
+ "z0093": {
+  "cbdbId": 178206,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：4 个同名候选中唯一与科年 825 存活区间相容"
+ },
+ "z0094": {
+  "cbdbId": 32000,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 826 相容"
+ },
+ "z0101": {
+  "cbdbId": 188190,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：4 个同名候选中唯一与科年 833 存活区间相容"
+ },
+ "z0105": {
+  "cbdbId": 185743,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：4 个同名候选中唯一与科年 837 存活区间相容"
+ },
+ "z0106": {
+  "cbdbId": 171263,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 838 存活区间相容"
+ },
+ "z0120": {
+  "cbdbId": 40771,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：11 个同名候选中唯一与科年 852 存活区间相容"
+ },
+ "z0123": {
+  "cbdbId": 179641,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：3 个同名候选中唯一与科年 855 存活区间相容"
+ },
+ "z0124": {
+  "cbdbId": 177755,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 856 相容"
+ },
+ "z0126": {
+  "cbdbId": 184776,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 859 相容"
+ },
+ "z0128": {
+  "cbdbId": 171193,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 861 存活区间相容"
+ },
+ "z0130": {
+  "cbdbId": 184752,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 863 存活区间相容"
+ },
+ "z0133": {
+  "cbdbId": 179803,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：4 个同名候选中唯一与科年 868 存活区间相容"
+ },
+ "z0137": {
+  "cbdbId": 184774,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 873 相容"
+ },
+ "z0139": {
+  "cbdbId": 183579,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 875 存活区间相容"
+ },
+ "z0140": {
+  "cbdbId": 184779,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 876 相容"
+ },
+ "z0143": {
+  "cbdbId": 176964,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 882 相容"
+ },
+ "z0144": {
+  "cbdbId": 184754,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 883 相容"
+ },
+ "z0147": {
+  "cbdbId": 179642,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 887 相容"
+ },
+ "z0151": {
+  "cbdbId": 176965,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 891 相容"
+ },
+ "z0154": {
+  "cbdbId": 181608,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 894 存活区间相容"
+ },
+ "z0164": {
+  "cbdbId": 144846,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 907 存活区间相容"
+ },
+ "z0181": {
+  "cbdbId": 39043,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 952 相容"
+ },
+ "z0182": {
+  "cbdbId": 49210,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 959 存活区间相容"
+ },
+ "z0194": {
+  "cbdbId": 19768,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：10 个同名候选中唯一与科年 966 存活区间相容"
+ },
+ "z0245": {
+  "cbdbId": 10378,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：5 个同名候选中唯一与科年 1012 存活区间相容"
+ },
+ "z0258": {
+  "cbdbId": 687904,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：22 个同名候选中唯一与科年 1025 存活区间相容"
+ },
+ "z0269": {
+  "cbdbId": 22124,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：5 个同名候选中唯一与科年 1042 存活区间相容"
+ },
+ "z0271": {
+  "cbdbId": 22138,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：8 个同名候选中唯一与科年 1046 存活区间相容"
+ },
+ "z0309": {
+  "cbdbId": 10830,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：5 个同名候选中唯一与科年 1107 存活区间相容"
+ },
+ "z0317": {
+  "cbdbId": 550042,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 1121 相容"
+ },
+ "z0319": {
+  "cbdbId": 688750,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：9 个同名候选中唯一与科年 1122 存活区间相容"
+ },
+ "z0343": {
+  "cbdbId": 688221,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：2 个同名候选中唯一与科年 1152 存活区间相容"
+ },
+ "z0371": {
+  "cbdbId": 35682,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：40 个同名候选中唯一与科年 1191 存活区间相容"
+ },
+ "z0372": {
+  "cbdbId": 126193,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：5 个同名候选中唯一与科年 1191 存活区间相容"
+ },
+ "z0388": {
+  "cbdbId": 100914,
+  "confidence": 0.9,
+  "rationale": "时代相容消歧：45 个同名候选中唯一与科年 1209 存活区间相容"
+ },
+ "z0544": {
+  "cbdbId": 88875,
+  "confidence": 0.9,
+  "rationale": "仅姓名命中，index_year/生卒与科年 1652 相容"
+ }
 }
