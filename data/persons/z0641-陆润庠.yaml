@@ -1,0 +1,58 @@
+id: z0641
+name: 陆润庠
+zi: 凤石
+hao: 云洒（号固叟）
+dynasty: qing
+exam_year: 1874
+reign: 同治十三年
+native_hist: 江苏省苏州府元和县
+native_modern: 江苏省苏州市
+birth_year: 1841
+death_year: 1915
+ke_ci: 同治十三年甲戌科
+bio_short: 同治十三年状元，苏州元和陆氏——远祖唐相陆贽，七世祖即康熙二十四年状元陆肯堂，隔世两百年再夺魁。庚子国变中赴西安行在代草诏制；官至体仁阁大学士，为末代皇帝溥仪之师。书法清华朗润，近欧虞而馆阁气重。入民国不仕，以逊清遗老终，谥文端。
+tags:
+  - 溥仪之师
+  - 陆氏双状元
+  - 馆阁体
+events:
+  - year: 1874
+    type: 夺魁
+    title: 同治十三年甲戌科状元
+    description: 元和陆氏簪缨世泽：远祖唐名相陆贽，七世祖陆肯堂康熙二十四年状元，祖父、父亲皆苏州儒医。陆润庠夺魁后入值南书房，迁侍读。
+    source_id: s0005
+  - year_label: 光绪年间
+    precision: range
+    type: 升迁
+    title: 督山东学政，总办苏州商务
+    description: 出国子监祭酒、山东学政；以母疾归苏州，总办苏州商务，主讲上海橤珠书院。
+    office: 山东学政
+    rank_grade: 4
+    estimated: true
+    source_id: s0005
+  - year: 1900
+    type: 轶事
+    title: 庚子西狩，代言草制
+    description: 八国联军入京，慈禧挟光绪西逃，陆润庠奔赴西安行在，代朝廷草拟诏制——乱世词臣的关键一笔。后任工部尚书、吏部尚书。
+    source_id: s0005
+  - year_label: 宣统年间
+    precision: range
+    type: 升迁
+    title: 体仁阁大学士，溥仪之师
+    description: 官至太保、东阁大学士、体仁阁大学士；宣统三年皇族内阁成立时任弼德院院长；留清宫为溥仪老师。
+    office: 体仁阁大学士、弼德院院长
+    rank_grade: 1
+    estimated: true
+    source_id: s0005
+  - year: 1915
+    type: 卒
+    title: 民国四年卒，年七十五
+    description: 辛亥后不为民国官，以逊清遗老终。临终病魔缠身，终日危坐瞑目、不言不食，数日而逝。逊清追赠太子太傅，谥文端。书法清华朗润，为晚清馆阁体代表。
+    source_id: s0005
+career:
+  first_office: 翰林院修撰、南书房行走
+  first_category: 翰林院
+  mid_office: 国子监祭酒、山东学政
+  mid_category: 学政文教
+  final_office: 体仁阁大学士、溥仪之师（谥文端）
+  final_category: 宰辅

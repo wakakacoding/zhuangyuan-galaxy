@@ -1,0 +1,49 @@
+id: z0574
+name: 彭启丰
+zi: 翰文
+hao: 芝庭
+dynasty: qing
+exam_year: 1727
+reign: 雍正五年
+native_hist: 江苏省苏州府长洲县
+native_modern: 江苏省苏州市
+birth_year: 1701
+death_year: 1784
+ke_ci: 雍正五年丁未科
+bio_short: 雍正五年状元，彭定求之孙——祖孙连中会元、状元，清代唯一。殿试初拟第三，雍正帝亲拔第一。官至兵部尚书、经筵讲官，晚年主讲苏州紫阳书院，桃李盈门。女婿庄培因 1754 年状元，翁婿状元又是一段佳话。
+tags:
+  - 祖孙状元
+  - 翁婿状元
+  - 兵部尚书
+events:
+  - year: 1727
+    type: 夺魁
+    title: 雍正五年丁未科状元
+    description: 会试第一，殿试初拟第三名，雍正帝亲拔为一甲第一。上距其祖彭定求夺魁五十一年。父彭正乾自嘲「父之父不如儿之父，父之子不如儿之子」——状元生我，我生状元。
+    source_id: s0005
+  - year_label: 雍正—乾隆年间
+    precision: range
+    type: 升迁
+    title: 官至兵部尚书
+    description: 历河南、云南、江西乡试考官，翰林院编修、侍讲，刑部右侍郎，官至兵部尚书、经筵讲官。
+    office: 兵部尚书
+    rank_grade: 2
+    estimated: true
+    source_id: s0005
+  - year: 1754
+    type: 轶事
+    title: 女婿庄培因夺魁
+    description: 乾隆十九年甲戌科，婿庄培因（常州庄存与之弟）状元及第。榜前彭启丰笑谓：「君当作状元，不见榜头书鼎元庄耶？」——翁婿皆状元，一时佳话。
+    source_id: s0005
+  - year: 1784
+    type: 卒
+    title: 乾隆四十九年卒，年八十四
+    description: 晚年因病归乡，主讲苏州紫阳书院，培育英才无数。「葑门第一家」至此极盛。
+    source_id: s0005
+career:
+  first_office: 翰林院编修、侍讲
+  first_category: 翰林院
+  mid_office: 刑部右侍郎
+  mid_category: 部院
+  final_office: 兵部尚书（晚主讲紫阳书院）
+  final_category: 部院高官

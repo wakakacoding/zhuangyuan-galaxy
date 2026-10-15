@@ -1,0 +1,39 @@
+id: z0570
+name: 汪应铨
+zi: 度龄（一字杜林）
+dynasty: qing
+exam_year: 1718
+reign: 康熙五十七年
+native_hist: 江苏省苏州府常熟县
+native_modern: 江苏省苏州市常熟市（原籍安徽休宁）
+birth_year: 1685
+death_year: 1745
+ke_ci: 康熙五十七年戊戌科
+bio_short: 康熙五十七年状元，原籍徽州休宁，迁居常熟——徽商后裔融入江南科举世家的典型。官至左春坊赞善。与同邑汪绎（1700 年状元）前后辉映。
+tags:
+  - 常熟状元
+  - 徽迁常熟
+events:
+  - year: 1718
+    type: 夺魁
+    title: 康熙五十七年戊戌科状元
+    description: 原籍徽州府休宁县，占籍常熟夺魁，授翰林院修撰。
+    source_id: s0005
+  - year_label: 康熙末—雍正年间
+    precision: range
+    type: 升迁
+    title: 官至左春坊赞善
+    description: 历官左春坊赞善，以词臣供职。
+    office: 左春坊赞善
+    rank_grade: 6
+    estimated: true
+    source_id: s0005
+  - year: 1745
+    type: 卒
+    title: 乾隆十年卒
+    source_id: s0018
+career:
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 左春坊赞善
+  final_category: 学政文教

@@ -1,0 +1,40 @@
+id: z0543
+name: 刘子壮
+zi: 克猷
+hao: 稚川
+dynasty: qing
+exam_year: 1649
+reign: 顺治六年
+native_hist: 湖廣省黄州府黄冈县
+native_modern: 湖北省黄冈市
+birth_year: 1609
+death_year: 1653
+ke_ci: 顺治六年己丑科
+bio_short: 顺治六年状元——顺治帝不满廷试对策八股套话，明令该科不得用四六俗套；刘子壮直陈利弊、朴茂沉雄，深合旨意夺魁，策中主张民族和睦、省刑薄赋。与熊伯龙并称清初黄冈文宗。夺魁四年即病卒，年四十四。
+tags:
+  - 反八股夺魁
+  - 早逝
+events:
+  - year: 1649
+    type: 夺魁
+    title: 顺治六年己丑科状元
+    description: 顺治帝针对廷试对策八股套话滥行，明令该科不得用四六文俗套。刘子壮直陈利弊、朴茂沉雄，深合旨意；殿试策对主张民族和睦、省刑薄赋，大魁天下。授国史馆修撰。
+    source_id: s0005
+  - year: 1652
+    type: 升迁
+    title: 顺治九年充会试同考官
+    description: 充会试同考官，试毕告病还乡。
+    office: 国史馆修撰、会试同考官
+    rank_grade: 6
+    estimated: true
+    source_id: s0005
+  - year: 1653
+    type: 卒
+    title: 顺治九年病卒，年四十四
+    description: 与熊伯龙齐名，为清初黄冈文宗。文名盛而寿促，士林惜之。
+    source_id: s0005
+career:
+  first_office: 国史馆修撰
+  first_category: 翰林院
+  final_office: 国史馆修撰（会试同考官，病卒）
+  final_category: 早逝

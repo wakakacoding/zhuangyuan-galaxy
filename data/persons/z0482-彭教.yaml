@@ -1,0 +1,35 @@
+id: z0482
+name: 彭教
+zi: 敷五
+hao: 东泷
+dynasty: ming
+exam_year: 1464
+reign: 天顺八年
+native_hist: 江西吉安府吉水县
+native_modern: 江西省吉安市吉水县
+birth_year: 1438
+death_year: 1480
+ke_ci: 天顺八年甲申科
+bio_short: 天顺八年状元——英宗复辟后最后一科的魁首，吉水庐陵文脉再续。授翰林院修撰，官至侍讲学士，四十三岁卒，未尽其才。
+tags:
+  - 庐陵文脉
+events:
+  - year: 1464
+    type: 夺魁
+    title: 天顺八年甲申科状元
+    description: 英宗天顺朝最后一科。授翰林院修撰。
+    source_id: s0004
+  - year_label: 成化年间
+    precision: range
+    type: 升迁
+    title: 官至侍讲学士
+    description: 以文学侍从为职，官至侍讲学士。成化十六年卒，年四十三，士林惜之。
+    office: 侍讲学士
+    rank_grade: 4.5
+    estimated: true
+    source_id: s0004
+career:
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 侍讲学士
+  final_category: 早逝

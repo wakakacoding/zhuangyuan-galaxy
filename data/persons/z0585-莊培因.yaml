@@ -1,0 +1,46 @@
+id: z0585
+name: 莊培因
+zi: 本淳（一字仲淳）
+dynasty: qing
+exam_year: 1754
+reign: 乾隆十九年
+native_hist: 江苏省常州府阳湖县
+native_modern: 江苏省常州市
+birth_year: 1723
+death_year: 1759
+ke_ci: 乾隆十九年甲戌科
+bio_short: 乾隆十九年状元，常州庄氏（常州学派开创者庄存与之弟）、雍正状元彭启丰之婿。少负才华「不作第二人想」，其兄存与中榜眼时他赋诗「他年小宋魁天下，始信人间有弟兄」——九年后果然夺魁。此科为「名榜」：榜眼王鸣盛、同榜纪昀、钱大昕。三十七岁卒于福建学政任上。
+tags:
+  - 诗谶
+  - 名榜状元
+  - 早逝
+events:
+  - year: 1754
+    type: 夺魁
+    title: 乾隆十九年甲戌科状元
+    description: 少负才华，不作第二人想。乾隆十年其兄庄存与榜眼及第，培因赋诗调之「他年小宋魁天下，始信人间有弟兄」，九年后自践其言。此科榜眼王鸣盛、同榜纪昀（二甲四）、钱大昕（二甲四十），史称「名榜」。岳父彭启丰榜前笑谓「君当作状元，不见榜头书鼎元庄耶」。
+    source_id: s0005
+  - year_label: 乾隆年间
+    precision: range
+    type: 升迁
+    title: 日讲起居注官、侍讲学士
+    description: 授修撰，充日讲起居注官，迁侍讲学士。文思敏捷、书法精妙，随驾出塞于行帐中录章奏，急宣不能据案则手执一匣疾书而工整。校阅考卷必亲自审定，常至漏尽更残。
+    office: 侍讲学士
+    rank_grade: 4.5
+    estimated: true
+    source_id: s0005
+  - year: 1759
+    type: 卒
+    title: 乾隆二十三年卒于福建学政任
+    description: 出任福建学政，积劳成疾；同年奔父丧回乡，悲伤过度而卒，年三十七。「吾敢以身故负官耶」一语见其任事之勇。著《虚一斋集》五卷。
+    office: 福建学政
+    rank_grade: 4
+    estimated: true
+    source_id: s0005
+career:
+  first_office: 翰林院修撰（此前以举人考授中书入军机房）
+  first_category: 翰林院
+  mid_office: 侍讲学士、日讲起居注官
+  mid_category: 学政文教
+  final_office: 福建学政（卒于任）
+  final_category: 早逝

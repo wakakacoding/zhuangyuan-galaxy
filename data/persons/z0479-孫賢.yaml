@@ -1,0 +1,38 @@
+id: z0479
+name: 孫賢
+zi: 舜卿
+dynasty: ming
+exam_year: 1454
+reign: 景泰五年
+native_hist: 河南開封府杞县
+native_modern: 河南省开封市杞县
+birth_year: 1423
+death_year: 1477
+ke_ci: 景泰五年甲戌科
+bio_short: 景泰五年状元——「铁状元、银榜眼、金探花」的主角（孙贤面黑、徐溥面白、徐辖面黄）。殿试原拟取丘浚，以其貌不扬改擢孙贤。官至太常寺卿兼侍读学士。
+tags:
+  - 铁状元
+events:
+  - year: 1454
+    type: 夺魁
+    title: 景泰五年甲戌科状元
+    description: 未第先梦金甲神人持黄旗插于其门，有「状元」二字，廷试果首擢。是科孙贤面黑、徐溥面白、徐辖面黄，时谓「铁状元，银榜眼，金探花」。同榜有丘浚、何乔新、耿裕等名臣。
+    source_id: s0018
+  - year_label: 景泰—成化年间
+    precision: range
+    type: 升迁
+    title: 官至太常寺卿兼侍读学士
+    description: 授翰林院修撰，历官至太常寺卿兼侍读学士。
+    office: 太常寺卿兼侍读学士
+    rank_grade: 3.5
+    estimated: true
+    source_id: s0004
+  - year: 1477
+    type: 卒
+    title: 成化十三年卒，年五十五
+    source_id: s0018
+career:
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  final_office: 太常寺卿兼侍读学士
+  final_category: 部院高官
