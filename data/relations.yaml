@@ -302,8 +302,8 @@
   source_id: s0010
 - from: z0235   # 王曾
   to: w0010     # 李沆（外延）
-  type: 亲属
-  note: CBDB 亲属：第一任妻父
+  type: 翁婿
+  note: CBDB 亲属：第一任妻父（2026-10-15 A3 修订：原落型「亲属」，按姻亲口径改「翁婿」；同轮 CBDB 另载「第二任妻父」）
   source_id: s0010
 - from: z0237   # 李迪
   to: w0011     # 章惇（外延）
@@ -453,4 +453,275 @@
   to: w0019     # 史詔（外延）
   type: 亲属
   note: CBDB 亲属：直系祖先
+  source_id: s0010
+# ===== M5-c A1 CBDB --deep 反查导入（置信度 0.8–0.95，source s0010） =====
+- from: z0326   # 张九成
+  to: z0328     # 汪应辰
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
+  source_id: s0010
+- from: z0396   # 吴潜
+  to: z0415     # 姚勉
+  type: 师生
+  note: CBDB：推薦；CBDB：被Y推薦
+  source_id: s0010
+- from: z0549   # 徐元文
+  to: z0554     # 韩菼
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
+  source_id: s0010
+- from: z0309   # 李石
+  to: w0026     # 穆深之（外延）
+  type: 同僚
+  note: CBDB：與Y遊
+  source_id: s0010
+- from: z0211   # 吕蒙正
+  to: w0028     # 林特（外延）
+  type: 同僚
+  note: CBDB：辟；CBDB：為Y所辟
+  source_id: s0010
+- from: z0212   # 胡旦
+  to: w0029     # 梁顥（外延）
+  type: 同僚
+  note: CBDB：與Y結黨
+  source_id: s0010
+- from: z0237   # 李迪
+  to: w0028     # 林特（外延）
+  type: 政敌
+  note: CBDB：反對/攻訐；CBDB：遭到Y的反對/攻訐
+  source_id: s0010
+- from: z0237   # 李迪
+  to: w0030     # 李及之（外延）
+  type: 亲属
+  note: CBDB 亲属：從子;姪子；CBDB 亲属：從父;伯叔父
+  source_id: s0010
+- from: z0242   # 梁固
+  to: w0029     # 梁顥（外延）
+  type: 亲属
+  note: CBDB 亲属：父；CBDB 亲属：子
+  source_id: s0010
+- from: z0259   # 王尧臣
+  to: w0030     # 李及之（外延）
+  type: 师生
+  note: CBDB：推薦；CBDB：被Y推薦
+  source_id: s0010
+- from: z0273   # 冯京
+  to: w0027     # 富弼（外延）
+  type: 同僚
+  note: CBDB：支持；CBDB：得到Y的支持
+  source_id: s0010
+- from: z0273   # 冯京
+  to: w0031     # 鄧咸（外延）
+  type: 师生
+  note: CBDB：從Y遊；CBDB：從遊者為Y
+  source_id: s0010
+- from: z0273   # 冯京
+  to: w0032     # 王安石（外延）
+  type: 政敌
+  note: CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持
+  source_id: s0010
+- from: z0273   # 冯京
+  to: w0027     # 富弼（外延）
+  type: 翁婿
+  note: CBDB 亲属：第二任妻父；CBDB 亲属：第三任妻父；CBDB 亲属：長女婿；CBDB 亲属：二女婿
+  source_id: s0010
+- from: z0275   # 郑獬
+  to: w0032     # 王安石（外延）
+  type: 政敌
+  note: CBDB：遭Y排擠；CBDB：為Y所忌/惡；CBDB：排擠；CBDB：忌/惡
+  source_id: s0010
+- from: z0275   # 郑獬
+  to: w0031     # 鄧咸（外延）
+  type: 师生
+  note: CBDB：從Y遊；CBDB：從遊者為Y
+  source_id: s0010
+- from: z0308   # 蔡薿
+  to: w0012     # 蔡京（外延）
+  type: 亲属
+  note: CBDB：與Y攀親戚敘族屬；CBDB：Y與之攀親戚敘族屬
+  source_id: s0010
+- from: z0320   # 沈晦
+  to: w0022     # 喻樗（外延）
+  type: 师生
+  note: CBDB：被Y欣賞/器重；CBDB：欣賞/器重
+  source_id: s0010
+- from: z0321   # 冯时行
+  to: w0026     # 穆深之（外延）
+  type: 同僚
+  note: CBDB：友
+  source_id: s0010
+- from: z0321   # 冯时行
+  to: w0020     # 秦檜（外延）
+  type: 政敌
+  note: CBDB：遭Y排擠；CBDB：得罪Y；CBDB：排擠；CBDB：被Y得罪
+  source_id: s0010
+- from: z0326   # 张九成
+  to: w0022     # 喻樗（外延）
+  type: 师生
+  note: CBDB：被Y欣賞/器重；CBDB：欣賞/器重
+  source_id: s0010
+- from: z0326   # 张九成
+  to: w0020     # 秦檜（外延）
+  type: 政敌
+  note: CBDB：不合
+  source_id: s0010
+- from: z0328   # 汪应辰
+  to: w0023     # 查籥（外延）
+  type: 师生
+  note: CBDB：推薦；CBDB：被Y推薦
+  source_id: s0010
+- from: z0328   # 汪应辰
+  to: w0033     # 葉顒（外延）
+  type: 师生
+  note: CBDB：被Y推薦；CBDB：推薦
+  source_id: s0010
+- from: z0328   # 汪应辰
+  to: w0034     # 呂祖謙（外延）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
+  source_id: s0010
+- from: z0328   # 汪应辰
+  to: w0020     # 秦檜（外延）
+  type: 政敌
+  note: CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持
+  source_id: s0010
+- from: z0328   # 汪应辰
+  to: w0022     # 喻樗（外延）
+  type: 翁婿
+  note: CBDB 亲属：岳父；CBDB 亲属：女婿
+  source_id: s0010
+- from: z0329   # 黄公度
+  to: w0020     # 秦檜（外延）
+  type: 政敌
+  note: CBDB：遭Y排擠；CBDB：反對/不支持Y的政策；CBDB：排擠；CBDB：其政策被Y反對/不支持
+  source_id: s0010
+- from: z0336   # 刘章
+  to: w0020     # 秦檜（外延）
+  type: 政敌
+  note: CBDB：遭Y排擠；CBDB：得罪Y；CBDB：排擠；CBDB：被Y得罪
+  source_id: s0010
+- from: z0337   # 王佐
+  to: w0020     # 秦檜（外延）
+  type: 政敌
+  note: CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持
+  source_id: s0010
+- from: z0340   # 赵逵
+  to: w0020     # 秦檜（外延）
+  type: 政敌
+  note: CBDB：為Y所忌/惡；CBDB：忌/惡
+  source_id: s0010
+- from: z0344   # 张孝祥
+  to: w0023     # 查籥（外延）
+  type: 同僚
+  note: CBDB：同道
+  source_id: s0010
+- from: z0347   # 王十朋
+  to: w0033     # 葉顒（外延）
+  type: 师生
+  note: CBDB：被Y推薦；CBDB：推薦
+  source_id: s0010
+- from: z0347   # 王十朋
+  to: w0023     # 查籥（外延）
+  type: 同僚
+  note: CBDB：同道
+  source_id: s0010
+- from: z0373   # 陈亮
+  to: w0035     # 朱熹（外延）
+  type: 同僚
+  note: CBDB：友
+  source_id: s0010
+- from: z0373   # 陈亮
+  to: w0034     # 呂祖謙（外延）
+  type: 亲属
+  note: CBDB 亲属：族兄；CBDB 亲属：族弟
+  source_id: s0010
+- from: z0387   # 郑性之
+  to: w0035     # 朱熹（外延）
+  type: 师生
+  note: CBDB：為Y之門人；CBDB：門人為Y
+  source_id: s0010
+- from: z0396   # 吴潜
+  to: w0024     # 丁大全（外延）
+  type: 政敌
+  note: CBDB：彈劾；CBDB：反對/攻訐；CBDB：被Y彈劾；CBDB：遭到Y的反對/攻訐
+  source_id: s0010
+- from: z0414   # 方逢辰
+  to: w0025     # 賈似道（外延）
+  type: 政敌
+  note: CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持
+  source_id: s0010
+- from: z0415   # 姚勉
+  to: w0024     # 丁大全（外延）
+  type: 政敌
+  note: CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持
+  source_id: s0010
+- from: z0415   # 姚勉
+  to: w0025     # 賈似道（外延）
+  type: 政敌
+  note: CBDB：得罪Y；CBDB：被Y得罪
+  source_id: s0010
+- from: z0417   # 周震炎
+  to: w0024     # 丁大全（外延）
+  type: 师生
+  note: CBDB：被Y欣賞/器重；CBDB：欣賞/器重
+  source_id: s0010
+- from: z0420   # 陈文龙
+  to: w0025     # 賈似道（外延）
+  type: 政敌
+  note: CBDB：遭Y排擠；CBDB：排擠
+  source_id: s0010
+- from: z0484   # 吳寬
+  to: w0036     # 文徵明（外延）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
+  source_id: s0010
+- from: z0534   # 文震孟
+  to: w0013     # 姚希孟（外延）
+  type: 师生
+  note: CBDB：同學、同門
+  source_id: s0010
+- from: z0534   # 文震孟
+  to: w0036     # 文徵明（外延）
+  type: 亲属
+  note: CBDB 亲属：曾祖；CBDB 亲属：曾孫; 重孫
+  source_id: s0010
+- from: z0549   # 徐元文
+  to: w0037     # 徐乾學（外延）
+  type: 亲属
+  note: CBDB 亲属：兄；CBDB 亲属：弟
+  source_id: s0010
+- from: z0552   # 缪彤
+  to: w0038     # 湯斌（外延）
+  type: 师生
+  note: CBDB：被Y推薦；CBDB：推薦
+  source_id: s0010
+- from: z0554   # 韩菼
+  to: w0037     # 徐乾學（外延）
+  type: 师生
+  note: CBDB：為Y之學生；CBDB：學生為Y
+  source_id: s0010
+- from: z0555   # 彭定求
+  to: w0038     # 湯斌（外延）
+  type: 师生
+  note: CBDB：為Y之學生；CBDB：為Y之弟子；CBDB：學生為Y；CBDB：弟子為Y
+  source_id: s0010
+- from: z0629   # 张之萬
+  to: w0021     # 梁士詒（外延）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
+  source_id: s0010
+- from: z0633   # 翁同龢
+  to: w0021     # 梁士詒（外延）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
+  source_id: s0010
+- from: z0636   # 徐郙
+  to: w0021     # 梁士詒（外延）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
+  source_id: s0010
+- from: z0643   # 王仁堪
+  to: w0021     # 梁士詒（外延）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生
   source_id: s0010

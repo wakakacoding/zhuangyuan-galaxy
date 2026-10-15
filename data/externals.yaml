@@ -1,4 +1,4 @@
-# 外延人物表（M5 T4）：非状元但与 ≥2 名状元有 CBDB 记录关系者；stub 档案，不入星图/统计分母
+# 外延人物表（M5 T4 + M5-c A1 deep）：非状元但与 ≥2 名状元有 CBDB 记录关系者；stub 档案，不入星图/统计分母
 - id: w0001
   name: 歸融
   cbdb_id: 32880
@@ -134,4 +134,143 @@
   cbdb_id: 10379
   index_year: 1064
   note: 与状元 史简、史大成 有亲属关系（CBDB）
+  source_id: s0010
+- id: w0020
+  name: 秦檜
+  cbdb_id: 8008
+  birth_year: 1090
+  death_year: 1155
+  index_year: 1090
+  note: 与状元 冯时行、张九成、汪应辰、黄公度、刘章、王佐、赵逵、张孝祥 有 CBDB 记录关系（冯时行·遭Y排擠；冯时行·為Y之門客）
+  source_id: s0010
+- id: w0021
+  name: 梁士詒
+  cbdb_id: 89100
+  birth_year: 1869
+  death_year: 1933
+  index_year: 1869
+  note: 与状元 张之萬、翁同龢、徐郙、王仁堪 有 CBDB 记录关系（张之萬·學生為Y；张之萬·為Y之學生）
+  source_id: s0010
+- id: w0022
+  name: 喻樗
+  cbdb_id: 22849
+  death_year: 1180
+  index_year: 1117
+  note: 与状元 沈晦、张九成、汪应辰 有 CBDB 记录关系（沈晦·被Y欣賞/器重；沈晦·欣賞/器重）
+  source_id: s0010
+- id: w0023
+  name: 查籥
+  cbdb_id: 5
+  index_year: 1121
+  note: 与状元 汪应辰、张孝祥、王十朋 有 CBDB 记录关系（汪应辰·推薦；汪应辰·被Y推薦）
+  source_id: s0010
+- id: w0024
+  name: 丁大全
+  cbdb_id: 15990
+  death_year: 1263
+  index_year: 1200
+  note: 与状元 吴潜、姚勉、周震炎 有 CBDB 记录关系（吴潜·彈劾；吴潜·反對/攻訐）
+  source_id: s0010
+- id: w0025
+  name: 賈似道
+  cbdb_id: 10374
+  birth_year: 1213
+  death_year: 1275
+  index_year: 1213
+  note: 与状元 方逢辰、姚勉、陈文龙 有 CBDB 记录关系（方逢辰·反對/不支持Y的政策；方逢辰·其政策被Y反對/不支持）
+  source_id: s0010
+- id: w0026
+  name: 穆深之
+  cbdb_id: 52274
+  birth_year: 1106
+  death_year: 1174
+  index_year: 1106
+  note: 与状元 李石、冯时行 有 CBDB 记录关系（李石·與Y遊；冯时行·友）
+  source_id: s0010
+- id: w0027
+  name: 富弼
+  cbdb_id: 628
+  birth_year: 1004
+  death_year: 1083
+  index_year: 1004
+  note: 与状元 吕蒙正、冯京 有 CBDB 记录关系（吕蒙正·欣賞/器重；吕蒙正·被Y欣賞/器重）
+  source_id: s0010
+- id: w0028
+  name: 林特
+  cbdb_id: 1169
+  index_year: 965
+  note: 与状元 吕蒙正、李迪 有 CBDB 记录关系（吕蒙正·辟；吕蒙正·為Y所辟）
+  source_id: s0010
+- id: w0029
+  name: 梁顥
+  cbdb_id: 1133
+  birth_year: 963
+  death_year: 1004
+  index_year: 963
+  note: 与状元 胡旦、梁固 有 CBDB 记录关系（胡旦·與Y結黨；梁固·父）
+  source_id: s0010
+- id: w0030
+  name: 李及之
+  cbdb_id: 3479
+  index_year: 998
+  note: 与状元 李迪、王尧臣 有 CBDB 记录关系（李迪·從子;姪子；李迪·從父;伯叔父）
+  source_id: s0010
+- id: w0031
+  name: 鄧咸
+  cbdb_id: 51448
+  note: 与状元 冯京、郑獬 有 CBDB 记录关系（冯京·從Y遊；冯京·從遊者為Y）
+  source_id: s0010
+- id: w0032
+  name: 王安石
+  cbdb_id: 1762
+  birth_year: 1021
+  death_year: 1086
+  index_year: 1021
+  note: 与状元 冯京、郑獬 有 CBDB 记录关系（冯京·反對/不支持Y的政策；冯京·其政策被Y反對/不支持）
+  source_id: s0010
+- id: w0033
+  name: 葉顒
+  cbdb_id: 2058
+  index_year: 1102
+  note: 与状元 汪应辰、王十朋 有 CBDB 记录关系（汪应辰·被Y推薦；汪应辰·推薦）
+  source_id: s0010
+- id: w0034
+  name: 呂祖謙
+  cbdb_id: 7055
+  birth_year: 1137
+  death_year: 1181
+  index_year: 1137
+  note: 与状元 汪应辰、陈亮 有 CBDB 记录关系（汪应辰·學生為Y；汪应辰·為Y之學生）
+  source_id: s0010
+- id: w0035
+  name: 朱熹
+  cbdb_id: 3257
+  birth_year: 1130
+  death_year: 1200
+  index_year: 1130
+  note: 与状元 陈亮、郑性之 有 CBDB 记录关系（陈亮·友；陈亮·批評）
+  source_id: s0010
+- id: w0036
+  name: 文徵明
+  cbdb_id: 34673
+  birth_year: 1470
+  death_year: 1559
+  index_year: 1470
+  note: 与状元 吳寬、文震孟 有 CBDB 记录关系（吳寬·學生為Y；吳寬·為Y之學生）
+  source_id: s0010
+- id: w0037
+  name: 徐乾學
+  cbdb_id: 30399
+  birth_year: 1631
+  death_year: 1694
+  index_year: 1631
+  note: 与状元 徐元文、韩菼 有 CBDB 记录关系（徐元文·兄；徐元文·弟）
+  source_id: s0010
+- id: w0038
+  name: 湯斌
+  cbdb_id: 34836
+  birth_year: 1627
+  death_year: 1687
+  index_year: 1627
+  note: 与状元 缪彤、彭定求 有 CBDB 记录关系（缪彤·被Y推薦；缪彤·推薦）
   source_id: s0010

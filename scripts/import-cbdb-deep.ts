@@ -96,12 +96,15 @@ export function runDeep(): void {
   const kinOut = db.prepare('SELECT c_kin_id AS other, c_kin_code AS code FROM KIN_DATA WHERE c_personid = ?');
   const kinIn = db.prepare('SELECT c_personid AS other, c_kin_code AS code FROM KIN_DATA WHERE c_kin_id = ?');
 
-  // 亲属码 → 本站型（翁婿 / 父子 / 亲属）
+  // 亲属码 → 本站型（翁婿 / 亲属）
+  // A3 修订（2026-10-15）：原实现把 祖/孫/曾祖/直系 等归入「父子」，与 T4 轮已入库的
+  // 外延边口径（一律 亲属）不一致 —— 同一对人物会同时出现 亲属（既有）与 父子（本轮）两条边，
+  // 在星图上表现为重复连线；且「母」被误落 父子（如 陈尧叟↔馮氏）。故统一为：
+  //   妻父/岳父/女婿类 → 翁婿；其余血亲、姻亲、直系祖孙一律 → 亲属。
+  // 「父子」型保留给人工考据确证的直系父子状元对（如 张去华→张师德），不复由 CBDB 亲属码生成。
   const mapKinDeep = (desc: string | undefined): LocalRelationType | null => {
     if (!desc || /未詳|missing data|非可用|暫時保留|待刪除/.test(desc)) return null;
     if (/岳父|女婿|岳母|妻父|得許娶|許妻以|妻之父/.test(desc)) return '翁婿';
-    if (/族|從|堂|表|伯|叔|姑|舅|姨|甥|姪|侄|姻親|夫之|妻之|妾|姊妹|兄弟|媳|妯娌|連襟|外祖|外孫|同母異父|繼兄弟|繼姊妹/.test(desc)) return '亲属';
-    if (/父|母|子|女|孫|祖|兒|嗣|養|繼/.test(desc)) return '父子';
     return '亲属';
   };
 
@@ -467,19 +470,49 @@ export function runDeep(): void {
   let nextW = existingExt.length ? Math.max(...existingExt.map((e) => Number(e.id.slice(1)))) + 1 : 1;
 
   // 人工裁定过滤：cbdb-deep-reviewed.json 存在则按其裁决，否则全量采纳（告警）
+  // A3 修订（2026-10-15）：裁定粒度由「只认站内边 + 外延按人」扩展到外延边级 ——
+  //   adopted_external_edges（白名单，zid|cbdb_id|type）与 rejected_edges / rejected_external_edges
+  //   （黑名单，裁定驳回者，含同对异型冲突中择一驳回）。白名单在位时，未列出的外延边一律不入库，
+  //   使「队列清零」可验证。
   const reviewedDeepPath = join(seedDir, 'cbdb-deep-reviewed.json');
   let adoptedEdges = internalEdges;
   let adoptedExt = extAdopt;
+  let okExtEdges: Set<string> | null = null;
+  const badExtEdges = new Set<string>();
+  const adoptedExtIds = new Set(adoptedExt.map((e) => e.cbdb_id));
+  const queueExtEdgeCount = new Set(extEdges.filter((e) => adoptedExtIds.has(e.cbdb_id))
+    .map((e) => `${e.zid}|${e.cbdb_id}|${e.type}`)).size;
   if (existsSync(reviewedDeepPath)) {
+    interface ReviewedEdge { from?: string; to?: string; zid?: string; cbdb_id?: number; type: string }
     const rv = JSON.parse(readFileSync(reviewedDeepPath, 'utf8')) as {
       adopted_edges?: Array<{ from: string; to: string; type: string; rationale?: string }>;
+      rejected_edges?: ReviewedEdge[];
       adopted_externals?: Array<{ cbdb_id: number }>;
+      adopted_external_edges?: ReviewedEdge[];
+      rejected_external_edges?: ReviewedEdge[];
     };
     const okEdge = new Set((rv.adopted_edges ?? []).map((e) => `${pairKey(e.from, e.to)}|${e.type}`));
     const okExt = new Set((rv.adopted_externals ?? []).map((e) => e.cbdb_id));
     adoptedEdges = internalEdges.filter((e) => okEdge.has(`${e.pair_key}|${e.type}`));
     adoptedExt = extAdopt.filter((e) => okExt.has(e.cbdb_id));
-    log(`人工裁定文件在位：采纳边 ${adoptedEdges.length}/${internalEdges.length}，采纳外延 ${adoptedExt.length}/${extAdopt.length}`);
+    if (rv.adopted_external_edges) {
+      okExtEdges = new Set((rv.adopted_external_edges).map((e) => `${e.zid}|${e.cbdb_id}|${e.type}`));
+    }
+    for (const e of [...(rv.rejected_external_edges ?? []), ...(rv.rejected_edges ?? [])]) {
+      if (e.cbdb_id !== undefined && e.zid) badExtEdges.add(`${e.zid}|${e.cbdb_id}|${e.type}`);
+    }
+    log(`人工裁定文件在位：采纳站内边 ${adoptedEdges.length}/${internalEdges.length}，采纳外延 ${adoptedExt.length}/${extAdopt.length}`
+      + `${okExtEdges ? `，采纳外延边 ${okExtEdges.size}/${queueExtEdgeCount}（复核队列）` : ''}，裁定驳回外延边 ${badExtEdges.size}`);
+    if (okExtEdges) {
+      const queueKeys = extEdges.filter((e) => adoptedExtIds.has(e.cbdb_id))
+        .map((e) => `${e.zid}|${e.cbdb_id}|${e.type}`);
+      const unaccounted = [...new Set(queueKeys)].filter((k) => !okExtEdges?.has(k) && !badExtEdges.has(k));
+      if (unaccounted.length) {
+        log(`⚠ 复核队列未清零：${unaccounted.length} 条外延边既未采纳也未驳回（按驳回处理）`);
+      } else {
+        log(`复核队列已清零：${new Set(queueKeys).size} 条外延边全部有裁定（采纳 ${okExtEdges.size} / 驳回 ${badExtEdges.size}）`);
+      }
+    }
   } else {
     log('⚠ 未发现 cbdb-deep-reviewed.json（A3 裁定留痕），本次全量采纳 —— 建议先完成人工复核');
   }
@@ -507,9 +540,12 @@ export function runDeep(): void {
   const relExisting = new Set(manual.map((r) => `${r.from}|${r.to}|${r.type}`));
   const relAppend: Array<{ from: string; to: string; type: string; note: string }> = [];
   for (const e of adoptedEdges) relAppend.push({ from: e.from, to: e.to, type: e.type, note: e.note });
-  const adoptedExtIds = new Set(adoptedExt.map((e) => e.cbdb_id));
+  let skippedByReview = 0;
   for (const ee of extEdges) {
     if (!adoptedExtIds.has(ee.cbdb_id)) continue;
+    const ek = `${ee.zid}|${ee.cbdb_id}|${ee.type}`;
+    if (badExtEdges.has(ek)) { skippedByReview++; continue; }
+    if (okExtEdges && !okExtEdges.has(ek)) { skippedByReview++; continue; }
     const w = extIdByCbdb.get(ee.cbdb_id);
     if (!w) continue;
     const k = `${ee.zid}|${w}|${ee.type}`;
@@ -517,6 +553,7 @@ export function runDeep(): void {
     relExisting.add(k);
     relAppend.push({ from: ee.zid, to: w, type: ee.type, note: ee.note });
   }
+  if (skippedByReview) log(`A3 裁定驳回/未列出而跳过的外延边：${skippedByReview} 条`);
   if (relAppend.length) {
     const relRaw = readFileSync(relPath, 'utf8');
     const wName = new Map(mergedExt.map((m) => [m.id, m.name]));

@@ -5,114 +5,88 @@
   "confirmed": 346,
   "raw_records": 11747,
   "uniq_records": 10621,
-  "internal_edge_candidates": 3,
-  "internal_high": 3,
+  "internal_edge_candidates": 0,
+  "internal_high": 0,
   "internal_low": 0,
   "external_pool": 1924,
   "external_adopt": 37,
-  "external_edges": 98,
-  "review_queue": 101,
-  "projected_relations": 174,
+  "external_edges": 97,
+  "review_queue": 97,
+  "projected_relations": 150,
   "skipped_same_year": 133,
-  "skipped_existing_pair": 20,
+  "skipped_existing_pair": 32,
   "skipped_self": 8,
   "dropped_no_biog": 0
  },
- "internal_edges": [
-  {
-   "from": "z0326",
-   "to": "z0328",
-   "type": "师生",
-   "names": "张九成（1132）↔ 汪应辰（1135）",
-   "note": "CBDB：學生為Y；CBDB：為Y之學生",
-   "confidence": 0.95
-  },
-  {
-   "from": "z0396",
-   "to": "z0415",
-   "type": "师生",
-   "names": "吴潜（1217）↔ 姚勉（1253）",
-   "note": "CBDB：推薦；CBDB：被Y推薦",
-   "confidence": 0.95,
-   "evidence": "語甚切直 遂歸 及吳潛入相 召為校書郎 帝過東宮"
-  },
-  {
-   "from": "z0549",
-   "to": "z0554",
-   "type": "师生",
-   "names": "徐元文（1659）↔ 韩菼（1673）",
-   "note": "CBDB：學生為Y；CBDB：為Y之學生",
-   "confidence": 0.95
-  }
- ],
+ "internal_edges": [],
  "external_edges": [
   {
    "zid": "z0062",
    "cbdb_id": 189513,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0655",
    "cbdb_id": 32880,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0051",
    "cbdb_id": 189513,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0126",
    "cbdb_id": 184775,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0130",
    "cbdb_id": 184751,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0140",
    "cbdb_id": 184775,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0143",
    "cbdb_id": 176961,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0144",
    "cbdb_id": 184751,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0151",
    "cbdb_id": 176961,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0245",
    "cbdb_id": 10379,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：子；CBDB 亲属：父",
    "confidence": 0.8
   },
@@ -127,35 +101,35 @@
   {
    "zid": "z0134",
    "cbdb_id": 32880,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0138",
    "cbdb_id": 32880,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
   {
    "zid": "z0184",
    "cbdb_id": 282,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：子；CBDB 亲属：父",
    "confidence": 0.8
   },
   {
    "zid": "z0184",
    "cbdb_id": 205,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：孫；CBDB 亲属：祖父",
    "confidence": 0.8
   },
   {
    "zid": "z0184",
    "cbdb_id": 699339,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：曾孫; 重孫；CBDB 亲属：曾祖",
    "confidence": 0.8
   },
@@ -183,14 +157,14 @@
   {
    "zid": "z0219",
    "cbdb_id": 3083,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：長子; 第一子",
    "confidence": 0.8
   },
   {
    "zid": "z0219",
    "cbdb_id": 118924,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：母；CBDB 亲属：子",
    "confidence": 0.8
   },
@@ -211,7 +185,7 @@
   {
    "zid": "z0222",
    "cbdb_id": 17911,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：祖父；CBDB 亲属：孫",
    "confidence": 0.8
   },
@@ -225,14 +199,14 @@
   {
    "zid": "z0233",
    "cbdb_id": 3083,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：三子",
    "confidence": 0.8
   },
   {
    "zid": "z0233",
    "cbdb_id": 118924,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：母；CBDB 亲属：子",
    "confidence": 0.8
   },
@@ -281,7 +255,7 @@
   {
    "zid": "z0242",
    "cbdb_id": 1133,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：父；CBDB 亲属：子",
    "confidence": 0.8
   },
@@ -302,14 +276,14 @@
   {
    "zid": "z0244",
    "cbdb_id": 205,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：次子；CBDB 亲属：父",
    "confidence": 0.8
   },
   {
    "zid": "z0244",
    "cbdb_id": 699339,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：孫；CBDB 亲属：祖父",
    "confidence": 0.8
   },
@@ -677,7 +651,7 @@
   {
    "zid": "z0534",
    "cbdb_id": 34673,
-   "type": "父子",
+   "type": "亲属",
    "note": "CBDB 亲属：曾祖；CBDB 亲属：曾孫; 重孫",
    "confidence": 0.8
   },
@@ -691,15 +665,8 @@
   {
    "zid": "z0547",
    "cbdb_id": 10379,
-   "type": "父子",
-   "note": "CBDB 亲属：直系祖先",
-   "confidence": 0.8
-  },
-  {
-   "zid": "z0547",
-   "cbdb_id": 10379,
    "type": "亲属",
-   "note": "CBDB 亲属：直系後裔",
+   "note": "CBDB 亲属：直系祖先；CBDB 亲属：直系後裔",
    "confidence": 0.8
   },
   {
@@ -1629,20 +1596,6 @@
    "notes": [
     "师生｜CBDB：同學、同門〔與舅文震○○孟同學〕",
     "亲属｜CBDB 亲属：外甥；CBDB 亲属：母舅"
-   ]
-  },
-  {
-   "label": "史大成(1655) ↔ 史詔（外延）",
-   "scope": "外延",
-   "types": [
-    "父子",
-    "亲属"
-   ],
-   "tension": false,
-   "has_evidence": false,
-   "notes": [
-    "父子｜CBDB 亲属：直系祖先",
-    "亲属｜CBDB 亲属：直系後裔"
    ]
   }
  ],
