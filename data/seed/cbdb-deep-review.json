@@ -1,0 +1,1650 @@
+{
+ "_comment": "待裁定队列（置信度 <1.0 全部入队）。A3 人工裁定后产出 cbdb-deep-reviewed.json：{adopted_edges:[{from,to,type,rationale}],rejected_edges:[{from,to,type,reason}],adopted_externals:[{cbdb_id,name}],rejected_externals:[{cbdb_id,reason}]}",
+ "generated_at": "2026-10-15",
+ "stats": {
+  "confirmed": 346,
+  "raw_records": 11747,
+  "uniq_records": 10621,
+  "internal_edge_candidates": 3,
+  "internal_high": 3,
+  "internal_low": 0,
+  "external_pool": 1924,
+  "external_adopt": 37,
+  "external_edges": 98,
+  "review_queue": 101,
+  "projected_relations": 174,
+  "skipped_same_year": 133,
+  "skipped_existing_pair": 20,
+  "skipped_self": 8,
+  "dropped_no_biog": 0
+ },
+ "internal_edges": [
+  {
+   "from": "z0326",
+   "to": "z0328",
+   "type": "师生",
+   "names": "张九成（1132）↔ 汪应辰（1135）",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.95
+  },
+  {
+   "from": "z0396",
+   "to": "z0415",
+   "type": "师生",
+   "names": "吴潜（1217）↔ 姚勉（1253）",
+   "note": "CBDB：推薦；CBDB：被Y推薦",
+   "confidence": 0.95,
+   "evidence": "語甚切直 遂歸 及吳潛入相 召為校書郎 帝過東宮"
+  },
+  {
+   "from": "z0549",
+   "to": "z0554",
+   "type": "师生",
+   "names": "徐元文（1659）↔ 韩菼（1673）",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.95
+  }
+ ],
+ "external_edges": [
+  {
+   "zid": "z0062",
+   "cbdb_id": 189513,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0655",
+   "cbdb_id": 32880,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0051",
+   "cbdb_id": 189513,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0126",
+   "cbdb_id": 184775,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0130",
+   "cbdb_id": 184751,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0140",
+   "cbdb_id": 184775,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0143",
+   "cbdb_id": 176961,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0144",
+   "cbdb_id": 184751,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0151",
+   "cbdb_id": 176961,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0245",
+   "cbdb_id": 10379,
+   "type": "父子",
+   "note": "CBDB 亲属：子；CBDB 亲属：父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0309",
+   "cbdb_id": 52274,
+   "type": "同僚",
+   "note": "CBDB：與Y遊",
+   "confidence": 0.8,
+   "evidence": "侍讀程敦厚 皆其素交 李石使彭 日與之游 淳熙元年卒"
+  },
+  {
+   "zid": "z0134",
+   "cbdb_id": 32880,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0138",
+   "cbdb_id": 32880,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0184",
+   "cbdb_id": 282,
+   "type": "父子",
+   "note": "CBDB 亲属：子；CBDB 亲属：父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0184",
+   "cbdb_id": 205,
+   "type": "父子",
+   "note": "CBDB 亲属：孫；CBDB 亲属：祖父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0184",
+   "cbdb_id": 699339,
+   "type": "父子",
+   "note": "CBDB 亲属：曾孫; 重孫；CBDB 亲属：曾祖",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0211",
+   "cbdb_id": 628,
+   "type": "师生",
+   "note": "CBDB：欣賞/器重；CBDB：被Y欣賞/器重",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0211",
+   "cbdb_id": 1169,
+   "type": "同僚",
+   "note": "CBDB：辟；CBDB：為Y所辟",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0212",
+   "cbdb_id": 1133,
+   "type": "同僚",
+   "note": "CBDB：與Y結黨",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0219",
+   "cbdb_id": 3083,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：長子; 第一子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0219",
+   "cbdb_id": 118924,
+   "type": "父子",
+   "note": "CBDB 亲属：母；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0219",
+   "cbdb_id": 98,
+   "type": "亲属",
+   "note": "CBDB 亲属：弟；CBDB 亲属：兄",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0219",
+   "cbdb_id": 14384,
+   "type": "亲属",
+   "note": "CBDB 亲属：從子;姪子；CBDB 亲属：從父;伯叔父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0222",
+   "cbdb_id": 17911,
+   "type": "父子",
+   "note": "CBDB 亲属：祖父；CBDB 亲属：孫",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0231",
+   "cbdb_id": 17911,
+   "type": "亲属",
+   "note": "CBDB 亲属：族父；CBDB 亲属：族子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0233",
+   "cbdb_id": 3083,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：三子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0233",
+   "cbdb_id": 118924,
+   "type": "父子",
+   "note": "CBDB 亲属：母；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0233",
+   "cbdb_id": 98,
+   "type": "亲属",
+   "note": "CBDB 亲属：兄；CBDB 亲属：弟",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0233",
+   "cbdb_id": 14384,
+   "type": "亲属",
+   "note": "CBDB 亲属：從子;姪子；CBDB 亲属：從父;伯叔父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0235",
+   "cbdb_id": 8076,
+   "type": "翁婿",
+   "note": "CBDB 亲属：第一任妻父；CBDB 亲属：第二任妻父；CBDB 亲属：女婿",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0237",
+   "cbdb_id": 1169,
+   "type": "政敌",
+   "note": "CBDB：反對/攻訐；CBDB：遭到Y的反對/攻訐",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0237",
+   "cbdb_id": 3479,
+   "type": "亲属",
+   "note": "CBDB 亲属：從子;姪子；CBDB 亲属：從父;伯叔父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0237",
+   "cbdb_id": 333,
+   "type": "亲属",
+   "note": "CBDB 亲属：外孫；CBDB 亲属：外祖父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0242",
+   "cbdb_id": 1133,
+   "type": "父子",
+   "note": "CBDB 亲属：父；CBDB 亲属：子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0244",
+   "cbdb_id": 8076,
+   "type": "翁婿",
+   "note": "CBDB 亲属：岳父；CBDB 亲属：女婿",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0244",
+   "cbdb_id": 282,
+   "type": "亲属",
+   "note": "CBDB 亲属：兄弟",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0244",
+   "cbdb_id": 205,
+   "type": "父子",
+   "note": "CBDB 亲属：次子；CBDB 亲属：父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0244",
+   "cbdb_id": 699339,
+   "type": "父子",
+   "note": "CBDB 亲属：孫；CBDB 亲属：祖父",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0259",
+   "cbdb_id": 3479,
+   "type": "师生",
+   "note": "CBDB：推薦；CBDB：被Y推薦",
+   "confidence": 0.8,
+   "evidence": "撰次唐史有益治體者 為君臣龜鑑八十卷 王堯臣上其書 韓琦亦以館職薦之 除直秘閣"
+  },
+  {
+   "zid": "z0273",
+   "cbdb_id": 628,
+   "type": "同僚",
+   "note": "CBDB：支持；CBDB：得到Y的支持",
+   "confidence": 0.8,
+   "evidence": "數月不一見之 琦謂其傲 以語富弼 弼使往見 京謂琦曰：公為宰相"
+  },
+  {
+   "zid": "z0273",
+   "cbdb_id": 51448,
+   "type": "师生",
+   "note": "CBDB：從Y遊；CBDB：從遊者為Y",
+   "confidence": 0.8,
+   "evidence": "咸創立義塾 以訓族中子弟及游學之士 馮京、鄭獬胥從之遊 時論嘉之"
+  },
+  {
+   "zid": "z0273",
+   "cbdb_id": 1762,
+   "type": "政敌",
+   "note": "CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持",
+   "confidence": 0.8,
+   "evidence": "乃所以重公也 豈曰傲哉？熙寧中 論王安石為政更張 被謫 後以太子少師致仕"
+  },
+  {
+   "zid": "z0273",
+   "cbdb_id": 628,
+   "type": "翁婿",
+   "note": "CBDB 亲属：第二任妻父；CBDB 亲属：第三任妻父；CBDB 亲属：長女婿；CBDB 亲属：二女婿",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0275",
+   "cbdb_id": 1762,
+   "type": "政敌",
+   "note": "CBDB：遭Y排擠；CBDB：為Y所忌/惡；CBDB：排擠；CBDB：忌/惡",
+   "confidence": 0.8,
+   "evidence": "權知開封府 以不肯用新法 為王安石所惡 出知杭州 徙青州"
+  },
+  {
+   "zid": "z0275",
+   "cbdb_id": 51448,
+   "type": "师生",
+   "note": "CBDB：從Y遊；CBDB：從遊者為Y",
+   "confidence": 0.8,
+   "evidence": "咸創立義塾 以訓族中子弟及游學之士 馮京、鄭獬胥從之遊 時論嘉之"
+  },
+  {
+   "zid": "z0275",
+   "cbdb_id": 1762,
+   "type": "同僚",
+   "note": "CBDB：為Y之門客；CBDB：門客為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0277",
+   "cbdb_id": 333,
+   "type": "亲属",
+   "note": "CBDB 亲属：從父;伯叔父；CBDB 亲属：從子;姪子",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0299",
+   "cbdb_id": 1649,
+   "type": "政敌",
+   "note": "CBDB：彈劾；CBDB：為Y所忌/惡；CBDB：被Y彈劾；CBDB：忌/惡",
+   "confidence": 0.8,
+   "evidence": "四川保寧人 元祐元年進士第一 上疏忤蔡京坐貶 後入黨籍 遂廢不用"
+  },
+  {
+   "zid": "z0308",
+   "cbdb_id": 1649,
+   "type": "师生",
+   "note": "CBDB：恩主是Y；CBDB：是Y的恩主",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0308",
+   "cbdb_id": 1649,
+   "type": "同僚",
+   "note": "CBDB：得到Y的支持；CBDB：支持",
+   "confidence": 0.8,
+   "evidence": "字文饒 開封人 崇寧五年以諸生試策諛蔡京 擢第一 釋褐纔九月"
+  },
+  {
+   "zid": "z0308",
+   "cbdb_id": 1649,
+   "type": "亲属",
+   "note": "CBDB：與Y攀親戚敘族屬；CBDB：Y與之攀親戚敘族屬",
+   "confidence": 0.8,
+   "evidence": "宋人傳記資料索引(電子版): 「[蔡薿]與[蔡]京敘族屬，尊為叔父。」"
+  },
+  {
+   "zid": "z0320",
+   "cbdb_id": 22849,
+   "type": "师生",
+   "note": "CBDB：被Y欣賞/器重；CBDB：欣賞/器重",
+   "confidence": 0.8,
+   "evidence": "淳熙七年卒 樗善於識鑒 嘗言沈晦、張九成進士當第一 後果然 有中庸大學論語解、玉泉語錄"
+  },
+  {
+   "zid": "z0321",
+   "cbdb_id": 52274,
+   "type": "同僚",
+   "note": "CBDB：友",
+   "confidence": 0.8,
+   "evidence": "博學喜讀書 好議論性理 提刑馮時行 侍讀程敦厚 皆其素交"
+  },
+  {
+   "zid": "z0321",
+   "cbdb_id": 8008,
+   "type": "政敌",
+   "note": "CBDB：遭Y排擠；CBDB：得罪Y；CBDB：排擠；CBDB：被Y得罪",
+   "confidence": 0.8,
+   "evidence": "以奉禮郎召對 力言和議不可信 忤秦檜 出知萬州 尋罷職"
+  },
+  {
+   "zid": "z0321",
+   "cbdb_id": 8008,
+   "type": "同僚",
+   "note": "CBDB：為Y之門客；CBDB：門客為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0326",
+   "cbdb_id": 22849,
+   "type": "师生",
+   "note": "CBDB：被Y欣賞/器重；CBDB：欣賞/器重",
+   "confidence": 0.8,
+   "evidence": "淳熙七年卒 樗善於識鑒 嘗言沈晦、張九成進士當第一 後果然 有中庸大學論語解、玉泉語錄"
+  },
+  {
+   "zid": "z0326",
+   "cbdb_id": 8008,
+   "type": "政敌",
+   "note": "CBDB：不合",
+   "confidence": 0.8,
+   "evidence": "紹興二年廷對第一 歷官禮部侍郎 以與秦檜不和 被謫 檜死"
+  },
+  {
+   "zid": "z0328",
+   "cbdb_id": 5,
+   "type": "师生",
+   "note": "CBDB：推薦；CBDB：被Y推薦",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0328",
+   "cbdb_id": 2058,
+   "type": "师生",
+   "note": "CBDB：被Y推薦；CBDB：推薦",
+   "confidence": 0.8,
+   "evidence": "進尚書左僕射 兼樞密使 首薦汪應辰、王十朋等 孝宗嘉納 乾道三年帝親郊而雷"
+  },
+  {
+   "zid": "z0328",
+   "cbdb_id": 7055,
+   "type": "师生",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0328",
+   "cbdb_id": 8008,
+   "type": "政敌",
+   "note": "CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0328",
+   "cbdb_id": 22849,
+   "type": "翁婿",
+   "note": "CBDB 亲属：岳父；CBDB 亲属：女婿",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0329",
+   "cbdb_id": 8008,
+   "type": "政敌",
+   "note": "CBDB：遭Y排擠；CBDB：反對/不支持Y的政策；CBDB：排擠；CBDB：其政策被Y反對/不支持",
+   "confidence": 0.8,
+   "evidence": "紹興八年舉進士第一 除秘書正字 時秦檜當國 坐譏切時政 出判肇慶府"
+  },
+  {
+   "zid": "z0329",
+   "cbdb_id": 8008,
+   "type": "同僚",
+   "note": "CBDB：為Y之門客；CBDB：門客為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0336",
+   "cbdb_id": 8008,
+   "type": "政敌",
+   "note": "CBDB：遭Y排擠；CBDB：得罪Y；CBDB：排擠；CBDB：被Y得罪",
+   "confidence": 0.8,
+   "evidence": "兼王府教授 專以經義文學啟迪掖導 秦檜嗛其不附己 諷言者劾之 出倅筠州"
+  },
+  {
+   "zid": "z0336",
+   "cbdb_id": 8008,
+   "type": "同僚",
+   "note": "CBDB：為Y之門客；CBDB：門客為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0337",
+   "cbdb_id": 8008,
+   "type": "政敌",
+   "note": "CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持",
+   "confidence": 0.8,
+   "evidence": "紹興十八年廷對第一 為秘書省校書郎 時秦檜專政 其子熺提舉秘書省 佐未嘗交一語"
+  },
+  {
+   "zid": "z0340",
+   "cbdb_id": 8008,
+   "type": "政敌",
+   "note": "CBDB：為Y所忌/惡；CBDB：忌/惡",
+   "confidence": 0.8,
+   "evidence": "資州資陽人 紹興二十一年對策擢第一 秦檜不悅 既罷知舉王曦 授逵簽書劍南東川"
+  },
+  {
+   "zid": "z0344",
+   "cbdb_id": 8008,
+   "type": "同僚",
+   "note": "CBDB：支持；CBDB：得到Y的支持",
+   "confidence": 0.8,
+   "evidence": "惟渡江初 張浚主復讎 湯思退祖秦檜之說主和 孝祥出入二人之門而兩持其說 議者惜之"
+  },
+  {
+   "zid": "z0344",
+   "cbdb_id": 5,
+   "type": "同僚",
+   "note": "CBDB：同道",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0347",
+   "cbdb_id": 2058,
+   "type": "师生",
+   "note": "CBDB：被Y推薦；CBDB：推薦",
+   "confidence": 0.8,
+   "evidence": "進尚書左僕射 兼樞密使 首薦汪應辰、王十朋等 孝宗嘉納 乾道三年帝親郊而雷"
+  },
+  {
+   "zid": "z0347",
+   "cbdb_id": 5,
+   "type": "同僚",
+   "note": "CBDB：同道",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0373",
+   "cbdb_id": 3257,
+   "type": "同僚",
+   "note": "CBDB：友",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0373",
+   "cbdb_id": 3257,
+   "type": "政敌",
+   "note": "CBDB：批評；CBDB：被Y批評",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0373",
+   "cbdb_id": 7055,
+   "type": "亲属",
+   "note": "CBDB 亲属：族兄；CBDB 亲属：族弟",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0387",
+   "cbdb_id": 3257,
+   "type": "师生",
+   "note": "CBDB：為Y之門人；CBDB：門人為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0396",
+   "cbdb_id": 15990,
+   "type": "政敌",
+   "note": "CBDB：彈劾；CBDB：反對/攻訐；CBDB：被Y彈劾；CBDB：遭到Y的反對/攻訐",
+   "confidence": 0.8,
+   "evidence": "累進左丞相 封許國公 會論丁大全、沈炎、高鑄之奸 卒為炎論劾 謫建昌軍"
+  },
+  {
+   "zid": "z0414",
+   "cbdb_id": 10374,
+   "type": "政敌",
+   "note": "CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持",
+   "confidence": 0.8,
+   "evidence": "累官兵部侍郎 國史修撰 時宰相鄭清之、賈似道擅權 逢辰力詆其非 稱疾歸"
+  },
+  {
+   "zid": "z0415",
+   "cbdb_id": 15990,
+   "type": "政敌",
+   "note": "CBDB：反對/不支持Y的政策；CBDB：其政策被Y反對/不支持",
+   "confidence": 0.8,
+   "evidence": "寶祐元年中進士第一 除校書郎 時太學生有困論丁大全被逐者 勉上疏言之 語甚切直"
+  },
+  {
+   "zid": "z0415",
+   "cbdb_id": 10374,
+   "type": "政敌",
+   "note": "CBDB：得罪Y；CBDB：被Y得罪",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0417",
+   "cbdb_id": 15990,
+   "type": "师生",
+   "note": "CBDB：被Y欣賞/器重；CBDB：欣賞/器重",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0420",
+   "cbdb_id": 10374,
+   "type": "政敌",
+   "note": "CBDB：遭Y排擠；CBDB：排擠",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0420",
+   "cbdb_id": 10374,
+   "type": "同僚",
+   "note": "CBDB：為Y之門客；CBDB：門客為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0484",
+   "cbdb_id": 34673,
+   "type": "师生",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0531",
+   "cbdb_id": 56535,
+   "type": "同僚",
+   "note": "CBDB：友",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0534",
+   "cbdb_id": 56535,
+   "type": "师生",
+   "note": "CBDB：同學、同門",
+   "confidence": 0.8,
+   "evidence": "與舅文震○○孟同學"
+  },
+  {
+   "zid": "z0534",
+   "cbdb_id": 34673,
+   "type": "父子",
+   "note": "CBDB 亲属：曾祖；CBDB 亲属：曾孫; 重孫",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0534",
+   "cbdb_id": 56535,
+   "type": "亲属",
+   "note": "CBDB 亲属：外甥；CBDB 亲属：母舅",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0547",
+   "cbdb_id": 10379,
+   "type": "父子",
+   "note": "CBDB 亲属：直系祖先",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0547",
+   "cbdb_id": 10379,
+   "type": "亲属",
+   "note": "CBDB 亲属：直系後裔",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0549",
+   "cbdb_id": 30399,
+   "type": "亲属",
+   "note": "CBDB 亲属：兄；CBDB 亲属：弟",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0552",
+   "cbdb_id": 34836,
+   "type": "师生",
+   "note": "CBDB：被Y推薦；CBDB：推薦",
+   "confidence": 0.8,
+   "evidence": "巡撫湯斌內召，奏吳中薦紳以道義自持者，彤爲首"
+  },
+  {
+   "zid": "z0554",
+   "cbdb_id": 30399,
+   "type": "师生",
+   "note": "CBDB：為Y之學生；CBDB：學生為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0555",
+   "cbdb_id": 34836,
+   "type": "师生",
+   "note": "CBDB：為Y之學生；CBDB：為Y之弟子；CBDB：學生為Y；CBDB：弟子為Y",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0629",
+   "cbdb_id": 89100,
+   "type": "师生",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0633",
+   "cbdb_id": 89100,
+   "type": "师生",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0636",
+   "cbdb_id": 89100,
+   "type": "师生",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.8
+  },
+  {
+   "zid": "z0643",
+   "cbdb_id": 89100,
+   "type": "师生",
+   "note": "CBDB：學生為Y；CBDB：為Y之學生",
+   "confidence": 0.8
+  }
+ ],
+ "externals": [
+  {
+   "cbdb_id": 8008,
+   "name": "秦檜",
+   "birth": 1090,
+   "death": 1155,
+   "index_year": 1090,
+   "links": [
+    "z0321",
+    "z0326",
+    "z0328",
+    "z0329",
+    "z0336",
+    "z0337",
+    "z0340",
+    "z0344"
+   ],
+   "link_names": 8,
+   "link_count": 8,
+   "rel_descs": [
+    "冯时行·遭Y排擠",
+    "冯时行·為Y之門客",
+    "冯时行·得罪Y",
+    "冯时行·排擠",
+    "冯时行·門客為Y",
+    "冯时行·被Y得罪",
+    "张九成·不合",
+    "汪应辰·反對/不支持Y的政策",
+    "汪应辰·其政策被Y反對/不支持",
+    "黄公度·遭Y排擠",
+    "黄公度·為Y之門客",
+    "黄公度·反對/不支持Y的政策",
+    "黄公度·排擠",
+    "黄公度·門客為Y",
+    "黄公度·其政策被Y反對/不支持",
+    "刘章·遭Y排擠",
+    "刘章·為Y之門客",
+    "刘章·得罪Y",
+    "刘章·排擠",
+    "刘章·門客為Y",
+    "刘章·被Y得罪",
+    "王佐·反對/不支持Y的政策",
+    "王佐·其政策被Y反對/不支持",
+    "赵逵·為Y所忌/惡",
+    "赵逵·忌/惡",
+    "张孝祥·支持",
+    "张孝祥·得到Y的支持"
+   ]
+  },
+  {
+   "cbdb_id": 89100,
+   "name": "梁士詒",
+   "birth": 1869,
+   "death": 1933,
+   "index_year": 1869,
+   "links": [
+    "z0629",
+    "z0633",
+    "z0636",
+    "z0643"
+   ],
+   "link_names": 4,
+   "link_count": 4,
+   "rel_descs": [
+    "张之萬·學生為Y",
+    "张之萬·為Y之學生",
+    "翁同龢·學生為Y",
+    "翁同龢·為Y之學生",
+    "徐郙·學生為Y",
+    "徐郙·為Y之學生",
+    "王仁堪·學生為Y",
+    "王仁堪·為Y之學生"
+   ]
+  },
+  {
+   "cbdb_id": 32880,
+   "name": "歸融",
+   "index_year": 782,
+   "links": [
+    "z0655",
+    "z0134",
+    "z0138"
+   ],
+   "link_names": 3,
+   "link_count": 3,
+   "rel_descs": [
+    "归仁翰·父",
+    "归仁翰·子",
+    "归仁绍·父",
+    "归仁绍·子",
+    "归仁泽·父",
+    "归仁泽·子"
+   ]
+  },
+  {
+   "cbdb_id": 22849,
+   "name": "喻樗",
+   "death": 1180,
+   "index_year": 1117,
+   "links": [
+    "z0320",
+    "z0326",
+    "z0328"
+   ],
+   "link_names": 3,
+   "link_count": 3,
+   "rel_descs": [
+    "沈晦·被Y欣賞/器重",
+    "沈晦·欣賞/器重",
+    "张九成·被Y欣賞/器重",
+    "张九成·欣賞/器重",
+    "汪应辰·岳父",
+    "汪应辰·女婿"
+   ]
+  },
+  {
+   "cbdb_id": 5,
+   "name": "查籥",
+   "index_year": 1121,
+   "links": [
+    "z0328",
+    "z0344",
+    "z0347"
+   ],
+   "link_names": 3,
+   "link_count": 3,
+   "rel_descs": [
+    "汪应辰·推薦",
+    "汪应辰·被Y推薦",
+    "张孝祥·同道",
+    "王十朋·同道"
+   ]
+  },
+  {
+   "cbdb_id": 15990,
+   "name": "丁大全",
+   "death": 1263,
+   "index_year": 1200,
+   "links": [
+    "z0396",
+    "z0415",
+    "z0417"
+   ],
+   "link_names": 3,
+   "link_count": 3,
+   "rel_descs": [
+    "吴潜·彈劾",
+    "吴潜·反對/攻訐",
+    "吴潜·被Y彈劾",
+    "吴潜·遭到Y的反對/攻訐",
+    "姚勉·反對/不支持Y的政策",
+    "姚勉·其政策被Y反對/不支持",
+    "周震炎·被Y欣賞/器重",
+    "周震炎·欣賞/器重"
+   ]
+  },
+  {
+   "cbdb_id": 10374,
+   "name": "賈似道",
+   "birth": 1213,
+   "death": 1275,
+   "index_year": 1213,
+   "links": [
+    "z0414",
+    "z0415",
+    "z0420"
+   ],
+   "link_names": 3,
+   "link_count": 3,
+   "rel_descs": [
+    "方逢辰·反對/不支持Y的政策",
+    "方逢辰·其政策被Y反對/不支持",
+    "姚勉·得罪Y",
+    "姚勉·被Y得罪",
+    "陈文龙·遭Y排擠",
+    "陈文龙·為Y之門客",
+    "陈文龙·排擠",
+    "陈文龙·門客為Y"
+   ]
+  },
+  {
+   "cbdb_id": 189513,
+   "name": "張泚",
+   "death": 774,
+   "index_year": 711,
+   "links": [
+    "z0062",
+    "z0051"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "张正甫·父",
+    "张正甫·子",
+    "张式·父",
+    "张式·子"
+   ]
+  },
+  {
+   "cbdb_id": 184775,
+   "name": "孔溫孺",
+   "death": 847,
+   "index_year": 784,
+   "links": [
+    "z0126",
+    "z0140"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "孔纬·父",
+    "孔纬·子",
+    "孔缄·父",
+    "孔缄·子"
+   ]
+  },
+  {
+   "cbdb_id": 184751,
+   "name": "孔策",
+   "death": 865,
+   "index_year": 802,
+   "links": [
+    "z0130",
+    "z0144"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "孔振·父",
+    "孔振·子",
+    "孔拯·父",
+    "孔拯·子"
+   ]
+  },
+  {
+   "cbdb_id": 176961,
+   "name": "崔璙",
+   "death": 859,
+   "index_year": 796,
+   "links": [
+    "z0143",
+    "z0151"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "崔昭纬·父",
+    "崔昭纬·子",
+    "崔昭矩·父",
+    "崔昭矩·子"
+   ]
+  },
+  {
+   "cbdb_id": 10379,
+   "name": "史詔",
+   "index_year": 1064,
+   "links": [
+    "z0245",
+    "z0547"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "史简·子",
+    "史简·父",
+    "史大成·直系祖先",
+    "史大成·直系後裔"
+   ]
+  },
+  {
+   "cbdb_id": 52274,
+   "name": "穆深之",
+   "birth": 1106,
+   "death": 1174,
+   "index_year": 1106,
+   "links": [
+    "z0309",
+    "z0321"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "李石·與Y遊",
+    "冯时行·友"
+   ]
+  },
+  {
+   "cbdb_id": 282,
+   "name": "張師顏",
+   "index_year": 968,
+   "links": [
+    "z0184",
+    "z0244"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "张去华·子",
+    "张去华·父",
+    "张师德·兄弟"
+   ]
+  },
+  {
+   "cbdb_id": 205,
+   "name": "張景憲",
+   "birth": 1004,
+   "death": 1080,
+   "index_year": 1004,
+   "links": [
+    "z0184",
+    "z0244"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "张去华·孫",
+    "张去华·祖父",
+    "张师德·次子",
+    "张师德·父"
+   ]
+  },
+  {
+   "cbdb_id": 699339,
+   "name": "張立",
+   "birth": 1047,
+   "death": 1062,
+   "index_year": 1047,
+   "links": [
+    "z0184",
+    "z0244"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "张去华·曾孫; 重孫",
+    "张去华·曾祖",
+    "张师德·孫",
+    "张师德·祖父"
+   ]
+  },
+  {
+   "cbdb_id": 628,
+   "name": "富弼",
+   "birth": 1004,
+   "death": 1083,
+   "index_year": 1004,
+   "links": [
+    "z0211",
+    "z0273"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "吕蒙正·欣賞/器重",
+    "吕蒙正·被Y欣賞/器重",
+    "冯京·支持",
+    "冯京·得到Y的支持",
+    "冯京·第二任妻父",
+    "冯京·第三任妻父",
+    "冯京·長女婿",
+    "冯京·二女婿"
+   ]
+  },
+  {
+   "cbdb_id": 1169,
+   "name": "林特",
+   "index_year": 965,
+   "links": [
+    "z0211",
+    "z0237"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "吕蒙正·辟",
+    "吕蒙正·為Y所辟",
+    "李迪·反對/攻訐",
+    "李迪·遭到Y的反對/攻訐"
+   ]
+  },
+  {
+   "cbdb_id": 1133,
+   "name": "梁顥",
+   "birth": 963,
+   "death": 1004,
+   "index_year": 963,
+   "links": [
+    "z0212",
+    "z0242"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "胡旦·與Y結黨",
+    "梁固·父",
+    "梁固·子"
+   ]
+  },
+  {
+   "cbdb_id": 3083,
+   "name": "陳省華",
+   "birth": 939,
+   "death": 1006,
+   "index_year": 939,
+   "links": [
+    "z0219",
+    "z0233"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "陈尧叟·父",
+    "陈尧叟·長子; 第一子",
+    "陈尧咨·父",
+    "陈尧咨·三子"
+   ]
+  },
+  {
+   "cbdb_id": 118924,
+   "name": "馮氏(陳堯叟母)",
+   "index_year": 942,
+   "links": [
+    "z0219",
+    "z0233"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "陈尧叟·母",
+    "陈尧叟·子",
+    "陈尧咨·母",
+    "陈尧咨·子"
+   ]
+  },
+  {
+   "cbdb_id": 98,
+   "name": "陳堯佐",
+   "birth": 963,
+   "death": 1044,
+   "index_year": 963,
+   "links": [
+    "z0219",
+    "z0233"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "陈尧叟·弟",
+    "陈尧叟·兄",
+    "陈尧咨·兄",
+    "陈尧咨·弟"
+   ]
+  },
+  {
+   "cbdb_id": 14384,
+   "name": "陳漸",
+   "index_year": 962,
+   "links": [
+    "z0219",
+    "z0233"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "陈尧叟·從子;姪子",
+    "陈尧叟·從父;伯叔父",
+    "陈尧咨·從子;姪子",
+    "陈尧咨·從父;伯叔父"
+   ]
+  },
+  {
+   "cbdb_id": 17911,
+   "name": "孫鎰",
+   "index_year": 891,
+   "links": [
+    "z0222",
+    "z0231"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "孙何·祖父",
+    "孙何·孫",
+    "孙暨·族父",
+    "孙暨·族子"
+   ]
+  },
+  {
+   "cbdb_id": 8076,
+   "name": "李沆",
+   "birth": 947,
+   "death": 1004,
+   "index_year": 947,
+   "links": [
+    "z0235",
+    "z0244"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "王曾·第一任妻父",
+    "王曾·第二任妻父",
+    "王曾·女婿",
+    "张师德·岳父",
+    "张师德·女婿"
+   ]
+  },
+  {
+   "cbdb_id": 3479,
+   "name": "李及之",
+   "index_year": 998,
+   "links": [
+    "z0237",
+    "z0259"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "李迪·從子;姪子",
+    "李迪·從父;伯叔父",
+    "王尧臣·推薦",
+    "王尧臣·被Y推薦"
+   ]
+  },
+  {
+   "cbdb_id": 333,
+   "name": "章惇",
+   "birth": 1035,
+   "death": 1105,
+   "index_year": 1035,
+   "links": [
+    "z0237",
+    "z0277"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "李迪·外孫",
+    "李迪·外祖父",
+    "章衡·從父;伯叔父",
+    "章衡·從子;姪子"
+   ]
+  },
+  {
+   "cbdb_id": 51448,
+   "name": "鄧咸",
+   "links": [
+    "z0273",
+    "z0275"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "冯京·從Y遊",
+    "冯京·從遊者為Y",
+    "郑獬·從Y遊",
+    "郑獬·從遊者為Y"
+   ]
+  },
+  {
+   "cbdb_id": 1762,
+   "name": "王安石",
+   "birth": 1021,
+   "death": 1086,
+   "index_year": 1021,
+   "links": [
+    "z0273",
+    "z0275"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "冯京·反對/不支持Y的政策",
+    "冯京·其政策被Y反對/不支持",
+    "郑獬·遭Y排擠",
+    "郑獬·為Y所忌/惡",
+    "郑獬·為Y之門客",
+    "郑獬·排擠",
+    "郑獬·忌/惡",
+    "郑獬·門客為Y"
+   ]
+  },
+  {
+   "cbdb_id": 1649,
+   "name": "蔡京",
+   "birth": 1047,
+   "death": 1126,
+   "index_year": 1047,
+   "links": [
+    "z0299",
+    "z0308"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "马涓·彈劾",
+    "马涓·為Y所忌/惡",
+    "马涓·被Y彈劾",
+    "马涓·忌/惡",
+    "蔡薿·恩主是Y",
+    "蔡薿·得到Y的支持",
+    "蔡薿·與Y攀親戚敘族屬",
+    "蔡薿·是Y的恩主",
+    "蔡薿·支持",
+    "蔡薿·Y與之攀親戚敘族屬"
+   ]
+  },
+  {
+   "cbdb_id": 2058,
+   "name": "葉顒",
+   "index_year": 1102,
+   "links": [
+    "z0328",
+    "z0347"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "汪应辰·被Y推薦",
+    "汪应辰·推薦",
+    "王十朋·被Y推薦",
+    "王十朋·推薦"
+   ]
+  },
+  {
+   "cbdb_id": 7055,
+   "name": "呂祖謙",
+   "birth": 1137,
+   "death": 1181,
+   "index_year": 1137,
+   "links": [
+    "z0328",
+    "z0373"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "汪应辰·學生為Y",
+    "汪应辰·為Y之學生",
+    "陈亮·族兄",
+    "陈亮·族弟"
+   ]
+  },
+  {
+   "cbdb_id": 3257,
+   "name": "朱熹",
+   "birth": 1130,
+   "death": 1200,
+   "index_year": 1130,
+   "links": [
+    "z0373",
+    "z0387"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "陈亮·友",
+    "陈亮·批評",
+    "陈亮·被Y批評",
+    "郑性之·為Y之門人",
+    "郑性之·門人為Y"
+   ]
+  },
+  {
+   "cbdb_id": 34673,
+   "name": "文徵明",
+   "birth": 1470,
+   "death": 1559,
+   "index_year": 1470,
+   "links": [
+    "z0484",
+    "z0534"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "吳寬·學生為Y",
+    "吳寬·為Y之學生",
+    "文震孟·曾祖",
+    "文震孟·曾孫; 重孫"
+   ]
+  },
+  {
+   "cbdb_id": 56535,
+   "name": "姚希孟",
+   "birth": 1579,
+   "death": 1636,
+   "index_year": 1579,
+   "links": [
+    "z0531",
+    "z0534"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "周延儒·友",
+    "文震孟·同學、同門",
+    "文震孟·外甥",
+    "文震孟·母舅"
+   ]
+  },
+  {
+   "cbdb_id": 30399,
+   "name": "徐乾學",
+   "birth": 1631,
+   "death": 1694,
+   "index_year": 1631,
+   "links": [
+    "z0549",
+    "z0554"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "徐元文·兄",
+    "徐元文·弟",
+    "韩菼·為Y之學生",
+    "韩菼·學生為Y"
+   ]
+  },
+  {
+   "cbdb_id": 34836,
+   "name": "湯斌",
+   "birth": 1627,
+   "death": 1687,
+   "index_year": 1627,
+   "links": [
+    "z0552",
+    "z0555"
+   ],
+   "link_names": 2,
+   "link_count": 2,
+   "rel_descs": [
+    "缪彤·被Y推薦",
+    "缪彤·推薦",
+    "彭定求·為Y之學生",
+    "彭定求·為Y之弟子",
+    "彭定求·學生為Y",
+    "彭定求·弟子為Y"
+   ]
+  }
+ ],
+ "type_conflicts": [
+  {
+   "label": "郑獬(1053) ↔ 王安石（外延）",
+   "scope": "外延",
+   "types": [
+    "政敌",
+    "同僚"
+   ],
+   "tension": true,
+   "has_evidence": true,
+   "notes": [
+    "政敌｜CBDB：遭Y排擠；CBDB：為Y所忌/惡；CBDB：排擠；CBDB：忌/惡〔權知開封府 以不肯用新法 為王安石所惡 出知杭州 徙青州〕",
+    "同僚｜CBDB：為Y之門客；CBDB：門客為Y"
+   ]
+  },
+  {
+   "label": "冯时行(1124) ↔ 秦檜（外延）",
+   "scope": "外延",
+   "types": [
+    "政敌",
+    "同僚"
+   ],
+   "tension": true,
+   "has_evidence": true,
+   "notes": [
+    "政敌｜CBDB：遭Y排擠；CBDB：得罪Y；CBDB：排擠；CBDB：被Y得罪〔以奉禮郎召對 力言和議不可信 忤秦檜 出知萬州 尋罷職〕",
+    "同僚｜CBDB：為Y之門客；CBDB：門客為Y"
+   ]
+  },
+  {
+   "label": "黄公度(1138) ↔ 秦檜（外延）",
+   "scope": "外延",
+   "types": [
+    "政敌",
+    "同僚"
+   ],
+   "tension": true,
+   "has_evidence": true,
+   "notes": [
+    "政敌｜CBDB：遭Y排擠；CBDB：反對/不支持Y的政策；CBDB：排擠；CBDB：其政策被Y反對/不支持〔紹興八年舉進士第一 除秘書正字 時秦檜當國 坐譏切時政 出判肇慶府〕",
+    "同僚｜CBDB：為Y之門客；CBDB：門客為Y"
+   ]
+  },
+  {
+   "label": "刘章(1145) ↔ 秦檜（外延）",
+   "scope": "外延",
+   "types": [
+    "政敌",
+    "同僚"
+   ],
+   "tension": true,
+   "has_evidence": true,
+   "notes": [
+    "政敌｜CBDB：遭Y排擠；CBDB：得罪Y；CBDB：排擠；CBDB：被Y得罪〔兼王府教授 專以經義文學啟迪掖導 秦檜嗛其不附己 諷言者劾之 出倅筠州〕",
+    "同僚｜CBDB：為Y之門客；CBDB：門客為Y"
+   ]
+  },
+  {
+   "label": "陈亮(1193) ↔ 朱熹（外延）",
+   "scope": "外延",
+   "types": [
+    "同僚",
+    "政敌"
+   ],
+   "tension": true,
+   "has_evidence": false,
+   "notes": [
+    "同僚｜CBDB：友",
+    "政敌｜CBDB：批評；CBDB：被Y批評"
+   ]
+  },
+  {
+   "label": "陈文龙(1268) ↔ 賈似道（外延）",
+   "scope": "外延",
+   "types": [
+    "政敌",
+    "同僚"
+   ],
+   "tension": true,
+   "has_evidence": false,
+   "notes": [
+    "政敌｜CBDB：遭Y排擠；CBDB：排擠",
+    "同僚｜CBDB：為Y之門客；CBDB：門客為Y"
+   ]
+  },
+  {
+   "label": "冯京(1049) ↔ 富弼（外延）",
+   "scope": "外延",
+   "types": [
+    "同僚",
+    "翁婿"
+   ],
+   "tension": false,
+   "has_evidence": true,
+   "notes": [
+    "同僚｜CBDB：支持；CBDB：得到Y的支持〔數月不一見之 琦謂其傲 以語富弼 弼使往見 京謂琦曰：公為宰相〕",
+    "翁婿｜CBDB 亲属：第二任妻父；CBDB 亲属：第三任妻父；CBDB 亲属：長女婿；CBDB 亲属：二女婿"
+   ]
+  },
+  {
+   "label": "蔡薿(1106) ↔ 蔡京（外延）",
+   "scope": "外延",
+   "types": [
+    "师生",
+    "同僚",
+    "亲属"
+   ],
+   "tension": false,
+   "has_evidence": true,
+   "notes": [
+    "师生｜CBDB：恩主是Y；CBDB：是Y的恩主",
+    "同僚｜CBDB：得到Y的支持；CBDB：支持〔字文饒 開封人 崇寧五年以諸生試策諛蔡京 擢第一 釋褐纔九月〕",
+    "亲属｜CBDB：與Y攀親戚敘族屬；CBDB：Y與之攀親戚敘族屬〔宋人傳記資料索引(電子版): 「[蔡薿]與[蔡]京敘族屬，尊為叔父。」〕"
+   ]
+  },
+  {
+   "label": "文震孟(1622) ↔ 姚希孟（外延）",
+   "scope": "外延",
+   "types": [
+    "师生",
+    "亲属"
+   ],
+   "tension": false,
+   "has_evidence": true,
+   "notes": [
+    "师生｜CBDB：同學、同門〔與舅文震○○孟同學〕",
+    "亲属｜CBDB 亲属：外甥；CBDB 亲属：母舅"
+   ]
+  },
+  {
+   "label": "史大成(1655) ↔ 史詔（外延）",
+   "scope": "外延",
+   "types": [
+    "父子",
+    "亲属"
+   ],
+   "tension": false,
+   "has_evidence": false,
+   "notes": [
+    "父子｜CBDB 亲属：直系祖先",
+    "亲属｜CBDB 亲属：直系後裔"
+   ]
+  }
+ ],
+ "roster_hints": []
+}

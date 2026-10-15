@@ -1,0 +1,17 @@
+# CBDB --deep 站内关系边候选（3 条）——置信度均 <1.0，须人工复核后 --apply 入库
+# 生成：scripts/import-cbdb.ts --deep ｜ 去重基准：data/relations.yaml（87 条）+ 同年派生
+- from: z0326   # 张九成（1132）
+  to: z0328     # 汪应辰（1135）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生（CBDB 反查，置信度 0.95）
+  source_id: s0010
+- from: z0396   # 吴潜（1217）
+  to: z0415     # 姚勉（1253）
+  type: 师生
+  note: CBDB：推薦；CBDB：被Y推薦（CBDB 反查，置信度 0.95）
+  source_id: s0010
+- from: z0549   # 徐元文（1659）
+  to: z0554     # 韩菼（1673）
+  type: 师生
+  note: CBDB：學生為Y；CBDB：為Y之學生（CBDB 反查，置信度 0.95）
+  source_id: s0010

@@ -6,11 +6,20 @@
 //   <0.7 / 多候选无法消歧 → 丢弃（宁缺毋错）
 // 输出：data/seed/cbdb-match.json / cbdb-relations-draft.yaml / cbdb-review.json
 //       / externals-candidates.json / docs/CBDB匹配报告.md
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 import yaml from 'js-yaml';
+import { mapAssocCode, rulesByFamily, ruleCount, TEXTUAL_DISCARD, type LocalRelationType } from './cbdb-assoc-map';
+import { runDeep } from './import-cbdb-deep';
+
+// --deep 模式（M5-c A1）：走独立模块，直接消费 cbdb-match*.json 中已确认的 personid，
+// 不重跑人物匹配、不覆写浅层产物；完成后立即退出，浅层逻辑不执行。
+if (process.argv.includes('--deep')) {
+  runDeep();
+  process.exit(0);
+}
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const seedDir = join(root, 'data', 'seed');
