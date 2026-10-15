@@ -1,0 +1,47 @@
+id: z0465
+name: 马铎
+zi: 彦声
+hao: 梅岩
+dynasty: ming
+exam_year: 1412
+reign: 永乐十年
+native_hist: 福建福州府长乐县
+native_modern: 福建省福州市长乐区
+birth_year: 1366
+death_year: 1423
+ke_ci: 永乐十年壬辰科
+bio_short: 永乐十年状元，长乐「一母两状元」之兄。替人放羊时趴私塾窗旁听，无师自通人称「马五经」；四十五岁夺魁，成祖亲试对联「白扇画梅，日日迎风花不动——青鞋绣菊，朝朝踢露蕊难开」，叹「真状元之才」。两度受命「代驾郊天」替皇帝祭天地，世称「马铎一日君」。
+tags:
+  - 一日君
+  - 一母两状元
+  - 马五经
+events:
+  - year: 1412
+    type: 夺魁
+    title: 永乐十年壬辰科状元
+    description: 早年父丧家贫，为人放羊，过私塾辄伏窗旁听，遂通《诗》《书》，人号「马五经」。四十五岁夺魁，成祖亲览试卷赞其文「气象广大」。本名马乐，避永乐讳改名马铎。
+    source_id: s0033
+  - year_label: 夺魁时
+    precision: range
+    type: 轶事
+    title: 御前对句，「真状元之才」
+    description: 成祖持白扇画梅出上联「白扇画梅，日日迎风花不动」，马铎即对「青鞋绣菊，朝朝踢露蕊难开」；又指殿外铃儿草「风吹不响铃儿草」，随口对「雨打无声鼓子花」。成祖连声赞赏。
+    source_id: s0033
+  - year_label: 永乐年间
+    precision: range
+    type: 轶事
+    title: 「代驾郊天」，一日为君
+    description: 成祖两度出京巡幸，皆命马铎留京监国、代驾郊天——作为皇帝替身祭祀天地，做了「一日君」，此事在长乐传诵六百年。后治理黄河、平息边关，文可服众、武能安邦。
+    source_id: s0033
+  - year: 1423
+    type: 卒
+    title: 永乐二十一年卒于任
+    description: 耿直磊落、生活简朴，深得军民爱戴。其同母异父弟李騏，六年后（1418）亦中状元——「一母两状元」传为千古佳话。有《梅岩集》。
+    source_id: s0033
+career:
+  first_office: 翰林院修撰
+  first_category: 翰林院
+  mid_office: 留京监国（代驾郊天）
+  mid_category: 部院
+  final_office: 卒于任（治河、平边）
+  final_category: 其他

@@ -1,0 +1,43 @@
+id: z0433
+name: 笃列图
+zi: 敬夫（一字彦诚）
+hao: 敬斋
+dynasty: yuan
+exam_year: 1330
+reign: 至順元年
+native_hist: 蒙古捏古台氏，燕山
+native_modern: 祖籍燕山（今河北），徙江西永丰
+birth_year: 1312
+death_year: 1348
+ke_ci: 至顺元年庚午科（右榜）
+bio_short: 至顺元年右榜状元，蒙古捏古台氏。文宗览其对策惊问「是必世家子弟，何以知吾家事若是之详？」——御史中丞马祖常闻其名，以妹妻之。按治湖广、江浙，弹劾威顺王宽彻不花，官吏相戒「慎勿犯捏古状元」。工书法善大字，兼能画，三十七岁病卒，二子取汉姓「揭」皆成进士。
+tags:
+  - 右榜状元
+  - 慎勿犯捏古状元
+events:
+  - year: 1330
+    type: 夺魁
+    title: 至顺元年庚午科右榜状元
+    description: 父卜里也秃思从文宗于潜邸，官靖江路总管。笃列图举进士第一，文宗览对策奇其详知朝家事；御史中丞马祖常赏其才，以妹妻之。
+    source_id: s0031
+  - year_label: 至顺—至正年间
+    precision: range
+    type: 升迁
+    title: 江南行台监察御史，弹劾威顺王
+    description: 按治湖广、江浙诸路，威有名迹。威顺王宽彻不花夺山泽之利、民尤苦之，笃列图一无所贷，劾王罪宜削爵土。故事御史按部，官吏供张甚盛，笃列图命悉撤去，及视事莫不震慑，相戒曰「慎勿犯捏古状元」。
+    office: 江南行台监察御史
+    rank_grade: 7
+    estimated: true
+    source_id: s0031
+  - year: 1348
+    type: 卒
+    title: 至正八年病卒，年三十七
+    description: 召为内台御史，以病卒。陶宗仪《书史会要》称其善书大字；与傅若金等诗人唱和，亦善画。二子取汉姓揭（揭沈、揭沋）皆名进士，族弟帖哥后代改铁姓，有「揭铁是一家」之说。
+    source_id: s0031
+career:
+  first_office: 集贤修撰
+  first_category: 学政文教
+  mid_office: 江南行台监察御史
+  mid_category: 部院
+  final_office: 内台御史（病卒）
+  final_category: 早逝

@@ -1,0 +1,47 @@
+id: z0353
+name: 孟宗献
+zi: 友之
+hao: 虚静居士
+dynasty: jin
+exam_year: 1163
+reign: 大定三年
+native_hist: 開封
+native_modern: 河南省开封市
+birth_year: 1130
+birth_circa: true
+death_year: 1180
+death_circa: true
+ke_ci: 大定三年癸未科
+bio_short: 中国科举史上唯一的「四元状元」——乡试、府试、省试、廷试四场连中第一，号「孟四元」。早年自负落第，把老师刘㧑（1124 年状元）的词赋贴满墙壁诵读揣摩，闭门数年功成。金世宗破格提拔：惯例状元从七品，孟宗献独授从六品奉直大夫。
+tags:
+  - 四元及第
+  - 孟四元
+events:
+  - year: 1163
+    type: 夺魁
+    title: 大定三年癸未科状元，四场皆第一
+    description: 乡试、府试、省试、廷试连夺四元，时人号「孟四元」，科举史上唯一。考官杨伯仁读其程文预言「此人当成大名」。世宗以其独异等，破例授从六品奉直大夫（惯例状元仅从七品承务郎）。
+    source_id: s0008
+  - year_label: 夺魁前
+    precision: range
+    type: 轶事
+    title: 贴墙苦学，从落第到四元
+    description: 少年聪颖而自负，初试铩羽；遂自省发愤，把老师刘㧑（天会二年状元）所作词赋尽数收集贴于墙壁，诵读揣摩数年，闭门谢客，终成大家。
+    source_id: s0018
+  - year_label: 大定年间
+    precision: range
+    type: 升迁
+    title: 翰林供奉，文风典雅
+    description: 世宗、章宗两朝受重用，任翰林供奉等职。文风典雅，有诗集及《金丹赋》传世，《苏门花坞》广为流传。
+    source_id: s0008
+  - year_label: 大定末年
+    precision: circa
+    type: 卒
+    title: 母丧哀毁而卒
+    description: 性至孝，母病逝后哀伤过度，于服丧期间病卒于家——「四元状元」以孝终。
+    source_id: s0018
+career:
+  first_office: 翰林供奉（破格从六品）
+  first_category: 学政文教
+  final_office: 翰林供奉
+  final_category: 学政文教
