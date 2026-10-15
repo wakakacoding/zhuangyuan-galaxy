@@ -119,6 +119,16 @@ const nameOf = (id: string) => personById.get(id)?.name ?? externalById.get(id)?
 // 同年自动派生：同朝同科年（dynasty+exam_year）的两两连边，derived 标记，与人工边去重
 const pairKey = (a: string, b: string, type: string) => [a, b].sort().join('|') + '#' + type;
 const existingPairs = new Set(manualRelations.map((r) => pairKey(r.from, r.to, r.type)));
+
+// 唯一性铁律（M5-c A5 新增）：同对同型只允许一条
+// 背景：2026-10-15 A5 对账发现 relations.yaml 有 5 组同对同型重复边（批次追加与早期边撞车、note 措辞不同），
+// 会在星图上画成重复连线并虚增计数。此处把校验落到构建期，批量追加撞车即 CI 拦截。
+const manualSeen = new Set<string>();
+for (const r of manualRelations) {
+  const k = pairKey(r.from, r.to, r.type);
+  if (manualSeen.has(k)) err(`关系重复：${nameOf(r.from)}↔${nameOf(r.to)}（${r.from}↔${r.to}）类型「${r.type}」出现多条——同对同型只应保留一条`);
+  manualSeen.add(k);
+}
 const derivedRelations: Relation[] = [];
 const cohorts = new Map<string, Person[]>();
 for (const p of persons) {
