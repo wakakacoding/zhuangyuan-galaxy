@@ -28,6 +28,23 @@ export interface SourceItem {
   id: string; title: string; author?: string; juan?: string; quote?: string;
   tier: 'A' | 'B' | 'C'; url?: string; note?: string;
 }
+export interface ExternalStub {
+  id: string;
+  name: string;
+  kind: 'external';
+  birth_year?: number;
+  death_year?: number;
+  index_year?: number;
+  note?: string;
+  cbdb_id?: number;
+  source_id?: string;
+  related: { id: string; name: string; type: string; note?: string }[];
+}
+
+export function isExternalStub(value: object | null | undefined): value is ExternalStub {
+  return !!value && 'kind' in value && (value as { kind?: string }).kind === 'external';
+}
+
 export interface PersonDetailData {
   id: string; name: string; zi?: string; hao?: string;
   birth_year?: number; death_year?: number; birth_circa?: boolean; death_circa?: boolean;
@@ -35,25 +52,49 @@ export interface PersonDetailData {
   dynasty: string; reign?: string; exam_year: number; ganzhi?: string; ke_ci?: string;
   rank_detail: string; bio_short?: string; tags: string[];
   disputed: boolean; dispute_note?: string;
+  research_status?: 'uncompiled' | 'compiled' | 'disputed';
   career?: CareerInfo;
   events: EventItem[]; sources: SourceItem[];
 }
 
 const cache = new Map<string, Promise<unknown>>();
+
+/** 测试替身。未设置时走 fetch。只用于模拟失败、乱序和重试。 */
+export type LoadFetch = (url: string) => Promise<unknown>;
+let loadFetch: LoadFetch | null = null;
+export function setLoadFetch(fn: LoadFetch | null) { loadFetch = fn; }
+
+/** 丢掉这一条的失败缓存。成功结果保留，不影响正在进行的另一次请求。 */
+export function invalidateLoad(url: string) {
+  const pending = cache.get(url);
+  if (!pending) return;
+  void pending.then(
+    () => {},
+    () => { if (cache.get(url) === pending) cache.delete(url); },
+  );
+}
+
 const load = <T>(url: string): Promise<T> => {
-  if (!cache.has(url)) {
-    cache.set(url, fetch(u(url)).then((r) => {
-      if (!r.ok) throw new Error(`加载失败: ${url}`);
-      return r.json();
-    }));
-  }
-  return cache.get(url) as Promise<T>;
+  const hit = cache.get(url);
+  if (hit) return hit as Promise<T>;
+  const pending = (loadFetch ? loadFetch(url) : fetch(u(url)).then((r) => {
+    if (!r.ok) throw new Error(`加载失败: ${url}`);
+    return r.json();
+  })).then(
+    (data) => data,
+    (err) => {
+      if (cache.get(url) === pending) cache.delete(url);
+      throw err;
+    },
+  );
+  cache.set(url, pending);
+  return pending as Promise<T>;
 };
 
 export const loadIndex = () => load<IndexEntry[]>('/data/person-index.json');
 export const loadDynasties = () => load<DynastyMeta[]>('/data/dynasties.json');
 export const loadStats = () => load<any>('/data/stats.json');
-export const loadPerson = (id: string) => load<PersonDetailData>(`/data/person/${id}.json`);
+export const loadPerson = (id: string) => load<PersonDetailData | ExternalStub>(`/data/person/${id}.json`);
 
 // ---- 籍贯地图（geo.json v2 + 分朝 GeoJSON 切片） ----
 export interface GeoPoint {

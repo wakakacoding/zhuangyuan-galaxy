@@ -428,7 +428,7 @@ export default function StarMap() {
     };
   }, [layout, scheduleDraw]);
 
-  // 筛选联动：不匹配降透明度
+  // 筛选联动：不匹配的星降透明度，不从星图删除
   useEffect(() => {
     const st = stateRef.current;
     if (!st.stars.length) return;

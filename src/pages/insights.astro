@@ -84,16 +84,30 @@ const compN: number = stats.total;
         yName=" 人"
         ariaLabel="夺魁年龄分布直方图"
       />
-      <p class="mb-2 mt-4 text-xs text-miDim">最年轻的十位（平均夺魁年龄 {stats.avg_age} 岁）：</p>
+      <p class="mb-2 mt-4 text-xs text-miDim">
+        最年轻的十位（平均夺魁年龄 {stats.avg_age} 岁；仅计生年确切、且状元身份无争议者）：
+      </p>
       <ol class="space-y-1.5">
-        {stats.youngest.map((a: { name: string; dynasty: string; age: number }, i: number) => (
+        {stats.youngest.map((a: { id: string; name: string; dynasty: string; age: number }, i: number) => (
           <li class="flex items-baseline gap-3 text-sm">
             <span class="w-6 text-right text-jin/70">{i + 1}.</span>
-            <span class="text-mi">{a.name}</span>
+            <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/person/${a.id}`} class="text-mi underline decoration-jin/40">{a.name}</a>
             <span class="text-miDim">{dynName(a.dynasty)} · {a.age} 岁夺魁</span>
           </li>
         ))}
       </ol>
+      {stats.youngest_uncertain?.length > 0 && (
+        <div class="mt-3 rounded-md border border-miDim/25 px-3 py-2">
+          <p class="mb-1 text-xs text-miDim">
+            存疑参考：以下诸人生年系「约」或其状元身份存疑，年龄不宜与其他条目等量齐观，故未计入上方确定榜。
+          </p>
+          <p class="text-xs leading-relaxed text-miDim">
+            {stats.youngest_uncertain
+              .map((a: { name: string; dynasty: string; age: number }) => `${a.name}（${dynName(a.dynasty)}·${a.age} 岁）`)
+              .join('、')}
+          </p>
+        </div>
+      )}
     </section>
 
     {/* q2 分朝平均年龄 */}
@@ -120,6 +134,9 @@ const compN: number = stats.total;
         <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">哪个姓氏出状元最多？</h2>
         <ShareButton client:load anchor="q3" />
       </div>
+      <p class="mb-2 text-xs text-miDim">
+        口径：姓氏经繁简归一后统计（如「張」并入「张」），复姓（独孤 / 鲜于 / 徒单）整体计作一姓。
+      </p>
       <div class="grid grid-cols-1 gap-1.5 sm:grid-cols-2 sm:gap-x-8">
         {stats.top_surnames.slice(0, 10).map(([s, n]: [string, number]) => (
           <div class="flex items-center gap-3 text-sm">

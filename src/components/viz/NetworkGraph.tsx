@@ -7,10 +7,11 @@ import * as echarts from 'echarts/core';
 import { GraphChart } from 'echarts/charts';
 import { TooltipComponent } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
-import { selectedDynasties, searchQuery } from '../../store/filters';
+import { selectedDynasties, searchQuery, matchEntry } from '../../store/filters';
 import { selectPerson } from '../../store/selection';
+import { canOpenPerson } from '../../lib/openable';
 import {
-  loadEdges, loadIndex, loadDynasties, RELATION_STYLE,
+  loadEdges, loadIndex, loadDynasties, invalidateLoad, RELATION_STYLE,
   type EdgesData, type IndexEntry, type DynastyMeta, type EdgeItem,
 } from '../../lib/data';
 import GuidePopover from '../shell/GuidePopover';
@@ -26,10 +27,12 @@ export default function NetworkGraph() {
   const [index, setIndex] = useState<IndexEntry[]>([]);
   const [dynasties, setDynasties] = useState<DynastyMeta[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [attempt, setAttempt] = useState(0);
   const [offTypes, setOffTypes] = useState<Set<string>>(new Set()); // 被关闭的关系类型
   const [egoId, setEgoId] = useState<string | null>(null);
   const [activeComm, setActiveComm] = useState<number | null>(null);
   const [showExternals, setShowExternals] = useState(false); // 默认「仅状元」，外延人物按需展开
+  const [pickedId, setPickedId] = useState<string | null>(null);
 
   const dynFilter = useStore(selectedDynasties);
   const query = useStore(searchQuery);
@@ -37,6 +40,9 @@ export default function NetworkGraph() {
   // ---------- 数据加载 ----------
   useEffect(() => {
     let dead = false;
+    invalidateLoad('/data/edges.json');
+    invalidateLoad('/data/person-index.json');
+    invalidateLoad('/data/dynasties.json');
     (async () => {
       try {
         const [e, idx, d] = await Promise.all([loadEdges(), loadIndex(), loadDynasties()]);
@@ -47,7 +53,7 @@ export default function NetworkGraph() {
       }
     })();
     return () => { dead = true; };
-  }, []);
+  }, [attempt]);
 
   const personById = useMemo(() => new Map(index.map((p) => [p.id, p])), [index]);
   const externalById = useMemo(
@@ -129,7 +135,7 @@ export default function NetworkGraph() {
       };
       chartRef.current.on('click', (p) => {
         const id = pickId(p);
-        if (id && !id.startsWith('w')) selectPerson(id); // 外延人物无人物帖，点击不跳转
+        if (id) setPickedId(id);
       });
       chartRef.current.on('dblclick', (p) => {
         const id = pickId(p);
@@ -142,12 +148,7 @@ export default function NetworkGraph() {
       if (externalById.has(id)) return true; // 外延人物不受朝代/搜索筛选影响
       const p = personById.get(id);
       if (!p) return false;
-      if (dynFilter.length && !dynFilter.includes(p.dynasty)) return false;
-      if (query.trim()) {
-        const q = query.trim();
-        if (!(`${p.name}${p.native_hist}${p.native_modern ?? ''}`.includes(q))) return false;
-      }
-      return true;
+      return matchEntry(p, dynFilter, query);
     };
 
     const nodes = [...connectedIds].map((id) => {
@@ -236,15 +237,23 @@ export default function NetworkGraph() {
 
   // 自适应
   useEffect(() => {
+    if (!chartEl.current || !data) return;
     const ro = new ResizeObserver(() => chartRef.current?.resize());
-    if (chartEl.current) ro.observe(chartEl.current);
+    ro.observe(chartEl.current);
     return () => ro.disconnect();
-  }, []);
+  }, [data]);
 
-  if (loadError) return <p className="font-serif text-sm text-zhusha">关系数据加载失败：{loadError}</p>;
+  if (loadError) {
+    return (
+      <div className="flex flex-col items-start gap-2">
+        <p className="font-serif text-sm text-zhusha" role="alert">关系数据加载失败：{loadError}</p>
+        <button type="button" onClick={() => { setLoadError(null); setAttempt((n) => n + 1); }} className="rounded-full border border-jin/50 px-4 py-1.5 font-serif text-xs text-jin">重试</button>
+      </div>
+    );
+  }
   if (!data) return <p className="font-serif text-sm text-miDim">织网中…</p>;
 
-  const coverage = new Set(data.edges.flatMap((e) => [e.from, e.to])).size;
+  const coverage = new Set(data.edges.flatMap((e) => [e.from, e.to]));
   const egoName = egoId ? personById.get(egoId)?.name : null;
 
   return (
@@ -281,12 +290,17 @@ export default function NetworkGraph() {
           </button>
         )}
         <span className="ml-auto font-serif text-[11px] text-miDim/70">
-          已收录关系 {data.edges.length} 条 · 覆盖 {coverage}/{index.length} 人
+          已收录关系 {data.edges.length} 条 · 状元 {index.filter((p) => coverage.has(p.id)).length}/{index.length} · 外延 {data.externals?.filter((e) => coverage.has(e.id)).length ?? 0}/{data.externals?.length ?? 0} · 筛选只降亮
         </span>
       </div>
 
+      {activeEdges.length === 0 && (
+        <div className="mb-3 flex items-center justify-between rounded-lg border border-dashed border-miDim/30 px-3 py-2" role="status">
+          <p className="font-serif text-xs text-miDim">当前没有可显示的关系。</p>
+          <button type="button" onClick={() => { setOffTypes(new Set()); setShowExternals(true); }} className="rounded-full border border-jin/40 px-3 py-1 font-serif text-xs text-jin">恢复全部关系</button>
+        </div>
+      )}
       <div className="flex flex-col gap-3 md:flex-row">
-        {/* 主图 */}
         <div className="relative min-w-0 flex-1">
           <div ref={chartEl} className="h-[62vh] w-full rounded-lg border border-jin/15 bg-xuan/30 md:h-[560px]" />
           <GuidePopover title="关系网络怎么读">
@@ -299,6 +313,12 @@ export default function NetworkGraph() {
               关系考据刚起步，唐孔氏、清翁氏等家族网络最完整；大量「史中无痕」者暂无关系可画——空白也是史实。
             </p>
           </GuidePopover>
+          {pickedId && (
+            <div className="absolute bottom-2 left-2 z-10 flex gap-2 rounded-lg border border-jin/30 bg-dai/95 p-2">
+              <button type="button" onClick={() => canOpenPerson(pickedId) && selectPerson(pickedId)} disabled={!canOpenPerson(pickedId)} className="rounded-full border border-jin/50 px-3 py-1 font-serif text-xs text-jin disabled:opacity-40">查看人物</button>
+              <button type="button" onClick={() => setEgoId(pickedId)} className="rounded-full border border-miDim/40 px-3 py-1 font-serif text-xs text-mi">聚焦关系</button>
+            </div>
+          )}
           {egoId && (
             <button
               onClick={() => setEgoId(null)}

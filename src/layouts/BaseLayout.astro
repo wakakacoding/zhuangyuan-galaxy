@@ -7,7 +7,7 @@ interface Props {
   title: string;
   description?: string;
 }
-const { title, description = '一眼望尽 1283 年：从唐武德五年到清光绪三十年，654 位状元的人生星河' } = Astro.props;
+const { title, description = '一眼望尽 1283 年：从唐武德五年到清光绪三十年，历代状元的人生星河' } = Astro.props;
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 const nav = [
   { href: '/', label: '星图' },
@@ -35,10 +35,21 @@ const currentPath = stripBase(current.replace(/\/$/, '')) || '/';
         <span class="text-lg font-bold tracking-widest text-jin">状元星河</span>
         <span class="hidden text-[10px] tracking-[0.3em] text-miDim sm:inline">622 – 1904</span>
       </a>
-      <div class="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto">
+      <details class="relative md:hidden">
+        <summary class="cursor-pointer list-none rounded border border-jin/30 px-2 py-1 text-xs text-jin">页面</summary>
+        <div class="absolute left-0 top-8 z-30 w-36 rounded-lg border border-jin/25 bg-dai p-1 shadow-xl">
+          {nav.map((n) => (
+            <a href={`${BASE}${n.href === '/' ? '' : n.href}/`} data-nav="1" class={`block rounded px-2 py-2 text-sm ${
+              currentPath === n.href ? 'text-jin' : 'text-miDim'
+            }`}>{n.label}</a>
+          ))}
+        </div>
+      </details>
+      <div class="hidden min-w-0 flex-1 items-center gap-1 md:flex" id="site-nav">
         {nav.map((n) => (
           <a
             href={`${BASE}${n.href === '/' ? '' : n.href}/`}
+            data-nav="1"
             class={`whitespace-nowrap rounded px-2.5 py-1.5 text-sm transition-colors sm:px-3 ${
               currentPath === n.href ? 'bg-jin/15 text-jin' : 'text-miDim hover:text-mi'
             }`}
@@ -53,7 +64,31 @@ const currentPath = stripBase(current.replace(/\/$/, '')) || '/';
   </body>
 </html>
 
+<script>
+  const keep = ['dyn', 'q'];
+  const explore = ['/', '/map', '/network'];
+  const base = document.querySelector('base')?.getAttribute('href') ?? '';
+  for (const a of document.querySelectorAll('a[data-nav]')) {
+    a.addEventListener('click', (event) => {
+      const url = new URL(a.getAttribute('href') || '/', window.location.origin);
+      const path = url.pathname.replace(/\/$/, '') || '/';
+      const bare = path.replace(new RegExp('^' + base.replace(/\/$/, '')), '') || '/';
+      if (!explore.includes(bare)) return;
+      const current = new URLSearchParams(window.location.search);
+      const next = new URLSearchParams();
+      for (const key of keep) {
+        const value = current.get(key);
+        if (value) next.set(key, value);
+      }
+      url.search = next.toString();
+      event.preventDefault();
+      window.location.assign(url.toString());
+    });
+  }
+</script>
+
 <style is:global>
+  :focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
   ::selection { background: rgba(201, 162, 39, 0.35); }
   ::-webkit-scrollbar { width: 8px; height: 8px; }
   ::-webkit-scrollbar-thumb { background: rgba(154, 165, 177, 0.25); border-radius: 4px; }

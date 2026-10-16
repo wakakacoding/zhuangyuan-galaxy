@@ -76,6 +76,7 @@ export const PersonSchema = z.object({
   tags: z.array(z.string()).default([]),
   disputed: z.boolean().default(false), // 状元身份存疑
   dispute_note: z.string().optional(),
+  research_status: z.enum(['uncompiled', 'compiled', 'disputed']).default('uncompiled'),
   career: CareerSchema.optional(), // 仕途轻量字段（聚合桑基用）
   events: z.array(EventSchema).default([]),
 });

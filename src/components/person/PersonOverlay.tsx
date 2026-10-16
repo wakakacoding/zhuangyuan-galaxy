@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useStore } from '@nanostores/react';
-import { selectedPersonId, selectPerson, popPerson, personStack } from '../../store/selection';
-import { loadPerson, loadDynasties, EVENT_COLOR, type PersonDetailData, type DynastyMeta } from '../../lib/data';
+import { selectedPersonId, selectPerson, popPerson, pushPerson, personStack } from '../../store/selection';
+import { loadPerson, loadDynasties, EVENT_COLOR, isExternalStub, type PersonDetailData, type ExternalStub, type DynastyMeta } from '../../lib/data';
+import { settlePersonLoad } from '../../lib/personLoad';
 import { lifespan } from '../../lib/era';
 import RelationSection from './RelationSection';
 import CareerRiver from '../viz/CareerRiver';
@@ -16,27 +17,74 @@ const TIER_STYLE: Record<string, { label: string; cls: string }> = {
 export default function PersonOverlay() {
   const id = useStore(selectedPersonId);
   const stack = useStore(personStack);
-  const [person, setPerson] = useState<PersonDetailData | null>(null);
+  const [record, setRecord] = useState<PersonDetailData | ExternalStub | null>(null);
   const [dynasties, setDynasties] = useState<DynastyMeta[]>([]);
   const [loading, setLoading] = useState(false);
+  const [failedId, setFailedId] = useState<string | null>(null);
+  const [attempt, setAttempt] = useState(0);
   const [dragY, setDragY] = useState(0);
   const dragRef = useRef<{ startY: number; dy: number } | null>(null);
+  const panelRef = useRef<HTMLElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => { loadDynasties().then(setDynasties).catch(() => {}); }, []);
 
   useEffect(() => {
-    if (!id) { setPerson(null); return; }
+    if (!id) { setRecord(null); setFailedId(null); setLoading(false); return; }
+    let alive = true;
+    setRecord(null);
+    setFailedId(null);
     setLoading(true);
-    loadPerson(id).then((p) => { setPerson(p); setLoading(false); }).catch(() => setLoading(false));
-  }, [id]);
+    panelRef.current?.scrollTo(0, 0);
+    loadPerson(id).then((p) => {
+      const settled = settlePersonLoad(id, alive ? id : null, { ok: true, person: p });
+      if (!settled.accept) return;
+      setRecord(settled.person);
+      setFailedId(settled.failedId);
+      setLoading(false);
+    }).catch(() => {
+      const settled = settlePersonLoad(id, alive ? id : null, { ok: false });
+      if (!settled.accept) return;
+      setRecord(null);
+      setFailedId(settled.failedId);
+      setLoading(false);
+    });
+    return () => { alive = false; };
+  }, [id, attempt]);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') selectPerson(null); };
+    if (!id) return;
+    openerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    panelRef.current?.querySelector('button')?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (panelRef.current?.querySelector('[aria-expanded="true"]')) return;
+        e.preventDefault();
+        selectPerson(null);
+      }
+      if (e.key !== 'Tab' || !panelRef.current) return;
+      const items = [...panelRef.current.querySelectorAll('button, a, input, summary')].filter(
+        (el): el is HTMLElement => el instanceof HTMLElement && !el.hasAttribute('disabled'),
+      );
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = previousOverflow;
+      openerRef.current?.focus();
+    };
+  }, [id]);
 
   if (!id) return null;
+  const stub = isExternalStub(record) ? record : null;
+  const person = record && !isExternalStub(record) ? record : null;
   const dyn = dynasties.find((d) => d.key === person?.dynasty);
   const sortedEvents = [...(person?.events ?? [])].sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
 
@@ -61,6 +109,10 @@ export default function PersonOverlay() {
     <div className="fixed inset-0 z-40">
       <div className="absolute inset-0 bg-black/50" onClick={() => selectPerson(null)} />
       <aside
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="person-dialog-title"
         className="absolute right-0 top-0 h-full w-full max-w-md overflow-y-auto border-l border-jin/25 bg-dai shadow-2xl max-md:top-auto max-md:bottom-0 max-md:h-[92dvh] max-md:max-w-none max-md:rounded-t-2xl max-md:border-l-0 max-md:border-t md:w-[480px]"
         style={dragY ? { transform: `translateY(${dragY}px)`, transition: 'none' } : undefined}
       >
@@ -77,7 +129,7 @@ export default function PersonOverlay() {
         {/* 竖排题签 */}
         <div className="pointer-events-none absolute left-0 top-0 h-full w-10 border-r border-jin/10" style={{ writingMode: 'vertical-rl' }}>
           <span className="pt-6 text-center font-serif text-xl tracking-[0.5em] text-jin/70">
-            {person?.name ?? ''}
+            {person?.name ?? stub?.name ?? ''}
           </span>
         </div>
 
@@ -93,19 +145,48 @@ export default function PersonOverlay() {
             )}
             <button
               onClick={() => selectPerson(null)}
-              className="rounded-full border border-miDim/30 px-3 py-1 font-serif text-xs text-miDim hover:border-jin/50 hover:text-jin"
+              className="min-h-11 rounded-full border border-miDim/30 px-4 font-serif text-sm text-miDim hover:border-jin/50 hover:text-jin"
             >
               ✕ 收起
             </button>
           </div>
 
-          {loading && <p className="font-serif text-sm text-miDim">读取档案…</p>}
+          {loading && (
+            <p className="font-serif text-sm text-miDim" role="status">正在读取 {id} 的档案…</p>
+          )}
 
-          {person && (
+          {failedId === id && !loading && (
+            <div className="rounded-lg border border-zhusha/50 bg-zhusha/10 p-4" role="alert">
+              <p className="font-serif text-sm text-mi">档案没有打开</p>
+              <p className="mt-1 font-serif text-xs leading-6 text-miDim">
+                {`${id} 的档案没有取到，可能是网络中断或这条记录尚未收录。`}
+              </p>
+              <div className="mt-3 flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => setAttempt((n) => n + 1)}
+                  className="rounded-full border border-jin/50 px-3 py-1 font-serif text-xs text-jin hover:bg-jin/10"
+                >
+                  重试
+                </button>
+                <button
+                  type="button"
+                  onClick={() => (stack.length > 1 ? popPerson() : selectPerson(null))}
+                  className="rounded-full border border-miDim/30 px-3 py-1 font-serif text-xs text-miDim hover:text-jin"
+                >
+                  {stack.length > 1 ? '返回上一帖' : '关闭'}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {stub && stub.id === id && <ExternalStubView stub={stub} />}
+
+          {person && person.id === id && (
             <>
               {/* 题签区 */}
               <header className="mb-5 border-b border-jin/20 pb-4">
-                <h2 className="font-serif text-3xl font-bold text-mi">
+                <h2 id="person-dialog-title" className="font-serif text-3xl font-bold text-mi">
                   {person.name}
                   {(person.zi || person.hao) && (
                     <span className="ml-3 text-sm font-normal text-miDim">
@@ -134,7 +215,7 @@ export default function PersonOverlay() {
               )}
 
               {/* 档案区 */}
-              <section className="mb-5 grid grid-cols-2 gap-2 font-serif text-xs">
+              <section className="mb-5 grid grid-cols-1 gap-2 font-serif text-sm sm:grid-cols-2">
                 <div className="rounded bg-xuan/60 p-2.5">
                   <span className="text-miDim">生卒</span>
                   <p className="mt-0.5 text-mi">{lifespan(person.birth_year, person.death_year, person.birth_circa, person.death_circa)}</p>
@@ -202,8 +283,8 @@ export default function PersonOverlay() {
                 </section>
               ) : (
                 <section className="mb-5 rounded-lg border border-dashed border-miDim/25 p-4 text-center">
-                  <p className="font-serif text-sm text-miDim">榜上有名，史中无痕</p>
-                  <p className="mt-1 font-serif text-xs text-miDim/60">现存史料仅录其姓名科年，详传待考。</p>
+                  <p className="font-serif text-sm text-miDim">本站尚未整理这份档案</p>
+                  <p className="mt-1 font-serif text-xs text-miDim/60">目前只录姓名和科年。这不表示史料不存在，本站档案完整度仍在补齐。</p>
                 </section>
               )}
 
@@ -219,7 +300,9 @@ export default function PersonOverlay() {
                       <div key={s.id} className="flex items-start gap-2 rounded bg-xuan/60 px-2.5 py-2">
                         <TierMark tier={s.tier} />
                         <div className="font-serif text-xs">
-                          <span className="text-mi">《{s.title}》{s.author && <span className="text-miDim"> {s.author}</span>}</span>
+                          <span className="text-mi">《{s.title}》{s.juan ? ` · ${s.juan}` : ''}{s.author && <span className="text-miDim"> {s.author}</span>}</span>
+                          {s.quote && <p className="mt-0.5 text-miDim">{s.quote}</p>}
+                          {s.url && <a href={s.url} target="_blank" rel="noopener" className="mt-1 inline-block text-jin underline">核查原文</a>}
                           {s.note && <p className="mt-0.5 text-miDim/70">{s.note}</p>}
                         </div>
                       </div>
@@ -228,6 +311,8 @@ export default function PersonOverlay() {
                   <p className="mt-2 font-kai text-[11px] text-miDim/60">
                     可信度：A=正史/碑录/朱卷　B=方志/年谱/整理名录　C=笔记传说
                   </p>
+                  <a href={`${import.meta.env.BASE_URL}person/${person.id}`} className="mt-3 inline-block font-serif text-xs text-jin underline">完整档案</a>
+                  <a href={`https://github.com/wakakacoding/zhuangyuan-galaxy/issues/new?template=errata.yml&title=${encodeURIComponent('[勘误] ' + person.id + ' ' + person.name)}`} className="ml-3 inline-block font-serif text-xs text-miDim underline">提交勘误</a>
                 </section>
               )}
             </>
@@ -253,5 +338,49 @@ function SourceBadge({ source }: { source: { tier: 'A' | 'B' | 'C'; title: strin
       <TierMark tier={source.tier} />
       《{source.title}》
     </span>
+  );
+}
+
+function ExternalStubView({ stub }: { stub: ExternalStub }) {
+  return (
+    <>
+      <header className="mb-5 border-b border-jin/20 pb-4">
+        <p className="mb-2 font-serif text-xs tracking-widest text-jin">外延人物 · 非状元</p>
+        <h2 id="person-dialog-title" className="font-serif text-3xl font-bold text-mi">{stub.name}</h2>
+        <p className="mt-2 font-serif text-xs text-miDim">不计入状元名录与统计。生卒或年代缺失处保持空白。</p>
+      </header>
+      <section className="mb-5 grid grid-cols-2 gap-2 font-serif text-xs">
+        <div className="rounded bg-xuan/60 p-2.5">
+          <span className="text-miDim">生卒</span>
+          <p className="mt-0.5 text-mi">{lifespan(stub.birth_year, stub.death_year)}</p>
+        </div>
+        <div className="rounded bg-xuan/60 p-2.5">
+          <span className="text-miDim">索引年</span>
+          <p className="mt-0.5 text-mi">{stub.index_year ? `${stub.index_year} 年` : '未录'}</p>
+        </div>
+      </section>
+      {stub.note && <p className="mb-5 font-serif text-sm leading-7 text-mi/90">{stub.note}</p>}
+      <section className="mb-5">
+        <h3 className="mb-3 font-serif text-sm font-bold tracking-widest text-jin">相关状元</h3>
+        {stub.related.length === 0 ? (
+          <p className="font-serif text-xs text-miDim">暂无站内关联。</p>
+        ) : (
+          <div className="grid grid-cols-1 gap-1.5">
+            {stub.related.map((r) => (
+              <button
+                key={r.id + r.type}
+                type="button"
+                onClick={() => pushPerson(r.id)}
+                className="flex items-center gap-2 rounded-lg border border-miDim/15 bg-xuan/60 px-3 py-2 text-left hover:border-jin/40"
+              >
+                <span className="font-serif text-sm text-mi">{r.name}</span>
+                <span className="font-serif text-xs text-jin/80">{r.type}</span>
+                {r.note && <span className="ml-auto line-clamp-1 font-serif text-[11px] text-miDim">{r.note}</span>}
+              </button>
+            ))}
+          </div>
+        )}
+      </section>
+    </>
   );
 }

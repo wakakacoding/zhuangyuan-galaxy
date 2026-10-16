@@ -8,8 +8,10 @@
     "build": "npm run build:maps && npm run build:data && npm run build:panorama && astro build",
     "preview": "astro preview",
     "build:data": "tsx scripts/build-data.ts",
+    "test:data": "node --test scripts/lifespan.test.mjs scripts/build-guard.test.mjs scripts/external-stub.test.mjs scripts/search-match.test.mjs scripts/history-nav.test.mjs && tsx scripts/load-race.test.mjs && tsx scripts/share-state.test.mjs",
     "build:maps": "tsx scripts/build-geo-maps.ts",
-    "build:panorama": "node scripts/render-panorama.mjs"
+    "build:panorama": "node scripts/render-panorama.mjs",
+    "lighthouse": "node scripts/lighthouse-check.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",

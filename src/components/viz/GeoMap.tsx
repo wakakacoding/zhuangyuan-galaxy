@@ -13,7 +13,7 @@ import {
 } from '../../store/filters';
 import { selectPerson } from '../../store/selection';
 import {
-  loadGeo, loadDynasties, loadIndex, loadMapSlice,
+  loadGeo, loadDynasties, loadIndex, loadMapSlice, invalidateLoad,
   type GeoData, type DynastyMeta, type IndexEntry, type GeoPoint,
 } from '../../lib/data';
 import GuidePopover from '../shell/GuidePopover';
@@ -43,7 +43,10 @@ export default function GeoMap() {
   const [showMigration, setShowMigration] = useState(true);
   const [playing, setPlaying] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [sliceError, setSliceError] = useState<string | null>(null);
   const [sliceLoading, setSliceLoading] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  const [sliceAttempt, setSliceAttempt] = useState(0);
 
   const sliceKey = useStore(mapSlice);
   const region = useStore(selectedRegion);
@@ -57,6 +60,10 @@ export default function GeoMap() {
   // ---------- 基础数据 + 初始化 ----------
   useEffect(() => {
     let dead = false;
+    setLoadError(null);
+    invalidateLoad('/data/geo.json');
+    invalidateLoad('/data/dynasties.json');
+    invalidateLoad('/data/person-index.json');
     (async () => {
       try {
         const [g, d, idx] = await Promise.all([loadGeo(), loadDynasties(), loadIndex()]);
@@ -67,7 +74,7 @@ export default function GeoMap() {
       }
     })();
     return () => { dead = true; };
-  }, []);
+  }, [attempt]);
 
   useEffect(() => {
     if (!baseReady || !chartEl.current) return;
@@ -83,16 +90,21 @@ export default function GeoMap() {
     if (!baseReady || slices.has(currentKey)) return;
     let dead = false;
     setSliceLoading(true);
+    setSliceError(null);
+    invalidateLoad(`/data/maps/${currentKey}.json`);
     loadMapSlice(currentKey)
       .then((gj) => {
         if (dead) return;
         echarts.registerMap(HIST(currentKey), gj as never);
         setSlices((s) => new Set(s).add(currentKey));
       })
-      .catch((e) => setLoadError(e instanceof Error ? e.message : '切片加载失败'))
+      .catch((e) => {
+        if (dead) return;
+        setSliceError(e instanceof Error ? e.message : '切片加载失败');
+      })
       .finally(() => !dead && setSliceLoading(false));
     return () => { dead = true; };
-  }, [currentKey, baseReady, slices]);
+  }, [currentKey, baseReady, slices, sliceAttempt]);
 
   // ---------- 全局筛选变化：当前朝代不在筛选内时跳到首个命中朝 ----------
   useEffect(() => {
@@ -104,18 +116,20 @@ export default function GeoMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dynFilter, sorted.length]);
 
-  // ---------- 播放 ----------
+  const playback = dynFilter.length ? sorted.filter((d) => dynFilter.includes(d.key)) : sorted;
+
+  // ---------- 播放：有朝代筛选时只在这些朝之间走 ----------
   useEffect(() => {
-    if (!playing || sorted.length < 2) return;
+    if (!playing || playback.length < 2) return;
     const t = setInterval(() => {
-      const i = sorted.findIndex((d) => d.key === mapSlice.get());
+      const i = playback.findIndex((d) => d.key === mapSlice.get());
       const cur = i < 0 ? 0 : i;
-      if (cur >= sorted.length - 1) { setPlaying(false); return; }
-      setMapSlice(sorted[cur + 1].key);
+      if (cur >= playback.length - 1) { setPlaying(false); return; }
+      setMapSlice(playback[cur + 1].key);
     }, 2000);
     return () => clearInterval(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playing, sorted.length]);
+  }, [playing, playback]);
 
   // ---------- 深链修正：?region=X 但当前切片无此政区时，跳到拥有它的首个朝代 ----------
   useEffect(() => {
@@ -139,7 +153,7 @@ export default function GeoMap() {
     const regionAgg = new Map((geo.regions[currentKey] ?? []).map((r) => [r.name, r.count]));
     const pts = geo.points.filter((p) => p.dynasty === currentKey);
 
-    // 全局筛选 → 命中集合（朝代筛选已保证只剩当前朝，这里主要吃关键词）
+    // 全局筛选 → 命中集合。热力只画命中者；散点保留未命中但降亮。
     const filterActive = dynFilter.length > 0 || query.trim().length > 0;
     const matched = new Set(
       index.filter((e) => matchEntry(e, dynFilter, query)).map((e) => e.id),
@@ -231,7 +245,7 @@ export default function GeoMap() {
             itemStyle: { color: '#C03F2B' },
             label: {
               show: Boolean(curCent) && showMigration, position: 'right', color: '#F2EAD8', fontSize: 11,
-              formatter: () => (curCent ? `${current.name}重心 · n=${curCent.count}` : ''),
+              formatter: () => (curCent ? `${current.name}重心 · 全量 ${curCent.count}` : ''),
             },
             data: showMigration && curCent ? [{ value: [curCent.lng, curCent.lat] }] : [],
             name: 'centroid',
@@ -256,8 +270,13 @@ export default function GeoMap() {
   }, [geo, sorted, currentKey, slices, viewMode, showMigration, dynFilter, query, region, index, current]);
 
   // ---------- UI ----------
-  if (loadError) {
-    return <div className="flex h-full items-center justify-center text-sm text-zhusha">地图数据加载失败：{loadError}</div>;
+  if (loadError && !geo) {
+    return (
+      <div className="flex h-full flex-col items-center justify-center gap-3 text-sm text-zhusha">
+        <p role="alert">地图数据加载失败：{loadError}</p>
+        <button type="button" onClick={() => setAttempt((n) => n + 1)} className="rounded-full border border-jin/50 px-4 py-1.5 font-serif text-jin">重试</button>
+      </div>
+    );
   }
   if (!geo || !sorted.length) {
     return <div className="flex h-full items-center justify-center text-sm text-miDim">舆图铺展中…</div>;
@@ -267,6 +286,13 @@ export default function GeoMap() {
   return (
     <div className="relative h-full w-full">
       <div ref={chartEl} className="h-full w-full" />
+      {sliceError && (
+        <div className="absolute left-3 top-3 z-10 max-w-xs rounded-lg border border-zhusha/40 bg-dai/95 p-3 font-serif text-xs text-mi" role="alert">
+          <p>这一朝的底图没有载入：{sliceError}</p>
+          <p className="mt-1 text-miDim">已保留上一张成功的地图，朝代切换仍然可用。</p>
+          <button type="button" onClick={() => setSliceAttempt((n) => n + 1)} className="mt-2 rounded-full border border-jin/50 px-3 py-1 text-jin">重试这一朝</button>
+        </div>
+      )}
       <GuidePopover title="籍贯地图怎么读">
         散点是状元籍贯，底色为各朝行政区划。拖动时间滑块可见状元产地的千年南移：唐代重心尚在黄河中下游，北宋移至江淮，明清沉入江浙——背后正是经济重心南移与南方书院的兴起。金色轨迹为各朝重心连线；辽金元样本稀少（n&lt;8 以虚线示警），空白同样是史实。
       </GuidePopover>

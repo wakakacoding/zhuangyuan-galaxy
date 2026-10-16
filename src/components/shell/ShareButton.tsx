@@ -1,66 +1,74 @@
 import { useState } from 'react';
 
-// 分享按钮：URL 即现场（筛选/选中人物/ego/地图切片全编码在 URL），一键复制或调起系统分享
+const SHARE_KEYS = ['dyn', 'q', 'p', 'slice', 'region', 'ego', 'nt', 'nx'];
+
+export function shareUrl(current: URL, anchor?: string): string {
+  const params = new URLSearchParams();
+  for (const key of SHARE_KEYS) {
+    const value = current.searchParams.get(key);
+    if (value) params.set(key, value);
+  }
+  const hash = anchor ? '#' + anchor : current.hash;
+  const search = params.toString();
+  return `${current.origin}${current.pathname}${search ? '?' + search : ''}${hash}`;
+}
+
+export async function copyText(text: string, writer?: (value: string) => Promise<void>): Promise<boolean> {
+  try {
+    if (writer) await writer(text);
+    else await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export default function ShareButton({
   anchor,
   label = '分享',
   className = '',
 }: {
-  anchor?: string; // 可选锚点（问答页各答案卡用 #q1 等）
+  anchor?: string;
   label?: string;
   className?: string;
 }) {
-  const [copied, setCopied] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'copied' | 'manual'>('idle');
+  const [manualUrl, setManualUrl] = useState('');
 
   const share = async () => {
-    const url = `${window.location.origin}${window.location.pathname}${window.location.search}${anchor ? `#${anchor}` : window.location.hash}`;
-    const shareData = { title: document.title, url };
+    const url = shareUrl(new URL(window.location.href), anchor);
     try {
       if (navigator.share) {
-        await navigator.share(shareData);
+        await navigator.share({ title: document.title, url });
         return;
       }
-    } catch {
-      // 用户取消系统分享或不支持，落回复制
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return;
     }
-    try {
-      await navigator.clipboard.writeText(url);
-    } catch {
-      // 剪贴板 API 不可用（非安全上下文）时的兜底
-      const ta = document.createElement('textarea');
-      ta.value = url;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
+    const ok = await copyText(url);
+    if (ok) {
+      setStatus('copied');
+      setTimeout(() => setStatus('idle'), 2000);
+      return;
     }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setManualUrl(url);
+    setStatus('manual');
   };
 
   return (
-    <button
-      type="button"
-      onClick={share}
-      className={`inline-flex items-center gap-1 rounded-full border border-miDim/30 px-2.5 py-1 font-serif text-[11px] text-miDim transition hover:border-jin/60 hover:text-jin ${className}`}
-      title="复制本画面链接，打开即是当前现场"
-    >
-      {copied ? (
-        <>
-          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 6.5 5 9.5 10 2.5"/></svg>
-          已复制
-        </>
-      ) : (
-        <>
-          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.2">
-            <circle cx="9.5" cy="2.5" r="1.6" /><circle cx="2.5" cy="6" r="1.6" /><circle cx="9.5" cy="9.5" r="1.6" />
-            <path d="m4 5 3.8-2M4 7l3.8 2" />
-          </svg>
-          {label}
-        </>
+    <span className="inline-flex items-center gap-2">
+      <button
+        type="button"
+        onClick={share}
+        aria-live="polite"
+        className={`inline-flex items-center gap-1 rounded-full border border-miDim/30 min-h-11 px-3 py-2 font-serif text-sm text-miDim transition hover:border-jin/60 hover:text-jin ${className}`}
+        title="分享当前筛选、人物、地图或网络选择和问答位置。不包含悬停和临时图形位置。"
+      >
+        {status === 'copied' ? '已复制' : label}
+      </button>
+      {status === 'manual' && (
+        <input aria-label="手动复制链接" readOnly value={manualUrl} className="w-40 rounded border border-jin/30 bg-transparent px-2 py-1 font-serif text-[11px] text-mi" onFocus={(e) => e.currentTarget.select()} />
       )}
-    </button>
+    </span>
   );
 }

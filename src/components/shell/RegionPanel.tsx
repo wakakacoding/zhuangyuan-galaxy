@@ -1,22 +1,28 @@
 // 地区面板：点击历史政区后滑出该地区状元名单（当前朝代切片内）
 // 桌面右侧抽屉 / 移动端底部上滑卡片；URL ?region= 可分享
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useStore } from '@nanostores/react';
-import { selectedRegion, setRegion, mapSlice } from '../../store/filters';
+import { selectedRegion, setRegion, mapSlice, selectedDynasties, searchQuery, matchEntry } from '../../store/filters';
 import { selectPerson } from '../../store/selection';
-import { loadGeo, type GeoPoint } from '../../lib/data';
+import { loadGeo, loadIndex, type GeoPoint, type IndexEntry } from '../../lib/data';
 
 export default function RegionPanel() {
   const region = useStore(selectedRegion);
   const slice = useStore(mapSlice);
+  const dynasties = useStore(selectedDynasties);
+  const query = useStore(searchQuery);
   const [pts, setPts] = useState<GeoPoint[]>([]);
+  const [index, setIndex] = useState<IndexEntry[]>([]);
 
   useEffect(() => {
     if (!region) return;
     loadGeo().then((g) => {
       setPts(g.points.filter((p) => p.region === region && (!slice || p.dynasty === slice)));
     });
+    loadIndex().then(setIndex);
   }, [region, slice]);
+  const matched = useMemo(() => new Set(index.filter((p) => matchEntry(p, dynasties, query)).map((p) => p.id)), [index, dynasties, query]);
+  const shown = pts.filter((p) => !dynasties.length && !query.trim() || matched.has(p.id));
 
   if (!region) return null;
 
@@ -25,7 +31,7 @@ export default function RegionPanel() {
       <div className="flex items-center justify-between border-b border-jin/15 px-4 py-3">
         <div>
           <h3 className="text-base font-bold text-jin">{region}</h3>
-          <p className="mt-0.5 text-[11px] text-miDim">该政区状元 {pts.length} 人（按科年排序）</p>
+          <p className="mt-0.5 text-[11px] text-miDim">当前匹配 {shown.length} 人 / 该政区 {pts.length} 人</p>
         </div>
         <button
           onClick={() => setRegion(null)}
@@ -35,11 +41,11 @@ export default function RegionPanel() {
           ✕
         </button>
       </div>
-      <ul className="max-h-[calc(55vh-4rem)] overflow-y-auto px-2 py-2 md:max-h-none md:flex-1">
-        {pts.length === 0 && (
-          <li className="px-3 py-6 text-center text-xs text-miDim">此切片年内暂无该政区状元记录</li>
+      <ul className="max-h-64 overflow-y-auto px-2 py-2">
+        {shown.length === 0 && (
+          <li className="px-3 py-6 text-center text-xs text-miDim">当前筛选下没有这个政区的状元</li>
         )}
-        {[...pts].sort((a, b) => a.exam_year - b.exam_year).map((p) => (
+        {[...shown].sort((a, b) => a.exam_year - b.exam_year).map((p) => (
           <li key={p.id}>
             <button
               onClick={() => selectPerson(p.id)}

@@ -19,7 +19,7 @@ export default function GuidePopover({
     const onDoc = (e: MouseEvent) => {
       if (rootRef.current && !rootRef.current.contains(e.target as Node)) setOpen(false);
     };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); setOpen(false); } };
     document.addEventListener('mousedown', onDoc);
     document.addEventListener('keydown', onKey);
     return () => {
@@ -36,7 +36,7 @@ export default function GuidePopover({
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
         className={`flex items-center justify-center rounded-full border font-serif transition ${
-          inline ? 'h-[18px] w-[18px] align-middle text-[10px]' : 'h-7 w-7 text-xs'
+          inline ? 'h-11 w-11 align-middle text-sm' : 'h-11 w-11 text-sm'
         } ${
           open
             ? 'border-jin bg-jin/20 text-jin'

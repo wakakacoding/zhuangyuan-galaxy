@@ -5,7 +5,7 @@ import * as echarts from 'echarts/core';
 import { SankeyChart } from 'echarts/charts';
 import { TooltipComponent } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
-import { loadCareer, type CareerData } from '../../lib/data';
+import { loadCareer, invalidateLoad, type CareerData } from '../../lib/data';
 
 echarts.use([SankeyChart, TooltipComponent, CanvasRenderer]);
 
@@ -29,8 +29,15 @@ export default function AggregateSankey() {
   const chartRef = useRef<echarts.ECharts | null>(null);
   const [data, setData] = useState<CareerData | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [attempt, setAttempt] = useState(0);
 
-  useEffect(() => { loadCareer().then(setData).catch((e) => setErr(String(e))); }, []);
+  useEffect(() => {
+    let dead = false;
+    setErr(null);
+    invalidateLoad('/data/career.json');
+    loadCareer().then((d) => { if (!dead) setData(d); }).catch((e) => { if (!dead) setErr(String(e)); });
+    return () => { dead = true; };
+  }, [attempt]);
 
   useEffect(() => {
     if (!data || !el.current) return;
@@ -63,12 +70,20 @@ export default function AggregateSankey() {
   }, [data]);
 
   useEffect(() => {
+    if (!el.current || !data) return;
     const ro = new ResizeObserver(() => chartRef.current?.resize());
-    if (el.current) ro.observe(el.current);
-    return () => ro.disconnect();
-  }, []);
+    ro.observe(el.current);
+    return () => { ro.disconnect(); chartRef.current?.dispose(); chartRef.current = null; };
+  }, [data]);
 
-  if (err) return <p className="font-serif text-sm text-zhusha">仕途数据加载失败</p>;
+  if (err) {
+    return (
+      <div className="flex flex-col items-start gap-2">
+        <p className="font-serif text-sm text-zhusha" role="alert">仕途数据加载失败</p>
+        <button type="button" onClick={() => setAttempt((n) => n + 1)} className="rounded-full border border-jin/50 px-4 py-1.5 font-serif text-xs text-jin">重试</button>
+      </div>
+    );
+  }
   if (!data) return <p className="font-serif text-sm text-miDim">疏浚河道中…</p>;
   if (!data.n) return <p className="font-serif text-sm text-miDim">仕途数据回填中，暂无足够样本绘图。</p>;
 

@@ -1,5 +1,6 @@
 import { atom } from 'nanostores';
 import { normalizeQuery } from '../lib/normalize';
+import { writeHistory, bindPopState } from './history';
 
 // 全局筛选状态：朝代多选 + 关键词。URL 同步见 initUrlSync。
 export const selectedDynasties = atom<string[]>([]);
@@ -15,7 +16,12 @@ export function setMapSlice(key: string | null) {
   }
 }
 export function setRegion(name: string | null) {
+  const prev = selectedRegion.get();
   selectedRegion.set(name);
+  const kind = name && name !== prev ? 'region-open' : 'region-close';
+  writeHistory((params) => {
+    if (name) params.set('region', name); else params.delete('region');
+  }, kind);
 }
 
 export function toggleDynasty(key: string) {
@@ -62,8 +68,10 @@ export function initUrlSync() {
     const params = new URLSearchParams(window.location.search);
     const d = selectedDynasties.get();
     const q = searchQuery.get();
-    const s = mapSlice.get();
-    const r = selectedRegion.get();
+    const path = window.location.pathname.replace(/\/$/, '') || '/';
+    const onMap = path.endsWith('/map');
+    const s = onMap ? mapSlice.get() : null;
+    const r = onMap ? selectedRegion.get() : null;
     if (d.length) params.set('dyn', d.join(',')); else params.delete('dyn');
     if (q) params.set('q', q); else params.delete('q');
     if (s) params.set('slice', s); else params.delete('slice');
@@ -75,4 +83,16 @@ export function initUrlSync() {
   searchQuery.subscribe(push);
   mapSlice.subscribe(push);
   selectedRegion.subscribe(push);
+  bindPopState((params) => {
+    syncing = true;
+    selectedDynasties.set((params.get('dyn') ?? '').split(',').filter(Boolean));
+    searchQuery.set(params.get('q') ?? '');
+    mapSlice.set(params.get('slice'));
+    selectedRegion.set(params.get('region'));
+    syncing = false;
+    const state = window.history.state as { personStack?: string[] } | null;
+    const person = params.get('p');
+    const stack = state?.personStack ?? (person ? [person] : []);
+    import('./selection').then((m) => m.restorePersonStack(stack));
+  });
 }

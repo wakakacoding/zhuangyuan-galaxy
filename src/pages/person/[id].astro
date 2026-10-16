@@ -53,6 +53,14 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
       </div>
     </header>
 
+    {/* 存疑警示（M5-d D3）：异说互见——如 z0656 陆器 / z0108 李从实 同科两说并存 */}
+    {person.disputed && (
+      <section class="mt-5 rounded-lg border border-zhusha/50 bg-zhusha/10 p-3">
+        <p class="font-serif text-xs font-bold text-zhusha">⚠ 状元身份存疑</p>
+        {person.dispute_note && <p class="mt-1 font-serif text-xs leading-relaxed text-mi/80">{person.dispute_note}</p>}
+      </section>
+    )}
+
     {/* 档案区 */}
     <section class="mt-6 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
       <div>
@@ -96,9 +104,9 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
     {/* 留白页 */}
     {!hasDetail && (
       <section class="mt-10 rounded-lg border border-dashed border-miDim/25 p-8 text-center">
-        <p class="font-serif text-lg tracking-[0.3em] text-miDim/80">榜上有名 · 史中无痕</p>
+        <p class="font-serif text-lg tracking-[0.3em] text-miDim/80">本站尚未整理</p>
         <p class="mt-3 font-kai text-xs leading-6 text-miDim/60">
-          现存记载仅余姓名与科年。空白不是缺漏，是文献存佚的真实——本站不为任何人编造字段。
+          目前页面只呈现已录入的姓名与科年。没有事件不等于史料不存在，也不改变其身份是否存疑。
         </p>
       </section>
     )}

@@ -1,17 +1,27 @@
 // 人物帖·关系区：分组卡片链，点击栈式跳转对方帖
 import { useEffect, useMemo, useState } from 'react';
 import {
-  loadEdges, loadIndex, RELATION_STYLE,
+  loadEdges, loadIndex, invalidateLoad, RELATION_STYLE,
   type EdgesData, type IndexEntry,
 } from '../../lib/data';
 import { pushPerson } from '../../store/selection';
+import { canOpenPerson } from '../../lib/openable';
 
 export default function RelationSection({ id, name }: { id: string; name: string }) {
   const [edges, setEdges] = useState<EdgesData | null>(null);
   const [index, setIndex] = useState<IndexEntry[]>([]);
+  const [failed, setFailed] = useState(false);
+  const [attempt, setAttempt] = useState(0);
 
-  useEffect(() => { loadEdges().then(setEdges).catch(() => {}); }, []);
-  useEffect(() => { loadIndex().then(setIndex).catch(() => {}); }, []);
+  useEffect(() => {
+    let dead = false;
+    setFailed(false);
+    invalidateLoad('/data/edges.json');
+    invalidateLoad('/data/person-index.json');
+    loadEdges().then((e) => { if (!dead) setEdges(e); }).catch(() => { if (!dead) setFailed(true); });
+    loadIndex().then((rows) => { if (!dead) setIndex(rows); }).catch(() => { if (!dead) setFailed(true); });
+    return () => { dead = true; };
+  }, [attempt]);
 
   const groups = useMemo(() => {
     if (!edges) return [];
@@ -33,7 +43,20 @@ export default function RelationSection({ id, name }: { id: string; name: string
     const m = new Map(index.map((p) => [p.id, p.dynasty]));
     return (pid: string) => m.get(pid) ?? '';
   }, [index]);
+  const openable = useMemo(() => {
+    const ids = new Set(index.map((p) => p.id));
+    for (const e of edges?.externals ?? []) ids.add(e.id);
+    return ids;
+  }, [index, edges]);
 
+  if (failed) {
+    return (
+      <section className="mb-5 rounded-lg border border-zhusha/40 p-4" role="alert">
+        <p className="font-serif text-sm text-mi">人物关系没有载入</p>
+        <button type="button" onClick={() => setAttempt((n) => n + 1)} className="mt-2 rounded-full border border-jin/50 px-3 py-1 font-serif text-xs text-jin">重试</button>
+      </section>
+    );
+  }
   if (!edges) return null;
   if (!groups.length) {
     return (
@@ -59,17 +82,22 @@ export default function RelationSection({ id, name }: { id: string; name: string
                 </span>
               </div>
               <div className="grid grid-cols-1 gap-1.5">
-                {list.map((r) => (
+                {list.map((r) => {
+                  const open = canOpenPerson(r.otherId, openable);
+                  return (
                   <button
                     key={r.otherId + type}
-                    onClick={() => pushPerson(r.otherId)}
-                    className="group flex items-center gap-2 rounded-lg border border-miDim/15 bg-xuan/60 px-3 py-2 text-left transition-colors hover:border-jin/40"
+                    type="button"
+                    disabled={!open}
+                    onClick={() => open && pushPerson(r.otherId)}
+                    className="group flex items-center gap-2 rounded-lg border border-miDim/15 bg-xuan/60 px-3 py-2 text-left transition-colors hover:border-jin/40 disabled:cursor-default disabled:opacity-60"
                   >
                     <span className="font-serif text-sm text-mi group-hover:text-jin">{r.otherName}</span>
                     <DynastyChip dynastyKey={dynastyOf(r.otherId)} />
                     {r.note && <span className="ml-auto line-clamp-1 text-right font-serif text-[11px] text-miDim/80">{r.note}</span>}
                   </button>
-                ))}
+                  );
+                })}
               </div>
             </div>
           );
