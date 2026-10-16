@@ -1,0 +1,19 @@
+{
+  "policy": "M5-d D3 争议身份（disputed）判定与异说互见说明",
+  "decided_at": "2026-10-16",
+  "rule": [
+    "① 名录 tags 含「异说并存」→ disputed=true，dispute_note 取 roster-supplements.tsv 同名同科行的 source_note（考据依据唯一来源）",
+    "② 本文件 notes：同科异说的另一方（名录行无 tag）显式登记 disputed=true + dispute_note，用于详情页两存互见；不得与来源①/③重叠（重叠即构建失败）",
+    "③ 深档 YAML data/persons/*.yaml 的 disputed 字段（既有 7 人，不在此重复登记）",
+    "④ disputed 人物不参与同年派生——身份未定者不宜据此连「同年」边；「异说」关系型留待 M6 schema 扩展，本期以双方 dispute_note 互指",
+    "⑤ disputed=true 必带 dispute_note；争议类 tag（异说/存疑/待考/阙疑/两说/说法不一…）未映射一律构建失败"
+  ],
+  "notes": [
+    {
+      "id": "z0108",
+      "dispute_note": "开成五年庚申科（840）状元身份异说：本站名录另收 z0656 陆器，清人据《常熟县志》《陆氏宗谱》考证为同科状元（B 级）。两说并存待考，故本名录对同科两人均标身份存疑，且不与对方互连「同年」边。",
+      "reason": "与 z0656 陆器同科异说（异说发起方在 roster tag「异说并存」，本行登记另一方），详情页须与陆器互见——依据 D3 指令步骤 3",
+      "decided_at": "2026-10-16"
+    }
+  ]
+}

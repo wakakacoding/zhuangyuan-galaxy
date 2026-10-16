@@ -1,10 +1,14 @@
 // 解析维基状元列表 wikitext → wiki-parsed.tsv（不含 id，供 roster-diff.mjs 比对用）
 // ⚠️ M5 起 id 冻结：roster.tsv 为主名录且追加式维护，本脚本不得再直写 roster.tsv
 // 输入：data/seed/wiki_*.txt（唐/宋/明/清独立页 + 中国状元列表总页的五代/辽/金/元章节）
-// 输出：data/seed/wiki-parsed.tsv  列：name dynasty exam_year reign birth death native_hist tags
+// 输出：data/seed/wiki-parsed.tsv
+//   列：name dynasty exam_year reign birth death native_hist tags birth_circa death_circa
+//   ⚠️ 后两列为 M5-d D1 追加，一律**追加在末尾**，保证 roster-diff.mjs 等按位读取不受影响。
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+// 生卒解析单一真源（M5-d D1）：原「首数字当出生年」实现会把「？－658年」读成 birth=658
+import { parseLifespan } from './lib/lifespan.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const seedDir = join(root, 'data', 'seed');
@@ -42,12 +46,6 @@ const parseYear = (cell) => {
   return m ? Number(m[1]) : null;
 };
 
-const parseLifespan = (cell) => {
-  if (!cell) return { birth: '', death: '' };
-  const nums = [...cell.matchAll(/(\d{3,4})\s*年/g)].map((m) => Number(m[1]));
-  return { birth: nums[0] ?? '', death: nums[1] ?? '' };
-};
-
 const parseName = (cell) => {
   if (!cell) return '';
   const m = cell.match(/\[\[([^\]]*)\]\]/);
@@ -69,12 +67,13 @@ const parseTable = (text, dynasty) => {
     if (!year) continue;
     const name = parseName(cells[2]);
     if (!name || name.length < 2 || name.length > 4) continue;
-    const { birth, death } = parseLifespan(cells[3] ?? '');
+    const { birth, death, birth_circa, death_circa } = parseLifespan(cells[3] ?? '');
+    const life_raw = String(cells[3] ?? '').replace(/\s+/g, ' ').trim();
     const native = stripWiki(cells[4] ?? '').replace(/人$/, '').replace(/[|]/g, '').trim();
     const note = stripWiki(cells[5] ?? '');
     const tags = /三元及第|连中三元/.test(note) ? '三元及第' : '';
     const reign = stripWiki(cells[1] ?? '');
-    rows.push({ dynasty, exam_year: year, name, reign, birth, death, native_hist: native, tags });
+    rows.push({ dynasty, exam_year: year, name, reign, birth, death, birth_circa, death_circa, life_raw, native_hist: native, tags });
   }
   return rows;
 };
@@ -129,9 +128,12 @@ const order = { tang: 0, wudai: 1, liao: 2, song: 3, jin: 4, yuan: 5, ming: 6, q
 deduped.sort((a, b) => a.exam_year - b.exam_year || order[a.dynasty] - order[b.dynasty]);
 
 const esc = (s) => String(s ?? '').replace(/\t/g, ' ');
-const lines = ['name\tdynasty\texam_year\treign\tbirth\tdeath\tnative_hist\ttags'];
+const lines = ['name\tdynasty\texam_year\treign\tbirth\tdeath\tnative_hist\ttags\tbirth_circa\tdeath_circa\tlife_raw'];
 deduped.forEach((r) => {
-  lines.push([r.name, r.dynasty, r.exam_year, esc(r.reign), r.birth, r.death, esc(r.native_hist), r.tags].join('\t'));
+  lines.push([
+    r.name, r.dynasty, r.exam_year, esc(r.reign), r.birth, r.death, esc(r.native_hist), r.tags,
+    r.birth_circa ? '1' : '', r.death_circa ? '1' : '', esc(r.life_raw),
+  ].join('\t'));
 });
 writeFileSync(join(seedDir, 'wiki-parsed.tsv'), lines.join('\n'));
 console.log(`TOTAL: ${deduped.length} → data/seed/wiki-parsed.tsv`);

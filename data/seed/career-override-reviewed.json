@@ -1,0 +1,274 @@
+{
+  "$comment": "M5-d D2 careers 冲突裁定留痕。overrides = 显式覆写回填值（value 必须在深档值/回填值中择一，reason 必填）；kept_deep = 已裁定保留深档（policy 默认）；review_hints = 待 X2 确认的建议复核项。由 scripts/build-data.ts 读取并校验。",
+  "policy": "default-keep-deep",
+  "decided_at": "2026-10-16（X2 裁定：11 条分类字段建议 —— 5 条覆写回填值、6 条保留深档）",
+  "overrides": [
+    {
+      "id": "z0219",
+      "field": "first_category",
+      "value": "部院",
+      "reason": "深档原值自标「推定」（州县幕职）；s0003 载夺魁授「光禄寺丞、直史馆」，属部院系明确著录，优于推定值"
+    },
+    {
+      "id": "z0233",
+      "field": "first_category",
+      "value": "部院",
+      "reason": "深档原值自标「推定」（州县官）；s0003 载「将作监丞」，为宋制状元初授官通例，实证优于推定"
+    },
+    {
+      "id": "z0242",
+      "field": "first_category",
+      "value": "部院",
+      "reason": "深档「密州监丞」疑为官称与差遣（通判密州）混写；s0003 载「将作监丞」，与宋制状元初授一致"
+    },
+    {
+      "id": "z0465",
+      "field": "final_category",
+      "value": "学政文教",
+      "reason": "深档「其他」为空分类；马铎终官仍为翰林院系（修撰/侍讲），归学政文教信息量与既有归类似例更贴"
+    },
+    {
+      "id": "z0587",
+      "field": "first_category",
+      "value": "翰林院",
+      "reason": "字段定义为「夺魁后首授官职」，深档原值取的是夺魁**前**之内阁中书、军机处行走；夺魁后首授为翰林院修撰"
+    }
+  ],
+  "kept_deep": [
+    {
+      "id": "z0002",
+      "field": "final_office"
+    },
+    {
+      "id": "z0178",
+      "field": "final_office"
+    },
+    {
+      "id": "z0215",
+      "field": "final_office"
+    },
+    {
+      "id": "z0219",
+      "field": "final_office"
+    },
+    {
+      "id": "z0219",
+      "field": "first_category"
+    },
+    {
+      "id": "z0219",
+      "field": "first_office"
+    },
+    {
+      "id": "z0222",
+      "field": "final_office"
+    },
+    {
+      "id": "z0222",
+      "field": "first_office"
+    },
+    {
+      "id": "z0226",
+      "field": "final_office"
+    },
+    {
+      "id": "z0233",
+      "field": "final_office"
+    },
+    {
+      "id": "z0233",
+      "field": "first_category"
+    },
+    {
+      "id": "z0233",
+      "field": "first_office"
+    },
+    {
+      "id": "z0242",
+      "field": "final_office"
+    },
+    {
+      "id": "z0242",
+      "field": "first_category"
+    },
+    {
+      "id": "z0242",
+      "field": "first_office"
+    },
+    {
+      "id": "z0412",
+      "field": "final_office"
+    },
+    {
+      "id": "z0427",
+      "field": "final_office"
+    },
+    {
+      "id": "z0427",
+      "field": "first_category",
+      "reason": "首授集贤殿修撰属集贤院，非翰林院；回填值系机械归类（同为「集贤殿修撰」却落翰林院）"
+    },
+    {
+      "id": "z0436",
+      "field": "final_office"
+    },
+    {
+      "id": "z0465",
+      "field": "final_category"
+    },
+    {
+      "id": "z0465",
+      "field": "final_office"
+    },
+    {
+      "id": "z0477",
+      "field": "final_office"
+    },
+    {
+      "id": "z0531",
+      "field": "final_category",
+      "reason": "两任内阁首辅，终点即宰辅；回填「其他」系早期考据按赐死结局刻意降级，M5-d 裁定回归宰辅"
+    },
+    {
+      "id": "z0531",
+      "field": "final_office"
+    },
+    {
+      "id": "z0534",
+      "field": "final_office"
+    },
+    {
+      "id": "z0542",
+      "field": "final_office"
+    },
+    {
+      "id": "z0542",
+      "field": "first_office"
+    },
+    {
+      "id": "z0543",
+      "field": "final_office"
+    },
+    {
+      "id": "z0543",
+      "field": "first_office"
+    },
+    {
+      "id": "z0545",
+      "field": "final_office"
+    },
+    {
+      "id": "z0545",
+      "field": "first_office"
+    },
+    {
+      "id": "z0553",
+      "field": "final_category",
+      "reason": "终点「翰林院检讨（病退）」与归隐自洽（对照 z0483 羅倫 讲学终老落归隐）"
+    },
+    {
+      "id": "z0553",
+      "field": "final_office"
+    },
+    {
+      "id": "z0553",
+      "field": "first_office"
+    },
+    {
+      "id": "z0555",
+      "field": "final_category",
+      "reason": "口径偏好项，两说皆通；取深档（终点为奉敕编书之职《全唐诗》总裁）"
+    },
+    {
+      "id": "z0555",
+      "field": "final_office"
+    },
+    {
+      "id": "z0557",
+      "field": "final_office"
+    },
+    {
+      "id": "z0557",
+      "field": "first_office"
+    },
+    {
+      "id": "z0558",
+      "field": "final_office"
+    },
+    {
+      "id": "z0563",
+      "field": "final_office"
+    },
+    {
+      "id": "z0570",
+      "field": "final_office"
+    },
+    {
+      "id": "z0572",
+      "field": "final_category",
+      "reason": "终点为乾隆初再起之行人司司副，非文教职；回填取其被贬前的湖北学政"
+    },
+    {
+      "id": "z0572",
+      "field": "final_office"
+    },
+    {
+      "id": "z0572",
+      "field": "first_office"
+    },
+    {
+      "id": "z0574",
+      "field": "final_office"
+    },
+    {
+      "id": "z0574",
+      "field": "first_office"
+    },
+    {
+      "id": "z0578",
+      "field": "final_office"
+    },
+    {
+      "id": "z0585",
+      "field": "final_office"
+    },
+    {
+      "id": "z0585",
+      "field": "first_office"
+    },
+    {
+      "id": "z0587",
+      "field": "final_office"
+    },
+    {
+      "id": "z0587",
+      "field": "first_category"
+    },
+    {
+      "id": "z0587",
+      "field": "first_office"
+    },
+    {
+      "id": "z0637",
+      "field": "final_category",
+      "reason": "终点「翰林院修撰（病归，书画终老）」，归隐性质明确"
+    },
+    {
+      "id": "z0637",
+      "field": "final_office"
+    },
+    {
+      "id": "z0637",
+      "field": "first_office"
+    },
+    {
+      "id": "z0641",
+      "field": "final_office"
+    },
+    {
+      "id": "z0641",
+      "field": "first_office"
+    }
+  ],
+  "review_hints": []
+}

@@ -19,8 +19,15 @@ const readTsv = (f) =>
   readFileSync(join(seedDir, f), 'utf8').split('\n').slice(1)
     .filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t'));
 
-const roster = readTsv('roster.tsv').map(([id, name, dynasty, exam_year, reign, birth, death, native_hist, tags]) =>
-  ({ id, name, dynasty, exam_year: Number(exam_year), reign, birth, death, native_hist, tags }));
+const rosterRaw = readFileSync(join(seedDir, 'roster.tsv'), 'utf8');
+const rosterHeader = rosterRaw.split('\n')[0];
+// 保留第 9 列之后的追加列（M5-d D1 的 birth_circa/death_circa 及未来列）——
+// 原实现只回写前 9 列，--apply 会静默截断这些列（数据丢失），此处按位透传
+const rosterTrailing = rosterHeader.split('\t').length - 9;
+const roster = readTsv('roster.tsv').map((cols) => {
+  const [id, name, dynasty, exam_year, reign, birth, death, native_hist, tags, ...rest] = cols;
+  return { id, name, dynasty, exam_year: Number(exam_year), reign, birth, death, native_hist, tags, rest };
+});
 const wiki = readTsv('wiki-parsed.tsv').map(([name, dynasty, exam_year, reign, birth, death, native_hist, tags]) =>
   ({ name, dynasty, exam_year: Number(exam_year), reign, birth, death, native_hist, tags }));
 const supp = readTsv('roster-supplements.tsv').map(([name, dynasty, exam_year, reign, birth, death, native_hist, tags, source_note]) =>
@@ -84,12 +91,12 @@ if (apply && suppNew.length) {
   const order = { tang: 0, wudai: 1, liao: 2, song: 3, jin: 4, yuan: 5, ming: 6, qing: 7 };
   const merged = [...roster];
   suppNew.forEach((s, i) => {
-    merged.push({ id: `z${String(maxId + 1 + i).padStart(4, '0')}`, ...s });
+    merged.push({ id: `z${String(maxId + 1 + i).padStart(4, '0')}`, ...s, rest: Array(rosterTrailing).fill('') });
   });
   merged.sort((a, b) => a.exam_year - b.exam_year || (order[a.dynasty] ?? 9) - (order[b.dynasty] ?? 9));
-  const lines = ['id\tname\tdynasty\texam_year\treign\tbirth\tdeath\tnative_hist\ttags'];
+  const lines = [rosterHeader];
   for (const r of merged) {
-    lines.push([r.id, r.name, r.dynasty, r.exam_year, r.reign ?? '', r.birth ?? '', r.death ?? '', r.native_hist ?? '', r.tags ?? ''].join('\t'));
+    lines.push([r.id, r.name, r.dynasty, r.exam_year, r.reign ?? '', r.birth ?? '', r.death ?? '', r.native_hist ?? '', r.tags ?? '', ...(r.rest ?? [])].join('\t'));
   }
   writeFileSync(join(seedDir, 'roster.tsv'), lines.join('\n') + '\n');
   report.push('', `## 五、补录执行（--apply）`, '', `已写入 ${suppNew.length} 人，id z${String(maxId + 1).padStart(4, '0')}–z${String(maxId + suppNew.length).padStart(4, '0')}，按科年插入；名录总数 ${merged.length}。`);

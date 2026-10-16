@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-10-16T06:43:23.771Z",
+  "task": "M5-d D1 · 生卒解析修复 + 名录一次性修复",
+  "root_cause": "parse-wiki.mjs 原实现取生卒年单元格内首个 3–4 位数字当出生年，「？－658年」「─1384年」「－1689年」「？~1030年」等生年阙如形态被误植为出生年",
+  "parse_fix": "scripts/lib/lifespan.mjs parseLifespan —— 年份必须落在连接号对应侧才算数，生年侧无数字则生年为空；「约」或同位「？」标 circa",
+  "inputs": {
+    "roster": "data/seed/roster.tsv",
+    "wiki_parsed": "data/seed/wiki-parsed.tsv",
+    "profiles_dir": "data/persons/*.yaml"
+  },
+  "precedence": [
+    "deep-profile（YAML 显式 birth_year/death_year）",
+    "wiki-cell（重解析生卒列）",
+    "roster（无新证据则维持）"
+  ],
+  "summary": {
+    "roster_total": 656,
+    "wiki_total": 654,
+    "wiki_matched": 654,
+    "wiki_unmatched": 2,
+    "changed_people": 0,
+    "changed_fields": 0,
+    "born_after_exam_before": 0,
+    "born_after_exam_after": 0,
+    "deep_profile_override": 0,
+    "silent_wipe_risk": 0
+  },
+  "pattern_histogram": [],
+  "people": [],
+  "changed_fields": [],
+  "silent_wipe_risk": [],
+  "unmatched_roster_rows": [
+    {
+      "id": "z0656",
+      "name": "陆器",
+      "dynasty": "tang",
+      "exam_year": 840
+    },
+    {
+      "id": "z0655",
+      "name": "归仁翰",
+      "dynasty": "tang",
+      "exam_year": 857
+    }
+  ]
+}
