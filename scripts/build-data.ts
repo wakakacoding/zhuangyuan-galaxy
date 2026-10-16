@@ -1,6 +1,7 @@
 // 数据构建管线：YAML/TSV 源 → 校验 → 地理回填 → 丰富度评分 → JSON 分包
 // 用法：tsx scripts/build-data.ts
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import yaml from 'js-yaml';
@@ -8,16 +9,25 @@ import {
   PersonSchema, DynastySchema, SourceSchema, RelationSchema, CareerSchema, ExternalSchema,
   RELATION_TYPES, CAREER_STAGE_CATEGORIES, CAREER_FINAL_CATEGORIES,
   type Person, type Dynasty, type Source, type Relation, type PersonIndexEntry, type External,
-  type EdgesFile, type Community,
+  type Career, type EdgesFile, type Community,
 } from '../src/lib/schema';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const dataDir = join(root, 'data');
-const outDir = join(root, 'public', 'data');
-mkdirSync(join(outDir, 'person'), { recursive: true });
+// D5 负向测试：BUILD_DATA_DIR / BUILD_OUT_DIR 指向隔离副本，默认仍是仓库 data 与 public/data。
+const dataDir = process.env.BUILD_DATA_DIR ? join(process.env.BUILD_DATA_DIR) : join(root, 'data');
+const outDir = process.env.BUILD_OUT_DIR ? join(process.env.BUILD_OUT_DIR) : join(root, 'public', 'data');
+const docsDir = process.env.BUILD_DOCS_DIR ? join(process.env.BUILD_DOCS_DIR) : join(root, 'docs');
 
 let errors = 0;
-const err = (msg: string) => { console.error(`  ✗ ${msg}`); errors++; };
+const err = (msg: string) => { console.error('  \u2717 ' + msg); errors++; };
+
+// M5-d D5: validate fully, then write. A failed run must not mkdir or writeFile.
+// This does not promise rollback if the disk fails mid-write.
+const assertClean = () => {
+  if (!errors) return;
+  console.error('\n\u6784\u5efa\u5931\u8d25\uff1a' + errors + ' \u4e2a\u9519\u8bef\uff08\u672a\u5199\u5165\u4efb\u4f55\u4ea7\u7269\uff09');
+  process.exit(1);
+};
 const warn = (msg: string) => console.warn(`  ⚠ ${msg}`);
 
 // ---------- 干支 ----------
@@ -44,16 +54,20 @@ const sourceById = new Map(sources.map((s) => [s.id, s]));
 console.log(`✓ 出处 ${sources.length}`);
 
 // ---------- 3. 骨架名录（roster.tsv） ----------
+// 列：id name dynasty exam_year reign birth death native_hist tags birth_circa death_circa
+// birth_circa/death_circa 为 M5-d D1 追加（追加在末尾，兼容所有按位读取的历史脚本）
 const tsv = readFileSync(join(dataDir, 'seed', 'roster.tsv'), 'utf8');
 const rosterLines = tsv.split('\n').slice(1).filter(Boolean);
 const persons: Person[] = rosterLines.map((line) => {
-  const [id, name, dynasty, exam_year, reign, birth, death, native_hist, tags] = line.split('\t');
+  const [id, name, dynasty, exam_year, reign, birth, death, native_hist, tags, birth_circa, death_circa] = line.split('\t');
   return PersonSchema.parse({
     id, name, dynasty,
     exam_year: Number(exam_year),
     reign: reign || undefined,
     birth_year: birth ? Number(birth) : undefined,
     death_year: death ? Number(death) : undefined,
+    birth_circa: birth_circa === '1',
+    death_circa: death_circa === '1',
     native_hist: native_hist || '',
     tags: tags ? tags.split(/[;,，；]/) : [],
     events: [],
@@ -63,21 +77,102 @@ const persons: Person[] = rosterLines.map((line) => {
 console.log(`✓ 骨架名录 ${persons.length}`);
 const personById = new Map(persons.map((p) => [p.id, p]));
 
+// ---------- 3b. 考据补录表（roster-supplements.tsv） ----------
+// M5-d D3 新增：补录行的 source_note 是「异说并存」类身份争议的**考据依据唯一来源**
+//（roster.tsv 只承载 tag 与结构化字段，不承载长文本），构建期据此回填 dispute_note。
+const suppPath = join(dataDir, 'seed', 'roster-supplements.tsv');
+const supplements = existsSync(suppPath)
+  ? readFileSync(suppPath, 'utf8').split('\n').slice(1)
+      .filter((l) => l.trim() && !l.startsWith('#'))
+      .map((l) => {
+        const [name, dynasty, exam_year, reign, birth, death, native_hist, tags, source_note] = l.split('\t');
+        return {
+          name, dynasty, exam_year: Number(exam_year), reign, birth, death,
+          native_hist: native_hist ?? '', tags: tags ?? '', source_note: source_note ?? '',
+        };
+      })
+  : [];
+const suppKey = (name: string, dynasty: string, examYear: number) => `${simp(name)}|${dynasty}|${examYear}`;
+const rosterKeySet = new Set(persons.map((p) => suppKey(p.name, p.dynasty, p.exam_year)));
+// 补录表是「待合并」清单：每行都应已由 `roster-diff.mjs --apply` 并入名录。行只存在于补录表
+// 正是历史上补录人被漏收的形态，故直接 err，而不是静默当作「尚未合并」放过。
+for (const s of supplements) {
+  if (!rosterKeySet.has(suppKey(s.name, s.dynasty, s.exam_year))) {
+    err(`补录表「${s.name}」（${s.dynasty} ${s.exam_year}）尚未并入名录——请先运行 node scripts/roster-diff.mjs --apply`);
+  }
+}
+const suppNoteByKey = new Map(supplements.map((s) => [suppKey(s.name, s.dynasty, s.exam_year), s.source_note]));
+const personBySuppKey = new Map(persons.map((p) => [suppKey(p.name, p.dynasty, p.exam_year), p]));
+if (supplements.length) console.log(`✓ 考据补录表 ${supplements.length} 行（已并入名录）`);
+
 // ---------- 4. 深度档案合并 ----------
 const profileFiles = readdirSync(join(dataDir, 'persons')).filter((f) => f.endsWith('.yaml'));
+// 记录每个深档在 career 下**显式写出**的字段：4b 节据此区分「深档值」与「回填值」，
+// 否则两个回填文件（careers.yaml / careers-mined-qing.yaml）之间的取值差会被误判为深档冲突
+const deepCareerKeys = new Map<string, Set<string>>();
 for (const f of profileFiles) {
-  const profile = PersonSchema.parse(yaml.load(readFileSync(join(dataDir, 'persons', f), 'utf8')));
+  const fp = join(dataDir, 'persons', f);
+  const raw = yaml.load(readFileSync(fp, 'utf8')) as Record<string, unknown>;
+  const profile = PersonSchema.parse(raw);
   const base = personById.get(profile.id);
   if (!base) { err(`深度档案 ${f} 的 id ${profile.id} 不在骨架名录中`); continue; }
-  // 深度档案覆盖骨架字段（以 YAML 为准）
-  Object.assign(base, profile);
+  // 深度档案覆盖骨架字段（以 YAML 为准）——但**只覆盖 YAML 里显式写出的字段**。
+  // M5-d D1：zod 的 default() 会把未写出的 birth_circa/death_circa 等填成默认值，
+  // 若无条件 Object.assign，深档未写 circa 者会把名录侧维基解析出的 circa 静默清零。
+  for (const k of Object.keys(raw)) {
+    if (k in profile) (base as unknown as Record<string, unknown>)[k] = (profile as unknown as Record<string, unknown>)[k];
+  }
+  if (raw.career && typeof raw.career === 'object') deepCareerKeys.set(profile.id, new Set(Object.keys(raw.career as object)));
 }
 console.log(`✓ 深度档案 ${profileFiles.length}`);
 
 // ---------- 4b. 仕途轻量字段回填（挖掘底稿 + 人工考据，聚合桑基数据源） ----------
 // 优先级：深度档案 YAML > careers.yaml（人工考据）> careers-mined-qing.yaml（脚本挖掘）
+// M5-d D2 修复：回填**仅补缺**——深档已写出的字段一律不被覆盖。
+// 旧实现 `{...p.career, ...parsed}` 会让回填顶掉深档，与上面这行优先级正相反（周延儒深档 final_category=宰辅
+// 被 careers.yaml 的「其他」顶掉即由此而来）。冲突不再静默：逐条留痕，构建末尾产出 docs/career-冲突裁定表.md。
+const CAREER_FIELDS = ['first_office', 'first_category', 'mid_office', 'mid_category', 'final_office', 'final_category'] as const;
+type CareerField = (typeof CAREER_FIELDS)[number];
+type ConflictResolution = 'deep-kept' | 'backfill-applied' | 'pending';
+type CareerConflict = {
+  id: string; name: string; field: CareerField;
+  deep: string; backfill: string; sources: string[]; alt: string[];
+  resolution: ConflictResolution; reason?: string;
+};
+type OverrideEntry = { id: string; field: CareerField; value: string; reason: string };
+type ReviewHint = { id: string; field: CareerField; advice: 'deep' | 'backfill'; confidence: string; why: string };
+
+// 裁定表（data/seed/career-override-reviewed.json）：overrides = 显式覆写，kept_deep = 已裁定保留深档
+//（可带 reason 作为复核理由，报告 §三 会显示为「显式保留深档」），review_hints = 待 X2 确认的建议复核项
+const overridePath = join(dataDir, 'seed', 'career-override-reviewed.json');
+const reviewFile = existsSync(overridePath)
+  ? (JSON.parse(readFileSync(overridePath, 'utf8')) as {
+      policy?: string; decided_at?: string; overrides?: OverrideEntry[];
+      kept_deep?: { id: string; field: CareerField; reason?: string }[];
+      review_hints?: ReviewHint[];
+    })
+  : {};
+const careerOverrides = new Map<string, OverrideEntry>();
+for (const o of reviewFile.overrides ?? []) {
+  const key = `${o.id}#${o.field}`;
+  if (!personById.has(o.id)) { err(`career-override-reviewed.json: id ${o.id} 不在骨架名录中`); continue; }
+  if (!(CAREER_FIELDS as readonly string[]).includes(o.field)) { err(`career-override-reviewed.json: ${key} 字段名非法`); continue; }
+  if (!o.reason || !o.reason.trim()) { err(`career-override-reviewed.json: ${key} 缺 reason——显式覆写必须写明理由`); continue; }
+  const allowed: readonly string[] = o.field === 'final_category' ? CAREER_FINAL_CATEGORIES
+    : o.field.endsWith('_category') ? CAREER_STAGE_CATEGORIES : [];
+  if (allowed.length && !allowed.includes(o.value)) { err(`career-override-reviewed.json: ${key} 的值「${o.value}」不在该字段合法取值内`); continue; }
+  if (careerOverrides.has(key)) { err(`career-override-reviewed.json: ${key} 重复裁定`); continue; }
+  careerOverrides.set(key, o);
+}
+const keptDeep = new Map<string, string | undefined>(
+  (reviewFile.kept_deep ?? []).map((k) => [`${k.id}#${k.field}`, k.reason] as [string, string | undefined]),
+);
+
+const careerConflicts = new Map<string, CareerConflict>();
 let careerCount = 0;
-for (const rel of ['seed/careers-mined-qing.yaml', 'careers.yaml']) {
+let careerFilled = 0;
+// 高优先级文件在前 + 仅补缺 → 天然实现 深档 > 人工考据 > 脚本挖掘
+for (const rel of ['careers.yaml', 'seed/careers-mined-qing.yaml']) {
   const fp = join(dataDir, rel);
   if (!existsSync(fp)) continue;
   const careerRows = (yaml.load(readFileSync(fp, 'utf8')) as unknown[]) ?? [];
@@ -86,13 +181,123 @@ for (const rel of ['seed/careers-mined-qing.yaml', 'careers.yaml']) {
     const p = personById.get(id);
     if (!p) { err(`${rel}: id ${id} 不在骨架名录中`); continue; }
     if (source_id && !sourceById.has(source_id)) { err(`${rel}: ${id} 引用不存在出处 ${source_id}`); continue; }
-    const parsed = CareerSchema.parse(careerFields);
-    // 后加载者优先（人工考据覆盖挖掘）；深档 YAML 已在合并阶段落定，此处不再回写覆盖其已有字段
-    p.career = { ...(p.career ?? {}), ...parsed };
+    const parsed = CareerSchema.parse(careerFields) as Record<string, string | undefined>;
+    const current = (p.career ?? {}) as Record<string, string | undefined>;
+    const merged: Record<string, string | undefined> = { ...current };
+    for (const f of CAREER_FIELDS) {
+      const bv = parsed[f];
+      if (bv === undefined) continue;
+      const dv = current[f];
+      if (dv === undefined) { merged[f] = bv; careerFilled++; continue; } // 无值（深档未写/写了留空）→ 补缺
+      if (!deepCareerKeys.get(p.id)?.has(f)) continue; // 有值但非深档所出 → 高优先级回填文件已填，按既定优先级保持且不报冲突
+      if (dv === bv) continue;                                          // 两处同值 → 非冲突
+      const key = `${p.id}#${f}`;
+      let ov = careerOverrides.get(key);
+      if (ov && ov.value !== dv && ov.value !== bv) {
+        err(`career-override-reviewed.json: ${key} 的裁定值「${ov.value}」既不等于深档值「${dv}」也不等于回填值「${bv}」——必须在两者中择一`);
+        ov = undefined; // 裁定失效，回落默认口径，但冲突本身仍照常留痕（不得因此静默消失）
+      }
+      const applyBackfill = ov?.value === bv;
+      const resolution: ConflictResolution = applyBackfill ? 'backfill-applied'
+        : (ov || keptDeep.has(key)) ? 'deep-kept' : 'pending';
+      merged[f] = applyBackfill ? bv : dv;
+      const prev = careerConflicts.get(key);
+      if (prev) {
+        if (!prev.sources.includes(rel)) prev.sources.push(rel);
+        if (prev.backfill !== bv) prev.alt.push(`${rel}：${bv}`);
+      } else {
+        careerConflicts.set(key, {
+          id: p.id, name: p.name, field: f, deep: dv, backfill: bv,
+          sources: [rel], alt: [], resolution, reason: ov?.reason ?? keptDeep.get(key),
+        });
+      }
+    }
+    p.career = merged as Career;
     careerCount++;
   }
 }
-console.log(`✓ 仕途回填 ${careerCount} 条记录（挖掘+人工）`);
+for (const key of careerOverrides.keys()) {
+  if (!careerConflicts.has(key)) warn(`career-override-reviewed.json: ${key} 无对应冲突（深档与回填已一致或字段缺失）——裁定已失效，建议清理`);
+}
+const conflictList = [...careerConflicts.values()].sort((a, b) =>
+  a.id.localeCompare(b.id) || CAREER_FIELDS.indexOf(a.field) - CAREER_FIELDS.indexOf(b.field));
+const pendingConflicts = conflictList.filter((c) => c.resolution === 'pending');
+const appliedConflicts = conflictList.filter((c) => c.resolution === 'backfill-applied');
+const keptConflicts = conflictList.filter((c) => c.resolution === 'deep-kept');
+console.log(`✓ 仕途回填 ${careerCount} 条记录（补缺 ${careerFilled} 字段；冲突 ${conflictList.length} 条：保留深档 ${keptConflicts.length} / 覆写 ${appliedConflicts.length} / 待裁定 ${pendingConflicts.length}）`);
+if (pendingConflicts.length) warn(`careers 冲突待裁定 ${pendingConflicts.length} 条：${pendingConflicts.map((c) => `${c.name}.${c.field}`).join('、')}——见 docs/career-冲突裁定表.md`);
+
+// ---------- 4c. 异说身份判定（M5-d D3） ----------
+// 背景：z0656 陆器 名录 tag 标「异说并存」却未映射为 disputed，且与 z0108 李从实（同为开成五年庚申科）
+// 被同年派生逻辑连出一条「840 年同科」假边——两人是同一科的**异说竞争者**，不是同榜同年。
+// 三条来源：
+//   ① 名录 tag「异说并存」（人工标注）→ disputed=true，dispute_note 取补录表同行 source_note
+//   ② data/seed/dispute-reviewed.json 显式登记 → 用于「同科异说的另一方」（名录行无 tag 者），详情页须互见
+//   ③ 深档 YAML 的 disputed 字段（既有 7 人：婁師德/员半千/陳伯玉/郭元振/張九齡/崔液/王维）
+// 铁律：disputed=true 必须带 dispute_note；同一人不得有两个来源；争议类 tag 未映射一律 err。
+const DISPUTE_TAG = '异说并存';
+const DISPUTE_PATTERN = /异说|異説|异説|存疑|待考|待攷|阙疑|闕疑|两说|兩說|说法不一|說法不一|异闻|異聞|互歧|异辞|異辭/;
+
+const disputePath = join(dataDir, 'seed', 'dispute-reviewed.json');
+const disputeFile = existsSync(disputePath)
+  ? (JSON.parse(readFileSync(disputePath, 'utf8')) as {
+      policy?: string; decided_at?: string;
+      notes?: { id: string; dispute_note: string; reason: string }[];
+    })
+  : {};
+const disputeRegistered = new Map<string, { dispute_note: string; reason: string }>();
+for (const n of disputeFile.notes ?? []) {
+  if (!personById.has(n.id)) { err(`dispute-reviewed.json: id ${n.id} 不在骨架名录中`); continue; }
+  if (!n.dispute_note?.trim()) { err(`dispute-reviewed.json: ${n.id} 缺 dispute_note`); continue; }
+  if (!n.reason?.trim()) { err(`dispute-reviewed.json: ${n.id} 缺 reason——显式登记必须写明异说依据`); continue; }
+  if (disputeRegistered.has(n.id)) { err(`dispute-reviewed.json: ${n.id} 重复登记`); continue; }
+  disputeRegistered.set(n.id, n);
+}
+
+// 同类排查（指令 D3 步骤 4）：补录表考据说明已述异说、名录行却未挂 tag 者 → 拦截
+// （补录表只回填新增行，不会给既有行补 tags，故这里必须比对“合并后的名录行”，而非补录表自身 tags 列）
+for (const s of supplements) {
+  if (!DISPUTE_PATTERN.test(s.source_note)) continue;
+  const p = personBySuppKey.get(suppKey(s.name, s.dynasty, s.exam_year));
+  if (p && !p.tags.includes(DISPUTE_TAG)) {
+    err(`补录表「${s.name}」的考据说明已述异说，但名录 ${p.id} 的 tags 未挂「${DISPUTE_TAG}」——请补齐 tag`);
+  }
+}
+
+const disputeSource = new Map<string, string>(); // id → 来源（报告留痕）
+const suppressedEdges: { from: string; to: string; note: string }[] = [];
+for (const p of persons) {
+  for (const t of p.tags) {
+    if (t !== DISPUTE_TAG && DISPUTE_PATTERN.test(t)) {
+      err(`${p.name}(${p.id}) 名录 tag「${t}」属争议类但未映射为 disputed——请统一改用「${DISPUTE_TAG}」或补进 build-data 映射`);
+    }
+  }
+  const tagged = p.tags.includes(DISPUTE_TAG);
+  const reg = disputeRegistered.get(p.id);
+  const deepDisputed = p.disputed;     // 此刻为真 ⇒ 来源必是深档 YAML（名录侧无 disputed 列）
+  const deepNote = p.dispute_note;
+  if (tagged && reg) {
+    err(`${p.name}(${p.id}) 的争议身份有两个来源（名录 tag「${DISPUTE_TAG}」+ dispute-reviewed.json）——择一留痕`);
+  } else if (reg && deepDisputed) {
+    err(`${p.name}(${p.id}) 已由深档 YAML 标 disputed，dispute-reviewed.json 重复登记——择一留痕`);
+  }
+  if (!tagged && !deepDisputed && !reg) continue;
+  p.disputed = true;
+  // 优先级：深档 YAML 说明（最详） > 补录表 source_note > 显式登记说明
+  p.dispute_note = deepNote?.trim()
+    || (tagged ? suppNoteByKey.get(suppKey(p.name, p.dynasty, p.exam_year))?.trim() : undefined)
+    || reg?.dispute_note?.trim();
+  if (!p.dispute_note) {
+    err(`${p.name}(${p.id}) disputed=true 但缺 dispute_note——存疑结论必须写明依据（tag 来源请补 roster-supplements.tsv 的 source_note）`);
+  }
+  disputeSource.set(p.id, deepDisputed ? '深档 YAML' : tagged ? '名录 tag' : 'dispute-reviewed.json');
+}
+const disputedPersons = persons.filter((p) => p.disputed);
+{
+  const bySrc = (s: string) => disputedPersons.filter((p) => disputeSource.get(p.id) === s).length;
+  console.log(`✓ 争议身份 ${disputedPersons.length} 人（深档 YAML ${bySrc('深档 YAML')} / 名录 tag ${bySrc('名录 tag')} / 显式登记 ${bySrc('dispute-reviewed.json')}）`);
+}
+const disputedIds = new Set(disputedPersons.map((p) => p.id));
 
 // ---------- 5. 关系（人工考据 + 同年自动派生） ----------
 const manualRelations = (yaml.load(readFileSync(join(dataDir, 'relations.yaml'), 'utf8')) as unknown[])
@@ -140,6 +345,16 @@ for (const [, members] of cohorts) {
   if (members.length < 2) continue;
   for (let i = 0; i < members.length; i++) {
     for (let j = i + 1; j < members.length; j++) {
+      // M5-d D3：disputed 人物不参与同年派生——其状元身份本身未定，据此连「同年」边会产出假边
+      //（典型：z0108 李从实 ↔ z0656 陆器「840 年同科」）。同科异说者之间的真实关系是「异说互见」，
+      // 不是同年；「异说」关系型留待 M6 schema 扩展，本期以双方 dispute_note 互指。
+      if (disputedIds.has(members[i].id) || disputedIds.has(members[j].id)) {
+        suppressedEdges.push({
+          from: members[i].id, to: members[j].id,
+          note: `${members[i].exam_year} 年同科（因一方状元身份存疑而抑制）`,
+        });
+        continue;
+      }
       const k = pairKey(members[i].id, members[j].id, '同年');
       if (existingPairs.has(k)) continue;
       existingPairs.add(k);
@@ -154,7 +369,7 @@ const relations: (Relation & { derived?: boolean })[] = [
   ...manualRelations,
   ...derivedRelations.map((r) => ({ ...r, derived: true as const })),
 ];
-console.log(`✓ 关系 人工 ${manualRelations.length} + 同年派生 ${derivedRelations.length} = ${relations.length}`);
+console.log(`✓ 关系 人工 ${manualRelations.length} + 同年派生 ${derivedRelations.length} = ${relations.length}${suppressedEdges.length ? `（异说抑制 ${suppressedEdges.length} 条：${suppressedEdges.map((e) => `${nameOf(e.from)}↔${nameOf(e.to)}`).join('、')}）` : ''}`);
 
 // ---------- 6. 地名坐标回填 ----------
 const placenames = readFileSync(join(dataDir, 'geo', 'placenames.csv'), 'utf8')
@@ -191,6 +406,22 @@ for (const p of persons) {
 for (const s of sources) {
   if (s.tier === 'A' && !s.title) err(`出处 ${s.id} 为 A 级但缺书名`);
 }
+
+// 7b. 生卒业务铁律（M5-d D1）——把「出生晚于登科」这类解析事故挡在构建期
+// 背景：parse-wiki 曾把「？－658年」读成 birth=658，全站 38 人出生晚于登科而无人报警。
+for (const p of persons) {
+  if (p.birth_year !== undefined && p.birth_year > p.exam_year) {
+    err(`${p.name}(${p.id}) 生年 ${p.birth_year} 晚于登科年 ${p.exam_year}`);
+  }
+  if (p.birth_year !== undefined && p.death_year !== undefined && p.birth_year > p.death_year) {
+    err(`${p.name}(${p.id}) 生年 ${p.birth_year} 晚于卒年 ${p.death_year}`);
+  }
+  if (!p.research_status) p.research_status = 'uncompiled';
+}
+
+// D5：上面所有 err() 已经跑完。有错就在任何写入之前退出。
+assertClean();
+mkdirSync(join(outDir, 'person'), { recursive: true });
 
 // ---------- 8. 丰富度评分（关系数只计人工考据边，同年派生边是计算产物不算史料） ----------
 const relCount = new Map<string, number>();
@@ -378,6 +609,22 @@ if (externals.length) {
     index_year: e.index_year, note: e.note, cbdb_id: e.cbdb_id,
   }))));
 }
+// UX2：外延简档只使用已有字段和真实关系。不进入 person-index，也不进入统计。
+for (const e of externals) {
+  const related = relations
+    .filter((r) => r.from === e.id || r.to === e.id)
+    .map((r) => {
+      const other = r.from === e.id ? r.to : r.from;
+      return { id: other, name: nameOf(other) ?? other, type: r.type, note: r.note };
+    });
+  const stub = {
+    id: e.id, name: e.name, kind: 'external' as const,
+    birth_year: e.birth_year, death_year: e.death_year, index_year: e.index_year,
+    note: e.note, cbdb_id: e.cbdb_id, source_id: e.source_id, related,
+  };
+  writeFileSync(join(outDir, 'person', `${e.id}.json`), JSON.stringify(stub));
+}
+console.log(`✓ 外延简档 ${externals.length}（不计入状元名录 ${index.length}）`);
 console.log(`✓ 社区发现：${commGroups.size} 个社区，标注 ${communities.length} 个（≥3 人）`);
 
 // ---------- 9d. career.json（仕途桑基聚合） ----------
@@ -417,18 +664,38 @@ writeFileSync(join(outDir, 'career.json'), JSON.stringify({
 console.log(`✓ 仕途桑基：${sankeyPersons.length} 人入样，${sankeyLinks.length} 条流量`);
 
 // ---------- 10. 统计预计算 ----------
+// M5-d D4 统计口径修复：① 姓氏繁简归一（原直接取 p.name[0]，致 张33/張11、刘16/劉10 同榜并存）
+// ② 复姓整体计一姓 ③ 年龄榜剔除「生年约（circa）」与「身份存疑（disputed）」者（原简文会 13 岁居榜首）
 const byDynasty = Object.fromEntries(dynasties.map((d) => [d.key, 0]));
 for (const p of persons) byDynasty[p.dynasty]++;
+
+// 复姓表（M5-d D4）——**按名录实证裁剪**：对 656 人逐一比对 100+ 项常见复姓前缀
+// （欧阳/司马/司徒/上官/诸葛/东方/独孤/慕容/尉迟/长孙/宇文/皇甫/完颜/耶律/蒲察/徒单/纥石烈/
+//   孛儿只斤/爱新觉罗/赫舍里/钮祜禄 等），实际出现者仅下列 3 个。其余二字起首者（如「完顏速蘭」
+//   「忽都達兒」）皆为二字名而非复姓，按单字姓处理。
+const COMPOUND_SURNAMES = ['独孤', '鲜于', '徒单'];
+const surnameOf = (name: string): string => {
+  const n = simp(name);
+  for (const c of COMPOUND_SURNAMES) if (n.startsWith(c)) return c;
+  return n[0] ?? '';
+};
 const surnames = new Map<string, number>();
 for (const p of persons) {
-  const s = p.name[0];
-  surnames.set(s, (surnames.get(s) ?? 0) + 1);
+  const s = surnameOf(p.name);
+  if (s) surnames.set(s, (surnames.get(s) ?? 0) + 1);
 }
 const topSurnames = [...surnames.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15);
-const ages = persons.filter((p) => p.birth_year && p.exam_year)
-  .map((p) => ({ name: p.name, dynasty: p.dynasty, age: p.exam_year - p.birth_year! }))
-  .filter((a) => a.age > 8 && a.age < 90)
-  .sort((a, b) => a.age - b.age);
+
+// 年龄榜口径（M5-d D4）：birth_circa（生年系「约」）或 disputed（状元身份存疑）者不进确定榜，
+// 单列 youngest_uncertain 存疑参考区，避免「约年」或身份未定者占据年龄纪录
+type Aged = { id: string; name: string; dynasty: string; age: number; uncertain: boolean };
+const allAged: Aged[] = persons
+  .filter((p) => p.birth_year && p.exam_year)
+  .map((p) => ({ id: p.id, name: p.name, dynasty: p.dynasty, age: p.exam_year - p.birth_year!, uncertain: p.birth_circa || p.disputed }))
+  .filter((a) => a.age > 8 && a.age < 90);
+const strip = ({ id, name, dynasty, age }: Aged) => ({ id, name, dynasty, age });
+const ages = allAged.filter((a) => !a.uncertain).map(strip).sort((a, b) => a.age - b.age);
+const uncertainAges = allAged.filter((a) => a.uncertain).map(strip).sort((a, b) => a.age - b.age);
 // 年龄分布直方图（5 岁桶）与分朝平均年龄——支撑问答页「最年轻/年龄变化」图表
 const AGE_BUCKET = 5;
 const ageHistMap = new Map<number, number>();
@@ -452,15 +719,25 @@ const compBuckets = Array.from({ length: 10 }, (_, i) => ({ bucket: i / 10, labe
 for (const p of persons) {
   compBuckets[Math.min(Math.floor(completeness(p) * 10), 9)].count++;
 }
+// 构建日期（供前端展示「数据更新于 …」）。默认取当天；设 SOURCE_DATE_EPOCH 可固定以保证可复现构建
+const BUILD_DATE = process.env.SOURCE_DATE_EPOCH
+  ? new Date(Number(process.env.SOURCE_DATE_EPOCH) * 1000).toISOString().slice(0, 10)
+  : new Date().toISOString().slice(0, 10);
+
 const stats = {
+  version: 3, // v3（M5-d D4）：新增 profiles / build_date / geo_unmatched / youngest_uncertain
   total: persons.length,
+  profiles: profileFiles.length, // 深度档案数——供 E3 替换前端写死的「16 人」
+  build_date: BUILD_DATE,
   by_dynasty: byDynasty,
   top_surnames: topSurnames,
   youngest: ages.slice(0, 10),
+  youngest_uncertain: uncertainAges.slice(0, 10), // 生年「约」或身份存疑者，存疑参考区
   oldest: ages.slice(-5).reverse(),
   avg_age: Math.round(ages.reduce((s, a) => s + a.age, 0) / ages.length * 10) / 10,
   sanyuan: persons.filter((p) => p.tags.includes('三元及第')).map((p) => ({ id: p.id, name: p.name, dynasty: p.dynasty, exam_year: p.exam_year })),
   geo_coverage: geoHit / persons.length,
+  geo_unmatched: persons.length - geoHit, // 地名未命中数——供 E3/E6 动态化消费
   age_histogram: { buckets: ageHistogram, n: ages.length },
   avg_age_by_dynasty: avgAgeByDynasty,
   completeness_histogram: compBuckets,
@@ -468,8 +745,149 @@ const stats = {
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats));
 writeFileSync(join(outDir, 'dynasties.json'), JSON.stringify(dynasties));
 
+// ---------- 10b. careers 冲突裁定表（构建期自动生成，不静默） ----------
+// 内容 = 深档 × 回填 的逐字段冲突 + 裁定状态（默认保留深档 / 显式覆写 / 待裁定）。
+// 报告只随内容变化重写（指纹化），保证重复构建零 git 噪声、字节级幂等可验。
+const fingerprint = createHash('sha256').update(
+  ['seed/roster.tsv', 'careers.yaml', 'seed/careers-mined-qing.yaml', 'seed/career-override-reviewed.json']
+    .map((f) => (existsSync(join(dataDir, f)) ? readFileSync(join(dataDir, f)) : Buffer.from(''))).reduce(
+      (acc, b) => Buffer.concat([acc, b]), Buffer.alloc(0),
+    ),
+).digest('hex').slice(0, 16);
+
+const esc = (s: string) => s.replace(/\|/g, '\\|');
+const conflictRow = (c: CareerConflict, verdict: string) =>
+  `| ${c.id} | ${c.name} | \`${c.field}\` | ${esc(c.deep)} | ${esc(c.backfill)} | ${c.sources.join(' + ')}${c.alt.length ? `<br>（另值 ${esc(c.alt.join('；'))}）` : ''} | ${verdict} |`;
+
+const conflictReport = `# careers 冲突裁定表（构建期自动生成 · 勿手工编辑）
+
+> **优先级口径**：深度档案 YAML（\`data/persons/*.yaml\`）> 人工考据（\`data/careers.yaml\`）> 脚本挖掘（\`data/seed/careers-mined-qing.yaml\`）。
+> **规则（M5-d D2）**：回填**仅补缺**——深档已写出的字段一律不被覆盖；两者给出不同值时逐条留痕于此，不再静默。
+> **裁定方式**：在 \`data/seed/career-override-reviewed.json\` 的 \`overrides\` 内加 \`{ "id", "field", "value", "reason" }\`；\`value\` 只能在**深档值 / 回填值**中择一，\`reason\` 必填（如周延儒「赐死结局刻意降级」）。未在 \`overrides\` 中列出的冲突按默认「保留深档」处理，并在 \`kept_deep\` 中登记。
+> **数据指纹**：\`${fingerprint}\`（roster.tsv + careers.yaml + careers-mined-qing.yaml + career-override-reviewed.json）
+
+**冲突 ${conflictList.length} 条 / ${new Set(conflictList.map((c) => c.id)).size} 人** ｜ 待裁定 **${pendingConflicts.length}** ｜ 已裁定·覆写 **${appliedConflicts.length}** ｜ 已裁定·保留深档 **${keptConflicts.length}**
+
+## 一、待裁定（${pendingConflicts.length} 条）
+
+${pendingConflicts.length ? `| id | 姓名 | 字段 | 深档值 | 回填值 | 回填来源 | 裁定 |\n| --- | --- | --- | --- | --- | --- | --- |\n${pendingConflicts.map((c) => conflictRow(c, '**待裁定**')).join('\n')}` : '（无）'}
+
+## 二、已裁定 · 覆写回填值（${appliedConflicts.length} 条）
+
+${appliedConflicts.length ? `| id | 姓名 | 字段 | 深档值（被覆盖） | 回填值（生效） | 回填来源 | 理由 |\n| --- | --- | --- | --- | --- | --- | --- |\n${appliedConflicts.map((c) => conflictRow(c, esc(c.reason ?? ''))).join('\n')}` : '（无）'}
+
+## 三、已裁定 · 保留深档（${keptConflicts.length} 条）
+
+| id | 姓名 | 字段 | 深档值（生效） | 回填值（未采用） | 回填来源 | 裁定 |
+| --- | --- | --- | --- | --- | --- | --- |
+${keptConflicts.map((c) => conflictRow(c, c.reason ? `显式保留深档：${esc(c.reason)}` : '保留深档（默认）')).join('\n')}
+
+## 四、字段分布
+
+| 字段 | 冲突条数 | 待裁定 | 已裁定·覆写 |
+| --- | --- | --- | --- |
+${CAREER_FIELDS.map((f) => {
+  const all = conflictList.filter((c) => c.field === f);
+  if (!all.length) return null;
+  return `| \`${f}\` | ${all.length} | ${all.filter((c) => c.resolution === 'pending').length} | ${all.filter((c) => c.resolution === 'backfill-applied').length} |`;
+}).filter(Boolean).join('\n')}
+
+## 五、建议复核（建议项，未生效 · 待 X2 确认）
+
+> 下表是「默认保留深档」看似可疑的条目与理由，**仅作建议、不参与构建**。确认后把结论写入 \`overrides\`（采纳回填）或 \`kept_deep\`（保留深档），并删除本文件对应 \`review_hints\`。
+
+${(reviewFile.review_hints ?? []).length ? `| id | 姓名 | 字段 | 建议 | 置信度 | 理由 |\n| --- | --- | --- | --- | --- | --- |\n${(reviewFile.review_hints ?? []).map((h) => {
+  const c = careerConflicts.get(`${h.id}#${h.field}`);
+  const nm = c?.name ?? personById.get(h.id)?.name ?? h.id;
+  return `| ${h.id} | ${nm} | \`${h.field}\` | ${h.advice === 'deep' ? '保留深档' : '**覆写回填**'} | ${h.confidence} | ${esc(h.why)} |`;
+}).join('\n')}` : '（无）'}
+
+---
+
+*由 \`scripts/build-data.ts\` 在每次 \`npm run build:data\` 时自动校验并重写（内容无变化则跳过写入，指纹 \`${fingerprint}\`）。*
+`;
+
+const conflictReportPath = join(docsDir, 'career-冲突裁定表.md');
+if (!existsSync(conflictReportPath) || readFileSync(conflictReportPath, 'utf8') !== conflictReport) {
+  writeFileSync(conflictReportPath, conflictReport);
+  console.log(`✓ careers 冲突裁定表已更新：docs/career-冲突裁定表.md（${conflictList.length} 条冲突）`);
+}
+
+// ---------- 10c. 争议身份一览（构建期自动生成，不静默） ----------
+// 三来源分组 + 派生抑制明细 + 同类排查结论，供人工复核；内容无变化则跳过写入（零 git 噪声）。
+const disputeFingerprint = createHash('sha256').update(
+  ['seed/roster.tsv', 'seed/roster-supplements.tsv', 'seed/dispute-reviewed.json']
+    .map((f) => (existsSync(join(dataDir, f)) ? readFileSync(join(dataDir, f)) : Buffer.from(''))).reduce(
+      (acc, b) => Buffer.concat([acc, b]), Buffer.alloc(0),
+    ),
+).digest('hex').slice(0, 16);
+
+const dispRow = (p: Person) => `| ${p.id} | ${p.name} | ${dynastyByKey.get(p.dynasty)?.name ?? p.dynasty} ${p.exam_year} | ${disputeSource.get(p.id) ?? '—'} | ${esc(p.dispute_note ?? '（缺）')} |`;
+const bySource = (s: string) => disputedPersons.filter((p) => disputeSource.get(p.id) === s);
+const allRosterTags = persons.flatMap((p) => p.tags);
+const tagHits = allRosterTags.filter((t) => t === DISPUTE_TAG).length;
+const patternHits = allRosterTags.filter((t) => t !== DISPUTE_TAG && DISPUTE_PATTERN.test(t)).length;
+const suppPatternHits = supplements.filter((s) => DISPUTE_PATTERN.test(s.source_note)).length;
+
+const disputeReport = `# 争议身份一览（构建期自动生成 · 勿手工编辑）
+
+> **口径（M5-d D3）**：\`disputed = true\` 表示「本站收录该人，但其**状元身份**存在异说」，而非「此人是伪造人物」。
+> 三条来源：① 名录 tag \`${DISPUTE_TAG}\`（考据依据取 \`roster-supplements.tsv\` 同名同科行的 \`source_note\`）
+> ② \`data/seed/dispute-reviewed.json\` 显式登记（用于「同科异说的另一方」——名录行无 tag，但详情页须与对方互见）
+> ③ 深档 YAML \`data/persons/*.yaml\` 的 \`disputed\` 字段。
+> **规则**：\`disputed=true\` 必带 \`dispute_note\`（缺即构建失败）；同一人不得有两个来源；争议类 tag 未映射即构建失败。
+> **派生口径**：\`disputed\` 人物**不参与同年派生**——其身份本身未定，据此连「同年」边会产出假边（同科异说者之间的真实关系是「异说互见」而非同年）。
+> **数据指纹**：\`${disputeFingerprint}\`（roster.tsv + roster-supplements.tsv + dispute-reviewed.json）
+
+**争议身份 ${disputedPersons.length} 人** ｜ 深档 YAML **${bySource('深档 YAML').length}** ｜ 名录 tag **${bySource('名录 tag').length}** ｜ 显式登记 **${bySource('dispute-reviewed.json').length}**
+**关系总数 ${relations.length}** = 人工考据 ${manualRelations.length} + 同年派生 ${derivedRelations.length} ｜ 因异说抑制派生边 **${suppressedEdges.length}** 条
+
+## 一、名录 tag 来源（${bySource('名录 tag').length} 人）
+
+${bySource('名录 tag').length ? `| id | 姓名 | 科次 | 来源 | dispute_note |\n| --- | --- | --- | --- | --- |\n${bySource('名录 tag').map(dispRow).join('\n')}` : '（无）'}
+
+## 二、显式登记来源（${bySource('dispute-reviewed.json').length} 人）
+
+> \`dispute-reviewed.json\`：同科异说的**另一方**，名录行本身无 tag（tag 只标在争议发起方），此处显式登记以便两页互见。
+
+${bySource('dispute-reviewed.json').length ? `| id | 姓名 | 科次 | 来源 | dispute_note |\n| --- | --- | --- | --- | --- |\n${bySource('dispute-reviewed.json').map(dispRow).join('\n')}` : '（无）'}
+
+## 三、深档 YAML 来源（${bySource('深档 YAML').length} 人）
+
+| id | 姓名 | 科次 | 来源 | dispute_note |
+| --- | --- | --- | --- | --- |
+${bySource('深档 YAML').map(dispRow).join('\n')}
+
+## 四、同年派生抑制明细（${suppressedEdges.length} 条）
+
+${suppressedEdges.length ? `| 派生对（同年） | 双方身份 | 抑制的边 |\n| --- | --- | --- |\n${suppressedEdges.map((e) => {
+  const a = persons.find((p) => p.id === e.from);
+  const b = persons.find((p) => p.id === e.to);
+  const mark = (p?: Person) => (p ? `${p.name}（${p.id}）${disputedIds.has(p.id) ? '·存疑' : ''}` : '?');
+  const both = [a, b].filter((p) => p && disputedIds.has(p.id)).length === 2;
+  return `| ${mark(a)} ↔ ${mark(b)} | ${both ? '双方均为争议身份' : '一方为争议身份'} | ${esc(e.note)} |`;
+}).join('\n')}` : '（无）'}
+
+## 五、同类排查（指令 D3 步骤 4）
+
+- 扫描范围：名录 ${persons.length} 行全部 tags（共 ${allRosterTags.length} 个 tag）+ 补录表 ${supplements.length} 行的 \`source_note\`
+- 命中：tag \`${DISPUTE_TAG}\` **${tagHits}** 处；补录表考据说明含异说类词 **${suppPatternHits}** 处
+- 未映射的争议类 tag（异说/存疑/待考/阙疑/两说/说法不一…）：**${patternHits}** 处 → 构建期 \`err\` 守卫已就位（新增 tag 漏映射即 CI 拦截）
+- 结论：本期无其他漏映射；补录表异说说明与名录 tag 一一对应
+`;
+
+const disputeReportPath = join(docsDir, '争议身份一览.md');
+if (!existsSync(disputeReportPath) || readFileSync(disputeReportPath, 'utf8') !== disputeReport) {
+  writeFileSync(disputeReportPath, disputeReport);
+  console.log(`✓ 争议身份一览已更新：docs/争议身份一览.md（${disputedPersons.length} 人）`);
+}
+
 console.log(`\n分包完成：index=${index.length}, geo=${geoPoints.length}点, edges=${relations.length}, stats ok`);
 console.log(`状元姓氏榜首：${topSurnames.slice(0, 3).map(([s, n]) => `${s}(${n})`).join(' ')}`);
 console.log(`已知夺魁年龄：平均 ${stats.avg_age} 岁，最年轻 ${ages[0]?.name} ${ages[0]?.age} 岁`);
-if (errors) { console.error(`\n构建失败：${errors} 个错误`); process.exit(1); }
+// D5：写入阶段不再新增 err()。若仍有错误，说明门禁被绕过，产物可能已变，必须失败。
+if (errors) {
+  console.error(`\n构建失败：${errors} 个错误（写入阶段之后仍有错误，产物可能已变化）`);
+  process.exit(1);
+}
 console.log('\n✓ build-data 完成');
