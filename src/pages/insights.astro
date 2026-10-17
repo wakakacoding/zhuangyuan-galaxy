@@ -39,15 +39,41 @@ const compRows: ChartRow[] = stats.completeness_histogram.map(
   }),
 );
 const compN: number = stats.total;
+const readings = JSON.parse(
+  readFileSync(new URL('../../public/data/readings.json', import.meta.url), 'utf8'),
+) as { person_id: string; title: string; summary: string }[];
+const index = JSON.parse(
+  readFileSync(new URL('../../public/data/person-index.json', import.meta.url), 'utf8'),
+) as { id: string; name: string; dynasty: string; exam_year: number }[];
+const personById = new Map(index.map((p) => [p.id, p]));
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="数据问答">
   <main class="mx-auto max-w-3xl px-4 py-8">
     <h1 class="text-2xl font-bold text-jin">数据问答</h1>
     <p class="mt-1 text-sm text-miDim">
-      用数据直接回答关于状元的高频问题。统计基于当前已收录 {stats.total} 人，随数据回填持续更新；
-      各卡恒定标注样本量 n——史料覆盖不均，诚实即内容。
+      先读几段有出处的人生，再看时代的统计。统计基于当前已收录 {stats.total} 人，随本站整理持续更新；
+      各卡恒定标注样本量 n。缺的是本站尚未录入的字段，不据此推断史料不存在。
     </p>
+
+    <section id="lives" class="mt-8 scroll-mt-16">
+      <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">金榜题名之后，他们经历了什么？</h2>
+      <div class="mt-3 grid gap-3 sm:grid-cols-3">
+        {readings.map((r) => {
+          const person = personById.get(r.person_id);
+          return (
+            <a href={`${base}/person/${r.person_id}/`} class="block rounded-lg border border-jin/25 bg-dai/50 p-4 hover:border-jin">
+              <p class="font-serif text-base font-bold text-mi">{person?.name ?? r.title}</p>
+              <p class="mt-1 font-serif text-xs text-miDim">{person ? `${dynName(person.dynasty)} · ${person.exam_year} 年` : ''}</p>
+              <p class="mt-2 font-serif text-sm leading-6 text-mi/90">{r.summary}</p>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    <h2 class="mt-12 font-serif text-base font-bold text-miDim">时代的统计</h2>
 
     {/* q0 总览：朝代分布 */}
     <section id="q0" class="mt-8 scroll-mt-16">
@@ -178,27 +204,53 @@ const compN: number = stats.total;
       </div>
     </section>
 
-    {/* q6 仕途桑基 */}
+    {/* q6 旧锚点保留。分类混有官职、去向和死亡，不作人生流向。 */}
     <section id="q6" class="mt-12 scroll-mt-16">
       <div class="mb-1 flex items-center gap-2">
-        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">状元们后来都去哪了？</h2>
-        <GuidePopover client:load inline title="桑基图怎么读">
-          从夺魁后第一站（多为翰林院）到仕途终点：有人直入宰辅，有人外放封疆，有人归隐讲学，有人以身殉国。流量带宽度为人数；样本偏向有完整仕途记载的著名人物——寂寂无闻者的归宿多已不可考。
-        </GuidePopover>
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">一份不能当成结局的分类</h2>
         <ShareButton client:load anchor="q6" />
       </div>
-      <p class="mb-3 text-xs text-miDim">
-        从夺魁后的第一站，到仕途终点：有人直入宰辅，有人外放封疆，有人归隐讲学，有人以身殉国。
+      <p class="mb-3 text-sm leading-7 text-miDim">
+        这里原来用桑基图，把登科后的官职、后来的去向和死亡放在同一条流向里。宰辅、归隐、殉国、早逝并不是同一类结局，人数也不能相加成人的一生。图先不展开。它不比较人生高低，也不表示谁过得更好。
       </p>
-      <AggregateSankey client:only="react" />
+      <div class="mb-4 grid gap-3 sm:grid-cols-3">
+        {[
+          ['记载中的官职', stats.career_dimensions?.office],
+          ['记载中的生活去向', stats.career_dimensions?.path],
+          ['记载中的死亡', stats.career_dimensions?.death],
+        ].map(([label, rows]) => (
+          <div class="rounded-lg border border-miDim/20 p-3">
+            <p class="font-serif text-sm font-bold text-mi">{label}</p>
+            <p class="mt-1 text-[11px] leading-5 text-miDim">三组各自计数，不能相加，也不表示生活好坏。</p>
+            <ul class="mt-2 space-y-1 text-xs text-miDim">
+              {(rows as { label: string; count: number }[] | undefined)?.map((row) => (
+                <li class="flex justify-between gap-3"><span>{row.label}</span><span>{row.count}</span></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      {stats.career_pending > 0 && (
+        <p class="mb-3 text-xs leading-6 text-miDim">另有 {stats.career_pending} 条旧记录拆不准，保持待核，没有填进上面任何一组。</p>
+      )}
+
+      <details class="rounded-lg border border-miDim/20 bg-dai/30 p-4">
+        <summary class="cursor-pointer font-serif text-sm text-miDim">仍要查看这张旧图</summary>
+        <p class="mt-3 text-xs leading-6 text-miDim">
+          样本只来自本站已填了这些分类的人。带宽是分类计数，不是人生阶段的流转。未知没有被填进任何一类。
+        </p>
+        <div class="mt-3">
+          <AggregateSankey client:only="react" />
+        </div>
+      </details>
     </section>
 
     {/* q7 诚实的数据：完整度直方图 */}
     <section id="q7" class="mt-12 scroll-mt-16">
       <div class="mb-3 flex items-center gap-2">
-        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">多少状元「史中无痕」？</h2>
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">本站档案整理到哪一步？</h2>
         <GuidePopover client:load inline title="完整度直方图怎么读">
-          横轴为史料丰富度评分（0–1，由基础字段、事件数、关系数、有无传记加权而成），纵轴为人数。集中在左端即「榜上有名，史中无痕」是常态；右端的亮星才是少数。本站不编造任何字段，空白即真相。
+          横轴是本站档案完整度（0–1，由已录入的基础字段、事件数、关系数和有无简介加权），纵轴为人数。它只衡量本站整理进度，不衡量存世史料总量，也不代表人物价值或记载是否可信。集中在左端，表示多数档案还只录入了姓名和科年。空白字段保持空白，本站不编造。
         </GuidePopover>
         <ShareButton client:load anchor="q7" />
       </div>
@@ -208,13 +260,13 @@ const compN: number = stats.total;
         rows={compRows}
         n={compN}
         yName=" 人"
-        ariaLabel="史料丰富度分布直方图"
+        ariaLabel="本站档案完整度分布直方图"
       />
       <div class="mt-4 rounded-lg border border-miDim/20 bg-dai/40 p-4">
         <p class="text-sm leading-7 text-miDim">
-          这 {stats.total} 位状元中，许多人的现存记载只有姓名与科年。
+          这 {stats.total} 位状元中，许多人在本站目前只录入了姓名与科年。
           当前籍贯坐标覆盖率 {(stats.geo_coverage * 100).toFixed(0)}%，其余正随考证工作流逐步回填。
-          本站不编造任何字段——「史料阙如」本身就是历史的真相。
+          未录入不等于史料不存在。本站不编造字段，空白处保持待整理。
         </p>
       </div>
     </section>

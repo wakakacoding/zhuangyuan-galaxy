@@ -441,7 +441,7 @@ export default function StarMap() {
     <div ref={containerRef} className="relative h-full w-full">
       <canvas ref={canvasRef} className="block h-full w-full" style={{ touchAction: 'none' }} />
       <GuidePopover title="星图怎么读">
-        每颗星是一位状元：横轴为夺魁年份（622–1904），纵轴按朝代分带，带高随该朝状元数伸缩——密度本身就是信息。亮度代表史料丰富度：唐宋大量淡星是「榜上有名，史中无痕」的真实呈现，明清星群密集明亮，因科举鼎盛、文献丰盈。点播放键，看千年星河次第点亮。
+        每颗星是一位状元：横轴为夺魁年份（622–1904），纵轴按朝代分带，带高随该朝状元数伸缩——密度本身就是信息。星的基础明暗反映本站档案整理程度，不代表人物价值、存世史料总量或记载是否可信。筛选时未命中者会再降亮，悬停时另有高亮，这两处都只是操作提示。点播放键，看千年星河次第点亮。
       </GuidePopover>
       {tooltip && (
         <div

@@ -1,6 +1,6 @@
 ---
 // 人物页（SSG 全量生成）：深链/SEO 入口，与人物帖浮层同构
-// 数据不足者呈现「榜上有名，史中无痕」留白页——诚实即内容
+// 本站尚未录入事件者呈现留白页：不推断史料不存在
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -24,7 +24,12 @@ const lifespan = (p: any) => {
   const d = p.death_year ? `${p.death_circa ? '约' : ''}${p.death_year}` : '？';
   return `${b} – ${d}`;
 };
-const sortedEvents = [...(person.events ?? [])].sort((a: any, b: any) => (a.year ?? 0) - (b.year ?? 0));
+// 与 src/lib/eventOrder.ts 同一规则：确切年份在前，范围与未详保持原序并后置
+const hasExactYear = (e: any) => typeof e.year === 'number' && e.precision !== 'range';
+const yearText = (e: any) => (hasExactYear(e) ? `${e.year} 年` : (e.year_label?.trim() || '时间未详'));
+const dated = (person.events ?? []).filter(hasExactYear).sort((a: any, b: any) => a.year - b.year);
+const undated = (person.events ?? []).filter((e: any) => !hasExactYear(e));
+const sortedEvents = [...dated, ...undated];
 const sourceById = new Map((person.sources ?? []).map((s: any) => [s.id, s]));
 const hasDetail = sortedEvents.length > 0 || person.bio_short;
 ---
@@ -76,16 +81,27 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
 
     {person.bio_short && <p class="mt-6 font-serif text-sm leading-7 text-mi/90">{person.bio_short}</p>}
 
-    {/* 仕途行迹（文本详录；品级阶梯图见星图人物帖） */}
+    {(person.readings ?? []).map((reading: any) => (
+      <article class="mt-8">
+        <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">{reading.title}</h2>
+        <div class="mt-4 space-y-3">
+          {reading.paragraphs.map((paragraph: any) => (
+            <p class="font-serif text-sm leading-7 text-mi/90">{paragraph.text}</p>
+          ))}
+        </div>
+      </article>
+    ))}
+
+    {/* 生平事件：与人物浮层同一顺序；官品曲线只在浮层作参考 */}
     {sortedEvents.length > 0 && (
       <section class="mt-8">
-        <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">仕途行迹</h2>
+        <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">生平事件</h2>
         <div class="relative ml-2 mt-4 border-l border-jin/25 pl-4">
           {sortedEvents.map((e: any) => (
             <div class="relative mb-4">
               <span class="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai bg-jin/70" />
               <div class="flex flex-wrap items-baseline gap-2">
-                <span class="font-serif text-xs text-jin/90">{e.year ? `${e.year} 年` : e.year_label}</span>
+                <span class="font-serif text-xs text-jin/90">{yearText(e)}</span>
                 <span class="font-serif text-sm text-mi">{e.title}</span>
                 {e.office && <span class="text-xs text-miDim">{e.office}</span>}
                 {e.source_id && sourceById.get(e.source_id) && (
@@ -98,6 +114,11 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
             </div>
           ))}
         </div>
+        {undated.length > 0 && (
+          <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
+            标为「时间未详」或只写时期的 {undated.length} 条，放在有确切年份的事件之后，不补造年份。
+          </p>
+        )}
       </section>
     )}
 

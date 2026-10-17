@@ -21,6 +21,12 @@ export default function StarMapGate() {
     if (hasExploreState) setEnterInteractive(true);
   }, [hasExploreState]);
 
+  useEffect(() => {
+    const enter = () => setEnterInteractive(true);
+    window.addEventListener('starmap:enter', enter);
+    return () => window.removeEventListener('starmap:enter', enter);
+  }, []);
+
   const needInteractive = !isMobile || enterInteractive;
   useEffect(() => {
     if (!needInteractive || StarMapComp) return;
@@ -42,7 +48,7 @@ export default function StarMapGate() {
         />
         <div className="absolute inset-x-4 bottom-4 rounded-lg border border-jin/25 bg-xuan/90 p-4 backdrop-blur">
           <p className="font-serif text-xs leading-6 text-miDim">
-            每一颗星是一位有姓名可考的状元。横轴是夺魁之年，纵带是朝代；星光越亮，存世史料越丰。
+            每一颗星是一位有姓名可考的状元。横轴是夺魁之年，纵带是朝代。星的基础明暗只反映本站档案整理程度，不代表人物价值或存世史料多少。
           </p>
           <button
             type="button"

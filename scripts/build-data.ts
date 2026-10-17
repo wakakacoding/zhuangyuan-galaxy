@@ -6,11 +6,12 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import yaml from 'js-yaml';
 import {
-  PersonSchema, DynastySchema, SourceSchema, RelationSchema, CareerSchema, ExternalSchema,
+  PersonSchema, DynastySchema, SourceSchema, RelationSchema, CareerSchema, ExternalSchema, ReadingSchema,
   RELATION_TYPES, CAREER_STAGE_CATEGORIES, CAREER_FINAL_CATEGORIES,
-  type Person, type Dynasty, type Source, type Relation, type PersonIndexEntry, type External,
+  type Person, type Dynasty, type Source, type Relation, type PersonIndexEntry, type External, type Reading,
   type Career, type EdgesFile, type Community,
 } from '../src/lib/schema';
+import { splitCareer } from '../src/lib/careerSplit';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 // D5 负向测试：BUILD_DATA_DIR / BUILD_OUT_DIR 指向隔离副本，默认仍是仓库 data 与 public/data。
@@ -419,6 +420,35 @@ for (const p of persons) {
   if (!p.research_status) p.research_status = 'uncompiled';
 }
 
+// 7c. 精选阅读。文件缺失就跳过；存在则整份校验。已审核段落必须有真实出处。
+const readingsPath = join(dataDir, 'readings.yaml');
+const readings: Reading[] = [];
+if (existsSync(readingsPath)) {
+  const parsed = ReadingSchema.array().safeParse(yaml.load(readFileSync(readingsPath, 'utf8')));
+  if (!parsed.success) {
+    err('readings.yaml 不符合结构：' + parsed.error.issues.map((i) => i.path.join('.') + ' ' + i.message).join('；'));
+  } else {
+    const seenReading = new Set<string>();
+    for (const reading of parsed.data) {
+      if (seenReading.has(reading.id)) err(`阅读 ${reading.id} 的 ID 重复`);
+      seenReading.add(reading.id);
+      if (!personById.has(reading.person_id)) err(`阅读 ${reading.id} 指向不存在的人物 ${reading.person_id}`);
+      if (reading.status === 'reviewed') {
+        for (const [i, paragraph] of reading.paragraphs.entries()) {
+          for (const sourceId of paragraph.source_ids) {
+            if (!sourceById.has(sourceId)) err(`阅读 ${reading.id} 第 ${i + 1} 段引用了不存在的出处 ${sourceId}`);
+          }
+        }
+      }
+      readings.push(reading);
+    }
+  }
+}
+const publishedReadings = readings
+  .filter((r) => r.status === 'reviewed')
+  .sort((a, b) => a.order - b.order);
+console.log(`✓ 精选阅读 ${publishedReadings.length} 篇公开 / ${readings.length} 篇录入`);
+
 // D5：上面所有 err() 已经跑完。有错就在任何写入之前退出。
 assertClean();
 mkdirSync(join(outDir, 'person'), { recursive: true });
@@ -453,11 +483,27 @@ const index: PersonIndexEntry[] = persons.map((p) => ({
 }));
 writeFileSync(join(outDir, 'person-index.json'), JSON.stringify(index));
 
+const readingsByPerson = new Map<string, Reading[]>();
+for (const reading of publishedReadings) {
+  const list = readingsByPerson.get(reading.person_id) ?? [];
+  list.push(reading);
+  readingsByPerson.set(reading.person_id, list);
+}
 for (const p of persons) {
   const usedSourceIds = new Set(p.events.map((e) => e.source_id).filter(Boolean) as string[]);
-  const detail = { ...p, sources: [...usedSourceIds].map((id) => sourceById.get(id)!) };
+  for (const reading of readingsByPerson.get(p.id) ?? []) {
+    for (const paragraph of reading.paragraphs) {
+      for (const sourceId of paragraph.source_ids) usedSourceIds.add(sourceId);
+    }
+  }
+  const detail = {
+    ...p,
+    sources: [...usedSourceIds].map((id) => sourceById.get(id)!),
+    readings: readingsByPerson.get(p.id) ?? [],
+  };
   writeFileSync(join(outDir, 'person', `${p.id}.json`), JSON.stringify(detail));
 }
+writeFileSync(join(outDir, 'readings.json'), JSON.stringify(publishedReadings));
 
 const geoPoints = persons.filter((p) => p.lat && p.lng)
   .map((p) => ({ id: p.id, name: p.name, dynasty: p.dynasty, exam_year: p.exam_year, lat: p.lat, lng: p.lng }));
@@ -627,8 +673,7 @@ for (const e of externals) {
 console.log(`✓ 外延简档 ${externals.length}（不计入状元名录 ${index.length}）`);
 console.log(`✓ 社区发现：${commGroups.size} 个社区，标注 ${communities.length} 个（≥3 人）`);
 
-// ---------- 9d. career.json（仕途桑基聚合） ----------
-// 三列：夺魁第一站(first_category，缺记入「未详」) → 中期流向(mid_category，缺省时直通终点) → 仕途终点(final_category)
+// ---------- 9d. career.json（旧分类保留；另附拆开的三组计数，不再把它们连成一条人生） ----------
 type SankeyLink = { source: string; target: string; value: number };
 const sankeyPersons = persons.filter((p) => p.career?.final_category);
 const linkCount = new Map<string, number>();
@@ -653,15 +698,45 @@ const sankeyLinks: SankeyLink[] = [...linkCount.entries()].map(([k, v]) => {
   return { source, target, value: v };
 });
 const sankeyNodes = [...usedNodes].map((name) => ({ name }));
+const splitCounts = {
+  office: new Map<string, number>(),
+  path: new Map<string, number>(),
+  death: new Map<string, number>(),
+};
+const pending: { id: string; name: string; final_category?: string; final_office?: string; reasons: string[] }[] = [];
+for (const p of sankeyPersons) {
+  const split = splitCareer(p.career!);
+  if (split.office) splitCounts.office.set(split.office, (splitCounts.office.get(split.office) ?? 0) + 1);
+  if (split.path) splitCounts.path.set(split.path, (splitCounts.path.get(split.path) ?? 0) + 1);
+  if (split.death) splitCounts.death.set(split.death, (splitCounts.death.get(split.death) ?? 0) + 1);
+  if (split.pending.length) pending.push({
+    id: p.id, name: p.name, final_category: p.career!.final_category, final_office: p.career!.final_office, reasons: split.pending,
+  });
+}
+const toRows = (m: Map<string, number>) => [...m.entries()].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count);
+const careerDimensions = {
+  office: toRows(splitCounts.office),
+  path: toRows(splitCounts.path),
+  death: toRows(splitCounts.death),
+};
+const careerPending = pending.length;
 writeFileSync(join(outDir, 'career.json'), JSON.stringify({
   nodes: sankeyNodes,
   links: sankeyLinks,
   n: sankeyPersons.length,
   total: persons.length,
+  unclassified: persons.length - sankeyPersons.length,
   stage_categories: CAREER_STAGE_CATEGORIES,
   final_categories: CAREER_FINAL_CATEGORIES,
+  legacy_note: 'nodes 与 links 是旧的混合分类，官职、去向和死亡不能相加。请用 dimensions。',
+  dimensions: {
+    office: { label: '记载中的官职', rows: careerDimensions.office },
+    path: { label: '记载中的生活去向', rows: careerDimensions.path },
+    death: { label: '记载中的死亡', rows: careerDimensions.death },
+  },
+  pending,
 }));
-console.log(`✓ 仕途桑基：${sankeyPersons.length} 人入样，${sankeyLinks.length} 条流量`);
+console.log(`✓ 仕途分类：旧入样 ${sankeyPersons.length}；官职 ${splitCounts.office.size} 类，去向 ${splitCounts.path.size} 类，死亡 ${splitCounts.death.size} 类；待核 ${pending.length}`);
 
 // ---------- 10. 统计预计算 ----------
 // M5-d D4 统计口径修复：① 姓氏繁简归一（原直接取 p.name[0]，致 张33/張11、刘16/劉10 同榜并存）
@@ -741,6 +816,8 @@ const stats = {
   age_histogram: { buckets: ageHistogram, n: ages.length },
   avg_age_by_dynasty: avgAgeByDynasty,
   completeness_histogram: compBuckets,
+  career_dimensions: careerDimensions,
+  career_pending: careerPending,
 };
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats));
 writeFileSync(join(outDir, 'dynasties.json'), JSON.stringify(dynasties));

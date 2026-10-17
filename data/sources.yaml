@@ -109,3 +109,46 @@
 - id: s0033
   title: 长乐县志、福州市志
   tier: B
+- id: s0034
+  title: 明史·杨慎传
+  juan: 卷一百九十二
+  tier: A
+  url: https://zh.wikisource.org/wiki/%E6%98%8E%E5%8F%B2/%E5%8D%B7192
+  quote: 年二十四，举正德六年殿试第一，授翰林修撰。嘉靖三十八年七月卒，年七十有二。天启中，追谥文宪。明世记诵之博，著作之富，推慎为第一。诗文外，杂著至一百余种，并行于世。
+  note: LIFE-04 专条。哭谏引语不在本传。
+- id: s0035
+  title: 明史·何孟春传
+  juan: 卷一百九十一
+  tier: A
+  url: https://zh.wikisource.org/wiki/%E6%98%8E%E5%8F%B2/%E5%8D%B7191
+  quote: 修撰杨慎曰：「国家养士百五十年，仗节死义，正在今日。」
+  note: 此句在号召伏阙之前，不是跪左顺门时的呼喊。
+- id: s0036
+  title: 清史稿·德宗本纪
+  juan: 卷二十三
+  tier: A
+  url: https://zh.wikisource.org/wiki/%E6%B8%85%E5%8F%B2%E7%A8%BF/%E5%8D%B723
+  quote: 夏四月……辛未，赐张謇等三百十一人进士及第出身有差。
+  note: 光绪二十年。本条未写授何官。
+- id: s0037
+  title: 新世说·言语
+  author: 易宗夔
+  juan: 卷一
+  tier: B
+  url: https://zh.wikisource.org/wiki/%E6%96%B0%E4%B8%96%E8%AA%AA/01
+  quote: 张名謇，江苏通州人。光绪甲午，以第一人赐及第。历年从事本省实业及教育。民国元年，南京政府任君为实业部总长。二年，熊内阁任君为农商部总长。见袁氏欲称帝，即辞职旋里云。
+  note: 维基文库页标明尚未校对。笔记，不作张謇自述。
+- id: s0038
+  title: 《南通张季直先生传记》序
+  author: 胡适
+  tier: B
+  url: https://zh.wikisource.org/wiki/%E3%80%8A%E5%8D%97%E9%80%9A%E5%BC%B5%E5%AD%A3%E7%9B%B4%E5%85%88%E7%94%9F%E5%82%B3%E8%A8%98%E3%80%8B%E5%BA%8F
+  quote: 张季直先生在近代中国史上是一个很伟大的失败的英雄，这是谁都不能否认的。
+  note: 1929 年为张孝若《传记》所作序，是后人评价，不是《啬翁自订年谱》的记载。
+- id: s0039
+  title: 宋史·吕蒙正传
+  juan: 卷二百六十五
+  tier: A
+  url: https://zh.wikisource.org/wiki/%E5%AE%8B%E5%8F%B2/%E5%8D%B7265
+  quote: 蒙正，太平兴国二年擢进士第一，授将作监丞，通判升州。
+  note: 文渊阁四库本「升」作「昇」。参知政事、平章事及朝堂不记姓名之语均在本传。

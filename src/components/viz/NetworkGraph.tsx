@@ -310,7 +310,7 @@ export default function NetworkGraph() {
               双击任一节点聚焦其二度朋友圈；右侧面板列出算法自动发现的五大「状元朋友圈」。
             </p>
             <p className="mt-2 font-kai text-[11px] text-miDim/70">
-              关系考据刚起步，唐孔氏、清翁氏等家族网络最完整；大量「史中无痕」者暂无关系可画——空白也是史实。
+              关系考据刚起步，唐孔氏、清翁氏等家族网络目前整理得最完整。图上没有连线，只表示本站尚未录入关系，不表示历史上没有往来。
             </p>
           </GuidePopover>
           {pickedId && (

@@ -86,3 +86,44 @@ test('校验失败（生年晚于登科 + 关系指向不存在的人）不改�
   same(docsBefore, snapshot(docsDir));
   rmSync(base, { recursive: true, force: true });
 });
+
+test('精选阅读引用不存在的出处时不写产物，草稿不进入公开名单', () => {
+  const base = join(tmpdir(), 'zy-read-' + process.pid);
+  rmSync(base, { recursive: true, force: true });
+  const dataDir = join(base, 'data');
+  const outDir = join(base, 'out');
+  const docsDir = join(base, 'docs');
+  cpSync(join(root, 'data'), dataDir, { recursive: true });
+  cpSync(join(root, 'public', 'data'), outDir, { recursive: true });
+  mkdirSync(docsDir);
+  for (const name of ['career-冲突裁定表.md', '争议身份一览.md']) {
+    cpSync(join(root, 'docs', name), join(docsDir, name));
+  }
+  const readings = readFileSync(join(dataDir, 'readings.yaml'), 'utf8');
+  writeFileSync(
+    join(dataDir, 'readings.yaml'),
+    readings.replace('source_ids: [s0034]', 'source_ids: [s9999]') +
+      '\n- id: r0099\n  person_id: z0497\n  title: 草稿\n  summary: 不该公开\n  order: 9\n  status: draft\n  paragraphs:\n    - text: 草稿正文\n      source_ids: [s0034]\n',
+  );
+  const before = snapshot(outDir);
+  const bad = run(dataDir, outDir, docsDir);
+  assert.notEqual(bad.status, 0);
+  assert.match(bad.stderr + bad.stdout, /s9999/);
+  assert.match(bad.stderr + bad.stdout, /未写入任何产物/);
+  same(before, snapshot(outDir));
+
+  writeFileSync(
+    join(dataDir, 'readings.yaml'),
+    readings +
+      '\n- id: r0099\n  person_id: z0497\n  title: 草稿\n  summary: 不该公开\n  order: 9\n  status: draft\n  paragraphs:\n    - text: 草稿正文\n      source_ids: [s0034]\n',
+  );
+  const good = run(dataDir, outDir, docsDir);
+  assert.equal(good.status, 0, good.stderr);
+  const published = JSON.parse(readFileSync(join(outDir, 'readings.json'), 'utf8'));
+  assert.equal(published.some((r) => r.id === 'r0099'), false);
+  assert.equal(published.length, 3);
+  const person = JSON.parse(readFileSync(join(outDir, 'person', 'z0497.json'), 'utf8'));
+  assert.equal(person.readings.some((r) => r.id === 'r0099'), false);
+  assert.equal(person.sources.some((s) => s.id === 's0034'), true);
+  rmSync(base, { recursive: true, force: true });
+});

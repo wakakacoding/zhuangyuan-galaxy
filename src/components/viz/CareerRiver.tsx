@@ -1,8 +1,9 @@
-// 仕途河流（个体视图）：横轴年份 × 纵轴官品（正一品顶 → 从九品底）的阶梯折线
-// 有品级事件构成阶梯线；无品级但有年份的事件入底部纪事带；推定品级半透明并配图注
+// 官职品级参考：横轴年份 × 纵轴官品（正一品顶 → 从九品底）
+// 只画同时有确切年份与品级的事件。未知品级不入纵轴，单点不连成走势。
 import { useMemo, useState } from 'react';
 import { scaleLinear } from 'd3-scale';
 import { EVENT_COLOR, gradeLabel, type EventItem } from '../../lib/data';
+import { hasExactYear, plottableEvents } from '../../lib/eventOrder';
 
 const W = 400, H = 200, PAD_L = 52, PAD_R = 14, PAD_T = 14, BAND_H = 26;
 const PLOT_H = H - PAD_T - BAND_H - 8;
@@ -11,9 +12,8 @@ export default function CareerRiver({ events }: { events: EventItem[] }) {
   const [hover, setHover] = useState<EventItem | null>(null);
 
   const { points, band, minYear, maxYear, hasEstimated } = useMemo(() => {
-    const graded = events.filter((e) => e.rank_grade !== undefined && e.year !== undefined)
-      .sort((a, b) => a.year! - b.year!);
-    const ungraded = events.filter((e) => e.rank_grade === undefined && e.year !== undefined)
+    const graded = plottableEvents(events).sort((a, b) => a.year! - b.year!);
+    const ungraded = events.filter((e) => hasExactYear(e) && e.rank_grade === undefined)
       .sort((a, b) => a.year! - b.year!);
     const years = [...graded, ...ungraded].map((e) => e.year!);
     return {
@@ -31,12 +31,11 @@ export default function CareerRiver({ events }: { events: EventItem[] }) {
 
   if (!points.length) return null;
 
-  // 阶梯线：水平保持前一级 → 到新年份垂直跳变
-  const path = points.map((p, i) => {
+  // 两点及以上才连阶梯。单点只标位置，不画虚构走势。
+  const path = points.length < 2 ? '' : points.map((p, i) => {
     const px = x(p.year!);
     const py = y(p.rank_grade!);
     if (i === 0) return `M ${px} ${py}`;
-    const prevY = y(points[i - 1].rank_grade!);
     return `H ${px} V ${py}`;
   }).join(' ');
 
@@ -52,8 +51,8 @@ export default function CareerRiver({ events }: { events: EventItem[] }) {
             </text>
           </g>
         ))}
-        {/* 阶梯主线 */}
-        <path d={path} fill="none" stroke="#C9A227" strokeWidth={1.6} strokeOpacity={0.85} />
+        {/* 阶梯主线：至少两点才画 */}
+        {path && <path d={path} fill="none" stroke="#C9A227" strokeWidth={1.6} strokeOpacity={0.85} />}
         {/* 纪事带分隔线 */}
         <line x1={PAD_L} x2={W - PAD_R} y1={PAD_T + PLOT_H + 4} y2={PAD_T + PLOT_H + 4} stroke="#9AA5B1" strokeOpacity={0.25} strokeWidth={0.5} strokeDasharray="2 3" />
         <text x={PAD_L - 4} y={PAD_T + PLOT_H + BAND_H - 6} textAnchor="end" fontSize={8} fill="#9AA5B1" fontFamily="serif">纪事</text>
@@ -99,9 +98,11 @@ export default function CareerRiver({ events }: { events: EventItem[] }) {
           <p className="mt-0.5 font-serif text-xs text-mi">{hover.office ?? hover.title}</p>
         </div>
       )}
-      {hasEstimated && (
-        <p className="mt-1 font-kai text-[10px] text-miDim/60">半透明节点品级为推定（唐宋官品依寄禄官折算，容有出入）。</p>
-      )}
+      <p className="mt-1 font-kai text-[10px] leading-5 text-miDim/60">
+        纵轴只表示官职品级，不代表生活如何。查不到品级的事件不放进这根轴。
+        {hasEstimated && '半透明节点的品级是推定（唐宋官品依寄禄官折算，容有出入）。'}
+        {points.length === 1 && '目前只有一个可定位的品级，故不连线。'}
+      </p>
     </div>
   );
 }

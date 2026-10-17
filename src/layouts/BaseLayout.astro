@@ -7,14 +7,14 @@ interface Props {
   title: string;
   description?: string;
 }
-const { title, description = '一眼望尽 1283 年：从唐武德五年到清光绪三十年，历代状元的人生星河' } = Astro.props;
+const { title, description = '金榜题名之后的人生：从唐到清，沿着有据可查的经历，看历代状元后来怎样度过一生；也可进入星图、籍贯地图与关系统计。' } = Astro.props;
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 const nav = [
   { href: '/', label: '星图' },
   { href: '/map', label: '籍贯地图' },
   { href: '/network', label: '关系网络' },
   { href: '/insights', label: '数据问答' },
-  { href: '/about', label: '关于数据' },
+  { href: '/about', label: '关于本站' },
 ];
 const current = Astro.url.pathname;
 const stripBase = (p: string) => (BASE && p.startsWith(BASE) ? p.slice(BASE.length) : p) || '/';

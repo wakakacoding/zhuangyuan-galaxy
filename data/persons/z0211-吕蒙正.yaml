@@ -9,37 +9,37 @@ death_year: 1011
 native_hist: 河南洛阳
 native_modern: 河南省洛阳市
 ke_ci: 太平兴国二年丁丑科
-bio_short: 北宋名臣，太平兴国二年状元，太宗、真宗朝三次拜相。以知人善任、雅量宽容著称，是宋代由科举正途直达宰执的标志性人物。
+bio_short: 太平兴国二年擢进士第一。太宗朝擢参知政事，又两度以平章事入相，真宗咸平四年再以本官同平章事。品级均为推定。
 tags:
   - 宰相
   - 寒门
 events:
   - year: 977
     type: 夺魁
-    title: 太平兴国二年丁丑科状元
-    description: 太宗即位后首次开科夺魁，受知于太宗，仕途自此通达。
-    source_id: s0003
+    title: 太平兴国二年擢进士第一
+    description: 本传记其擢进士第一，授将作监丞，通判升州。品级是推定，本传未写。
+    source_id: s0039
     office: 将作监丞、通判升州
     rank_grade: 8
     estimated: true
   - year: 983
     type: 升迁
-    title: 拜参知政事
-    description: 夺魁仅六年即入执政，升迁之速为宋初罕见。
-    source_id: s0003
+    title: 擢参知政事
+    description: 本传记其入为翰林学士后，擢左谏议大夫、参知政事。年份依通行纪年，本传未写「六年」「宋初罕见」。
+    source_id: s0039
     office: 参知政事
     rank_grade: 2
     estimated: true
   - year: 988
     type: 升迁
-    title: 拜相（同中书门下平章事）
-    description: 端拱元年首次拜相；此后淳化、咸平年间两度再相，前后三居相位。
-    source_id: s0003
-    office: 同中书门下平章事
+    title: 拜中书侍郎兼户部尚书、平章事
+    description: 本传记李昉罢相后，蒙正拜中书侍郎兼户部尚书、平章事。淳化中曾罢，四年复相；咸平四年再以本官同平章事。品级为推定。
+    source_id: s0039
+    office: 中书侍郎兼户部尚书、平章事
     rank_grade: 1
     estimated: true
   - year: 1011
     type: 卒
-    title: 大中祥符四年卒
-    description: 谥文穆。其侄吕夷简后为仁宗名相，吕氏一门三相。
-    source_id: s0003
+    title: 卒，谥文穆
+    description: 本传记其卒，赠中书令，谥文穆。吕夷简是其侄孙蒙亨之子，不是亲侄。
+    source_id: s0039

@@ -4,6 +4,7 @@ import { selectedPersonId, selectPerson, popPerson, pushPerson, personStack } fr
 import { loadPerson, loadDynasties, EVENT_COLOR, isExternalStub, type PersonDetailData, type ExternalStub, type DynastyMeta } from '../../lib/data';
 import { settlePersonLoad } from '../../lib/personLoad';
 import { lifespan } from '../../lib/era';
+import { eventYearText, orderEvents, plottableEvents } from '../../lib/eventOrder';
 import RelationSection from './RelationSection';
 import CareerRiver from '../viz/CareerRiver';
 import GuidePopover from '../shell/GuidePopover';
@@ -86,7 +87,9 @@ export default function PersonOverlay() {
   const stub = isExternalStub(record) ? record : null;
   const person = record && !isExternalStub(record) ? record : null;
   const dyn = dynasties.find((d) => d.key === person?.dynasty);
-  const sortedEvents = [...(person?.events ?? [])].sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
+  const sortedEvents = orderEvents(person?.events ?? []);
+  const gradedEvents = plottableEvents(sortedEvents);
+  const undatedEvents = sortedEvents.filter((e) => !e.year || e.precision === 'range');
 
   // 移动端下滑关闭手势（顶部抓手条拖动）
   const onGrabTouchStart = (e: React.TouchEvent) => {
@@ -231,55 +234,56 @@ export default function PersonOverlay() {
                 <p className="mb-5 font-serif text-sm leading-7 text-mi/90">{person.bio_short}</p>
               )}
 
-              {/* 仕途河流：有品级数据时展示阶梯图；文本行迹保留为折叠详录 */}
+              {/* 生平事件默认展开；官品曲线只作可折叠参考，且须有可绘事件 */}
               {sortedEvents.length > 0 ? (
                 <section className="mb-5">
-                  <h3 className="mb-3 font-serif text-sm font-bold tracking-widest text-jin">
-                    仕途行迹
-                    {sortedEvents.some((e) => e.rank_grade !== undefined) && (
-                      <span className="ml-2 align-middle">
-                        <GuidePopover inline title="仕途河流怎么读">
-                          横轴为年份，纵轴为官职品级（正一品置顶）。阶梯上升是升迁，陡然下落是贬谪；金色星点为夺魁。品级依《历代职官表》按该朝制度考订；半透明节点为推定值，查不到确切品级的一律置于底部纪事带——宁缺毋错。
-                        </GuidePopover>
-                      </span>
-                    )}
-                  </h3>
-                  {sortedEvents.some((e) => e.rank_grade !== undefined) && (
-                    <div className="mb-3 rounded-lg border border-jin/15 bg-xuan/40 p-2">
-                      <CareerRiver events={sortedEvents} />
-                    </div>
-                  )}
-                  <details open={!sortedEvents.some((e) => e.rank_grade !== undefined)} className="group">
-                    <summary className="mb-2 cursor-pointer font-serif text-xs text-miDim hover:text-jin">
-                      行迹详录（{sortedEvents.length} 条）
-                    </summary>
-                    <div className="relative ml-2 border-l border-jin/25 pl-4">
-                      {sortedEvents.map((e, i) => (
-                        <div key={i} className="relative mb-4">
-                          <span
-                            className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai"
-                            style={{ backgroundColor: EVENT_COLOR[e.type] ?? '#9AA5B1' }}
-                          />
-                          <div className="flex flex-wrap items-baseline gap-2">
-                            <span className="font-serif text-xs text-jin/90">{e.year ? `${e.year} 年` : e.year_label}</span>
-                            <span className="rounded-sm px-1 text-[10px]" style={{ color: EVENT_COLOR[e.type] ?? '#9AA5B1', border: `1px solid ${EVENT_COLOR[e.type] ?? '#9AA5B1'}55` }}>
-                              {e.type}
-                            </span>
-                            <span className="font-serif text-sm text-mi">{e.title}</span>
-                          </div>
-                          {e.office && (
-                            <p className="mt-0.5 font-serif text-xs text-mi/70">官职：{e.office}</p>
-                          )}
-                          {e.description && (
-                            <p className="mt-1 font-serif text-xs leading-6 text-miDim">{e.description}</p>
-                          )}
-                          {e.source_id && person.sources.find((s) => s.id === e.source_id) && (
-                            <SourceBadge source={person.sources.find((s) => s.id === e.source_id)!} />
-                          )}
+                  <h3 className="mb-3 font-serif text-sm font-bold tracking-widest text-jin">生平事件</h3>
+                  <div className="relative ml-2 border-l border-jin/25 pl-4">
+                    {sortedEvents.map((e, i) => (
+                      <div key={i} className="relative mb-4">
+                        <span
+                          className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai"
+                          style={{ backgroundColor: EVENT_COLOR[e.type] ?? '#9AA5B1' }}
+                        />
+                        <div className="flex flex-wrap items-baseline gap-2">
+                          <span className="font-serif text-xs text-jin/90">{eventYearText(e)}</span>
+                          <span className="rounded-sm px-1 text-[10px]" style={{ color: EVENT_COLOR[e.type] ?? '#9AA5B1', border: `1px solid ${EVENT_COLOR[e.type] ?? '#9AA5B1'}55` }}>
+                            {e.type}
+                          </span>
+                          <span className="font-serif text-sm text-mi">{e.title}</span>
                         </div>
-                      ))}
-                    </div>
-                  </details>
+                        {e.office && (
+                          <p className="mt-0.5 font-serif text-xs text-mi/70">官职：{e.office}</p>
+                        )}
+                        {e.description && (
+                          <p className="mt-1 font-serif text-xs leading-6 text-miDim">{e.description}</p>
+                        )}
+                        {e.source_id && person.sources.find((s) => s.id === e.source_id) && (
+                          <SourceBadge source={person.sources.find((s) => s.id === e.source_id)!} />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  {undatedEvents.length > 0 && (
+                    <p className="mt-1 font-serif text-[11px] leading-5 text-miDim/70">
+                      标为「时间未详」或只写时期的 {undatedEvents.length} 条，放在有确切年份的事件之后，不补造年份。
+                    </p>
+                  )}
+                  {gradedEvents.length > 0 && (
+                    <details className="mt-4">
+                      <summary className="cursor-pointer font-serif text-xs text-miDim hover:text-jin">
+                        官职品级参考（{gradedEvents.length} 条可定位）
+                        <span className="ml-2 align-middle">
+                          <GuidePopover inline title="官职品级怎么读">
+                            横轴为年份，纵轴只表示官职品级，正一品在上。它说明仕途升降，不说明生活是否顺遂。查不到品级的事件不放进纵轴，也不当作最低品。半透明节点是推定品级。只有一个可定位品级时只标点，不连线。
+                          </GuidePopover>
+                        </span>
+                      </summary>
+                      <div className="mt-2 rounded-lg border border-jin/15 bg-xuan/40 p-2">
+                        <CareerRiver events={sortedEvents} />
+                      </div>
+                    </details>
+                  )}
                 </section>
               ) : (
                 <section className="mb-5 rounded-lg border border-dashed border-miDim/25 p-4 text-center">
@@ -311,7 +315,7 @@ export default function PersonOverlay() {
                   <p className="mt-2 font-kai text-[11px] text-miDim/60">
                     可信度：A=正史/碑录/朱卷　B=方志/年谱/整理名录　C=笔记传说
                   </p>
-                  <a href={`${import.meta.env.BASE_URL}person/${person.id}`} className="mt-3 inline-block font-serif text-xs text-jin underline">完整档案</a>
+                  <a href={`${import.meta.env.BASE_URL}person/${person.id}`} className="mt-3 inline-block font-serif text-xs text-jin underline">{person.readings?.length ? '读完整人生' : '完整档案'}</a>
                   <a href={`https://github.com/wakakacoding/zhuangyuan-galaxy/issues/new?template=errata.yml&title=${encodeURIComponent('[勘误] ' + person.id + ' ' + person.name)}`} className="ml-3 inline-block font-serif text-xs text-miDim underline">提交勘误</a>
                 </section>
               )}

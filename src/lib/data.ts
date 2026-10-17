@@ -55,6 +55,7 @@ export interface PersonDetailData {
   research_status?: 'uncompiled' | 'compiled' | 'disputed';
   career?: CareerInfo;
   events: EventItem[]; sources: SourceItem[];
+  readings?: { id: string; title: string; summary: string; order: number; paragraphs: { text: string; source_ids: string[] }[] }[];
 }
 
 const cache = new Map<string, Promise<unknown>>();

@@ -47,9 +47,14 @@ export const CareerSchema = z.object({
   first_category: z.enum(CAREER_STAGE_CATEGORIES).optional(),
   mid_office: z.string().optional(), // 中期代表官职
   mid_category: z.enum(CAREER_STAGE_CATEGORIES).optional(),
-  final_office: z.string().optional(), // 仕途终点官职/状态
+  final_office: z.string().optional(), // 旧字段：官职、去向或死亡混用，不再当作唯一结局
   final_category: z.enum(CAREER_FINAL_CATEGORIES).optional(),
 });
+
+// LIFE-09：三个维度分开计数。旧 final_category 保留，不自动改写。
+export const OFFICE_BANDS = ['宰辅与执政', '部院', '地方', '翰林文教', '其他官职', '待核'] as const;
+export const LIFE_PATHS = ['归隐或讲学', '实业', '待核'] as const;
+export const DEATH_EVENTS = ['殉职或死事', '早逝', '待核'] as const;
 export type Career = z.infer<typeof CareerSchema>;
 
 // ============ 人物 ============
@@ -94,6 +99,21 @@ export const SourceSchema = z.object({
   note: z.string().optional(),
 });
 export type Source = z.infer<typeof SourceSchema>;
+
+// ============ 精选阅读（人工撰写；审核状态不能代替证据核对） ============
+export const ReadingSchema = z.object({
+  id: z.string().regex(/^r\d{4}$/),
+  person_id: z.string().regex(/^z\d{4}$/),
+  title: z.string().min(1),
+  summary: z.string().min(1),
+  order: z.number().int().positive(),
+  status: z.enum(['draft', 'reviewed']),
+  paragraphs: z.array(z.object({
+    text: z.string().min(1),
+    source_ids: z.array(z.string().regex(/^s\d{4}$/)).min(1),
+  })).min(1),
+});
+export type Reading = z.infer<typeof ReadingSchema>;
 
 // ============ 关系 ============
 export const RELATION_TYPES = ['同年', '师生', '父子', '亲属', '翁婿', '政敌', '同僚'] as const;
