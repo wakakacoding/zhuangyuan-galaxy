@@ -1,11 +1,8 @@
 name: Data Check
 
-# 数据校验：数据/脚本/schema 变更时跑全量构建校验，坏数据拦截在合并前
+# 保留为数据变更的快速检查。它不是发布资格：发布只认 Release gate。
 on:
   pull_request:
-    paths: ['data/**', 'scripts/**', 'src/lib/schema.ts']
-  push:
-    branches: [main]
     paths: ['data/**', 'scripts/**', 'src/lib/schema.ts']
   workflow_dispatch:
 

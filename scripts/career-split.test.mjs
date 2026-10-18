@@ -1,7 +1,7 @@
 // LIFE-09：旧终点拆成三组。早逝不自动变成官职，归隐不解释成幸福。
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { splitCareer } from '../src/lib/careerSplit.ts';
+import { enteredAnyGroup, splitCareer } from '../src/lib/careerSplit.ts';
 
 test('宰辅、归隐、殉国分别进入三个维度', () => {
   assert.equal(splitCareer({ final_category: '宰辅' }).office, '宰辅与执政');
@@ -15,6 +15,18 @@ test('早逝只记死亡；旁边的官职不自动计入官职维度', () => {
   assert.equal(split.death, '早逝');
   assert.equal(split.office, null);
   assert.equal(split.pending.length, 1);
+  assert.equal(enteredAnyGroup(split), true);
+});
+
+test('待核不等于未入任何组：早逝已入死亡组，「其他」才是未入组', () => {
+  const early = splitCareer({ final_category: '早逝', final_office: '卒年二十余' });
+  assert.equal(early.death, '早逝');
+  assert.equal(early.pending.length, 0);
+  assert.equal(enteredAnyGroup(early), true);
+
+  const other = splitCareer({ final_category: '其他', final_office: '事迹不详' });
+  assert.equal(enteredAnyGroup(other), false);
+  assert.equal(other.pending.length, 1);
 });
 
 test('其他不能可靠判断时保持待核', () => {

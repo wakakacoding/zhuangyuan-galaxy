@@ -1,0 +1,48 @@
+name: Release gate
+
+# 数据检查、类型检查、完整构建都过，才产出可部署制品。
+# Deploy 只在本工作流成功之后运行，不再与数据检查平行。
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:data
+      - run: npx tsc --noEmit
+      - run: npm run build
+        env:
+          GITHUB_ACTIONS: true
+      - name: Stamp build identity
+        run: |
+          node --input-type=module -e "
+            import { readFileSync, writeFileSync } from 'node:fs';
+            const stats = JSON.parse(readFileSync('public/data/stats.json','utf8'));
+            const stamp = {
+              commit: process.env.GITHUB_SHA,
+              data_build_date: stats.build_date,
+              stats_version: stats.version,
+              built_at: new Date().toISOString(),
+            };
+            writeFileSync('dist/build-stamp.json', JSON.stringify(stamp, null, 2));
+            console.log(JSON.stringify(stamp));
+          "
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist

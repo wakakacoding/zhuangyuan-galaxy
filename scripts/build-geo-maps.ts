@@ -45,7 +45,7 @@ for (const s of SLICES) {
   const out = join(outDir, `${s.dynasty}.json`);
   execFileSync(mapshaper, [
     shp,
-    '-filter', `BEG_YR <= ${s.year} && END_YR >= ${s.year}`,
+    '-filter', `BEG_YR <= ${s.year} && END_YR >= ${s.year} && TYPE_CH != "非政区国土"`,
     '-filter-fields', 'NAME_CH,TYPE_CH,BEG_YR,END_YR',
     '-rename-fields', 'name=NAME_CH,type=TYPE_CH,beg=BEG_YR,end=END_YR',
     '-simplify', 'weighted', s.simplify, 'keep-shapes',

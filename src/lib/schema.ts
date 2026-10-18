@@ -42,6 +42,15 @@ export const CAREER_STAGE_CATEGORIES = ['翰林院', '部院', '地方', '军职
 // 仕途终点分类
 export const CAREER_FINAL_CATEGORIES = ['宰辅', '部院高官', '地方大员', '学政文教', '归隐', '殉国', '早逝', '其他'] as const;
 
+const CareerFact = z.object({
+  office: z.string().optional(),
+  category: z.string().optional(),
+  year: z.number().optional(),
+  year_label: z.string().optional(),
+  source_id: z.string().regex(/^s\d{4}$/).optional(),
+  note: z.string().optional(),
+});
+
 export const CareerSchema = z.object({
   first_office: z.string().optional(), // 夺魁后首授官职
   first_category: z.enum(CAREER_STAGE_CATEGORIES).optional(),
@@ -49,6 +58,9 @@ export const CareerSchema = z.object({
   mid_category: z.enum(CAREER_STAGE_CATEGORIES).optional(),
   final_office: z.string().optional(), // 旧字段：官职、去向或死亡混用，不再当作唯一结局
   final_category: z.enum(CAREER_FINAL_CATEGORIES).optional(),
+  // N1-08：最高官与末任分开。缺省表示尚未迁移，不能从 final_* 自动填。
+  highest: CareerFact.optional(),
+  last: CareerFact.optional(),
 });
 
 // LIFE-09：三个维度分开计数。旧 final_category 保留，不自动改写。
@@ -95,6 +107,8 @@ export const SourceSchema = z.object({
   juan: z.string().optional(),
   quote: z.string().optional(),
   tier: z.enum(['A', 'B', 'C']),
+  /** 核对程度：缺省 unverified。A 级不等于已核到卷次与引文。 */
+  check: z.enum(['unverified', 'located', 'quoted']).default('unverified'),
   url: z.string().optional(),
   note: z.string().optional(),
 });

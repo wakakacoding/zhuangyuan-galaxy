@@ -9,7 +9,12 @@ export interface CareerSplit {
   office: string | null;
   path: string | null;
   death: string | null;
+  /** 某个维度待核的说明。有 pending 不表示整个人没进入任何一组。 */
   pending: string[];
+}
+
+export function enteredAnyGroup(split: CareerSplit): boolean {
+  return Boolean(split.office || split.path || split.death);
 }
 
 export function splitCareer(row: CareerRow): CareerSplit {

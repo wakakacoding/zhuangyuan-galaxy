@@ -11,7 +11,7 @@ import {
   type Person, type Dynasty, type Source, type Relation, type PersonIndexEntry, type External, type Reading,
   type Career, type EdgesFile, type Community,
 } from '../src/lib/schema';
-import { splitCareer } from '../src/lib/careerSplit';
+import { enteredAnyGroup, splitCareer } from '../src/lib/careerSplit';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 // D5 负向测试：BUILD_DATA_DIR / BUILD_OUT_DIR 指向隔离副本，默认仍是仓库 data 与 public/data。
@@ -703,15 +703,26 @@ const splitCounts = {
   path: new Map<string, number>(),
   death: new Map<string, number>(),
 };
-const pending: { id: string; name: string; final_category?: string; final_office?: string; reasons: string[] }[] = [];
+const pending: {
+  id: string; name: string; final_category?: string; final_office?: string;
+  reasons: string[]; entered: boolean;
+}[] = [];
+let pendingAlsoEntered = 0;
+let enteredNone = 0;
 for (const p of sankeyPersons) {
   const split = splitCareer(p.career!);
   if (split.office) splitCounts.office.set(split.office, (splitCounts.office.get(split.office) ?? 0) + 1);
   if (split.path) splitCounts.path.set(split.path, (splitCounts.path.get(split.path) ?? 0) + 1);
   if (split.death) splitCounts.death.set(split.death, (splitCounts.death.get(split.death) ?? 0) + 1);
-  if (split.pending.length) pending.push({
-    id: p.id, name: p.name, final_category: p.career!.final_category, final_office: p.career!.final_office, reasons: split.pending,
-  });
+  const entered = enteredAnyGroup(split);
+  if (!entered) enteredNone++;
+  if (split.pending.length) {
+    if (entered) pendingAlsoEntered++;
+    pending.push({
+      id: p.id, name: p.name, final_category: p.career!.final_category, final_office: p.career!.final_office,
+      reasons: split.pending, entered,
+    });
+  }
 }
 const toRows = (m: Map<string, number>) => [...m.entries()].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count);
 const careerDimensions = {
@@ -735,8 +746,13 @@ writeFileSync(join(outDir, 'career.json'), JSON.stringify({
     death: { label: '记载中的死亡', rows: careerDimensions.death },
   },
   pending,
+  pending_summary: {
+    with_pending_field: pending.length,
+    pending_and_entered: pendingAlsoEntered,
+    entered_none: enteredNone,
+  },
 }));
-console.log(`✓ 仕途分类：旧入样 ${sankeyPersons.length}；官职 ${splitCounts.office.size} 类，去向 ${splitCounts.path.size} 类，死亡 ${splitCounts.death.size} 类；待核 ${pending.length}`);
+console.log(`✓ 仕途分类：旧入样 ${sankeyPersons.length}；官职 ${splitCounts.office.size} 类，去向 ${splitCounts.path.size} 类，死亡 ${splitCounts.death.size} 类；待核字段 ${pending.length}（其中已入组 ${pendingAlsoEntered}，未入任何组 ${enteredNone}）`);
 
 // ---------- 10. 统计预计算 ----------
 // M5-d D4 统计口径修复：① 姓氏繁简归一（原直接取 p.name[0]，致 张33/張11、刘16/劉10 同榜并存）
@@ -769,8 +785,14 @@ const allAged: Aged[] = persons
   .map((p) => ({ id: p.id, name: p.name, dynasty: p.dynasty, age: p.exam_year - p.birth_year!, uncertain: p.birth_circa || p.disputed }))
   .filter((a) => a.age > 8 && a.age < 90);
 const strip = ({ id, name, dynasty, age }: Aged) => ({ id, name, dynasty, age });
-const ages = allAged.filter((a) => !a.uncertain).map(strip).sort((a, b) => a.age - b.age);
-const uncertainAges = allAged.filter((a) => a.uncertain).map(strip).sort((a, b) => a.age - b.age);
+// N1-07：名录生年没有可核对出处的，不进确定年龄榜，也不进平均年龄。
+// 目前只登记会直接改变榜首结论的两人。缺字段不等于事实为假。
+const AGE_UNSOURCED = new Set(['z0217', 'z0208']); // 程宿、梁颢
+const ages = allAged.filter((a) => !a.uncertain && !AGE_UNSOURCED.has(a.id)).map(strip).sort((a, b) => a.age - b.age);
+const uncertainAges = allAged
+  .filter((a) => a.uncertain || AGE_UNSOURCED.has(a.id))
+  .map(strip)
+  .sort((a, b) => a.age - b.age);
 // 年龄分布直方图（5 岁桶）与分朝平均年龄——支撑问答页「最年轻/年龄变化」图表
 const AGE_BUCKET = 5;
 const ageHistMap = new Map<number, number>();
@@ -794,13 +816,12 @@ const compBuckets = Array.from({ length: 10 }, (_, i) => ({ bucket: i / 10, labe
 for (const p of persons) {
   compBuckets[Math.min(Math.floor(completeness(p) * 10), 9)].count++;
 }
-// 构建日期（供前端展示「数据更新于 …」）。默认取当天；设 SOURCE_DATE_EPOCH 可固定以保证可复现构建
-const BUILD_DATE = process.env.SOURCE_DATE_EPOCH
-  ? new Date(Number(process.env.SOURCE_DATE_EPOCH) * 1000).toISOString().slice(0, 10)
-  : new Date().toISOString().slice(0, 10);
+// 数据基准日。不随每次构建改成当天；口径或数据内容变化时才改这一行。
+// 部署版本由 CI 的 commit 表达，不写进这个日期。
+const BUILD_DATE = '2026-10-16';
 
 const stats = {
-  version: 3, // v3（M5-d D4）：新增 profiles / build_date / geo_unmatched / youngest_uncertain
+  version: 4, // v4（N1-01）：待核按维度；区分已入组与未入任何组
   total: persons.length,
   profiles: profileFiles.length, // 深度档案数——供 E3 替换前端写死的「16 人」
   build_date: BUILD_DATE,
@@ -818,6 +839,8 @@ const stats = {
   completeness_histogram: compBuckets,
   career_dimensions: careerDimensions,
   career_pending: careerPending,
+  career_pending_entered: pendingAlsoEntered,
+  career_entered_none: enteredNone,
 };
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats));
 writeFileSync(join(outDir, 'dynasties.json'), JSON.stringify(dynasties));

@@ -4,7 +4,7 @@ import { selectedPersonId, selectPerson, popPerson, pushPerson, personStack } fr
 import { loadPerson, loadDynasties, EVENT_COLOR, isExternalStub, type PersonDetailData, type ExternalStub, type DynastyMeta } from '../../lib/data';
 import { settlePersonLoad } from '../../lib/personLoad';
 import { lifespan } from '../../lib/era';
-import { eventYearText, orderEvents, plottableEvents } from '../../lib/eventOrder';
+import { eventYearText, isUnplaced, orderEvents, plottableEvents } from '../../lib/eventOrder';
 import RelationSection from './RelationSection';
 import CareerRiver from '../viz/CareerRiver';
 import GuidePopover from '../shell/GuidePopover';
@@ -89,7 +89,7 @@ export default function PersonOverlay() {
   const dyn = dynasties.find((d) => d.key === person?.dynasty);
   const sortedEvents = orderEvents(person?.events ?? []);
   const gradedEvents = plottableEvents(sortedEvents);
-  const undatedEvents = sortedEvents.filter((e) => !e.year || e.precision === 'range');
+  const undatedEvents = sortedEvents.filter(isUnplaced);
 
   // 移动端下滑关闭手势（顶部抓手条拖动）
   const onGrabTouchStart = (e: React.TouchEvent) => {
@@ -266,7 +266,7 @@ export default function PersonOverlay() {
                   </div>
                   {undatedEvents.length > 0 && (
                     <p className="mt-1 font-serif text-[11px] leading-5 text-miDim/70">
-                      标为「时间未详」或只写时期的 {undatedEvents.length} 条，放在有确切年份的事件之后，不补造年份。
+                      标为「时间未详」或只写时期的 {undatedEvents.length} 条，放在可定位年份之后，不补造年份。约年按估计年排序，并标「约」，不当确切日期。
                     </p>
                   )}
                   {gradedEvents.length > 0 && (

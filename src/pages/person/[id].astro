@@ -2,6 +2,7 @@
 // 人物页（SSG 全量生成）：深链/SEO 入口，与人物帖浮层同构
 // 本站尚未录入事件者呈现留白页：不推断史料不存在
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { eventYearText, isUnplaced, orderEvents } from '../../lib/eventOrder';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -18,18 +19,19 @@ const dynasties = JSON.parse(readFileSync(join(root, 'public/data/dynasties.json
 const dyn = dynasties.find((d: any) => d.key === person.dynasty);
 
 const TIER_LABEL: Record<string, string> = { A: '正史/碑录', B: '方志/年谱', C: '笔记/传说' };
+const CHECK_LABEL: Record<string, string> = {
+  unverified: '未核对到卷次与引文',
+  located: '已定位卷次，引文未核',
+  quoted: '已核到引文',
+};
 const lifespan = (p: any) => {
   if (!p.birth_year && !p.death_year) return '生卒不详';
   const b = p.birth_year ? `${p.birth_circa ? '约' : ''}${p.birth_year}` : '？';
   const d = p.death_year ? `${p.death_circa ? '约' : ''}${p.death_year}` : '？';
   return `${b} – ${d}`;
 };
-// 与 src/lib/eventOrder.ts 同一规则：确切年份在前，范围与未详保持原序并后置
-const hasExactYear = (e: any) => typeof e.year === 'number' && e.precision !== 'range';
-const yearText = (e: any) => (hasExactYear(e) ? `${e.year} 年` : (e.year_label?.trim() || '时间未详'));
-const dated = (person.events ?? []).filter(hasExactYear).sort((a: any, b: any) => a.year - b.year);
-const undated = (person.events ?? []).filter((e: any) => !hasExactYear(e));
-const sortedEvents = [...dated, ...undated];
+const sortedEvents = orderEvents(person.events ?? []);
+const undated = sortedEvents.filter(isUnplaced);
 const sourceById = new Map((person.sources ?? []).map((s: any) => [s.id, s]));
 const hasDetail = sortedEvents.length > 0 || person.bio_short;
 ---
@@ -84,9 +86,24 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
     {(person.readings ?? []).map((reading: any) => (
       <article class="mt-8">
         <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">{reading.title}</h2>
+        <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
+          「已审阅」只表示这篇文字经过人工通读，不表示每条史料都已核对到卷次和引文。段末编号对应页底出处。
+        </p>
         <div class="mt-4 space-y-3">
           {reading.paragraphs.map((paragraph: any) => (
-            <p class="font-serif text-sm leading-7 text-mi/90">{paragraph.text}</p>
+            <p class="font-serif text-sm leading-7 text-mi/90">
+              {paragraph.text}
+              {(paragraph.source_ids ?? []).map((sid: string) => {
+                const src = sourceById.get(sid) as { tier?: string; title?: string } | undefined;
+                return (
+                  <a
+                    href={`#source-${sid}`}
+                    class="ml-1 align-super text-[10px] text-jin/80 underline decoration-jin/30"
+                    title={src ? `${src.tier ?? ''} ${src.title ?? sid}` : sid}
+                  >[{sid.replace(/^s0*/, '') || sid}]</a>
+                );
+              })}
+            </p>
           ))}
         </div>
       </article>
@@ -101,7 +118,7 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
             <div class="relative mb-4">
               <span class="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai bg-jin/70" />
               <div class="flex flex-wrap items-baseline gap-2">
-                <span class="font-serif text-xs text-jin/90">{yearText(e)}</span>
+                <span class="font-serif text-xs text-jin/90">{eventYearText(e)}</span>
                 <span class="font-serif text-sm text-mi">{e.title}</span>
                 {e.office && <span class="text-xs text-miDim">{e.office}</span>}
                 {e.source_id && sourceById.get(e.source_id) && (
@@ -116,7 +133,7 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
         </div>
         {undated.length > 0 && (
           <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
-            标为「时间未详」或只写时期的 {undated.length} 条，放在有确切年份的事件之后，不补造年份。
+            标为「时间未详」或只写时期的 {undated.length} 条，放在可定位年份之后，不补造年份。约年按估计年排序，并标「约」，不当确切日期。
           </p>
         )}
       </section>
@@ -138,13 +155,15 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
         <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">史料出处</h2>
         <ul class="mt-3 space-y-2.5">
           {person.sources.map((s: any) => (
-            <li class="rounded-lg border border-miDim/15 bg-dai/40 p-3 text-xs">
-              <div class="flex items-center gap-2">
+            <li id={`source-${s.id}`} class="scroll-mt-16 rounded-lg border border-miDim/15 bg-dai/40 p-3 text-xs">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="font-serif text-[10px] text-jin/70">[{String(s.id).replace(/^s0*/, '')}]</span>
                 <span class={`inline-flex h-4 w-4 items-center justify-center rounded-sm border text-[10px] font-bold ${
                   s.tier === 'A' ? 'border-jin/50 bg-jin/20 text-jin' : s.tier === 'B' ? 'border-[#5DCAA5]/40 bg-teal-400/10 text-[#5DCAA5]' : 'border-miDim/40 bg-miDim/10 text-miDim'
                 }`}>{s.tier}</span>
                 <span class="font-serif font-bold text-mi">{s.title}{s.juan ? ` · ${s.juan}` : ''}</span>
                 <span class="text-miDim/60">{TIER_LABEL[s.tier] ?? ''}</span>
+                <span class="text-miDim/50">{CHECK_LABEL[s.check ?? 'unverified']}</span>
               </div>
               {s.quote && <p class="mt-1.5 font-kai leading-6 text-miDim">{s.quote}</p>}
               {s.url && <a href={s.url} target="_blank" rel="noopener" class="mt-1 inline-block text-jin/70 underline hover:text-jin">核查原文 →</a>}
