@@ -6,7 +6,7 @@ import { zoom as d3zoom, zoomIdentity, type ZoomBehavior, type D3ZoomEvent } fro
 import { quadtree as d3quadtree, type Quadtree } from 'd3-quadtree';
 import { forceSimulation, forceX, forceY, forceCollide } from 'd3-force';
 import { scaleLinear } from 'd3-scale';
-import { selectedDynasties, searchQuery, matchEntry } from '../../store/filters';
+import { selectedDynasties, searchQuery, yearFrom, yearTo, selectedTags, areaQuery, depthFilter, currentFilters, filtersActive, matchEntry } from '../../store/filters';
 import { selectPerson } from '../../store/selection';
 import { loadIndex, loadDynasties, type IndexEntry, type DynastyMeta } from '../../lib/data';
 import { ganzhiOf } from '../../lib/era';
@@ -59,6 +59,11 @@ export default function StarMap() {
 
   const dynFilter = useStore(selectedDynasties);
   const query = useStore(searchQuery);
+  const yFrom = useStore(yearFrom);
+  const yTo = useStore(yearTo);
+  const tags = useStore(selectedTags);
+  const area = useStore(areaQuery);
+  const depth = useStore(depthFilter);
 
   // 年份播放 / 录制状态
   const [playing, setPlaying] = useState(false);
@@ -432,13 +437,13 @@ export default function StarMap() {
   useEffect(() => {
     const st = stateRef.current;
     if (!st.stars.length) return;
-    if (!dynFilter.length && !query.trim()) st.matched = null;
-    else st.matched = new Set(st.stars.filter((s) => matchEntry(s, dynFilter, query)).map((s) => s.id));
+    if (!filtersActive()) st.matched = null;
+    else st.matched = new Set(st.stars.filter((s) => matchEntry(s, currentFilters())).map((s) => s.id));
     scheduleDraw();
-  }, [dynFilter, query, stars, scheduleDraw]);
+  }, [dynFilter, query, yFrom, yTo, tags, area, depth, stars, scheduleDraw]);
 
   return (
-    <div ref={containerRef} className="relative h-full w-full">
+    <div ref={containerRef} className="relative h-full w-full" data-starmap-canvas tabIndex={-1} aria-label="状元星图画布区">
       <canvas ref={canvasRef} className="block h-full w-full" style={{ touchAction: 'none' }} />
       <GuidePopover title="星图怎么读">
         每颗星是一位状元：横轴为夺魁年份（622–1904），纵轴按朝代分带，带高随该朝状元数伸缩——密度本身就是信息。星的基础明暗反映本站档案整理程度，不代表人物价值、存世史料总量或记载是否可信。筛选时未命中者会再降亮，悬停时另有高亮，这两处都只是操作提示。点播放键，看千年星河次第点亮。

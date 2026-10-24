@@ -1,16 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import { useStore } from '@nanostores/react';
 import { selectedPersonId, selectPerson, popPerson, pushPerson, personStack } from '../../store/selection';
+import { selectedDynasties, searchQuery } from '../../store/filters';
 import { loadPerson, loadDynasties, EVENT_COLOR, isExternalStub, type PersonDetailData, type ExternalStub, type DynastyMeta } from '../../lib/data';
 import { settlePersonLoad } from '../../lib/personLoad';
 import { lifespan } from '../../lib/era';
 import { eventYearText, isUnplaced, orderEvents, plottableEvents } from '../../lib/eventOrder';
+import { groupBySection, SECTION_META, type EvidenceSection } from '../../lib/evidence';
 import RelationSection from './RelationSection';
+import CareerFacts from './CareerFacts';
+import DisputedBadge from './DisputedBadge';
 import CareerRiver from '../viz/CareerRiver';
 import GuidePopover from '../shell/GuidePopover';
 
 const TIER_STYLE: Record<string, { label: string; cls: string }> = {
   A: { label: 'A', cls: 'bg-jin/20 text-jin border-jin/50' },
+  'A-': { label: 'A−', cls: 'bg-jin/10 text-jin/80 border-jin/30' },
   B: { label: 'B', cls: 'bg-teal-400/10 text-[#5DCAA5] border-[#5DCAA5]/40' },
   C: { label: 'C', cls: 'bg-miDim/10 text-miDim border-miDim/40' },
 };
@@ -18,6 +23,8 @@ const TIER_STYLE: Record<string, { label: string; cls: string }> = {
 export default function PersonOverlay() {
   const id = useStore(selectedPersonId);
   const stack = useStore(personStack);
+  const dynFilter = useStore(selectedDynasties);
+  const query = useStore(searchQuery);
   const [record, setRecord] = useState<PersonDetailData | ExternalStub | null>(null);
   const [dynasties, setDynasties] = useState<DynastyMeta[]>([]);
   const [loading, setLoading] = useState(false);
@@ -55,7 +62,17 @@ export default function PersonOverlay() {
 
   useEffect(() => {
     if (!id) return;
-    openerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    // P2-1 修复（2026-10-24）：鼠标从 canvas 打开时 document.activeElement 是 body，
+    // 直接记下它等于没记。此时回退到该人物在名单替代表里的行按钮（data-person-id），
+    // 再退到星图画布容器；键盘/按钮打开的路径不变（activeElement 本就是触发元素）。
+    const ae = document.activeElement;
+    if (ae instanceof HTMLElement && ae !== document.body && ae !== document.documentElement) {
+      openerRef.current = ae;
+    } else {
+      openerRef.current =
+        document.querySelector<HTMLElement>(`[data-person-id="${id}"]`) ??
+        document.querySelector<HTMLElement>('[data-starmap-canvas]');
+    }
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     panelRef.current?.querySelector('button')?.focus();
@@ -90,6 +107,23 @@ export default function PersonOverlay() {
   const sortedEvents = orderEvents(person?.events ?? []);
   const gradedEvents = plottableEvents(sortedEvents);
   const undatedEvents = sortedEvents.filter(isUnplaced);
+  const sources = person?.sources ?? [];
+  const sourceById = new Map(sources.map((s) => [s.id, s]));
+  const groups = groupBySection(sortedEvents, sourceById);
+  const readings = person?.readings ?? [];
+  const archiveDepth: 'full' | 'partial' | 'skeleton' =
+    readings.length > 0 ? 'full'
+    : sortedEvents.length > 0 || person?.bio_short || sources.length > 0 ? 'partial'
+    : 'skeleton';
+  // P1-1：完整档案链接带上当前筛选，人物页再把它接回星图
+  const filterQS = new URLSearchParams();
+  if (dynFilter.length) filterQS.set('dyn', dynFilter.join(','));
+  if (query.trim()) filterQS.set('q', query);
+  const filterSuffix = filterQS.toString() ? `?${filterQS.toString()}` : '';
+  const archiveHref = person ? `${import.meta.env.BASE_URL}person/${person.id}${filterSuffix}` : '#';
+  const errataHref = person
+    ? `https://github.com/wakakacoding/zhuangyuan-galaxy/issues/new?template=errata.yml&title=${encodeURIComponent(`[勘误] ${person.id} ${person.name}`)}`
+    : '';
 
   // 移动端下滑关闭手势（顶部抓手条拖动）
   const onGrabTouchStart = (e: React.TouchEvent) => {
@@ -197,6 +231,11 @@ export default function PersonOverlay() {
                     </span>
                   )}
                 </h2>
+                {person.disputed && (
+                  <div className="mt-1.5">
+                    <DisputedBadge note={person.dispute_note} />
+                  </div>
+                )}
                 <div className="mt-2 flex flex-wrap items-center gap-2 font-serif text-xs">
                   <span className="rounded px-2 py-0.5" style={{ backgroundColor: (dyn?.color ?? '#666') + '33', color: dyn?.color }}>
                     {dyn?.name}
@@ -230,40 +269,68 @@ export default function PersonOverlay() {
                 </div>
               </section>
 
+              {/* 档案深度（P0-2）：浮层里也要说清"只是没深档"，不包装成已考据 */}
+              {archiveDepth === 'partial' && (
+                <section
+                  className="mb-5 rounded-lg border border-dashed border-miDim/25 p-3"
+                  data-archive-depth={archiveDepth}
+                >
+                  <p className="font-serif text-xs font-bold text-mi">本站暂无该人物的长篇深度档案</p>
+                  <p className="mt-1 font-kai text-[11px] leading-5 text-miDim">
+                    本页有 {sortedEvents.length} 条事件、{sources.length} 条出处，但还没有写成整篇通读稿；「暂无深档」不等于已考据完成。
+                  </p>
+                </section>
+              )}
+
+              {/* 仕途四维（三态） */}
+              <CareerFacts career={person.career} sources={sources} variant="overlay" />
+
               {person.bio_short && (
                 <p className="mb-5 font-serif text-sm leading-7 text-mi/90">{person.bio_short}</p>
               )}
 
-              {/* 生平事件默认展开；官品曲线只作可折叠参考，且须有可绘事件 */}
+              {/* 生平事件：按证据性质分区（史实 / 笔记传说 / 待证），与人物页同一分类口径 */}
               {sortedEvents.length > 0 ? (
                 <section className="mb-5">
-                  <h3 className="mb-3 font-serif text-sm font-bold tracking-widest text-jin">生平事件</h3>
-                  <div className="relative ml-2 border-l border-jin/25 pl-4">
-                    {sortedEvents.map((e, i) => (
-                      <div key={i} className="relative mb-4">
-                        <span
-                          className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai"
-                          style={{ backgroundColor: EVENT_COLOR[e.type] ?? '#9AA5B1' }}
-                        />
-                        <div className="flex flex-wrap items-baseline gap-2">
-                          <span className="font-serif text-xs text-jin/90">{eventYearText(e)}</span>
-                          <span className="rounded-sm px-1 text-[10px]" style={{ color: EVENT_COLOR[e.type] ?? '#9AA5B1', border: `1px solid ${EVENT_COLOR[e.type] ?? '#9AA5B1'}55` }}>
-                            {e.type}
-                          </span>
-                          <span className="font-serif text-sm text-mi">{e.title}</span>
+                  {(['fact', 'anecdote', 'pending'] as EvidenceSection[]).map((section) => {
+                    const list = groups[section];
+                    if (!list.length) return null;
+                    return (
+                      <div key={section} className="mb-4" data-evidence-section={section}>
+                        <h3 className="mb-1 font-serif text-sm font-bold tracking-widest text-jin">
+                          {SECTION_META[section].title}
+                          <span className="ml-1 text-[11px] font-normal text-miDim/70">（{list.length} 条）</span>
+                        </h3>
+                        <p className="mb-2 font-kai text-[10px] leading-4 text-miDim/60">{SECTION_META[section].short}</p>
+                        <div className="relative ml-2 border-l border-jin/25 pl-4">
+                          {list.map((e, i) => (
+                            <div key={`${section}-${i}`} className="relative mb-4">
+                              <span
+                                className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai"
+                                style={{ backgroundColor: EVENT_COLOR[e.type] ?? '#9AA5B1' }}
+                              />
+                              <div className="flex flex-wrap items-baseline gap-2">
+                                <span className="font-serif text-xs text-jin/90">{eventYearText(e)}</span>
+                                <span className="rounded-sm px-1 text-[10px]" style={{ color: EVENT_COLOR[e.type] ?? '#9AA5B1', border: `1px solid ${EVENT_COLOR[e.type] ?? '#9AA5B1'}55` }}>
+                                  {e.type}
+                                </span>
+                                <span className="font-serif text-sm text-mi">{e.title}</span>
+                              </div>
+                              {e.office && (
+                                <p className="mt-0.5 font-serif text-xs text-mi/70">官职：{e.office}</p>
+                              )}
+                              {e.description && (
+                                <p className="mt-1 font-serif text-xs leading-6 text-miDim">{e.description}</p>
+                              )}
+                              {e.source_id && sourceById.get(e.source_id) && (
+                                <SourceBadge source={sourceById.get(e.source_id)!} />
+                              )}
+                            </div>
+                          ))}
                         </div>
-                        {e.office && (
-                          <p className="mt-0.5 font-serif text-xs text-mi/70">官职：{e.office}</p>
-                        )}
-                        {e.description && (
-                          <p className="mt-1 font-serif text-xs leading-6 text-miDim">{e.description}</p>
-                        )}
-                        {e.source_id && person.sources.find((s) => s.id === e.source_id) && (
-                          <SourceBadge source={person.sources.find((s) => s.id === e.source_id)!} />
-                        )}
                       </div>
-                    ))}
-                  </div>
+                    );
+                  })}
                   {undatedEvents.length > 0 && (
                     <p className="mt-1 font-serif text-[11px] leading-5 text-miDim/70">
                       标为「时间未详」或只写时期的 {undatedEvents.length} 条，放在可定位年份之后，不补造年份。约年按估计年排序，并标「约」，不当确切日期。
@@ -286,39 +353,52 @@ export default function PersonOverlay() {
                   )}
                 </section>
               ) : (
-                <section className="mb-5 rounded-lg border border-dashed border-miDim/25 p-4 text-center">
-                  <p className="font-serif text-sm text-miDim">本站尚未整理这份档案</p>
-                  <p className="mt-1 font-serif text-xs text-miDim/60">目前只录姓名和科年。这不表示史料不存在，本站档案完整度仍在补齐。</p>
+                <section className="mb-5 rounded-lg border border-dashed border-miDim/25 p-4 text-center" data-archive-depth="skeleton">
+                  <p className="font-serif text-sm text-mi">本站暂无该人物深度档案</p>
+                  <p className="mt-1 font-serif text-xs leading-5 text-miDim/60">
+                    目前只录得姓名、朝代与科年，尚无逐条出处，也未做证据分级。这不表示史料不存在，本站档案完整度仍在补齐。
+                  </p>
                 </section>
               )}
 
               {/* 人物关系区（分组卡片链，栈式跳转） */}
               <RelationSection id={person.id} name={person.name} />
 
-              {/* 出处面板 */}
-              {person.sources.length > 0 && (
-                <section>
-                  <h3 className="mb-2 font-serif text-sm font-bold tracking-widest text-jin">史料出处</h3>
-                  <div className="space-y-1.5">
-                    {person.sources.map((s) => (
-                      <div key={s.id} className="flex items-start gap-2 rounded bg-xuan/60 px-2.5 py-2">
-                        <TierMark tier={s.tier} />
-                        <div className="font-serif text-xs">
-                          <span className="text-mi">《{s.title}》{s.juan ? ` · ${s.juan}` : ''}{s.author && <span className="text-miDim"> {s.author}</span>}</span>
-                          {s.quote && <p className="mt-0.5 text-miDim">{s.quote}</p>}
-                          {s.url && <a href={s.url} target="_blank" rel="noopener" className="mt-1 inline-block text-jin underline">核查原文</a>}
-                          {s.note && <p className="mt-0.5 text-miDim/70">{s.note}</p>}
+              {/* 出处面板 + 出口（完整档案 / 勘误）：无出处的浅档也必须有两个出口 */}
+              <section>
+                {person.sources.length > 0 && (
+                  <>
+                    <h3 className="mb-2 font-serif text-sm font-bold tracking-widest text-jin">史料出处</h3>
+                    <div className="space-y-1.5">
+                      {person.sources.map((s) => (
+                        <div key={s.id} className="flex items-start gap-2 rounded bg-xuan/60 px-2.5 py-2">
+                          <TierMark tier={s.tier} />
+                          <div className="font-serif text-xs">
+                            <span className="text-mi">《{s.title}》{s.juan ? ` · ${s.juan}` : ''}{s.author && <span className="text-miDim"> {s.author}</span>}</span>
+                            {s.quote && <p className="mt-0.5 text-miDim">{s.quote}</p>}
+                            {s.url && <a href={s.url} target="_blank" rel="noopener" className="mt-1 inline-block text-jin underline">核查原文</a>}
+                            {s.note && <p className="mt-0.5 text-miDim/70">{s.note}</p>}
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="mt-2 font-kai text-[11px] text-miDim/60">
-                    可信度：A=正史/碑录/朱卷　B=方志/年谱/整理名录　C=笔记传说
-                  </p>
-                  <a href={`${import.meta.env.BASE_URL}person/${person.id}`} className="mt-3 inline-block font-serif text-xs text-jin underline">{person.readings?.length ? '读完整人生' : '完整档案'}</a>
-                  <a href={`https://github.com/wakakacoding/zhuangyuan-galaxy/issues/new?template=errata.yml&title=${encodeURIComponent('[勘误] ' + person.id + ' ' + person.name)}`} className="ml-3 inline-block font-serif text-xs text-miDim underline">提交勘误</a>
-                </section>
-              )}
+                      ))}
+                    </div>
+                    <p className="mt-2 font-kai text-[11px] leading-5 text-miDim/60">
+                      可信度：A=正史/碑录/朱卷　B=方志/年谱/整理名录　C=笔记/传说（笔记不等于虚构，只作参考）
+                    </p>
+                  </>
+                )}
+                <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <a href={archiveHref} data-archive-link="1" className="font-serif text-xs text-jin underline">
+                    {readings.length ? '读完整人生' : '完整档案'}
+                  </a>
+                  <a href={errataHref} target="_blank" rel="noopener" data-errata-link="1" className="font-serif text-xs text-miDim underline">
+                    提交勘误 / 补充材料
+                  </a>
+                </div>
+                <p className="mt-1 font-kai text-[11px] leading-5 text-miDim/60">
+                  勘误走 GitHub Issue 表单（errata.yml），须写清出处依据；无出处依据的不予采纳。
+                </p>
+              </section>
             </>
           )}
         </div>
@@ -327,7 +407,7 @@ export default function PersonOverlay() {
   );
 }
 
-function TierMark({ tier }: { tier: 'A' | 'B' | 'C' }) {
+function TierMark({ tier }: { tier: 'A' | 'A-' | 'B' | 'C' }) {
   const s = TIER_STYLE[tier];
   return (
     <span className={`mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-sm border font-serif text-[10px] font-bold ${s.cls}`}>
@@ -336,7 +416,7 @@ function TierMark({ tier }: { tier: 'A' | 'B' | 'C' }) {
   );
 }
 
-function SourceBadge({ source }: { source: { tier: 'A' | 'B' | 'C'; title: string } }) {
+function SourceBadge({ source }: { source: { tier: 'A' | 'A-' | 'B' | 'C'; title: string } }) {
   return (
     <span className="mt-1 inline-flex items-center gap-1 font-serif text-[10px] text-miDim/70">
       <TierMark tier={source.tier} />
