@@ -108,6 +108,8 @@ if (supplements.length) console.log(`✓ 考据补录表 ${supplements.length} �
 
 // ---------- 4. 深度档案合并 ----------
 const profileFiles = readdirSync(join(dataDir, 'persons')).filter((f) => f.endsWith('.yaml'));
+// 7e 守卫用：合并前快照名录侧籍贯（合并后 persons.native_hist 已被深档覆盖，无法回查）
+const rosterNativeById = new Map(persons.map((p) => [p.id, p.native_hist]));
 // 记录每个深档在 career 下**显式写出**的字段：4b 节据此区分「深档值」与「回填值」，
 // 否则两个回填文件（careers.yaml / careers-mined-qing.yaml）之间的取值差会被误判为深档冲突
 const deepCareerKeys = new Map<string, Set<string>>();
@@ -418,6 +420,22 @@ for (const p of persons) {
 }
 for (const s of sources) {
   if (s.tier === 'A' && !s.title) err(`出处 ${s.id} 为 A 级但缺书名`);
+}
+
+// 7e. 骨架档籍贯占位符守卫（2026-10-25 T25 复测发现）
+// 背景：DB21 骨架档生成时给 35 人写了 native_hist: 籍贯未详（待考）占位，
+// 深档显式字段无条件覆盖名录（第 4 节），其中 18 人把名录真实籍贯顶掉、geo.json 丢 18 点。
+// 占位本身合法（名录确实无籍贯者保留），但名录有值时占位即为数据冲突，err 拦截。
+const NATIVE_PLACEHOLDER = /籍贯未详|待考/;
+for (const f of profileFiles) {
+  const rawTxt = readFileSync(join(dataDir, 'persons', f), 'utf8');
+  const m = rawTxt.match(/^native_hist:\s*(.+)$/m);
+  if (!m || !NATIVE_PLACEHOLDER.test(m[1])) continue;
+  const id = f.split('-')[0];
+  const rosterVal = rosterNativeById.get(id) ?? '';
+  if (rosterVal && !NATIVE_PLACEHOLDER.test(rosterVal)) {
+    err(`深度档案 ${f} 写了籍贯占位「${m[1].trim()}」，但名录 ${id} 有真实籍贯「${rosterVal}」——占位顶掉了名录值（DB21 骨架档生成缺陷，见 T25 复测）`);
+  }
 }
 
 // 7d. 断言强度 ≤ 引文强度（2026-10-23 T02 D4 裁定落地，契约 v1.1）
