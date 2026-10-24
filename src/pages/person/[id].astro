@@ -2,7 +2,11 @@
 // 人物页（SSG 全量生成）：深链/SEO 入口，与人物帖浮层同构
 // 本站尚未录入事件者呈现留白页：不推断史料不存在
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { eventYearText, isUnplaced, orderEvents } from '../../lib/eventOrder';
+import CareerFacts from '../../components/person/CareerFacts';
+import DisputedBadge from '../../components/person/DisputedBadge';
+import EventTimeline from '../../components/person/EventTimeline.astro';
+import { isUnplaced, orderEvents } from '../../lib/eventOrder';
+import { groupBySection, tierSummary, TIER_LABEL } from '../../lib/evidence';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -18,7 +22,6 @@ const person = JSON.parse(readFileSync(join(root, `public/data/person/${id}.json
 const dynasties = JSON.parse(readFileSync(join(root, 'public/data/dynasties.json'), 'utf8'));
 const dyn = dynasties.find((d: any) => d.key === person.dynasty);
 
-const TIER_LABEL: Record<string, string> = { A: '正史/碑录', B: '方志/年谱', C: '笔记/传说' };
 const CHECK_LABEL: Record<string, string> = {
   unverified: '未核对到卷次与引文',
   located: '已定位卷次，引文未核',
@@ -32,11 +35,28 @@ const lifespan = (p: any) => {
 };
 const sortedEvents = orderEvents(person.events ?? []);
 const undated = sortedEvents.filter(isUnplaced);
-const sourceById = new Map((person.sources ?? []).map((s: any) => [s.id, s]));
+const sources = person.sources ?? [];
+const sourceById = new Map(sources.map((s: any) => [s.id, s]));
+const groups = groupBySection(sortedEvents, sourceById);
+const tiers = tierSummary(sources);
+const readings = person.readings ?? [];
+// 档案深度：full=有长篇深档；partial=有事件/出处但无通读稿；skeleton=只有名录骨架
+const archiveDepth: 'full' | 'partial' | 'skeleton' =
+  readings.length > 0 ? 'full'
+  : sortedEvents.length > 0 || person.bio_short || sources.length > 0 ? 'partial'
+  : 'skeleton';
 const hasDetail = sortedEvents.length > 0 || person.bio_short;
+const errataHref = `https://github.com/wakakacoding/zhuangyuan-galaxy/issues/new?template=errata.yml&title=${encodeURIComponent(
+  `[勘误] ${person.id} ${person.name}`,
+)}`;
+const tierLine = `A 级 ${tiers.A} 条 · A− 级 ${tiers.Am} 条 · B 级 ${tiers.B} 条 · C 级 ${tiers.C} 条`;
+// D3（2026-10-23 T02 裁定）：存疑人物的 meta description 不作无条件状元断言
+const metaText = person.disputed
+  ? `${person.name}，${dyn?.name ?? ''}${person.exam_year} 年殿试第一人记载存疑。${person.bio_short ?? ''}`
+  : `${person.name}，${dyn?.name ?? ''}${person.exam_year} 年状元。${person.bio_short ?? ''}`;
 ---
 
-<BaseLayout title={person.name} description={`${person.name}，${dyn?.name ?? ''}${person.exam_year} 年状元。${person.bio_short ?? ''}`}>
+<BaseLayout title={person.name} description={metaText}>
   <main class="mx-auto max-w-2xl px-4 py-8">
     {/* 题签区 */}
     <header class="border-b border-jin/20 pb-5">
@@ -47,7 +67,7 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
             {[person.zi && `字${person.zi}`, person.hao && `号${person.hao}`].filter(Boolean).join(' ')}
           </span>
         )}
-        {person.disputed && <span class="rounded border border-zhusha/60 px-1.5 py-0.5 text-xs text-zhusha">状元身份存疑</span>}
+        {person.disputed && <DisputedBadge note={person.dispute_note} />}
       </div>
       <div class="mt-3 flex flex-wrap items-center gap-2 font-serif text-sm">
         <span class="rounded px-2 py-0.5" style={`background:${dyn?.color ?? '#666'}33;color:${dyn?.color ?? '#999'}`}>{dyn?.name}</span>
@@ -60,11 +80,24 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
       </div>
     </header>
 
-    {/* 存疑警示（M5-d D3）：异说互见——如 z0656 陆器 / z0108 李从实 同科两说并存 */}
+    {/* 异说区（M5-d D3）：异说互见——如 z0656 陆器 / z0108 李从实 同科两说并存 */}
     {person.disputed && (
-      <section class="mt-5 rounded-lg border border-zhusha/50 bg-zhusha/10 p-3">
+      <section class="mt-5 rounded-lg border border-zhusha/50 bg-zhusha/10 p-3" data-evidence-section="disputed">
         <p class="font-serif text-xs font-bold text-zhusha">⚠ 状元身份存疑</p>
         {person.dispute_note && <p class="mt-1 font-serif text-xs leading-relaxed text-mi/80">{person.dispute_note}</p>}
+        <p class="mt-1.5 font-kai text-[11px] leading-5 text-mi/60">
+          存疑只针对「夺魁」这一条断言，不表示此人虚构，也不表示本页其余条目不可用。
+        </p>
+        {(person.dispute_claims ?? []).length > 0 && (
+          <ul class="mt-2 space-y-1">
+            {person.dispute_claims.map((c: any) => (
+              <li class="font-serif text-[11px] leading-5 text-mi/70">
+                <span class="text-zhusha">{c.claim}</span>
+                <span class="text-miDim">：{c.value}（{c.status}{c.note ? `；${c.note}` : ''}）</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
     )}
 
@@ -78,12 +111,56 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
         <p class="text-[11px] tracking-widest text-miDim/70">籍贯</p>
         <p class="mt-0.5 font-serif text-mi">{person.native_hist || '不详'}</p>
         {person.native_modern && <p class="text-xs text-miDim/70">今：{person.native_modern}</p>}
+        {person.lat && person.lng ? (
+          <a
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/map/?slice=${person.dynasty}&focus=${person.id}`}
+            class="mt-1 inline-block font-serif text-xs text-jin underline"
+          >在籍贯地图上定位</a>
+        ) : (
+          <p class="mt-1 font-serif text-xs text-miDim/70">本站没有这个人的籍贯坐标，地图上无法定位。</p>
+        )}
       </div>
     </section>
 
+    {/* 档案深度（P0-2）：浅档不包装成「已考据」 */}
+    {archiveDepth !== 'full' && (
+      <section class="mt-6 rounded-lg border border-dashed border-miDim/25 bg-dai/30 p-4" data-archive-depth={archiveDepth}>
+        <h2 class="font-serif text-base font-bold text-mi">
+          {archiveDepth === 'skeleton' ? '本站暂无该人物深度档案' : '本站暂无该人物的长篇深度档案'}
+        </h2>
+        {archiveDepth === 'skeleton' ? (
+          <>
+            <p class="mt-2 font-kai text-xs leading-6 text-miDim">
+              目前只录得姓名、朝代与科年（{person.ke_ci ?? `${person.exam_year} 年`}），尚未整理生平、仕途与出处。
+              没有事件不等于史料不存在；本页也不表示本站已经考据过这个人。
+            </p>
+            <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
+              已有信息的来源：名录骨架（姓名 / 朝代 / 科年 / 籍贯）。<strong class="text-mi">尚无逐条出处，未做证据分级。</strong>
+            </p>
+          </>
+        ) : (
+          <>
+            <p class="mt-2 font-kai text-xs leading-6 text-miDim">
+              本页有 {sortedEvents.length} 条事件、{sources.length} 条出处（{tierLine}），但还没有写成整篇通读稿。
+              「暂无长篇深档」不等于「已考据完成」，也不等于史料到此为止。
+            </p>
+            <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
+              已有信息的来源按等级标注在每条事件与页底出处上：A=正史/碑录/朱卷，B=方志/年谱/整理名录，C=笔记/传说。
+            </p>
+          </>
+        )}
+        <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
+          有可核的补充材料，见页末「提交勘误 / 补充材料」。
+        </p>
+      </section>
+    )}
+
+    {/* 仕途四维（契约 v1 §3.2 三态） */}
+    <CareerFacts career={person.career} sources={sources} variant="page" />
+
     {person.bio_short && <p class="mt-6 font-serif text-sm leading-7 text-mi/90">{person.bio_short}</p>}
 
-    {(person.readings ?? []).map((reading: any) => (
+    {readings.map((reading: any) => (
       <article class="mt-8">
         <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">{reading.title}</h2>
         <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
@@ -109,39 +186,21 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
       </article>
     ))}
 
-    {/* 生平事件：与人物浮层同一顺序；官品曲线只在浮层作参考 */}
-    {sortedEvents.length > 0 && (
-      <section class="mt-8">
-        <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">生平事件</h2>
-        <div class="relative ml-2 mt-4 border-l border-jin/25 pl-4">
-          {sortedEvents.map((e: any) => (
-            <div class="relative mb-4">
-              <span class="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai bg-jin/70" />
-              <div class="flex flex-wrap items-baseline gap-2">
-                <span class="font-serif text-xs text-jin/90">{eventYearText(e)}</span>
-                <span class="font-serif text-sm text-mi">{e.title}</span>
-                {e.office && <span class="text-xs text-miDim">{e.office}</span>}
-                {e.source_id && sourceById.get(e.source_id) && (
-                  <span class="rounded border border-miDim/30 px-1 text-[10px] text-miDim" title={(sourceById.get(e.source_id) as any).title}>
-                    {(sourceById.get(e.source_id) as any).tier} 级
-                  </span>
-                )}
-              </div>
-              {e.description && <p class="mt-1 text-xs leading-5 text-miDim">{e.description}</p>}
-            </div>
-          ))}
-        </div>
-        {undated.length > 0 && (
-          <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
-            标为「时间未详」或只写时期的 {undated.length} 条，放在可定位年份之后，不补造年份。约年按估计年排序，并标「约」，不当确切日期。
-          </p>
-        )}
-      </section>
+    {/* 生平事件：按证据性质分区；与人物浮层同一分类口径 */}
+    {(['fact', 'anecdote', 'pending'] as const).map((section) =>
+      groups[section].length > 0 ? (
+        <EventTimeline events={groups[section]} sourceById={sourceById} section={section} />
+      ) : null,
+    )}
+    {undated.length > 0 && (
+      <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/70">
+        标为「时间未详」或只写时期的 {undated.length} 条，放在可定位年份之后，不补造年份。约年按估计年排序，并标「约」，不当确切日期。
+      </p>
     )}
 
     {/* 留白页 */}
     {!hasDetail && (
-      <section class="mt-10 rounded-lg border border-dashed border-miDim/25 p-8 text-center">
+      <section class="mt-6 rounded-lg border border-dashed border-miDim/25 p-8 text-center">
         <p class="font-serif text-lg tracking-[0.3em] text-miDim/80">本站尚未整理</p>
         <p class="mt-3 font-kai text-xs leading-6 text-miDim/60">
           目前页面只呈现已录入的姓名与科年。没有事件不等于史料不存在，也不改变其身份是否存疑。
@@ -150,11 +209,11 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
     )}
 
     {/* 出处 */}
-    {(person.sources ?? []).length > 0 && (
+    {sources.length > 0 && (
       <section class="mt-8">
         <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">史料出处</h2>
         <ul class="mt-3 space-y-2.5">
-          {person.sources.map((s: any) => (
+          {sources.map((s: any) => (
             <li id={`source-${s.id}`} class="scroll-mt-16 rounded-lg border border-miDim/15 bg-dai/40 p-3 text-xs">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="font-serif text-[10px] text-jin/70">[{String(s.id).replace(/^s0*/, '')}]</span>
@@ -170,14 +229,60 @@ const hasDetail = sortedEvents.length > 0 || person.bio_short;
             </li>
           ))}
         </ul>
+        <p class="mt-2 font-kai text-[11px] leading-5 text-miDim/60">
+          C 级是笔记/传说性质的材料，不等于虚构：笔记里常有正史不载的细节，只是需要别的材料佐证，所以本页把它单独列在「笔记与传说」区。
+        </p>
       </section>
     )}
 
-    {/* 回星图（同构浮层入口） */}
+    {/* 勘误入口（P0-2）：站内没有提交后端，走既有 errata.yml 流程 */}
+    <section class="mt-8 rounded-lg border border-miDim/20 bg-dai/40 p-4" data-errata-entry="1">
+      <h2 class="border-l-2 border-jin pl-2 font-serif text-base font-bold">提交勘误 / 补充材料</h2>
+      <p class="mt-2 font-kai text-xs leading-6 text-miDim">
+        本站没有站内提交后端，勘误走既有 GitHub Issue 表单（errata.yml）：需写清「现行记载 / 建议修正 / 证据等级 / 出处依据」，
+        <strong class="text-mi">无出处依据的不予采纳</strong>。首次响应 ≤48 小时，裁定 ≤7 天（见仓库 docs/勘误处理流程.md）。
+      </p>
+      <a
+        href={errataHref}
+        target="_blank"
+        rel="noopener"
+        class="mt-3 inline-block rounded-full border border-jin/50 px-4 py-1.5 font-serif text-sm text-jin hover:bg-jin/10"
+      >在 GitHub 提交「{person.id} {person.name}」的勘误 →</a>
+      <p class="mt-2 font-serif text-[11px] leading-5 text-miDim/60">
+        需要 GitHub 账号；也可直接在仓库开 issue，附卷次、页码或书影。
+      </p>
+    </section>
+
+    {/* 回星图（同构浮层入口）；带上进入本页时的筛选，返回时不丢 */}
     <div class="mt-10 border-t border-jin/15 pt-5 text-center">
-      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/?p=${person.id}`} class="inline-block rounded-full border border-jin/50 px-5 py-2 font-serif text-sm text-jin transition hover:bg-jin/10">
+      <a
+        data-back-starmap="1"
+        href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/?p=${person.id}`}
+        class="inline-block rounded-full border border-jin/50 px-5 py-2 font-serif text-sm text-jin transition hover:bg-jin/10"
+      >
         在星河中打开 {person.name} 的星 →
       </a>
+      <p class="mt-2 font-serif text-[11px] text-miDim/60" data-back-hint hidden>返回时会带回你在星图上的朝代与关键词筛选。</p>
     </div>
   </main>
 </BaseLayout>
+
+<script>
+  // P1-1：人物页是静态页，返回星图时把来路的 dyn/q 接回链接，避免筛选丢失
+  const back = document.querySelector<HTMLAnchorElement>('[data-back-starmap]');
+  if (back) {
+    const from = new URLSearchParams(window.location.search);
+    const keep = new URLSearchParams();
+    for (const key of ['dyn', 'q']) {
+      const value = from.get(key);
+      if (value) keep.set(key, value);
+    }
+    if ([...keep.keys()].length) {
+      const url = new URL(back.href, window.location.origin);
+      keep.forEach((value, key) => url.searchParams.set(key, value));
+      back.href = `${url.pathname}${url.search}`;
+      const hint = document.querySelector<HTMLElement>('[data-back-hint]');
+      if (hint) hint.hidden = false;
+    }
+  }
+</script>

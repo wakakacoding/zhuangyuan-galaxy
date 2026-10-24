@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { readFileSync } from 'node:fs';
 const stats = JSON.parse(readFileSync(new URL('../../public/data/stats.json', import.meta.url), 'utf8'));
+// D3（2026-10-23 T02 裁定）：总数处披露存疑人数，与问答 q9 同口径
+const personIndex = JSON.parse(readFileSync(new URL('../../public/data/person-index.json', import.meta.url), 'utf8'));
+const disputedCount = (personIndex.people ?? personIndex).filter((p: any) => p.disputed).length;
 const repo = 'https://github.com/wakakacoding/zhuangyuan-galaxy';
 ---
 
@@ -32,7 +35,7 @@ const repo = 'https://github.com/wakakacoding/zhuangyuan-galaxy';
     <h2 class="mt-8 text-lg font-bold">覆盖范围</h2>
     <p class="mt-2 text-sm text-miDim">
       收录自唐武德五年（622 年）孙伏伽至清光绪三十年（1904 年）刘春霖，历代有姓名可考的文状元，
-      含辽、金等政权的科举状元，共 {stats.total} 人（数据更新于 {stats.build_date}）。隋朝虽有进士科之设，然状元名录争议过大，暂未收录；
+      含辽、金等政权的科举状元，共 {stats.total} 人（其中 {disputedCount} 人状元身份存疑，以存疑标记单独呈现；数据更新于 {stats.build_date}）。隋朝虽有进士科之设，然状元名录争议过大，暂未收录；
       武状元、大西、太平天国科举亦不在本期范围。
     </p>
 
@@ -63,9 +66,14 @@ const repo = 'https://github.com/wakakacoding/zhuangyuan-galaxy';
       <li>《明清进士题名碑录》—— 明清状元姓名籍贯名次</li>
       <li>二十四史及《清史稿》人物列传</li>
       <li>CBDB 中国历代人物传记资料库（哈佛/北大/中研院）</li>
-      <li>CHGIS 中国历史地理信息系统 —— 古今地名映射</li>
+      <li>Cliopatria 历史疆域数据集（Seshat Global History Databank）—— 各朝疆域轮廓</li>
       <li>历代状元开放名录（骨架初录，逐条核校中）</li>
     </ul>
+    <p class="mt-3 text-sm text-miDim">
+      名录、关系、外延和统计可以下载，见
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/data/`} class="text-jin underline">开放数据</a>。
+      历史疆域轮廓随开放仓库分发（CC BY 4.0，署名与改动说明见下节）。
+    </p>
 
     <h2 class="mt-8 text-lg font-bold">异说并存与勘误</h2>
     <p class="mt-2 text-sm text-miDim">
@@ -85,10 +93,18 @@ const repo = 'https://github.com/wakakacoding/zhuangyuan-galaxy';
     <h2 class="mt-8 text-lg font-bold" id="map-compliance">地图数据来源与合规</h2>
     <div class="mt-2 space-y-2 text-sm text-miDim">
       <p>
-        <span class="text-mi">历史政区底图</span>：CHGIS 中国历史地理信息系统 V6 时间序列数据
-        （哈佛大学费正清中国研究中心 / 复旦大学历史地理研究中心，免费学术使用，谨此署名致谢）。
-        本站按朝代切片（唐 741 年 / 五代 960 年 / 宋辽 1111 年 / 金 1189 年 / 元 1330 年 / 明 1582 年 / 清 1820 年）
-        重建历史行政区划轮廓。<strong class="text-mi">历史疆域为学术示意，不作国界依据。</strong>
+        <span class="text-mi">历史疆域底图</span>：Cliopatria 历史疆域数据集 v0.2.1
+        （Seshat Global History Databank，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" class="underline hover:text-jin">CC BY 4.0</a>；
+        学术论文：dx.doi.org/10.1038/s41597-025-04516-9）。
+        本站按朝代切片年截取对应政权轮廓（唐 741 年 / 五代 960 年八政权 / 宋 1111 年 / 辽 1111 年 / 金 1189 年 / 元 1330 年 / 明 1582 年 / 清 1820 年），
+        并对多边形做了抽稀简化。<strong class="text-mi">改动说明：按本站切片年选取年段、简化坐标、中文化政权名——原始数据与许可见
+        <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener" class="underline hover:text-jin">Cliopatria 仓库</a>。</strong>
+        历史疆域为学术示意，不作国界依据。
+      </p>
+      <p class="text-[11px] leading-5 text-miDim/70">
+        沿革：2026-10-24 前，本站底图使用 CHGIS V6 时间序列数据（哈佛/复旦历史地理研究中心，谨此致谢）；
+        因其许可禁止再分发、与公开分发冲突，2026-10-24 经裁定整体换源为 Cliopatria。
+        古今地名映射参考仍含 CHGIS 学术成果的致谢。
       </p>
       <p>
         <span class="text-mi">现代对照</span>：本站地图页仅呈现历史政区与籍贯分布，

@@ -7,6 +7,7 @@ import { cpSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } f
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
+import yaml from 'js-yaml';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const tsx = join(root, 'node_modules', '.bin', 'tsx');
@@ -48,8 +49,9 @@ function run(dataDir, outDir, docsDir) {
   });
 }
 
-test('校验失败（生年晚于登科 + 关系指向不存在的人）不改任何产物', () => {
-  const base = join(tmpdir(), 'zy-d5-' + process.pid);
+// 夹具：整份 data/ 与 public/data/ 复制到临时目录，产物目录已存在（用于比对「失败不改写」）
+function prepare(tag) {
+  const base = join(tmpdir(), `zy-${tag}-` + process.pid);
   rmSync(base, { recursive: true, force: true });
   const dataDir = join(base, 'data');
   const outDir = join(base, 'out');
@@ -60,6 +62,11 @@ test('校验失败（生年晚于登科 + 关系指向不存在的人）不改�
   for (const name of ['career-冲突裁定表.md', '争议身份一览.md']) {
     cpSync(join(root, 'docs', name), join(docsDir, name));
   }
+  return { base, dataDir, outDir, docsDir };
+}
+
+test('校验失败（生年晚于登科 + 关系指向不存在的人）不改任何产物', () => {
+  const { base, dataDir, outDir, docsDir } = prepare('d5');
 
   const rosterPath = join(dataDir, 'seed', 'roster.tsv');
   const lines = readFileSync(rosterPath, 'utf8').split('\n');
@@ -88,17 +95,7 @@ test('校验失败（生年晚于登科 + 关系指向不存在的人）不改�
 });
 
 test('精选阅读引用不存在的出处时不写产物，草稿不进入公开名单', () => {
-  const base = join(tmpdir(), 'zy-read-' + process.pid);
-  rmSync(base, { recursive: true, force: true });
-  const dataDir = join(base, 'data');
-  const outDir = join(base, 'out');
-  const docsDir = join(base, 'docs');
-  cpSync(join(root, 'data'), dataDir, { recursive: true });
-  cpSync(join(root, 'public', 'data'), outDir, { recursive: true });
-  mkdirSync(docsDir);
-  for (const name of ['career-冲突裁定表.md', '争议身份一览.md']) {
-    cpSync(join(root, 'docs', name), join(docsDir, name));
-  }
+  const { base, dataDir, outDir, docsDir } = prepare('read');
   const readings = readFileSync(join(dataDir, 'readings.yaml'), 'utf8');
   writeFileSync(
     join(dataDir, 'readings.yaml'),
@@ -121,9 +118,77 @@ test('精选阅读引用不存在的出处时不写产物，草稿不进入公�
   assert.equal(good.status, 0, good.stderr);
   const published = JSON.parse(readFileSync(join(outDir, 'readings.json'), 'utf8'));
   assert.equal(published.some((r) => r.id === 'r0099'), false);
-  assert.equal(published.length, 3);
+  // 2026-10-24：三篇新增长文（r0004–r0006）经逐段复核升 reviewed，公开数 3→6（M-G 收口）
+  assert.equal(published.length, 6);
   const person = JSON.parse(readFileSync(join(outDir, 'person', 'z0497.json'), 'utf8'));
   assert.equal(person.readings.some((r) => r.id === 'r0099'), false);
   assert.equal(person.sources.some((s) => s.id === 's0034'), true);
+  rmSync(base, { recursive: true, force: true });
+});
+
+test('同对同型重复边构建失败，且不改写任何产物', () => {
+  const { base, dataDir, outDir, docsDir } = prepare('dup');
+  const relPath = join(dataDir, 'relations.yaml');
+  const rels = yaml.load(readFileSync(relPath, 'utf8'));
+  assert.ok(Array.isArray(rels) && rels.length > 0, 'relations.yaml 应可解析');
+  const dup = rels[0];
+  writeFileSync(
+    relPath,
+    readFileSync(relPath, 'utf8') +
+      yaml.dump([{ from: dup.from, to: dup.to, type: dup.type, note: 'D5 夹具：同对同型重复边' }], { lineWidth: -1 }),
+  );
+
+  const before = snapshot(outDir);
+  const result = run(dataDir, outDir, docsDir);
+  assert.notEqual(result.status, 0, '重复边必须非零退出');
+  assert.match(result.stderr + result.stdout, /关系重复/);
+  assert.match(result.stderr + result.stdout, /未写入任何产物/);
+  same(before, snapshot(outDir));
+  rmSync(base, { recursive: true, force: true });
+});
+
+test('争议人物不参与同年派生：登记 disputed 后同科对不再生成同年边', () => {
+  const { base, dataDir, outDir, docsDir } = prepare('dispute');
+  // 五代 925 年同科两人：基线派生「同年」边；把其中一人登记为 disputed 后必须抑制
+  const [a, b] = ['z0170', 'z0171'];
+  const tongnian = () => {
+    const f = JSON.parse(readFileSync(join(outDir, 'edges.json'), 'utf8'));
+    const list = f.edges ?? f;
+    return list.some((e) => e.type === '同年' && ((e.from === a && e.to === b) || (e.from === b && e.to === a)));
+  };
+
+  const control = run(dataDir, outDir, docsDir);
+  assert.equal(control.status, 0, control.stderr);
+  assert.equal(tongnian(), true, '基线应派生同年边');
+
+  const disputePath = join(dataDir, 'seed', 'dispute-reviewed.json');
+  const disputeFile = JSON.parse(readFileSync(disputePath, 'utf8'));
+  disputeFile.notes.push({ id: a, dispute_note: 'D5 夹具：身份异说，仅用于负向回归', reason: 'D5 夹具' });
+  writeFileSync(disputePath, JSON.stringify(disputeFile, null, 2));
+
+  const res = run(dataDir, outDir, docsDir);
+  assert.equal(res.status, 0, res.stderr);
+  assert.equal(tongnian(), false, 'disputed 人物不应参与同年派生');
+  assert.match(res.stdout, /异说抑制 3 条/, '原有 2 条（李从实↔陆器、泰不华↔宋本——2026-10-23 泰不华经 T02 裁定补标 disputed）+ 新增 1 条');
+  rmSync(base, { recursive: true, force: true });
+});
+
+test('careers 冲突未裁定时只告警不失败，并写入裁定表', () => {
+  const { base, dataDir, outDir, docsDir } = prepare('career');
+  // 贺知章深档 final_category=归隐，追加一条人工回填「部院高官」且不做裁定
+  const careerPath = join(dataDir, 'careers.yaml');
+  writeFileSync(
+    careerPath,
+    readFileSync(careerPath, 'utf8') +
+      '\n- id: z0014   # D5 夹具：与深档 final_category 冲突且未裁定\n  final_category: 部院高官\n  source_id: s0006\n',
+  );
+
+  const res = run(dataDir, outDir, docsDir);
+  assert.equal(res.status, 0, '未裁定冲突不得升级为全库失败');
+  assert.match(res.stderr + res.stdout, /careers 冲突待裁定 \d+ 条/);
+  assert.match(res.stderr + res.stdout, /贺知章\.final_category/);
+
+  const report = readFileSync(join(docsDir, 'career-冲突裁定表.md'), 'utf8');
+  assert.match(report, /\| z0014 \| 贺知章 \| `final_category` \| 归隐 \| 部院高官 \| careers\.yaml \| \*\*待裁定\*\* \|/);
   rmSync(base, { recursive: true, force: true });
 });

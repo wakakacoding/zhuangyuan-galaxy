@@ -322,6 +322,18 @@ for (const r of manualRelations) {
 }
 const nameOf = (id: string) => personById.get(id)?.name ?? externalById.get(id)?.name;
 
+// 有方向关系的方向提示（T14 §5，2026-10-24 启用）：from 应为上位方。
+// from 科年晚于 to 超过 5 年只警告（座主可以比门生年轻），不判错、不拦截。
+const yearOf = (id: string) => personById.get(id)?.exam_year ?? externalById.get(id)?.index_year;
+for (const r of manualRelations) {
+  if (r.type === '父子' || r.type === '翁婿' || r.type === '座主' || r.type === '师承') {
+    const fy = yearOf(r.from), ty = yearOf(r.to);
+    if (fy !== undefined && ty !== undefined && fy > ty + 5) {
+      warn(`方向提示：${nameOf(r.from)}→${nameOf(r.to)}（${r.type}）from 科年 ${fy} 晚于 to ${ty} 超 5 年，请确认方向`);
+    }
+  }
+}
+
 // 同年自动派生：同朝同科年（dynasty+exam_year）的两两连边，derived 标记，与人工边去重
 const pairKey = (a: string, b: string, type: string) => [a, b].sort().join('|') + '#' + type;
 const existingPairs = new Set(manualRelations.map((r) => pairKey(r.from, r.to, r.type)));
@@ -408,6 +420,29 @@ for (const s of sources) {
   if (s.tier === 'A' && !s.title) err(`出处 ${s.id} 为 A 级但缺书名`);
 }
 
+// 7d. 断言强度 ≤ 引文强度（2026-10-23 T02 D4 裁定落地，契约 v1.1）
+// 背景：T02 抽验发现 z0179/z0180/z0427 三人的夺魁事件所挂正史原文并不含「第一」，
+// 属「类型强于出处」。此处拦截其可机检的形态：夺魁事件所挂出处**已核**（check=quoted）
+// 而引文不含名次明文，且同人无其他已核引文支撑——未核出处由 check 状态表达，不在此拦；
+// 已标 disputed 者是披露中的异说状态，降为警告。
+const RANK_MARK = /第一|榜首|状元|一甲一名|第一人/;
+for (const p of persons) {
+  const champ = p.events.find((e) => e.type === '夺魁');
+  if (!champ?.source_id) continue;
+  const src = sourceById.get(champ.source_id);
+  if (!src || src.check !== 'quoted') continue;
+  if (RANK_MARK.test(src.quote ?? '')) continue;
+  const rescued = p.events.some((e) => {
+    if (!e.source_id) return false;
+    const s = sourceById.get(e.source_id);
+    return s?.check === 'quoted' && RANK_MARK.test(s.quote ?? '');
+  });
+  if (rescued) continue;
+  const msg = `${p.name}(${p.id}) 夺魁事件所挂 ${src.id} 的已核引文不含名次明文，且同人无其他已核引文支撑`;
+  if (p.disputed) warn(`${msg}；该人已标 disputed，按异说披露`);
+  else err(`${msg}——改挂正确出处、收敛断言或标 disputed（T02 D4）`);
+}
+
 // 7b. 生卒业务铁律（M5-d D1）——把「出生晚于登科」这类解析事故挡在构建期
 // 背景：parse-wiki 曾把「？－658年」读成 birth=658，全站 38 人出生晚于登科而无人报警。
 for (const p of persons) {
@@ -449,6 +484,41 @@ const publishedReadings = readings
   .sort((a, b) => a.order - b.order);
 console.log(`✓ 精选阅读 ${publishedReadings.length} 篇公开 / ${readings.length} 篇录入`);
 
+// ---------- 7c. 数据契约 v1 守卫（T05）：状态语义与四维事实不得互相冒充 ----------
+// 规则来源：docs/数据契约-v1.md。这些检查只拦"写了但不自洽"的数据，不要求现在就把 656 人迁完。
+const FACT_DIMS = ['highest', 'last', 'whereabouts', 'death'] as const;
+const factCoverageRaw = { highest: { recorded: 0, unknown: 0 }, last: { recorded: 0, unknown: 0 }, whereabouts: { recorded: 0, unknown: 0 }, death: { recorded: 0, unknown: 0 } };
+for (const p of persons) {
+  if (p.research_status === 'searched' && !p.research_note?.trim()) {
+    err(`${p.name}(${p.id}) research_status=searched 但缺 research_note——"查过没找到"必须写检索范围与结论`);
+  }
+  if (p.research_status !== 'uncompiled' && !p.research_checked_at) {
+    warn(`${p.name}(${p.id}) research_status=${p.research_status} 但缺 research_checked_at（建议补 ISO 日期，便于复算）`);
+  }
+  for (const dim of FACT_DIMS) {
+    const f = p.career?.[dim];
+    if (!f) continue; // 缺省 = 尚未迁移，合法
+    if ((f.status ?? 'recorded') === 'unknown') factCoverageRaw[dim].unknown++;
+    else factCoverageRaw[dim].recorded++;
+    if (f.source_id && !sourceById.has(f.source_id)) {
+      err(`${p.name}(${p.id}) career.${dim} 引用不存在出处 ${f.source_id}`);
+    }
+    if ((f.status ?? 'recorded') === 'recorded' && !f.source_id) {
+      warn(`${p.name}(${p.id}) career.${dim} 有值但无 source_id——迁移期允许，验收前须补源或改 status=unknown`);
+    }
+  }
+  for (const [i, e] of p.events.entries()) {
+    if (e.evidence === 'primary' && !e.source_id) {
+      err(`${p.name}(${p.id}) 事件#${i + 1}「${e.title}」标 evidence=primary 但无 source_id——一手证据必须可定位`);
+    }
+    if (e.evidence === 'pending' && e.source_id) {
+      warn(`${p.name}(${p.id}) 事件#${i + 1}「${e.title}」标 evidence=pending 却挂 source_id——确认是"待证"还是"二手"`);
+    }
+  }
+}
+const careerRows = persons.filter((p) => p.career).length;
+console.log(`✓ 数据契约 v1：仕途四维 highest ${factCoverageRaw.highest.recorded} 有值/${factCoverageRaw.highest.unknown} 未知 · last ${factCoverageRaw.last.recorded}/${factCoverageRaw.last.unknown} · whereabouts ${factCoverageRaw.whereabouts.recorded}/${factCoverageRaw.whereabouts.unknown} · death ${factCoverageRaw.death.recorded}/${factCoverageRaw.death.unknown}（共 ${careerRows} 人有 career 记录）`);
+
 // D5：上面所有 err() 已经跑完。有错就在任何写入之前退出。
 assertClean();
 mkdirSync(join(outDir, 'person'), { recursive: true });
@@ -479,7 +549,8 @@ const index: PersonIndexEntry[] = persons.map((p) => ({
   tags: p.tags, completeness: completeness(p), event_count: p.events.length,
   disputed: p.disputed, bio_short: p.bio_short,
   // 繁简归一搜索键：查询词经同一 T2S 表归一后在此匹配
-  search_key: simp(`${p.name}${p.reign ?? ''}${p.ganzhi ?? ''}${p.native_hist}${p.native_modern ?? ''}${p.tags.join('')}`).toLowerCase(),
+  // 字（zi）/号（hao）一并入键：深档 88 人有字、42 人有号，此前只靠 tags 偶然覆盖少数人
+  search_key: simp(`${p.name}${p.zi ?? ''}${p.hao ?? ''}${p.reign ?? ''}${p.ganzhi ?? ''}${p.native_hist}${p.native_modern ?? ''}${p.tags.join('')}`).toLowerCase(),
 }));
 writeFileSync(join(outDir, 'person-index.json'), JSON.stringify(index));
 
@@ -549,6 +620,9 @@ const geoPointsV2 = geoPoints.map((p) => {
 console.log(`✓ 点面归属 ${assignedTotal}/${geoPoints.length}`);
 
 // 按朝聚合：regions（政区→人数）、centroids（重心，含该朝总数）、coverage（覆盖率审计）
+// 2026-10-24 换源 Cliopatria 后，底图为政权级疆域轮廓（每朝 1–8 个政权面），
+// 「政区」语义变为「政权疆域」：regions 只反映入面与否，人均落在同一政权名下。
+// 人物级的地域分组仍由 native_hist/现代地名承担（MapList 按省聚合），故 regions 保留但不再承载府级分组。
 const regions: Record<string, { name: string; count: number }[]> = {};
 const coverage: Record<string, { with_geo: number; assigned: number; total: number }> = {};
 for (const d of dynasties) {
@@ -818,10 +892,16 @@ for (const p of persons) {
 }
 // 数据基准日。不随每次构建改成当天；口径或数据内容变化时才改这一行。
 // 部署版本由 CI 的 commit 表达，不写进这个日期。
-const BUILD_DATE = '2026-10-16';
+const BUILD_DATE = '2026-10-23';
+
+const researchStatusCount = persons.reduce((a, p) => {
+  a[p.research_status] = (a[p.research_status] ?? 0) + 1;
+  return a;
+}, {} as Record<string, number>);
 
 const stats = {
-  version: 4, // v4（N1-01）：待核按维度；区分已入组与未入任何组
+  version: 5, // v5（T05）：数据契约 v1——整理状态与身份争议分轴；仕途四维覆盖计数
+  contract_version: 1.1,
   total: persons.length,
   profiles: profileFiles.length, // 深度档案数——供 E3 替换前端写死的「16 人」
   build_date: BUILD_DATE,
@@ -841,9 +921,100 @@ const stats = {
   career_pending: careerPending,
   career_pending_entered: pendingAlsoEntered,
   career_entered_none: enteredNone,
+  // v1 契约：四维覆盖按 656 名录为分母（missing = 尚未迁移，不等于"无"）
+  career_rows: careerRows,
+  career_facts: Object.fromEntries(
+    FACT_DIMS.map((d) => [d, { ...factCoverageRaw[d], missing: persons.length - factCoverageRaw[d].recorded - factCoverageRaw[d].unknown }]),
+  ),
+  research_status: researchStatusCount,
 };
 writeFileSync(join(outDir, 'stats.json'), JSON.stringify(stats));
+
+// T17：十组问答的机器可读口径。人数取自本次构建，不在页面里另算一套。
+const geoByDynasty = dynasties.map((d) => {
+  const c = coverage[d.key];
+  return { dynasty: d.key, name: d.name, with_geo: c.with_geo, total: c.total };
+});
+const tagCounts = new Map<string, number>();
+for (const p of persons) for (const t of p.tags) tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1);
+const questions = [
+  { id: 'q0', question: '哪个朝代状元最多？', denominator: persons.length, sample: persons.length, method: '按名录 dynasty 计数，八朝合计等于名录总数' },
+  { id: 'q1', question: '最年轻的状元是谁？', denominator: persons.length, sample: ages.length, method: '夺魁年减生年；生年约、身份存疑、无出处的生年不进确定榜' },
+  { id: 'q2', question: '平均夺魁年龄历代如何变化？', denominator: persons.length, sample: ages.length, method: '与 q1 同一批确定年龄，按朝求平均；样本为 0 的朝代断开' },
+  { id: 'q3', question: '哪个姓氏出状元最多？', denominator: persons.length, sample: persons.length, method: '繁简归一后取姓，复姓整体计一姓' },
+  { id: 'q4', question: '状元产地如何南移？', denominator: persons.length, sample: geoPoints.length, method: '只计有坐标者的地理重心，不把无坐标者补进重心' },
+  { id: 'q5', question: '哪些人连中三元？', denominator: persons.length, sample: stats.sanyuan.length, method: '名录标签「三元及第」，不是从官职推断' },
+  { id: 'q6', question: '登科后的分类为什么不能当成结局？', denominator: persons.length, sample: sankeyPersons.length, method: '官职、去向、死亡分三组计数，三组不能相加' },
+  { id: 'q7', question: '本站档案整理到哪一步？', denominator: persons.length, sample: persons.length, method: '完整度只衡量本站已录入字段，不衡量存世史料' },
+  { id: 'q8', question: '多少人有籍贯坐标？', denominator: persons.length, sample: geoPoints.length, method: '有 lat/lng 即计入；分朝分子分母分开，不能把各朝覆盖率相加' },
+  { id: 'q9', question: '多少人的状元身份存疑？', denominator: persons.length, sample: persons.filter((p) => p.disputed).length, method: 'disputed 标记；存疑只针对夺魁这一条，不表示人物虚构' },
+];
+writeFileSync(join(outDir, 'questions.json'), JSON.stringify({
+  version: 1,
+  total: persons.length,
+  questions,
+  geo_by_dynasty: geoByDynasty,
+  disputed: persons.filter((p) => p.disputed).map((p) => ({
+    id: p.id, name: p.name, dynasty: p.dynasty, exam_year: p.exam_year, note: p.dispute_note ?? '',
+  })),
+  tags: [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12).map(([tag, count]) => ({ tag, count })),
+}));
 writeFileSync(join(outDir, 'dynasties.json'), JSON.stringify(dynasties));
+
+// ---------- 10c. 开放数据 v1（T16）：名录、关系、外延、问答口径分开导出 ----------
+// 地图切片不进这里。CHGIS 许可未定，不能因为做了导出就把底图再分发一次。
+const csvCell = (v: unknown) => {
+  const s = v == null ? '' : String(v);
+  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+};
+const toCsv = (header: string[], rows: unknown[][]) =>
+  [header, ...rows].map((r) => r.map(csvCell).join(',')).join('\n') + '\n';
+const openDir = join(outDir, 'open');
+mkdirSync(openDir, { recursive: true });
+const rosterHeader = ['id', 'name', 'dynasty', 'exam_year', 'native_hist', 'native_modern', 'lat', 'lng', 'tags', 'disputed', 'event_count', 'research_status'];
+const rosterRows = persons.map((p) => [
+  p.id, p.name, p.dynasty, p.exam_year, p.native_hist, p.native_modern ?? '',
+  p.lat ?? '', p.lng ?? '', p.tags.join('|'), p.disputed ? 1 : 0, p.events.length, p.research_status,
+]);
+writeFileSync(join(openDir, 'roster.csv'), toCsv(rosterHeader, rosterRows));
+writeFileSync(join(openDir, 'relations.csv'), toCsv(
+  ['from', 'to', 'type', 'derived', 'note', 'source_id'],
+  relations.map((r) => [r.from, r.to, r.type, 'derived' in r && r.derived ? 1 : 0, r.note ?? '', r.source_id ?? '']),
+));
+writeFileSync(join(openDir, 'externals.csv'), toCsv(
+  ['id', 'name', 'birth_year', 'death_year', 'index_year', 'note'],
+  externals.map((e) => [e.id, e.name, e.birth_year ?? '', e.death_year ?? '', e.index_year ?? '', e.note ?? '']),
+));
+const manifest = {
+  version: 1,
+  generated_from: 'build-data',
+  build_date: BUILD_DATE,
+  roster: persons.length,
+  relations_manual: manualRelations.length,
+  relations_derived: relations.length - manualRelations.length,
+  externals: externals.length,
+  not_included: ['maps/*.json（CHGIS 底图，许可未定，不随开放数据分发）', 'cbdb sqlite（第三方库，按原许可使用）'],
+  semantics: {
+    disputed: '状元身份存疑，不等于人物虚构',
+    research_status: 'uncompiled=尚未整理；searched=查过未见；compiled=已整理。缺省按 uncompiled',
+    empty_field: '空值表示本站尚未录入或未见记载，不表示史料不存在',
+    lat_lng: '籍贯点，精度到县治量级，不是精确宅址',
+    source_tier: 'A=一手（正史/题名碑/朱卷/登科录）；A-=权威学术编纂（辑佚/汇考）；B=方志/年谱/名录；C=笔记/传说',
+    rank_detail: '缺省=未核到名次明文（v1.1 起不再对全名录携带默认状元断言）',
+  },
+  files: {
+    roster_json: '/data/person-index.json',
+    roster_csv: '/data/open/roster.csv',
+    relations_json: '/data/edges.json',
+    relations_csv: '/data/open/relations.csv',
+    externals_json: '/data/externals-index.json',
+    externals_csv: '/data/open/externals.csv',
+    stats_json: '/data/stats.json',
+    questions_json: '/data/questions.json',
+  },
+};
+writeFileSync(join(openDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
+console.log(`✓ 开放数据 v1：名录 ${persons.length} / 关系 ${relations.length} / 外延 ${externals.length}（不含地图切片）`);
 
 // ---------- 10b. careers 冲突裁定表（构建期自动生成，不静默） ----------
 // 内容 = 深档 × 回填 的逐字段冲突 + 裁定状态（默认保留深档 / 显式覆写 / 待裁定）。
