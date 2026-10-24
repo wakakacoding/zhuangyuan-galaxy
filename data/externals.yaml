@@ -143,14 +143,7 @@
   index_year: 1090
   note: 与状元 冯时行、张九成、汪应辰、黄公度、刘章、王佐、赵逵、张孝祥 有 CBDB 记录关系（冯时行·遭Y排擠；冯时行·為Y之門客）
   source_id: s0010
-- id: w0021
-  name: 梁士詒
-  cbdb_id: 89100
-  birth_year: 1869
-  death_year: 1933
-  index_year: 1869
-  note: 与状元 张之萬、翁同龢、徐郙、王仁堪 有 CBDB 记录关系（张之萬·學生為Y；张之萬·為Y之學生）
-  source_id: s0010
+# 2026-10-23 T02 D2 裁定摘除 w0021 梁士詒：4 条师生边全删（仅 CBDB 码无文献注），低于 ≥2 状元关系门槛。核到文献可回录。
 - id: w0022
   name: 喻樗
   cbdb_id: 22849
@@ -195,20 +188,8 @@
   index_year: 1004
   note: 与状元 吕蒙正、冯京 有 CBDB 记录关系（吕蒙正·欣賞/器重；吕蒙正·被Y欣賞/器重）
   source_id: s0010
-- id: w0028
-  name: 林特
-  cbdb_id: 1169
-  index_year: 965
-  note: 与状元 吕蒙正、李迪 有 CBDB 记录关系（吕蒙正·辟；吕蒙正·為Y所辟）
-  source_id: s0010
-- id: w0029
-  name: 梁顥
-  cbdb_id: 1133
-  birth_year: 963
-  death_year: 1004
-  index_year: 963
-  note: 与状元 胡旦、梁固 有 CBDB 记录关系（胡旦·與Y結黨；梁固·父）
-  source_id: s0010
+# 2026-10-23 T02 D2 裁定摘除 w0028 林特：吕蒙正同僚（辟）、李迪政敌 2 边全删（仅 CBDB 码无文献注），低于 ≥2 门槛。
+# 2026-10-23 T02 D2 裁定摘除 w0029 梁顥：胡旦同僚（結黨）边删除后仅剩梁固父子 1 边，低于 ≥2 门槛。父子关系本身不删——梁固→梁顥边仍在（经梁固档案），梁顥仅不再作外延节点。
 - id: w0030
   name: 李及之
   cbdb_id: 3479
@@ -234,14 +215,7 @@
   index_year: 1102
   note: 与状元 汪应辰、王十朋 有 CBDB 记录关系（汪应辰·被Y推薦；汪应辰·推薦）
   source_id: s0010
-- id: w0034
-  name: 呂祖謙
-  cbdb_id: 7055
-  birth_year: 1137
-  death_year: 1181
-  index_year: 1137
-  note: 与状元 汪应辰、陈亮 有 CBDB 记录关系（汪应辰·學生為Y；汪应辰·為Y之學生）
-  source_id: s0010
+# 2026-10-23 T02 D2 裁定摘除 w0034 呂祖謙：陈亮亲属边删除后仅剩汪应辰师生 1 边，低于 ≥2 门槛。核到文献可回录。
 - id: w0035
   name: 朱熹
   cbdb_id: 3257
@@ -274,3 +248,65 @@
   index_year: 1627
   note: 与状元 缪彤、彭定求 有 CBDB 记录关系（缪彤·被Y推薦；缪彤·推薦）
   source_id: s0010
+- id: w0039
+  name: 杨元琰
+  birth_year: 640
+  death_year: 718
+  note: 杨仲昌之父，虢州阌乡人。官至刑部尚书，封魏国公，谥忠。生卒据《新唐书》本传「开元六年卒，年七十九」反推。
+  source_id: s0040
+- id: w0040
+  name: 萧复
+  note: 宰相。荐梁肃为右拾遗，梁肃以母老不赴。
+  source_id: s0046
+- id: w0041
+  name: 令狐彰
+  note: 滑亳节度使。辟齐映为掌书记，并以女妻之。大历八年卒。
+  source_id: s0047
+- id: w0042
+  name: 王铎
+  note: 萧遘的座主。后与萧遘同为宰相。
+  source_id: s0050
+- id: w0043
+  name: 杨凭
+  note: 徐晦的举主。贬临贺尉时，亲友无人敢送，徐晦独送至蓝田。
+  source_id: s0051
+- id: w0044
+  name: 白居易
+  birth_year: 772
+  death_year: 846
+  note: 白敏中的从父兄。
+  source_id: s0051
+- id: w0045
+  name: 王起
+  note: 会昌三年知贡举，取卢肇为第一。依据是唐摭言，后出文献。
+  source_id: s0053
+- id: w0046
+  name: 富弼
+  birth_year: 1004
+  death_year: 1083
+  note: 冯京的岳父。冯京因此避嫌出知江宁。
+  source_id: s0055
+- id: w0047
+  name: 宋祁
+  birth_year: 998
+  death_year: 1061
+  note: 宋庠之弟。兄弟同榜，时称二宋。
+  source_id: s0055
+- id: w0048
+  name: 赵鼎
+  birth_year: 1085
+  death_year: 1147
+  note: 宰相。见汪应辰文而奇之，荐其才。
+  source_id: s0055
+- id: w0049
+  name: 王守仁
+  birth_year: 1472
+  death_year: 1529
+  note: 王华之子。明史卷 195 有传。
+  source_id: s0058
+- id: w0050
+  name: 张之洞
+  birth_year: 1837
+  death_year: 1909
+  note: 张之万的堂弟。
+  source_id: s0059
