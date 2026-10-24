@@ -2,7 +2,7 @@
 // 桌面右侧抽屉 / 移动端底部上滑卡片；URL ?region= 可分享
 import { useEffect, useMemo, useState } from 'react';
 import { useStore } from '@nanostores/react';
-import { selectedRegion, setRegion, mapSlice, selectedDynasties, searchQuery, matchEntry } from '../../store/filters';
+import { selectedRegion, setRegion, mapSlice, selectedDynasties, searchQuery, yearFrom, yearTo, selectedTags, areaQuery, depthFilter, currentFilters, filtersActive, matchEntry } from '../../store/filters';
 import { selectPerson } from '../../store/selection';
 import { loadGeo, loadIndex, type GeoPoint, type IndexEntry } from '../../lib/data';
 
@@ -11,6 +11,11 @@ export default function RegionPanel() {
   const slice = useStore(mapSlice);
   const dynasties = useStore(selectedDynasties);
   const query = useStore(searchQuery);
+  const y0 = useStore(yearFrom);
+  const y1 = useStore(yearTo);
+  const tags = useStore(selectedTags);
+  const area = useStore(areaQuery);
+  const depth = useStore(depthFilter);
   const [pts, setPts] = useState<GeoPoint[]>([]);
   const [index, setIndex] = useState<IndexEntry[]>([]);
 
@@ -21,8 +26,8 @@ export default function RegionPanel() {
     });
     loadIndex().then(setIndex);
   }, [region, slice]);
-  const matched = useMemo(() => new Set(index.filter((p) => matchEntry(p, dynasties, query)).map((p) => p.id)), [index, dynasties, query]);
-  const shown = pts.filter((p) => !dynasties.length && !query.trim() || matched.has(p.id));
+  const matched = useMemo(() => new Set(index.filter((p) => matchEntry(p, currentFilters())).map((p) => p.id)), [index, dynasties, query, y0, y1, tags, area, depth]);
+  const shown = pts.filter((p) => !filtersActive() || matched.has(p.id));
 
   if (!region) return null;
 

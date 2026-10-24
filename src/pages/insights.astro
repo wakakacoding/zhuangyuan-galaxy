@@ -39,6 +39,13 @@ const compRows: ChartRow[] = stats.completeness_histogram.map(
   }),
 );
 const compN: number = stats.total;
+const questions = JSON.parse(
+  readFileSync(new URL('../../public/data/questions.json', import.meta.url), 'utf8'),
+) as {
+  geo_by_dynasty: { dynasty: string; name: string; with_geo: number; total: number }[];
+  disputed: { id: string; name: string; dynasty: string; exam_year: number; note: string }[];
+  tags: { tag: string; count: number }[];
+};
 const readings = JSON.parse(
   readFileSync(new URL('../../public/data/readings.json', import.meta.url), 'utf8'),
 ) as { person_id: string; title: string; summary: string }[];
@@ -81,6 +88,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">哪个朝代状元最多？</h2>
         <ShareButton client:load anchor="q0" />
       </div>
+      <table class="mb-3 w-full border-collapse text-left font-serif text-sm">
+        <caption class="sr-only">各朝状元人数</caption>
+        <thead><tr class="text-miDim"><th scope="col" class="py-1 font-normal">朝代</th><th scope="col" class="py-1 font-normal">人数</th></tr></thead>
+        <tbody>
+          {dynasties.map((d) => (
+            <tr class="border-t border-miDim/15"><th scope="row" class="py-1 font-normal text-mi">{d.name}</th><td class="tabular-nums">{stats.by_dynasty[d.key]}</td></tr>
+          ))}
+        </tbody>
+      </table>
       <div class="space-y-1.5">
         {dynasties.map((d) => (
           <div class="flex items-center gap-3 text-sm">
@@ -272,6 +288,57 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           未录入不等于史料不存在。本站不编造字段，空白处保持待整理。
         </p>
       </div>
+    </section>
+
+    <section id="q8" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">多少人有籍贯坐标？</h2>
+        <ShareButton client:load anchor="q8" />
+      </div>
+      <p class="mb-3 text-sm leading-7 text-miDim">
+        全名录 {stats.total} 人里，{stats.total - stats.geo_unmatched} 人有坐标，
+        覆盖率 {(stats.geo_coverage * 100).toFixed(1)}%。没有坐标的人留空，不补一个估计点。
+        下表各朝的分母是该朝人数，各朝人数不能相加成另一套总数。
+      </p>
+      <table class="w-full border-collapse text-left font-serif text-sm">
+        <caption class="sr-only">各朝有籍贯坐标的人数与该朝总人数</caption>
+        <thead>
+          <tr class="text-miDim">
+            <th scope="col" class="py-1 font-normal">朝代</th>
+            <th scope="col" class="py-1 font-normal">有坐标</th>
+            <th scope="col" class="py-1 font-normal">该朝人数</th>
+          </tr>
+        </thead>
+        <tbody>
+          {questions.geo_by_dynasty.map((row) => (
+            <tr class="border-t border-miDim/15">
+              <th scope="row" class="py-1 font-normal text-mi">{row.name}</th>
+              <td class="py-1 tabular-nums text-mi">{row.with_geo}</td>
+              <td class="py-1 tabular-nums text-miDim">{row.total}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section id="q9" class="mt-12 scroll-mt-16">
+      <div class="mb-3 flex items-center gap-2">
+        <h2 class="border-l-2 border-jin pl-2 text-lg font-bold">多少人的状元身份存疑？</h2>
+        <ShareButton client:load anchor="q9" />
+      </div>
+      <p class="mb-3 text-sm leading-7 text-miDim">
+        {questions.disputed.length} 人标了存疑，分母是名录 {stats.total} 人。
+        存疑只针对「是否为该科状元」这一条，不表示这个人虚构，也不降低页上其他已有出处的条目。
+      </p>
+      <ul class="space-y-2">
+        {questions.disputed.map((p) => (
+          <li class="text-sm">
+            <a href={`${base}/person/${p.id}/`} class="text-mi underline decoration-jin/40">{p.name}</a>
+            <span class="ml-2 text-miDim">{dynName(p.dynasty)} · {p.exam_year}</span>
+            {p.note && <span class="mt-0.5 block text-xs leading-5 text-miDim">{p.note}</span>}
+          </li>
+        ))}
+      </ul>
     </section>
   </main>
 </BaseLayout>

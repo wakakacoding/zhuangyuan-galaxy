@@ -1,0 +1,56 @@
+---
+// 生平事件时间线（按证据性质分区渲染）：人物页三个分区共用
+import { eventYearText } from '../../lib/eventOrder';
+import { SECTION_META, type EvidenceSection } from '../../lib/evidence';
+
+interface Props {
+  events: any[];
+  sourceById: Map<string, any>;
+  section: EvidenceSection;
+}
+const { events, sourceById, section } = Astro.props;
+const meta = SECTION_META[section];
+const tone =
+  section === 'fact' ? 'border-jin/40 text-jin/90'
+  : section === 'anecdote' ? 'border-[#B08FC0]/50 text-[#B08FC0]'
+  : 'border-miDim/40 text-miDim';
+---
+
+<section class="mt-7" data-evidence-section={section} aria-labelledby={`evidence-${section}`}>
+  <h2 id={`evidence-${section}`} class="border-l-2 border-jin pl-2 font-serif text-base font-bold text-mi">
+    {meta.title}<span class="ml-1 text-xs font-normal text-miDim/70">（{events.length} 条）</span>
+  </h2>
+  <p class="mt-1.5 font-kai text-[11px] leading-5 text-miDim/70">{meta.note}</p>
+  <div class="relative ml-2 mt-4 border-l border-jin/25 pl-4">
+    {events.map((e: any) => (
+      <div class="relative mb-4">
+        <span class="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-dai bg-jin/70" />
+        <div class="flex flex-wrap items-baseline gap-2">
+          <span class="font-serif text-xs text-jin/90">{eventYearText(e)}</span>
+          <span class="font-serif text-sm text-mi">{e.title}</span>
+          {e.office && <span class="text-xs text-miDim">{e.office}</span>}
+          {section === 'anecdote' && (
+            <span class="rounded border border-[#B08FC0]/50 px-1 text-[10px] text-[#B08FC0]" title="出自笔记/传说类材料，可参考，不作史实断言">
+              笔记/传说性质
+            </span>
+          )}
+          {section === 'pending' && (
+            <span class="rounded border border-dashed border-miDim/40 px-1 text-[10px] text-miDim" title="尚无出处，按待证展示">
+              尚无出处
+            </span>
+          )}
+          {e.source_id && sourceById.get(e.source_id) ? (
+            <a
+              href={`#source-${e.source_id}`}
+              class={`rounded border px-1 text-[10px] ${tone}`}
+              title={(sourceById.get(e.source_id) as any).title}
+            >
+              {(sourceById.get(e.source_id) as any).tier} 级
+            </a>
+          ) : null}
+        </div>
+        {e.description && <p class="mt-1 text-xs leading-5 text-miDim">{e.description}</p>}
+      </div>
+    ))}
+  </div>
+</section>

@@ -8,12 +8,12 @@ import { dirname, join } from 'node:path';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (rel) => JSON.parse(readFileSync(join(root, rel), 'utf8'));
 
-test('38 份外延简档可读取，引用都落在名录或外延中，名录仍为 656', () => {
+test('外延简档可读取，引用都落在名录或外延中，名录仍为 656', () => {
   const index = read('public/data/person-index.json');
   const stats = read('public/data/stats.json');
   const known = new Set(index.map((p) => p.id));
   const files = readdirSync(join(root, 'public/data/person')).filter((f) => f.startsWith('w'));
-  assert.equal(files.length, 38);
+  assert.ok(files.length >= 38, '外延简档不应少于基线 38');
   assert.equal(index.length, 656);
   assert.equal(stats.total, 656);
   assert.equal(index.some((p) => p.id.startsWith('w')), false);

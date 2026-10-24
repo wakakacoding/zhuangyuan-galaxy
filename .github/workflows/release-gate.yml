@@ -1,7 +1,8 @@
 name: Release gate
 
-# 数据检查、类型检查、完整构建都过，才产出可部署制品。
-# Deploy 只在本工作流成功之后运行，不再与数据检查平行。
+# 数据检查、类型检查、完整构建都过，才产出可部署制品；制品与部署同属本次运行，
+# 因此「测试的 commit = 构建的 commit = 部署的 commit」由同一次 run 保证。
+# 失败时 gate 退出码非零 → deploy 因 needs 被跳过，不会部署。
 on:
   push:
     branches: [main]
@@ -46,3 +47,20 @@ jobs:
         if: github.event_name != 'pull_request'
         with:
           path: dist
+
+  # 部署必须与构建同一次运行：actions/deploy-pages@v4 只读取**本次运行**的
+  # github-pages 制品（源码 api-client.js：No artifacts named "github-pages"
+  # were found for this workflow run）。跨 run 用 workflow_run 取不到制品。
+  deploy:
+    needs: gate
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

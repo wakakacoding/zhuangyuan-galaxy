@@ -137,6 +137,9 @@ export const loadCareer = () => load<CareerData>('/data/career.json');
 export const RELATION_STYLE: Record<string, { color: string; dash?: number[]; label: string }> = {
   同年: { color: '#5B6B7F', dash: [2, 3], label: '同年' },
   师生: { color: '#5FA8A0', dash: [6, 3], label: '师生' },
+  座主: { color: '#2F8C84', label: '座主' },
+  师承: { color: '#5FA8A0', dash: [4, 2], label: '师承' },
+  荐举: { color: '#7FB8B1', dash: [1, 3], label: '荐举' },
   父子: { color: '#C9A227', label: '父子' },
   亲属: { color: '#C9A227', label: '亲属' },
   翁婿: { color: '#B08FC0', label: '翁婿' },

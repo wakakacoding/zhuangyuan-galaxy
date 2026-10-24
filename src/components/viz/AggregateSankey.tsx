@@ -53,6 +53,7 @@ export default function AggregateSankey() {
           return `${d.name}`;
         },
       },
+      aria: { enabled: true, label: { description: '旧分类桑基图。官职、去向和死亡不能相加，数字以页面上的三张表为准。' } },
       series: [{
         type: 'sankey',
         left: 10, right: 96, top: 12, bottom: 12,

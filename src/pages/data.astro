@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { readFileSync } from 'node:fs';
+
+const manifest = JSON.parse(
+  readFileSync(new URL('../../public/data/open/manifest.json', import.meta.url), 'utf8'),
+);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const semantics = Object.entries(manifest.semantics as Record<string, string>);
+const files = [
+  ['名录 JSON', manifest.files.roster_json, `${manifest.roster} 人，页面搜索用的同一份`],
+  ['名录 CSV', manifest.files.roster_csv, '姓名、朝代、科年、籍贯、坐标、标签、存疑、事件数、整理状态'],
+  ['关系 JSON', manifest.files.relations_json, '含人工边与同年派生边，derived 字段区分'],
+  ['关系 CSV', manifest.files.relations_csv, 'from、to、type、derived、note、source_id'],
+  ['外延 JSON', manifest.files.externals_json, `${manifest.externals} 人，不计入状元名录`],
+  ['外延 CSV', manifest.files.externals_csv, '只含已有字段，不含推断'],
+  ['统计 JSON', manifest.files.stats_json, '问答页的数字都从这里来'],
+];
+---
+
+<BaseLayout title="开放数据">
+  <main class="mx-auto max-w-3xl px-4 py-8">
+    <h1 class="text-2xl font-bold text-jin">开放数据</h1>
+    <p class="mt-2 text-sm leading-7 text-miDim">
+      版本 v{manifest.version}，数据基准日 {manifest.build_date}。下面的文件与页面统计用同一份构建产物。
+      空字段表示本站尚未录入或未见记载，不表示史料不存在。身份存疑只针对「是否状元」这一条。
+    </p>
+    <p class="mt-2 text-sm leading-7 text-miDim">
+      当前含名录 {manifest.roster} 人、人工关系 {manifest.relations_manual} 条、同年派生 {manifest.relations_derived} 条、外延 {manifest.externals} 人。
+      历史地图切片不在这里：底图来自 CHGIS，再分发许可还没有定，不能因为做了下载入口就公开底图。
+    </p>
+    <ul class="mt-6 space-y-2">
+      {files.map(([name, href, note]) => (
+        <li class="flex flex-wrap items-baseline justify-between gap-2 rounded border border-jin/20 px-3 py-2">
+          <a href={`${base}${href}`} class="font-serif text-sm text-jin underline">{name}</a>
+          <span class="font-serif text-xs text-miDim">{note}</span>
+        </li>
+      ))}
+    </ul>
+    <h2 class="mt-8 border-l-2 border-jin pl-2 text-lg font-bold">字段怎么读</h2>
+    <dl class="mt-3 space-y-2 text-sm text-miDim">
+      {semantics.map(([k, v]) => (
+        <div>
+          <dt class="inline font-bold text-mi">{k}</dt>
+          <dd class="inline">：{v}</dd>
+        </div>
+      ))}
+    </dl>
+    <p class="mt-6 text-xs leading-6 text-miDim">
+      本页只提供静态文件，没有查询接口。字段增加时升版本号，不删已有列。
+      署名与许可见<a href={`${base}/about/`} class="text-jin underline">关于本站</a>。
+    </p>
+  </main>
+</BaseLayout>

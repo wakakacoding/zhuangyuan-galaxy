@@ -8,8 +8,9 @@ import { MapChart, ScatterChart, HeatmapChart, LinesChart, EffectScatterChart } 
 import { GeoComponent, TooltipComponent, VisualMapComponent } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
 import {
-  selectedDynasties, searchQuery, matchEntry,
-  mapSlice, setMapSlice, selectedRegion, setRegion,
+  selectedDynasties, searchQuery, yearFrom, yearTo, selectedTags, areaQuery, depthFilter,
+  currentFilters, filtersActive, matchEntry,
+  mapSlice, setMapSlice, selectedRegion, setRegion, focusPersonId, setFocusPerson,
 } from '../../store/filters';
 import { selectPerson } from '../../store/selection';
 import {
@@ -52,6 +53,12 @@ export default function GeoMap() {
   const region = useStore(selectedRegion);
   const dynFilter = useStore(selectedDynasties);
   const query = useStore(searchQuery);
+  const y0 = useStore(yearFrom);
+  const y1 = useStore(yearTo);
+  const tags = useStore(selectedTags);
+  const area = useStore(areaQuery);
+  const depth = useStore(depthFilter);
+  const focusId = useStore(focusPersonId);
 
   const sorted = useMemo(() => [...dynasties].sort((a, b) => a.order - b.order), [dynasties]);
   const current = sorted.find((d) => d.key === sliceKey) ?? sorted[0];
@@ -152,11 +159,13 @@ export default function GeoMap() {
     const cov = geo.coverage[currentKey];
     const regionAgg = new Map((geo.regions[currentKey] ?? []).map((r) => [r.name, r.count]));
     const pts = geo.points.filter((p) => p.dynasty === currentKey);
+    const focus = focusId ? geo.points.find((p) => p.id === focusId) ?? null : null;
+    if (focus && focus.dynasty !== currentKey) setMapSlice(focus.dynasty);
 
     // 全局筛选 → 命中集合。热力只画命中者；散点保留未命中但降亮。
-    const filterActive = dynFilter.length > 0 || query.trim().length > 0;
+    const filterActive = filtersActive();
     const matched = new Set(
-      index.filter((e) => matchEntry(e, dynFilter, query)).map((e) => e.id),
+      index.filter((e) => matchEntry(e, currentFilters())).map((e) => e.id),
     );
     const isHit = (p: GeoPoint) => !filterActive || matched.has(p.id);
 
@@ -217,6 +226,12 @@ export default function GeoMap() {
             type: 'heatmap', coordinateSystem: 'geo', geoIndex: 0, z: 3,
             pointSize: 18, blur: 16,
             data: viewMode === 'heat' ? pts.filter(isHit).map((p) => [p.lng, p.lat, 1]) : [],
+            markPoint: focus && focus.dynasty === currentKey ? {
+              symbol: 'pin', symbolSize: 36,
+              itemStyle: { color: '#C03F2B' },
+              label: { show: true, formatter: focus.name, color: '#F2EAD8', fontSize: 11 },
+              data: [{ coord: [focus.lng, focus.lat], name: focus.name }],
+            } : undefined,
             name: 'heat',
           },
           // 2 散点
@@ -267,7 +282,7 @@ export default function GeoMap() {
         setRegion(params.name);
       }
     });
-  }, [geo, sorted, currentKey, slices, viewMode, showMigration, dynFilter, query, region, index, current]);
+  }, [geo, sorted, currentKey, slices, viewMode, showMigration, dynFilter, query, y0, y1, tags, area, depth, region, index, current, focusId]);
 
   // ---------- UI ----------
   if (loadError && !geo) {
@@ -297,6 +312,16 @@ export default function GeoMap() {
         散点是状元籍贯，底色为各朝行政区划。拖动时间滑块可见状元产地的千年南移：唐代重心尚在黄河中下游，北宋移至江淮，明清沉入江浙——背后正是经济重心南移与南方书院的兴起。金色轨迹为各朝重心连线；辽金元样本稀少（n&lt;8 以虚线示警），空白同样是史实。
       </GuidePopover>
 
+      {focusId && (
+        <div className="absolute left-3 top-3 z-10 max-w-xs rounded-lg border border-jin/30 bg-dai/95 p-3 font-serif text-xs text-mi" role="status">
+          {(() => {
+            const hit = geo.points.find((p) => p.id === focusId);
+            if (!hit) return <p>本站没有这个人的籍贯坐标，地图上无法标出位置。</p>;
+            return <p>已定位 {hit.name}（{hit.exam_year}）。点可以打开人物帖。</p>;
+          })()}
+          <button type="button" onClick={() => setFocusPerson(null)} className="mt-2 text-jin underline">取消定位</button>
+        </div>
+      )}
       {/* 图层开关（右上） */}
       <div className="absolute right-3 top-3 z-10 flex flex-col gap-1.5 rounded-lg border border-jin/20 bg-xuan/85 p-2.5 text-xs backdrop-blur">
         <div className="mb-0.5 flex rounded border border-jin/25 text-center">

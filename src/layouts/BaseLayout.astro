@@ -1,6 +1,9 @@
 ---
-import '@fontsource/noto-serif-sc/400.css';
-import '@fontsource/noto-serif-sc/700.css';
+// 只把不含汉字的分片留在首屏阻塞 CSS（西文、数字、标点，约 10KB）。
+// 含 CJK 统一汉字的分片改到页面底部异步注入，见本文件末尾的 script。
+// 生成方式：node scripts/split-cjk-font.mjs
+import '../styles/fonts/latin-400.css';
+import '../styles/fonts/latin-700.css';
 import ShareButton from '../components/shell/ShareButton';
 
 interface Props {
@@ -14,6 +17,7 @@ const nav = [
   { href: '/map', label: '籍贯地图' },
   { href: '/network', label: '关系网络' },
   { href: '/insights', label: '数据问答' },
+  { href: '/data', label: '开放数据' },
   { href: '/about', label: '关于本站' },
 ];
 const current = Astro.url.pathname;
@@ -61,6 +65,17 @@ const currentPath = stripBase(current.replace(/\/$/, '')) || '/';
       <ShareButton client:load />
     </nav>
     <slot />
+      <script>
+      // 汉字字体不进首屏阻塞 CSS：页面起来后再插入 stylesheet。
+      // font-display: swap 已写在字体声明里，下载完成前用系统衬线，不出现不可见文字。
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+      for (const weight of [400, 700]) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = `${base}/fonts/cjk-${weight}.css`;
+        document.head.appendChild(link);
+      }
+    </script>
   </body>
 </html>
 
