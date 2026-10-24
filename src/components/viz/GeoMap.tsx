@@ -1,4 +1,5 @@
-// 籍贯地图：CHGIS 历史政区底图 + 散点/热力 + 朝代滑块 + 重心迁移线
+// 籍贯地图：Cliopatria（Seshat，CC BY 4.0）历史疆域轮廓 + 散点/热力 + 朝代滑块 + 重心迁移线
+// 2026-10-24 换源：CHGIS 因许可禁再分发弃用，沿革见「关于」页
 // 数据：/data/geo.json（v2）+ /data/maps/{dynasty}.json（懒加载）
 // 合规：无审图号的现代矢量层已撤除（M4），坐标系由当前历史切片兼任；现代对照见页面标准地图链接
 import { useEffect, useMemo, useRef, useState } from 'react';
