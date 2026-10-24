@@ -1,0 +1,46 @@
+id: z0484
+name: 吴宽
+zi: 原博
+dynasty: ming
+exam_year: 1472
+reign: 成化八
+birth_year: 1435
+death_year: 1504
+native_hist: 南直隶长洲
+native_modern: ""
+ke_ci: 1472年进士
+bio_short: 字原博，南直隶长洲人。成化八年进士第一。授翰林修撰。累迁礼部尚书。卒年七十，谥文定。
+tags: []
+events:
+  - year: 1472
+    type: 中举
+    title: 传为1472年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1504
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 礼部尚书
+    source_id: s0058
+    note: 明史卷 184
+  last:
+    office: 礼部尚书
+    source_id: s0058
+    note: 明史卷 184
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1504
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

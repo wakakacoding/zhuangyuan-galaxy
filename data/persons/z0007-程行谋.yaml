@@ -16,9 +16,9 @@ tags:
 events:
   - year: 674
     type: 夺魁
-    title: 上元元年甲戌科状元
-    description: 苏颋神道碑称「志大好学，首中甲科」；后世科举名录列为该科状元。
-    source_id: s0024
+    title: 名录系上元元年甲戌科状元
+    description: 苏颋神道碑称「志大好学，首中甲科」（《文苑英华》卷889）——甲科及第不等于殿试第一；后世科举名录列为该科状元。
+    source_id: s0011
   - year_label: 武周时期
     precision: range
     type: 升迁
@@ -57,3 +57,6 @@ career:
   mid_category: 部院
   final_office: 御史大夫（赠右丞相，谥贞）
   final_category: 宰辅
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

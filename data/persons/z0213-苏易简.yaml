@@ -1,0 +1,46 @@
+id: z0213
+name: 苏易简
+zi: 太简
+dynasty: song
+exam_year: 980
+reign: 太平興國五
+birth_year: 958
+death_year: 996
+native_hist: 梓州铜山
+native_modern: ""
+ke_ci: 980年进士
+bio_short: 梓州铜山人。父苏协，后蜀进士。太平兴国五年举进士，太宗覆试，擢冠甲科，年二十二。累迁翰林学士，参与编文苑英华。淳化四年为参知政事。至道二年卒，年三十九，赠礼部尚书。
+tags: []
+events:
+  - year: 980
+    type: 中举
+    title: 传为980年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 996
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 996
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

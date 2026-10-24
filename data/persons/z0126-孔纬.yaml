@@ -1,0 +1,51 @@
+id: z0126
+name: 孔纬
+zi: 化文
+dynasty: tang
+exam_year: 859
+reign: 大中
+death_year: 895
+native_hist: 曲阜
+native_modern: ""
+ke_ci: 大中十三年进士
+bio_short: 曲阜人，孔子后裔。少年丧父，依叔父。大中十三年进士及第。累迁翰林学士知制诰。僖宗幸蜀，从驾。光启二年拜相，封鲁国公。乾宁二年卒于相位，赠太尉。
+tags: []
+events:
+  - year: 859
+    type: 中举
+    title: 大中十三年进士及第
+    description: 两唐书有传。名次本传不写，名录的状元取后世名单。
+    source_id: s0052
+    evidence: secondary
+  - year: 886
+    type: 升迁
+    title: 拜相，封鲁国公
+    description: 从僖宗入蜀。
+    source_id: s0052
+    evidence: secondary
+  - year: 895
+    type: 卒
+    title: 卒于相位
+    description: 赠太尉。
+    source_id: s0052
+    evidence: secondary
+career:
+  highest:
+    office: 宰相
+    source_id: s0052
+    note: 光启二年拜相
+  last:
+    office: 宰相
+    source_id: s0052
+    note: 卒于相位
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 895
+    precision: circa
+    source_id: s0052
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

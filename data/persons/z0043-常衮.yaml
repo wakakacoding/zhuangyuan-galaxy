@@ -1,0 +1,69 @@
+id: z0043
+name: 常衮
+dynasty: tang
+exam_year: 755
+reign: 天宝
+birth_year: 729
+death_year: 783
+native_hist: 京兆
+native_modern: ""
+ke_ci: 天宝末
+bio_short: 京兆人，常无名之侄。天宝末举进士。大历十二年拜相，封河内郡公。德宗时贬潮州刺史，起为福建观察使，设乡校，亲为讲授。建中四年卒于任，年五十五。本传不写具体科年，也不写名次。
+tags: []
+events:
+  - year_label: 天宝末
+    precision: range
+    type: 中举
+    title: 天宝末举进士
+    description: 旧唐书只言天宝末，不写哪一年，也不写名次。名录系于天宝十四载，是后世名单。
+    source_id: s0048
+    evidence: primary
+  - year: 763
+    type: 升迁
+    title: 选为翰林学士、知制诰
+    source_id: s0048
+    office: 翰林学士
+    evidence: secondary
+  - year: 777
+    type: 升迁
+    title: 拜门下侍郎、同平章事
+    description: 封河内郡公。选用官吏，非文学之士不用。
+    source_id: s0048
+    office: 门下侍郎、同平章事
+    evidence: secondary
+  - year: 780
+    type: 贬谪
+    title: 贬潮州刺史
+    source_id: s0048
+    evidence: secondary
+  - year: 783
+    type: 卒
+    title: 卒于福建观察使任
+    description: 建中四年正月卒，年五十五。在福建设乡校，亲为讲授。赠左仆射。
+    source_id: s0048
+    office: 福建观察使
+    evidence: primary
+career:
+  highest:
+    office: 门下侍郎、同平章事
+    year: 777
+    precision: circa
+    source_id: s0048
+    note: 拜相在大历十二年，本轮取通说
+  last:
+    office: 福建观察使
+    year: 783
+    precision: exact
+    source_id: s0048
+    note: 卒于任上
+  whereabouts:
+    status: unknown
+    note: 卒于福建任所，未见致仕
+  death:
+    category: 待核
+    year: 783
+    precision: exact
+    source_id: s0048
+    note: 本传记卒于建中四年正月，未记死因
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -1,0 +1,47 @@
+id: z0075
+name: 徐晦
+zi: 大章
+dynasty: tang
+exam_year: 802
+reign: 贞元
+birth_year: 760
+death_year: 838
+native_hist: 籍贯未见记载 
+native_modern: ""
+ke_ci: 贞元十八年进士
+bio_short: 贞元十八年进士及第，又登直言极谏科。杨凭贬临贺尉，亲友无人敢送，徐晦独送到蓝田。后为福建观察使，终太子宾客。
+tags: []
+events:
+  - year: 802
+    type: 中举
+    title: 传为贞元十八年进士第一
+    description: 旧唐书卷 165 记及第与送杨凭事。名次本轮未逐字核录。
+    source_id: s0051
+    evidence: secondary
+  - year_label: 元和中
+    precision: range
+    type: 升迁
+    title: 独送杨凭至蓝田
+    description: 杨凭贬官，亲友无敢送者。
+    source_id: s0051
+    evidence: primary
+career:
+  highest:
+    office: 太子宾客
+    source_id: s0051
+    note: 本传记其终太子宾客
+  last:
+    office: 太子宾客
+    source_id: s0051
+    note: 同上
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 838
+    precision: circa
+    source_id: s0051
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

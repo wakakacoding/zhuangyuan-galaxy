@@ -1,0 +1,28 @@
+id: z0407
+name: 徐元傑
+dynasty: song
+exam_year: 1232
+reign: 紹定五年
+native_hist: 江西上饶
+native_modern: 江西省上饶市
+ke_ci: 紹定五年壬辰科
+bio_short: 宋1232 年状元。本档为 CBDB 骨架档（DB21 批次·第二批），仅收录 CBDB 有据的入仕、任职与卒年条目，叙事性内容待补。
+tags:
+  - DB21骨架档
+events:
+  - year: 1232
+    type: 夺魁
+    title: 紹定五年壬辰科状元
+    description: 'CBDB 入仕记录：examination: jinshi，科年与本站名录一致。'
+    source_id: s0010
+    evidence: secondary
+  - year: 1245
+    type: 卒
+    title: 卒
+    description: 享年 53（CBDB 记载）。
+    source_id: s0010
+    evidence: secondary
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: '本档由 CBDB 骨架生成（DB21 批次·第二批）：入仕（examination: jinshi）、任职、卒年均据 CBDB 数据库条目挂 s0010。夺魁名次断言不写 rank_detail（CBDB 只载「进士及第」不载名次）。叙事、籍贯考据与正史复核待后续批次。'
+cbdb_id: 22002

@@ -23,6 +23,7 @@ events:
     source_id: s0002
     office: 翰林院修撰
     rank_grade: 6.5
+    evidence: secondary
   - year: 1865
     type: 升迁
     title: 入值弘德殿，授同治帝读
@@ -31,6 +32,7 @@ events:
     office: 弘德殿行走（帝师），本官侍讲学士
     rank_grade: 4.5
     estimated: true
+    evidence: secondary
   - year: 1882
     type: 升迁
     title: 入直军机处
@@ -38,13 +40,44 @@ events:
     source_id: s0005
     office: 户部尚书、军机大臣
     rank_grade: 1.5
+    evidence: secondary
   - year: 1898
     type: 贬谪
     title: 戊戌变法开幕即被开缺
     description: 光绪帝下《明定国是诏》后数日，翁同龢突遭开缺回籍，朝野震动，后世史家多以此事为变法命运之伏笔。
     source_id: s0005
+    evidence: secondary
   - year: 1904
     type: 卒
     title: 卒于常熟故里
     description: 年七十五。其日记四十余册传世，为研究晚清政局的第一手史料。
     source_id: s0012
+    evidence: secondary
+career:
+  highest:
+    office: 户部尚书、协办大学士、军机大臣
+    year_label: 光绪朝前期
+    precision: range
+    source_id: s0005
+    note: 据深档转述《清史稿》：两度入军机，官至户部尚书、协办大学士；具体到任年份深档未逐一列出
+  last:
+    office: 户部尚书、协办大学士、军机大臣（开缺回籍）
+    year: 1898
+    precision: exact
+    source_id: s0005
+    note: 据深档转述：光绪帝下《明定国是诏》后数日被开缺回籍，此后无新授实职
+  whereabouts:
+    category: 归隐或讲学
+    year: 1898
+    precision: exact
+    source_id: s0005
+    note: 据深档转述：开缺后回常熟故里，直至 1904 年卒；深档未写回籍后讲学或出仕
+  death:
+    category: 待核
+    year: 1904
+    precision: exact
+    source_id: s0012
+    note: 据深档转述卒于常熟故里，年七十五；出处挂其日记，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

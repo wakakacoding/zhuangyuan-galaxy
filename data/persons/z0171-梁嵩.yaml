@@ -1,0 +1,34 @@
+id: z0171
+name: 梁嵩
+dynasty: wudai
+exam_year: 925
+reign: 白龙
+native_hist: 平南
+native_modern: ""
+ke_ci: 南汉白龙元年进士
+bio_short: 平南人。南汉白龙元年进士第一。后为翰林学士，曾上书请免赋税。依据是清人十国春秋，材料来自宋代笔记。
+tags: []
+events:
+  - year: 925
+    type: 中举
+    title: 传为南汉白龙元年进士第一
+    description: 十国春秋是清人编纂，只取科第、籍贯、翰林学士三件。
+    source_id: s0054
+    evidence: secondary
+career:
+  highest:
+    office: 翰林学士
+    source_id: s0054
+    note: 十国春秋记其官终翰林学士
+  last:
+    office: 翰林学士
+    source_id: s0054
+    note: 同上
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

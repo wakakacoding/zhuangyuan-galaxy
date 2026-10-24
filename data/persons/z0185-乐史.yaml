@@ -1,0 +1,46 @@
+id: z0185
+name: 乐史
+zi: 子正
+dynasty: wudai
+exam_year: 962
+reign: 建隆
+birth_year: 930
+death_year: 1007
+native_hist: 抚州宜黄
+native_modern: ""
+ke_ci: 南唐及第，入宋再举
+bio_short: 抚州宜黄人。初仕南唐，建隆三年及第，取士只有五人，是不是第一没有当代档案。入宋后为平原主簿，太平兴国五年又以现任官举进士。著太平寰宇记二百卷。
+tags: []
+events:
+  - year: 962
+    type: 中举
+    title: 南唐及第
+    description: 宋史乐黄目传附其父。这一次是不是第一，没有当代档案。
+    source_id: s0055
+    evidence: secondary
+  - year: 980
+    type: 中举
+    title: 太平兴国五年再举进士
+    description: 以现任官应试，不是状元。
+    source_id: s0055
+    evidence: primary
+career:
+  highest:
+    office: 著作郎
+    source_id: s0055
+    note: 本传记其献书后迁著作郎、直史馆
+  last:
+    office: 知商州
+    source_id: s0055
+    note: 本传记其历知陵、黄、商诸州
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1007
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

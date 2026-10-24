@@ -1,0 +1,46 @@
+id: z0250
+name: 蔡齐
+zi: 子思
+dynasty: song
+exam_year: 1015
+reign: 大中样符八
+birth_year: 988
+death_year: 1039
+native_hist: 莱州胶水
+native_modern: ""
+ke_ci: 1015年进士
+bio_short: 莱州胶水人。大中祥符八年进士第一。累迁翰林学士、枢密副使、参知政事。卒年五十二，谥文忠。
+tags: []
+events:
+  - year: 1015
+    type: 中举
+    title: 传为1015年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1039
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1039
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

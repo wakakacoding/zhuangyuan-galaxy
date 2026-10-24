@@ -1,0 +1,35 @@
+id: z0196
+name: 刘蒙叟
+zi: 道民
+dynasty: song
+exam_year: 967
+reign: 乾德五
+native_hist: 宁陵
+native_modern: ""
+ke_ci: 967年进士
+bio_short: 宁陵人。乾德五年进士及第。累迁知庐州、知濠州，终太常少卿。本传没有写他是第一，名录的状元不采用。
+tags: []
+events:
+  - year: 967
+    type: 中举
+    title: 传为967年进士第一
+    description: 宋史卷 263 附传只写进士及第，不写名次。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 太常少卿
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 太常少卿
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

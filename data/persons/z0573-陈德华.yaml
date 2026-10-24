@@ -1,0 +1,46 @@
+id: z0573
+name: 陈德华
+zi: 云倬
+dynasty: qing
+exam_year: 1724
+reign: 雍正二
+birth_year: 1696
+death_year: 1779
+native_hist: 直隶安州
+native_modern: ""
+ke_ci: 1724年进士
+bio_short: 字云倬，直隶安州人。雍正二年进士第一。授翰林修撰。累迁礼部尚书。卒年八十三。
+tags: []
+events:
+  - year: 1724
+    type: 中举
+    title: 传为1724年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+  - year: 1779
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+career:
+  highest:
+    office: 礼部尚书
+    source_id: s0059
+    note: 清史稿卷 302
+  last:
+    office: 礼部尚书
+    source_id: s0059
+    note: 清史稿卷 302
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1779
+    precision: circa
+    source_id: s0059
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

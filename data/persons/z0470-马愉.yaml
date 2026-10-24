@@ -1,0 +1,46 @@
+id: z0470
+name: 马愉
+zi: 性和
+dynasty: ming
+exam_year: 1427
+reign: 宣德二
+birth_year: 1395
+death_year: 1447
+native_hist: 山东临朐
+native_modern: ""
+ke_ci: 1427年进士
+bio_short: 字性和，山东临朐人。宣德二年进士第一。授翰林修撰。累迁礼部右侍郎。卒年五十三。
+tags: []
+events:
+  - year: 1427
+    type: 中举
+    title: 传为1427年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1447
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 礼部右侍郎
+    source_id: s0058
+    note: 明史卷 148
+  last:
+    office: 礼部右侍郎
+    source_id: s0058
+    note: 明史卷 148
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1447
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

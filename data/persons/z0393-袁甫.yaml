@@ -1,0 +1,46 @@
+id: z0393
+name: 袁甫
+zi: 广微
+dynasty: song
+exam_year: 1214
+reign: 嘉定七
+birth_year: 1174
+death_year: 1240
+native_hist: 庆元府鄞县
+native_modern: ""
+ke_ci: 1214年进士
+bio_short: 字广微，庆元府鄞县人。嘉定七年进士第一。累迁兵部侍郎、吏部侍郎。卒年六十七。
+tags: []
+events:
+  - year: 1214
+    type: 中举
+    title: 传为1214年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1240
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 吏部侍郎
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 吏部侍郎
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1240
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

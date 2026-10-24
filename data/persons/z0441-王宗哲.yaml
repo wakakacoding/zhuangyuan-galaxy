@@ -1,0 +1,34 @@
+id: z0441
+name: 王宗哲
+dynasty: yuan
+exam_year: 1348
+reign: 至正八
+native_hist: 无极（一说遂州）
+native_modern: ""
+ke_ci: 1348年进士
+bio_short: 无极人，一说遂州人。至正八年左榜进士第一，乡试、会试、殿试都是第一。元史无传，依据是登科录辑本，本轮没有读到原文。
+tags: []
+events:
+  - year: 1348
+    type: 中举
+    title: 传为1348年进士第一
+    description: 元史无传。三元之说取登科录辑本，本轮未读到原文，不写死。
+    source_id: s0057
+    evidence: secondary
+career:
+  highest:
+    office: 进士
+    source_id: s0057
+    note: 本传所记最高官
+  last:
+    office: 进士
+    source_id: s0057
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

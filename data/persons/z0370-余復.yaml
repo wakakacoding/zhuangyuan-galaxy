@@ -1,0 +1,22 @@
+id: z0370
+name: 余復
+dynasty: song
+exam_year: 1190
+reign: 紹熙元年
+native_hist: 福建宁德
+native_modern: 福建省宁德市
+ke_ci: 紹熙元年庚戌科
+bio_short: 宋1190 年状元。本档为 CBDB 骨架档（DB21 批次·第二批），仅收录 CBDB 有据的入仕、任职与卒年条目，叙事性内容待补。
+tags:
+  - DB21骨架档
+events:
+  - year: 1190
+    type: 夺魁
+    title: 紹熙元年庚戌科状元
+    description: 'CBDB 入仕记录：examination: jinshi，科年与本站名录一致。'
+    source_id: s0010
+    evidence: secondary
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: '本档由 CBDB 骨架生成（DB21 批次·第二批）：入仕（examination: jinshi）、任职、卒年均据 CBDB 数据库条目挂 s0010。夺魁名次断言不写 rank_detail（CBDB 只载「进士及第」不载名次）。叙事、籍贯考据与正史复核待后续批次。'
+cbdb_id: 41917

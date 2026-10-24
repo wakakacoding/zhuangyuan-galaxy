@@ -1,0 +1,35 @@
+id: z0212
+name: 胡旦
+zi: 周父
+dynasty: song
+exam_year: 978
+reign: 大平興國三
+native_hist: 渤海
+native_modern: ""
+ke_ci: 978年进士
+bio_short: 渤海人。太平兴国三年进士第一。累迁知制诰、直史馆。后贬，复起为祠部郎中。
+tags: []
+events:
+  - year: 978
+    type: 中举
+    title: 传为978年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 知制诰
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 知制诰
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

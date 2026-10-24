@@ -1,0 +1,41 @@
+id: z0026
+name: 李嶷
+dynasty: tang
+exam_year: 727
+reign: 开元
+native_hist: 赵郡赞皇
+native_modern: ""
+ke_ci: 开元十五年丁卯科
+bio_short: 赵郡赞皇人。官终右武卫录事参军。开元十五年进士第一只见于《唐才子传》记王昌龄为「李嶷榜进士」，没有第二处佐证。
+tags: []
+events:
+  - year: 727
+    type: 中举
+    title: 传为开元十五年进士第一
+    description: 唯一依据是《唐才子传》王昌龄传的「李嶷榜」。后出文献，名次未得第二处佐证。
+    source_id: s0045
+    evidence: secondary
+  - year_label: 开元中
+    precision: range
+    type: 升迁
+    title: 官终右武卫录事参军
+    source_id: s0044
+    office: 右武卫录事参军
+    evidence: secondary
+career:
+  highest:
+    office: 右武卫录事参军
+    source_id: s0044
+    note: 新唐书宰相世系表只记此官，未记年份
+  last:
+    office: 右武卫录事参军
+    source_id: s0044
+    note: 世系表以此为官终
+  whereabouts:
+    status: unknown
+    note: 没有任何去向记载
+  death:
+    status: unknown
+    note: 生卒、死因都没有材料
+research_status: compiled
+research_checked_at: "2026-10-20"

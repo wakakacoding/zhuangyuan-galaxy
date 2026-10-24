@@ -1,0 +1,46 @@
+id: z0579
+name: 庄有恭
+zi: 容可
+dynasty: qing
+exam_year: 1739
+reign: 乾隆四
+birth_year: 1713
+death_year: 1767
+native_hist: 广东番禺（祖籍福建晋江）
+native_modern: ""
+ke_ci: 1739年进士
+bio_short: 字容可，广东番禺人，祖籍福建晋江。乾隆四年进士第一。授翰林修撰。累迁福建巡抚、刑部尚书。卒年五十五。
+tags: []
+events:
+  - year: 1739
+    type: 中举
+    title: 传为1739年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+  - year: 1767
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+career:
+  highest:
+    office: 刑部尚书
+    source_id: s0059
+    note: 清史稿卷 323
+  last:
+    office: 刑部尚书
+    source_id: s0059
+    note: 清史稿卷 323
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1767
+    precision: circa
+    source_id: s0059
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

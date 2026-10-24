@@ -1,0 +1,46 @@
+id: z0210
+name: 王嗣宗
+zi: 希阮
+dynasty: song
+exam_year: 975
+reign: 開寶八
+birth_year: 944
+death_year: 1021
+native_hist: 汾州
+native_modern: ""
+ke_ci: 975年进士
+bio_short: 汾州人。开宝八年进士第一。累迁御史中丞、枢密副使。
+tags: []
+events:
+  - year: 975
+    type: 中举
+    title: 传为975年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1021
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 枢密副使
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 枢密副使
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1021
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -1,0 +1,59 @@
+id: z0090
+name: 白敏中
+zi: 用晦
+dynasty: tang
+exam_year: 822
+reign: 长庆
+birth_year: 792
+death_year: 861
+native_hist: 华州下邽（祖籍太原）
+native_modern: ""
+ke_ci: 长庆初进士
+bio_short: 白居易的从父弟。长庆初登进士第，正史不写名次。历河东、郑滑、邠宁三镇掌书记。会昌中为翰林学士，宣宗时拜相，封太原郡公。大中五年出为邠宁节度使。咸通中卒。
+tags: []
+events:
+  - year: 822
+    type: 中举
+    title: 传为长庆二年进士第一
+    description: 新唐书只写长庆初第进士，不写年份，也不写名次。第一名另有贺拔惎一说，两说并存。
+    source_id: s0051
+    evidence: secondary
+  - year_label: 会昌中
+    precision: range
+    type: 升迁
+    title: 召为翰林学士、知制诰
+    description: 武宗欲用白居易，李德裕以其病，荐敏中。
+    source_id: s0051
+    evidence: secondary
+  - year: 851
+    type: 升迁
+    title: 以宰相出为邠宁节度使
+    description: 讨党项，归者愿弃兵务农。
+    source_id: s0051
+    evidence: secondary
+  - year: 861
+    type: 卒
+    title: 卒
+    description: 谥丑，是恶谥。谥议原文本轮未核，不引。
+    source_id: s0051
+    evidence: secondary
+career:
+  highest:
+    office: 宰相
+    source_id: s0051
+    note: 会昌末以兵部侍郎同平章事，本传所记
+  last:
+    office: 太子太师
+    source_id: s0051
+    note: 本传记其卒前之官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 861
+    precision: circa
+    source_id: s0051
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

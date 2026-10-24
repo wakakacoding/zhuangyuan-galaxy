@@ -1,0 +1,46 @@
+id: z0415
+name: 姚勉
+zi: 述之
+dynasty: song
+exam_year: 1253
+reign: 寶祐元
+birth_year: 1216
+death_year: 1262
+native_hist: 瑞州新昌
+native_modern: ""
+ke_ci: 1253年进士
+bio_short: 字述之，瑞州新昌人。宝祐元年进士第一。累迁校书郎。有雪坡集。宋史无单传。
+tags: []
+events:
+  - year: 1253
+    type: 中举
+    title: 传为1253年进士第一
+    description: 宋史无单传。名次取方志，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1262
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 校书郎
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 校书郎
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1262
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

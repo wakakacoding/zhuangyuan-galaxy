@@ -1,0 +1,46 @@
+id: z0495
+name: 顾鼎臣
+zi: 九和
+dynasty: ming
+exam_year: 1505
+reign: 弘治十八
+birth_year: 1473
+death_year: 1540
+native_hist: 南直隶崑山
+native_modern: ""
+ke_ci: 1505年进士
+bio_short: 字九和，南直隶崑山人。弘治十八年进士第一。授翰林修撰。累迁礼部尚书、武英殿大学士。卒年六十八，谥文康。
+tags: []
+events:
+  - year: 1505
+    type: 中举
+    title: 传为1505年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1540
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 武英殿大学士
+    source_id: s0058
+    note: 明史卷 193
+  last:
+    office: 武英殿大学士
+    source_id: s0058
+    note: 明史卷 193
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1540
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

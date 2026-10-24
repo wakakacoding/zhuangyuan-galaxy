@@ -1,0 +1,46 @@
+id: z0514
+name: 申时行
+zi: 汝默
+dynasty: ming
+exam_year: 1562
+reign: 嘉靖四十一
+birth_year: 1535
+death_year: 1614
+native_hist: 南直隶长洲
+native_modern: ""
+ke_ci: 1562年进士
+bio_short: 字汝默，南直隶长洲人。嘉靖四十一年进士第一。授翰林修撰。万历中为首辅。卒年八十，谥文定。
+tags: []
+events:
+  - year: 1562
+    type: 中举
+    title: 传为1562年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1614
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 218
+  last:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 218
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1614
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -19,7 +19,7 @@ events:
     type: 夺魁
     title: 建中二年辛酉科状元，跨科连中三元
     description: 府试、省试皆第一，殿试以《白云起封中赋》夺魁（知贡举礼部侍郎于邵，此科进士十七人）；随后又登博学宏词科、贤良方正能直言极谏科第一——有据可考的「连中三元」自此始。弟崔敖、崔备同榜进士，兄弟三人名列一榜前列。
-    source_id: s0006
+    source_id: s0001
   - year: 787
     type: 升迁
     title: 贞元三年召入朝，拜太常博士
@@ -54,3 +54,6 @@ career:
   mid_category: 部院
   final_office: 知制诰（降职旋卒）
   final_category: 部院高官
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

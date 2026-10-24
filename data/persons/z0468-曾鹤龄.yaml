@@ -1,0 +1,46 @@
+id: z0468
+name: 曾鹤龄
+zi: 延年
+dynasty: ming
+exam_year: 1421
+reign: 永乐十九
+birth_year: 1383
+death_year: 1441
+native_hist: 江西泰和
+native_modern: ""
+ke_ci: 1421年进士
+bio_short: 字延年，江西泰和人。永乐十九年进士第一。授翰林修撰。累迁侍讲学士。卒年五十九。明史无单传，科第见于明实录和泰和方志。
+tags: []
+events:
+  - year: 1421
+    type: 中举
+    title: 传为1421年进士第一
+    description: 明史无单传。名次取明实录与方志，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1441
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 侍讲学士
+    source_id: s0058
+    note: 明实录与方志所记
+  last:
+    office: 侍讲学士
+    source_id: s0058
+    note: 明实录与方志所记
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1441
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

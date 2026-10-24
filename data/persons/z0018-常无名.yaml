@@ -1,0 +1,68 @@
+id: z0018
+name: 常无名
+dynasty: tang
+exam_year: 713
+reign: 开元
+birth_year: 688
+death_year: 744
+native_hist: 河内温
+native_modern: ""
+ke_ci: 开元元年
+bio_short: 河内温人，常衮之伯。官终礼部员外郎，天宝三载卒。开元元年状元之说只见于后世名单，正史与墓志都没写名次。
+tags: []
+events:
+  - year: 713
+    type: 中举
+    title: 传为开元元年进士第一
+    description: 名次只见于后世科举名单。新唐书与常衮所撰墓志都没有写他是第一。
+    source_id: s0001
+    evidence: secondary
+  - year: 722
+    type: 中举
+    title: 开元十年举文藻宏丽科
+    description: 与孙逖同入第二等。
+    source_id: s0041
+    evidence: secondary
+  - year_label: 开元中
+    precision: range
+    type: 升迁
+    title: 历鄠县尉、起居舍人
+    description: 任起居舍人期间撰《开元注记》。据常衮所撰墓志的转述，未逐字核录。
+    source_id: s0042
+    evidence: secondary
+  - year: 742
+    type: 升迁
+    title: 转礼部员外郎
+    source_id: s0042
+    office: 礼部员外郎
+    evidence: secondary
+  - year: 744
+    type: 卒
+    title: 天宝三载卒
+    description: 墓志记卒年五十六，与名录生年 688 相符。
+    source_id: s0042
+    evidence: secondary
+career:
+  highest:
+    office: 礼部员外郎
+    year: 742
+    precision: exact
+    source_id: s0042
+    note: 据墓志转述，天宝元年转礼部员外郎，旋卒于任
+  last:
+    office: 礼部员外郎
+    year: 744
+    precision: exact
+    source_id: s0042
+    note: 墓志转述卒于礼部员外郎任
+  whereabouts:
+    status: unknown
+    note: 只记卒于长安宣阳里，未见归里
+  death:
+    category: 待核
+    year: 744
+    precision: exact
+    source_id: s0042
+    note: 墓志转述卒年，未记死因
+research_status: compiled
+research_checked_at: "2026-10-20"

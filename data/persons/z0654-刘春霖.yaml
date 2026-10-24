@@ -22,6 +22,7 @@ events:
     title: 光绪三十年甲辰恩科状元
     description: 家境贫寒，由保定莲池书院院长吴汝纶资助进京赶考而夺魁。此为科举史上最后一科殿试。
     source_id: s0002
+    evidence: secondary
   - year: 1904
     type: 授官
     title: 授翰林院修撰
@@ -29,14 +30,45 @@ events:
     source_id: s0005
     office: 翰林院修撰
     rank_grade: 6.5
+    evidence: secondary
   - year_label: 1937–1945
     precision: range
     type: 轶事
     title: 沦陷期间拒附伪政权
     description: 华北沦陷后闭门谢客，拒绝出任伪职，鬻字为生，保全晚节。
     source_id: s0010
+    evidence: secondary
   - year: 1942
     type: 卒
     title: 卒于北平
     description: 卒年一说1944年，存两说备考。
     source_id: s0010
+    evidence: secondary
+career:
+  highest:
+    office: 翰林院修撰
+    year: 1904
+    precision: exact
+    source_id: s0005
+    note: 据深档转述《清史稿》：甲辰恩科及第后授翰林院修撰；次年科举即废，未见更高实职
+  last:
+    office: 翰林院修撰
+    year: 1904
+    precision: exact
+    source_id: s0005
+    note: 据深档转述，此后无新授实职；末任与最高官重合
+  whereabouts:
+    category: 归隐或讲学
+    year_label: 1937–1945
+    precision: range
+    source_id: s0010
+    note: 据深档转述 CBDB：华北沦陷后闭门谢客、拒绝出任伪职、鬻字为生；出处是人物资料库，不是一手文献
+  death:
+    category: 待核
+    year: 1942
+    precision: circa
+    source_id: s0010
+    note: 据深档转述卒于北平，卒年一说 1942、一说 1944，故 precision 取 circa；死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

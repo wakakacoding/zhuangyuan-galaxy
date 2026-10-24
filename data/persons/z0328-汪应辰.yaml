@@ -1,0 +1,46 @@
+id: z0328
+name: 汪应辰
+zi: 圣锡
+dynasty: song
+exam_year: 1135
+reign: 紹興五
+birth_year: 1118
+death_year: 1176
+native_hist: 信州玉山
+native_modern: ""
+ke_ci: 1135年进士
+bio_short: 信州玉山人，初名汪洋。绍兴五年进士第一，年十八。授镇东军签判。因反对秦桧和议，出通判建州。桧死后召还，累迁吏部尚书、翰林学士。卒年五十九，谥文定。
+tags: []
+events:
+  - year: 1135
+    type: 中举
+    title: 传为1135年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1176
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 翰林学士
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 翰林学士
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1176
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

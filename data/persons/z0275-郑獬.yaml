@@ -1,0 +1,46 @@
+id: z0275
+name: 郑獬
+zi: 毅夫
+dynasty: song
+exam_year: 1053
+reign: 皇祐五
+birth_year: 1022
+death_year: 1072
+native_hist: 安州安陆
+native_modern: ""
+ke_ci: 1053年进士
+bio_short: 安州安陆人。皇祐五年进士第一。累迁知制诰、翰林学士。卒年五十一。名录作江西宁都，与本传矛盾，不采用。
+tags: []
+events:
+  - year: 1053
+    type: 中举
+    title: 传为1053年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1072
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 翰林学士
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 翰林学士
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1072
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -1,0 +1,41 @@
+id: z0084
+name: 张又新
+dynasty: tang
+exam_year: 814
+reign: 元和
+native_hist: 深州陆泽
+native_modern: ""
+ke_ci: 元和中进士
+bio_short: 深州陆泽人。元和中进士及第，又登宏词科。历左右补阙，贬江州刺史，终左司郎中。名录标签三元及第只见于笔记，正史只写进士和宏词。
+tags: []
+events:
+  - year: 814
+    type: 中举
+    title: 元和中进士及第，又登宏词科
+    description: 旧唐书卷 149 不写名次。三元之说不采用。
+    source_id: s0051
+    evidence: secondary
+  - year_label: 长庆后
+    precision: range
+    type: 贬谪
+    title: 贬江州刺史
+    description: 终官左司郎中。
+    source_id: s0051
+    evidence: secondary
+career:
+  highest:
+    office: 左司郎中
+    source_id: s0051
+    note: 本传记其终于左司郎中
+  last:
+    office: 左司郎中
+    source_id: s0051
+    note: 同上
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

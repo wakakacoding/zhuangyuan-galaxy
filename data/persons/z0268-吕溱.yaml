@@ -1,0 +1,46 @@
+id: z0268
+name: 吕溱
+zi: 济叔
+dynasty: song
+exam_year: 1038
+reign: 寶元元
+birth_year: 1014
+death_year: 1068
+native_hist: 扬州
+native_modern: ""
+ke_ci: 1038年进士
+bio_short: 扬州人。宝元元年进士第一。累迁翰林学士、知开封府。卒年五十五。
+tags: []
+events:
+  - year: 1038
+    type: 中举
+    title: 传为1038年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1068
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 翰林学士
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 翰林学士
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1068
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

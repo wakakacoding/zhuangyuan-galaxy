@@ -1,0 +1,65 @@
+id: z0059
+name: 梁肃
+zi: 敬之
+dynasty: tang
+exam_year: 782
+reign: 建中
+birth_year: 753
+death_year: 793
+native_hist: 世居陆浑（安定梁氏）
+native_modern: ""
+ke_ci: 建中初文辞清丽科
+bio_short: 世居陆浑，安定梁氏。建中初中文辞清丽科，不是进士科。官至翰林学士、皇太子诸王侍读，卒年四十一。名录把他放在建中三年进士，正史没有这个年份。
+tags:
+  - 古文
+events:
+  - year_label: 建中初
+    precision: range
+    type: 中举
+    title: 中文辞清丽科，授太子校书郎
+    description: 制科，不是进士科。本传只说建中初，不说哪一年，也不说名次。名录的建中三年是后世名单所加。
+    source_id: s0046
+    evidence: primary
+  - year_label: 建中中
+    precision: range
+    type: 升迁
+    title: 萧复荐为右拾遗，不赴
+    description: 以母亲年老体弱为由没有赴任。
+    source_id: s0046
+    evidence: primary
+  - year_label: 贞元中
+    precision: range
+    type: 升迁
+    title: 转右补阙、翰林学士
+    description: 兼皇太子诸王侍读。
+    source_id: s0046
+    office: 翰林学士
+    evidence: primary
+  - year: 793
+    type: 卒
+    title: 卒，赠礼部郎中
+    description: 本传只记卒年四十一。卒于贞元九年、生于 753，据崔元翰所撰墓志的转述，本轮没有读到墓志原文。
+    source_id: s0046
+    evidence: secondary
+career:
+  highest:
+    office: 翰林学士
+    precision: range
+    source_id: s0046
+    note: 本传终官为右补阙、翰林学士、皇太子诸王侍读，未记年份
+  last:
+    office: 翰林学士
+    precision: range
+    source_id: s0046
+    note: 卒于任上与否本传未写
+  whereabouts:
+    status: unknown
+    note: 本传只记官历，未见致仕或归里
+  death:
+    category: 待核
+    year: 793
+    precision: circa
+    source_id: s0046
+    note: 本传只记年四十一，具体卒年取墓志转述，死因未见
+research_status: compiled
+research_checked_at: "2026-10-21"

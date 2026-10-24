@@ -1,0 +1,22 @@
+id: z0396
+name: 吴潜
+dynasty: song
+exam_year: 1217
+reign: 嘉定十年
+native_hist: 乌江
+native_modern: 安徽省马鞍山市和县乌江镇
+ke_ci: 嘉定十年丁丑科
+bio_short: 宋1217 年状元。本档为 CBDB 骨架档（DB21 批次·第二批），仅收录 CBDB 有据的入仕、任职与卒年条目，叙事性内容待补。
+tags:
+  - DB21骨架档
+events:
+  - year: 1217
+    type: 夺魁
+    title: 嘉定十年丁丑科状元
+    description: 'CBDB 入仕记录：examination: jinshi，科年与本站名录一致。'
+    source_id: s0010
+    evidence: secondary
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: '本档由 CBDB 骨架生成（DB21 批次·第二批）：入仕（examination: jinshi）、任职、卒年均据 CBDB 数据库条目挂 s0010。夺魁名次断言不写 rank_detail（CBDB 只载「进士及第」不载名次）。叙事、籍贯考据与正史复核待后续批次。'
+cbdb_id: 1959

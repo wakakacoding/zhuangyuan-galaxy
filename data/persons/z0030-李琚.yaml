@@ -1,0 +1,70 @@
+id: z0030
+name: 李琚
+zi: 公佩
+dynasty: tang
+exam_year: 734
+reign: 开元
+birth_year: 694
+death_year: 748
+native_hist: 顿丘
+native_modern: ""
+ke_ci: 开元二十二年甲戌科
+bio_short: 顿丘人。开元二十二年乡贡进士及第，同年再举博学宏词。终河南府洛阳县尉，天宝七载卒于任。墓志只写「擢第」，没有写名次。
+tags: []
+events:
+  - year: 734
+    type: 中举
+    title: 开元二十二年乡贡进士擢第
+    description: 考功员外郎孙逖知贡举，试题有《武库诗》。墓志写「擢第」，没写第几。名录的「状元」是后人据榜序所加。
+    source_id: s0043
+    evidence: primary
+  - year: 734
+    type: 中举
+    title: 同年再举博学宏词
+    description: 墓志说他在宏词试里「裒然」，后人据此说他是第一。录文没有「第一」二字，不写死。
+    source_id: s0043
+    evidence: primary
+  - year: 735
+    type: 升迁
+    title: 授秘书省校书郎
+    source_id: s0043
+    office: 秘书省校书郎
+    evidence: primary
+  - year_label: 开元末
+    precision: range
+    type: 升迁
+    title: 转右骁卫仓曹参军
+    source_id: s0043
+    office: 右骁卫仓曹参军
+    evidence: primary
+  - year: 748
+    type: 卒
+    title: 卒于洛阳县尉任
+    description: 天宝七载二月卒于洛阳毓德里，任洛阳县尉才两年。与妻薛氏合葬洛阳东北原。
+    source_id: s0043
+    office: 河南府洛阳县尉
+    evidence: primary
+career:
+  highest:
+    office: 河南府洛阳县尉
+    year: 748
+    precision: exact
+    source_id: s0043
+    note: 墓志「视事再岁而终」，终官即最高官
+  last:
+    office: 河南府洛阳县尉
+    year: 748
+    precision: exact
+    source_id: s0043
+    note: 卒于任上
+  whereabouts:
+    status: unknown
+    note: 卒于洛阳任所，未见致仕
+  death:
+    category: 待核
+    year: 748
+    precision: exact
+    source_id: s0043
+    note: 墓志记卒日，未记死因
+research_status: compiled
+research_checked_at: "2026-10-20"

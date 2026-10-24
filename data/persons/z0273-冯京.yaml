@@ -1,0 +1,46 @@
+id: z0273
+name: 冯京
+zi: 当世
+dynasty: song
+exam_year: 1049
+reign: 皇祐元
+birth_year: 1021
+death_year: 1094
+native_hist: 鄂州江夏
+native_modern: ""
+ke_ci: 1049年进士
+bio_short: 鄂州江夏人。乡试、礼部、殿试都是第一，是宋代最后一个三元。累迁翰林学士、枢密副使、参知政事。反对王安石新法，出知亳州。以太子少师致仕。绍圣元年卒，年七十四，赠司徒，谥文简。籍贯另有宜州龙水、藤州两说，本传作江夏。
+tags: []
+events:
+  - year: 1049
+    type: 中举
+    title: 传为1049年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1094
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1094
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

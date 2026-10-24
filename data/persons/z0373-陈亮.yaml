@@ -1,0 +1,46 @@
+id: z0373
+name: 陈亮
+zi: 同甫
+dynasty: song
+exam_year: 1193
+reign: 紹熙四
+birth_year: 1143
+death_year: 1194
+native_hist: 婺州永康
+native_modern: ""
+ke_ci: 1193年进士
+bio_short: 字同甫，婺州永康人。绍熙四年策进士，光宗亲擢第一。这是廷试擢第一，不是常规殿试的状元名目。授签书建康府判官厅公事，未赴而卒，年五十二。
+tags: []
+events:
+  - year: 1193
+    type: 中举
+    title: 传为1193年进士第一
+    description: 宋史卷 436。光宗策进士，奏名第三，御笔擢第一。本轮已核到这一句的转述。
+    source_id: s0055
+    evidence: secondary
+  - year: 1194
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 签书建康府判官厅公事
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 签书建康府判官厅公事
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1194
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

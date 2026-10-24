@@ -9,6 +9,7 @@ death_year: 1011
 native_hist: 河南洛阳
 native_modern: 河南省洛阳市
 ke_ci: 太平兴国二年丁丑科
+rank_detail: 殿试第一（状元）
 bio_short: 太平兴国二年擢进士第一。太宗朝擢参知政事，又两度以平章事入相，真宗咸平四年再以本官同平章事。品级均为推定。
 tags:
   - 宰相
@@ -22,6 +23,7 @@ events:
     office: 将作监丞、通判升州
     rank_grade: 8
     estimated: true
+    evidence: primary
   - year: 983
     type: 升迁
     title: 擢参知政事
@@ -30,6 +32,7 @@ events:
     office: 参知政事
     rank_grade: 2
     estimated: true
+    evidence: primary
   - year: 988
     type: 升迁
     title: 拜中书侍郎兼户部尚书、平章事
@@ -38,8 +41,38 @@ events:
     office: 中书侍郎兼户部尚书、平章事
     rank_grade: 1
     estimated: true
+    evidence: primary
   - year: 1011
     type: 卒
     title: 卒，谥文穆
     description: 本传记其卒，赠中书令，谥文穆。吕夷简是其侄孙蒙亨之子，不是亲侄。
     source_id: s0039
+    evidence: primary
+career:
+  highest:
+    office: 中书侍郎兼户部尚书、平章事
+    year: 988
+    precision: exact
+    source_id: s0039
+    note: 本传记端拱元年李昉罢相后拜中书侍郎兼户部尚书、平章事，淳化中罢、四年复相，咸平四年再以本官同平章事；赠中书令是卒后赠官，不计最高实职
+  last:
+    office: 太子太师（致仕）
+    year_label: 咸平六年（1003）
+    precision: exact
+    source_id: s0039
+    note: 本传记咸平六年授太子太师，封莱国公，改封徐，又封许，以疾致仕
+  whereabouts:
+    category: 归隐或讲学
+    year_label: 致仕后
+    precision: range
+    source_id: s0039
+    note: 本传记其以疾致仕，未载致仕后讲学或出仕；此格只记「致仕归家」，不推断其居处与活动
+  death:
+    category: 待核
+    year: 1011
+    precision: exact
+    source_id: s0039
+    note: 本传记卒，赠中书令，谥文穆；死因未见记载，故 category 取「待核」，卒年取本传
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

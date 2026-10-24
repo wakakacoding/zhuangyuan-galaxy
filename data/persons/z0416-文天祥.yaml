@@ -10,6 +10,7 @@ death_year: 1283
 native_hist: 吉州庐陵
 native_modern: 江西省吉安市
 ke_ci: 宝祐四年丙辰科
+rank_detail: 殿试第一（状元）
 bio_short: 南宋末状元、抗元名臣。殿试时理宗见其名曰"此天之祥，乃宋之瑞也"。国破后起兵勤王，兵败被俘，拒降四年，大都就义。"人生自古谁无死，留取丹心照汗青"为千古绝唱。
 tags:
   - 殉国
@@ -24,6 +25,7 @@ events:
     office: 承事郎、签书宁海军节度判官
     rank_grade: 8.5
     estimated: true
+    evidence: secondary
   - year: 1275
     type: 升迁
     title: 起兵勤王
@@ -32,23 +34,53 @@ events:
     office: 右丞相兼枢密使
     rank_grade: 1
     estimated: true
+    evidence: secondary
   - year: 1276
     type: 贬谪
     title: 出使元营被拘，逃脱南归
     description: 奉命赴元营议和，被伯颜扣留；押解途中于镇江逃脱，辗转至福建继续抗元。
     source_id: s0003
+    evidence: secondary
   - year: 1278
     type: 贬谪
     title: 五坡岭兵败被俘
     description: 十二月于广东海丰五坡岭兵败被俘，吞药不死。被押北上途中作《过零丁洋》。
     source_id: s0003
+    evidence: secondary
   - year: 1282
     type: 著作
     title: 狱中作《正气歌》
     description: 囚于大都兵马司狱，作《正气歌》明志。元人屡劝降，许以宰相之位，皆拒。
     source_id: s0003
+    evidence: secondary
   - year: 1283
     type: 卒
     title: 柴市口就义
     description: 至元二十年正月（公历1283年1月）于大都柴市就义，年四十七。衣带中留绝笔："孔曰成仁，孟曰取义。"
     source_id: s0003
+    evidence: secondary
+career:
+  highest:
+    office: 右丞相兼枢密使
+    year: 1275
+    precision: exact
+    source_id: s0003
+    note: 据本站深档转述《宋史》本传：起兵勤王，任右丞相兼枢密使；本步未逐字复核原文
+  last:
+    office: 右丞相兼枢密使
+    year: 1275
+    precision: exact
+    source_id: s0003
+    note: 据深档转述：1276 年出使被拘、1278 年被俘，此后无新授实职，末任即勤王时所任右丞相兼枢密使
+  whereabouts:
+    status: unknown
+    note: 检索《宋史》本传转述与本站深档，国破后即起兵勤王、兵败被俘，未见致仕或归隐记载，故无「去向」可记
+  death:
+    category: 殉职或死事
+    year: 1283
+    precision: exact
+    source_id: s0003
+    note: 据深档转述：至元二十年正月于大都柴市就义；深档写公历 1283 年 1 月，本步未核原文月日
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

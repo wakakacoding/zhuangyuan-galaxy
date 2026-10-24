@@ -1,0 +1,46 @@
+id: z0336
+name: 刘章
+zi: 文孺
+dynasty: song
+exam_year: 1145
+reign: 绍兴十五
+birth_year: 1100
+death_year: 1179
+native_hist: 衢州龙游
+native_modern: ""
+ke_ci: 1145年进士
+bio_short: 衢州龙游人。绍兴十五年进士第一。累迁礼部侍郎、权礼部尚书。
+tags: []
+events:
+  - year: 1145
+    type: 中举
+    title: 传为1145年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1179
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 礼部尚书
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 礼部尚书
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1179
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

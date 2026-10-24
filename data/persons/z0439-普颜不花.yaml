@@ -1,0 +1,34 @@
+id: z0439
+name: 普颜不花
+dynasty: yuan
+exam_year: 1345
+reign: 至正五
+native_hist: 蒙古
+native_modern: ""
+ke_ci: 至正五年右榜进士
+bio_short: 蒙古人。至正五年右榜进士第一。累迁淮南行省平章政事。守益都，城破死。右榜是蒙古、色目人的榜，不是汉人榜。
+tags: []
+events:
+  - year: 1345
+    type: 中举
+    title: 传为1345年进士第一
+    description: 元史卷 196 忠义传。名次取本传，本轮未逐字核录。
+    source_id: s0057
+    evidence: secondary
+career:
+  highest:
+    office: 平章政事
+    source_id: s0057
+    note: 本传所记最高官
+  last:
+    office: 平章政事
+    source_id: s0057
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

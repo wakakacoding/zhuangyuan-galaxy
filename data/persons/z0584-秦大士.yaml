@@ -1,0 +1,46 @@
+id: z0584
+name: 秦大士
+zi: 鲁一
+dynasty: qing
+exam_year: 1752
+reign: 乾隆十七
+birth_year: 1715
+death_year: 1777
+native_hist: 江苏江宁
+native_modern: ""
+ke_ci: 1752年进士
+bio_short: 字鲁一，江苏江宁人。乾隆十七年进士第一。授翰林修撰。累迁侍讲学士。清史稿无单传，科第见于清实录和江宁方志。
+tags: []
+events:
+  - year: 1752
+    type: 中举
+    title: 传为1752年进士第一
+    description: 清史稿无单传。名次取清实录与方志，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+  - year: 1777
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+career:
+  highest:
+    office: 侍讲学士
+    source_id: s0059
+    note: 清实录与方志所记
+  last:
+    office: 侍讲学士
+    source_id: s0059
+    note: 清实录与方志所记
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1777
+    precision: circa
+    source_id: s0059
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -1,0 +1,46 @@
+id: z0420
+name: 陈文龙
+zi: 君贲
+dynasty: song
+exam_year: 1268
+reign: 咸淳四
+birth_year: 1232
+death_year: 1277
+native_hist: 兴化军莆田
+native_modern: ""
+ke_ci: 1268年进士
+bio_short: 字君贲，初名子龙，度宗改名文龙。兴化军莆田人。咸淳四年进士第一。累迁参知政事。德祐末守兴化，兵败被俘，至杭州不食死。
+tags: []
+events:
+  - year: 1268
+    type: 中举
+    title: 传为1268年进士第一
+    description: 宋史卷 451 忠义传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1277
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 参知政事
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1277
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

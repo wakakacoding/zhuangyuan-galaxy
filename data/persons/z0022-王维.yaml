@@ -22,11 +22,13 @@ events:
     title: 开元九年进士擢第
     description: 正史仅载进士及第，未载名次。
     source_id: s0006
+    evidence: secondary
   - year: 721
     type: 夺魁
     title: 传为开元九年状元
     description: 笔记载王维以琵琶曲《郁轮袍》获岐王举荐、玉真公主助力夺魁，情节传奇色彩浓，属传说层级。
     source_id: s0016
+    evidence: secondary
   - year_label: 开元九年稍后
     precision: circa
     type: 贬谪
@@ -36,11 +38,13 @@ events:
     office: 济州司仓参军
     rank_grade: 8.5
     estimated: true
+    evidence: secondary
   - year: 756
     type: 贬谪
     title: 安史之乱中陷贼受伪职
     description: 长安陷落后被俘，迫受伪署给事中；曾赋"凝碧池"诗明志。乱平后以诗自明，得从宽处理。
     source_id: s0006
+    evidence: secondary
   - year: 761
     type: 卒
     title: 卒于尚书右丞任
@@ -49,3 +53,42 @@ events:
     office: 尚书右丞
     rank_grade: 4
     estimated: true
+    evidence: secondary
+career:
+  highest:
+    office: 尚书右丞
+    year: 761
+    precision: exact
+    source_id: s0006
+    note: 据深档转述《旧唐书》：官至尚书右丞；仕途本身见于正史，与「状元身份存疑」是两件事
+  last:
+    office: 尚书右丞
+    year: 761
+    precision: exact
+    source_id: s0006
+    note: 据深档转述卒于尚书右丞任，末任即最高官
+  whereabouts:
+    status: unknown
+    note: 检索本站深档与《旧唐书》转述，只记卒于尚书右丞任，未见致仕或归隐记载
+  death:
+    category: 待核
+    year: 761
+    precision: exact
+    source_id: s0006
+    note: 据深档转述卒于尚书右丞任（761）；死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。
+dispute_claims:
+  - claim: 夺魁
+    value: 开元九年（721）状元
+    status: disputed
+    source_ids:
+      - s0016
+    note: 正史仅作「进士擢第」，状元说见《集异记》等笔记
+  - claim: 进士及第
+    value: 开元九年进士擢第
+    status: confirmed
+    source_ids:
+      - s0006
+    note: 《旧唐书》载及第，未载名次

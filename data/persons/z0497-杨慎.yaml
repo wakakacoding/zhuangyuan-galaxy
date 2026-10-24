@@ -10,6 +10,7 @@ death_year: 1559
 native_hist: 四川成都府新都县（祖籍江西吉安府庐陵县）
 native_modern: 四川省成都市新都区
 ke_ci: 正德六年辛未科
+rank_detail: 一甲第一名（状元）
 bio_short: 二十四岁举正德六年殿试第一，授翰林院修撰。嘉靖三年伏左顺门力谏，再杖后谪戍云南永昌卫。本传称其著作之富为明世第一。嘉靖三十八年七月卒，天启中追谥文宪。
 tags:
   - 文学家
@@ -39,3 +40,6 @@ events:
     title: 嘉靖三十八年卒
     description: 本传记嘉靖三十八年七月卒，年七十二。追谥文宪在天启中，不是隆庆。
     source_id: s0034
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

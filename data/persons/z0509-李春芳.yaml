@@ -1,0 +1,46 @@
+id: z0509
+name: 李春芳
+zi: 子实
+dynasty: ming
+exam_year: 1547
+reign: 嘉靖二十六
+birth_year: 1510
+death_year: 1584
+native_hist: 南直隶兴化
+native_modern: ""
+ke_ci: 1547年进士
+bio_short: 字子实，南直隶兴化人。嘉靖二十六年进士第一。授翰林修撰。累迁吏部尚书、中极殿大学士，为首辅。卒年七十五，谥文定。
+tags: []
+events:
+  - year: 1547
+    type: 中举
+    title: 传为1547年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1584
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 193
+  last:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 193
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1584
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

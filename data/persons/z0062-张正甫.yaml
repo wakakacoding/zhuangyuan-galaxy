@@ -1,0 +1,33 @@
+id: z0062
+name: 张正甫
+dynasty: tang
+exam_year: 786
+reign: 貞元二年丙寅科
+native_hist: 籍贯未详（待考）
+ke_ci: 貞元二年丙寅科丙寅科
+bio_short: 唐786 年状元。本档为 CBDB 骨架档（DB21 批次·第二批），仅收录 CBDB 有据的入仕、任职与卒年条目，叙事性内容待补。
+tags:
+  - DB21骨架档
+events:
+  - year: 786
+    type: 夺魁
+    title: 貞元二年丙寅科丙寅科状元
+    description: 'CBDB 入仕记录：examination: jinshi，科年与本站名录一致。'
+    source_id: s0010
+    evidence: secondary
+  - year: 810
+    type: 升迁
+    title: 州刺史
+    description: CBDB 任职表首条。
+    source_id: s0010
+    evidence: secondary
+  - year: 834
+    type: 卒
+    title: 卒
+    description: 享年 83（CBDB 记载）。
+    source_id: s0010
+    evidence: secondary
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: '本档由 CBDB 骨架生成（DB21 批次·第二批）：入仕（examination: jinshi）、任职、卒年均据 CBDB 数据库条目挂 s0010。夺魁名次断言不写 rank_detail（CBDB 只载「进士及第」不载名次）。叙事、籍贯考据与正史复核待后续批次。'
+cbdb_id: 189512

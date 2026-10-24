@@ -1,0 +1,46 @@
+id: z0414
+name: 方逢辰
+zi: 君锡
+dynasty: song
+exam_year: 1250
+reign: 淳祐十
+birth_year: 1221
+death_year: 1291
+native_hist: 严州淳安
+native_modern: ""
+ke_ci: 1250年进士
+bio_short: 字君锡，严州淳安人。淳祐十年进士第一。累迁兵部侍郎。宋亡不仕。宋史无单传，科第见于严州续志。
+tags: []
+events:
+  - year: 1250
+    type: 中举
+    title: 传为1250年进士第一
+    description: 宋史无单传。名次取严州续志，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1291
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 兵部侍郎
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 兵部侍郎
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1291
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

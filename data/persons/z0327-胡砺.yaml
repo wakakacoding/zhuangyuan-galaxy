@@ -9,6 +9,7 @@ native_modern: 河北省邯郸市武安市
 birth_year: 1107
 death_year: 1161
 ke_ci: 天会十年壬子科
+rank_detail: 殿试第一（状元）
 bio_short: 金代北方文宗，武安史上唯一状元。少年被金兵掳掠，逃亡香山寺遇参知政事韩昉收教成名。其文舒卷自如，世称「元化格」，举子奉为考场范文；朝廷典章诏册多出其手。海陵王升平章，百官跪贺，唯胡砺不跪：「朝服之跪，面君之礼也」——刚直反而更被倚重。
 tags:
   - 元化格
@@ -53,3 +54,6 @@ career:
   mid_category: 地方
   final_office: 刑部尚书、翰林学士
   final_category: 部院高官
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

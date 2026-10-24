@@ -1,0 +1,34 @@
+id: z0217
+name: 程宿
+dynasty: song
+exam_year: 988
+reign: 端拱
+native_hist: 衢州开化
+native_modern: ""
+ke_ci: 端拱元年进士
+bio_short: 开化人。端拱元年进士及第，官至职方员外郎。这一年太宗不临轩，没有殿试第一的名目。名录的状元不采用。
+tags: []
+events:
+  - year: 988
+    type: 中举
+    title: 端拱元年进士及第
+    description: 见于严州图经一类方志，不是国史。不写状元。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 职方员外郎
+    source_id: s0055
+    note: 方志所记
+  last:
+    office: 职方员外郎
+    source_id: s0055
+    note: 同上
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -10,6 +10,7 @@ birth_year: 963
 death_year: 1053
 birth_circa: true
 ke_ci: 统和十四年丙申科
+rank_detail: 殿试第一（状元）
 bio_short: 辽圣宗统和十四年状元——该科仅取进士二人，连探花都没有。由云州幕僚被节度使以「一代之宝」献给圣宗，从此践历清华，官至左丞相、太师、中书令，封韩王、陈王，受遗诏辅立兴宗。一件袍子穿三十年，兴宗暗令人烫洞试探，他仍不易——辽代汉臣清望第一。
 tags:
   - 辽代名相
@@ -61,3 +62,6 @@ career:
   mid_category: 部院
   final_office: 太师、中书令（封陈王，加尚父）
   final_category: 宰辅
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

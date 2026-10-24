@@ -1,0 +1,46 @@
+id: z0643
+name: 王仁堪
+zi: 可庄
+dynasty: qing
+exam_year: 1877
+reign: 光绪三
+birth_year: 1848
+death_year: 1893
+native_hist: 福建闽县
+native_modern: ""
+ke_ci: 1877年进士
+bio_short: 字可庄，福建闽县人。光绪三年进士第一。授翰林修撰。出知镇江、苏州，卒于任，年四十六。
+tags: []
+events:
+  - year: 1877
+    type: 中举
+    title: 传为1877年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+  - year: 1893
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+career:
+  highest:
+    office: 知苏州府
+    source_id: s0059
+    note: 清史稿卷 479 循吏传
+  last:
+    office: 知苏州府
+    source_id: s0059
+    note: 清史稿卷 479 循吏传
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1893
+    precision: circa
+    source_id: s0059
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

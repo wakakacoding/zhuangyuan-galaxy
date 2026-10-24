@@ -10,6 +10,7 @@ death_year: 1486
 native_hist: 浙江严州府淳安县
 native_modern: 浙江省杭州市淳安县
 ke_ci: 正统十年乙丑科
+rank_detail: 一甲第一名（状元）
 bio_short: 明代官方记载中唯一连中三元者（黄观因削籍未计入）。历仕正统、景泰、天顺、成化四朝，官至内阁首辅，土木之变后力主坚守北京，成化间以持正著称。
 tags:
   - 三元及第
@@ -19,6 +20,7 @@ events:
     type: 中举
     title: 宣德十年浙江乡试第一（解元）
     source_id: s0004
+    evidence: secondary
   - year: 1445
     type: 夺魁
     title: 正统十年乙丑科状元，连中三元
@@ -26,6 +28,7 @@ events:
     source_id: s0004
     office: 翰林院修撰
     rank_grade: 6.5
+    evidence: secondary
   - year: 1449
     type: 升迁
     title: 土木之变后入阁
@@ -34,11 +37,13 @@ events:
     office: 翰林院侍读、入阁预机务
     rank_grade: 6
     estimated: true
+    evidence: secondary
   - year: 1457
     type: 贬谪
     title: 夺门之变后削籍为民
     description: 英宗复辟，石亨、徐有贞诬陷忠良，商辂被革职回乡，家居十年。
     source_id: s0004
+    evidence: secondary
   - year: 1467
     type: 升迁
     title: 成化三年召复入阁
@@ -47,8 +52,38 @@ events:
     office: 吏部尚书兼谨身殿大学士
     rank_grade: 2
     estimated: true
+    evidence: secondary
   - year: 1486
     type: 卒
     title: 成化二十二年卒
     description: 谥文毅。淳安至今存"三元坊"遗迹。
     source_id: s0004
+    evidence: secondary
+career:
+  highest:
+    office: 吏部尚书兼谨身殿大学士
+    year: 1467
+    precision: circa
+    source_id: s0004
+    note: 据深档转述《明史》本传：成化三年召复入阁，后官至吏部尚书兼谨身殿大学士；到任年份深档未写明，故取 circa
+  last:
+    office: 吏部尚书兼谨身殿大学士
+    year_label: 致仕前
+    precision: range
+    source_id: s0004
+    note: 据深档转述，此后未见更高或更后实职；末任与最高官重合
+  whereabouts:
+    category: 归隐或讲学
+    year_label: 致仕后至卒
+    precision: range
+    source_id: s0004
+    note: 据深档转述其致仕；致仕后是否讲学、居何处，深档未写，本格只记「致仕归里」
+  death:
+    category: 待核
+    year: 1486
+    precision: exact
+    source_id: s0004
+    note: 据深档转述卒于成化二十二年，谥文毅；死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

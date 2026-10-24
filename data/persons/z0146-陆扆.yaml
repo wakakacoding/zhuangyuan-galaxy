@@ -1,0 +1,52 @@
+id: z0146
+name: 陆扆
+zi: 祥文
+dynasty: tang
+exam_year: 886
+reign: 光启
+birth_year: 847
+death_year: 905
+native_hist: 吴郡（占籍陕州）
+native_modern: ""
+ke_ci: 光启二年进士
+bio_short: 吴郡人，徙陕州。光启二年进士及第，又登宏词科。历翰林学士。乾宁三年拜相。后为崔胤所恶，贬沂王傅，被杀。
+tags: []
+events:
+  - year: 886
+    type: 中举
+    title: 光启二年进士及第
+    description: 两唐书有传。名次本传不写。
+    source_id: s0052
+    evidence: secondary
+  - year: 896
+    type: 升迁
+    title: 拜相
+    description: 乾宁三年。
+    source_id: s0052
+    evidence: secondary
+  - year: 905
+    type: 卒
+    title: 被杀
+    description: 贬沂王傅后被杀。
+    source_id: s0052
+    evidence: secondary
+career:
+  highest:
+    office: 宰相
+    source_id: s0052
+    note: 乾宁三年拜相
+  last:
+    office: 沂王傅
+    source_id: s0052
+    note: 贬后被杀
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 905
+    precision: circa
+    source_id: s0052
+    note: 被杀。分类表没有对应项，记待核
+research_status: compiled
+research_checked_at: "2026-10-21"

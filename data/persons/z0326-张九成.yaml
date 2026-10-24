@@ -1,0 +1,46 @@
+id: z0326
+name: 张九成
+zi: 子韶
+dynasty: song
+exam_year: 1132
+reign: 紹興二
+birth_year: 1092
+death_year: 1159
+native_hist: 开封（徙钱塘）
+native_modern: ""
+ke_ci: 1132年进士
+bio_short: 其先开封人，徙钱塘。绍兴二年进士第一。授镇东军签判。累迁礼部侍郎兼侍讲。因不肯附秦桧，谪邵州，又贬南安军十四年。桧死后起知温州。卒年六十八，后赠太师，谥文忠。
+tags: []
+events:
+  - year: 1132
+    type: 中举
+    title: 传为1132年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1159
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 礼部侍郎
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 礼部侍郎
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1159
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

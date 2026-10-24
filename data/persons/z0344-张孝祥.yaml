@@ -1,0 +1,46 @@
+id: z0344
+name: 张孝祥
+zi: 安国
+dynasty: song
+exam_year: 1154
+reign: 绍兴二十四
+birth_year: 1132
+death_year: 1170
+native_hist: 和州乌江
+native_modern: ""
+ke_ci: 1154年进士
+bio_short: 历阳乌江人。绍兴二十四年进士第一。累迁中书舍人、建康留守。卒年三十八。
+tags: []
+events:
+  - year: 1154
+    type: 中举
+    title: 传为1154年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1170
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 中书舍人
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 中书舍人
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1170
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

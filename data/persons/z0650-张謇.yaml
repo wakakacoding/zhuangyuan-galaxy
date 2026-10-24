@@ -21,26 +21,61 @@ events:
     title: 光绪二十年以第一人赐及第
     description: 《清史稿·德宗本纪》记是年四月赐张謇等进士及第出身有差；《新世说》记其光绪甲午以第一人赐及第。授翰林院修撰与四十一岁，本步所核出处未写明。
     source_id: s0036
+    evidence: primary
   - year: 1895
     type: 实业
     title: 筹划通州纱厂
     description: 后人整理称，署两江总督张之洞委其总理通海一带商务，筹办大生纱厂，集股艰难，后以搁置官机作价入股。本步未核到《啬翁自订年谱》原文，故不挂年谱出处，也不写「辞官」。
+    evidence: pending
   - year: 1902
     type: 实业
     title: 筹划通州师范
     description: 后人整理称，光绪二十八年他应刘坤一之邀讨论兴学，地方官阻挠后与同人筹划在通州自立师范。本步未核到年谱原文，故不挂年谱出处，也不写「中国最早」。
+    evidence: pending
   - year: 1912
     type: 授官
     title: 任南京政府实业部总长
     description: 《新世说》记民国元年南京政府任其为实业部总长。
     source_id: s0037
+    evidence: secondary
   - year: 1913
     type: 授官
     title: 任熊内阁农商总长
     description: 《新世说》记民国二年熊内阁任其为农商总长，见袁世凯欲称帝，即辞职旋里。
     source_id: s0037
+    evidence: secondary
   - year: 1926
     type: 卒
     title: 卒
     description: 卒年取通行传记。胡适「很伟大的失败的英雄」是 1929 年序文里的评价，不是年谱所记。
     source_id: s0038
+    evidence: secondary
+career:
+  highest:
+    office: 翰林院修撰
+    status: recorded
+    year_label: 及第后
+    precision: range
+    source_id: s0036
+    note: 状元例授翰林院修撰，但本站所核《清史稿·德宗本纪》只写「赐张謇等进士及第出身有差」，未写授何官；此格沿本站 careers.yaml 旧录，标注「未核原文」
+  last:
+    office: 农商总长
+    year: 1913
+    precision: exact
+    source_id: s0037
+    note: 《新世说·言语》记民国二年熊内阁任其为农商总长，见袁世凯欲称帝即辞职旋里；此为笔记，非本人自述
+  whereabouts:
+    category: 实业
+    year: 1895
+    precision: exact
+    source_id: s0037
+    note: 《新世说》记其「历年从事本省实业及教育」；本站深档另记筹办大生纱厂、通州师范，但那两条事件本步未核到《啬翁自订年谱》原文，故不挂年谱出处
+  death:
+    category: 待核
+    year: 1926
+    precision: exact
+    source_id: s0038
+    note: 卒年取通行传记（1926）；胡适序是 1929 年的评价，不是卒年记载，此处只作时间参照，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

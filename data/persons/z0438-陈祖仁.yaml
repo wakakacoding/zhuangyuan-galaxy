@@ -1,0 +1,46 @@
+id: z0438
+name: 陈祖仁
+zi: 子山
+dynasty: yuan
+exam_year: 1342
+reign: 至正二
+birth_year: 1314
+death_year: 1368
+native_hist: 汴梁
+native_modern: ""
+ke_ci: 1342年进士
+bio_short: 字子山，汴梁人。至正二年进士第一。累迁翰林学士、参知政事。明军入京，死于难。
+tags: []
+events:
+  - year: 1342
+    type: 中举
+    title: 传为1342年进士第一
+    description: 元史卷 186。名次取本传，本轮未逐字核录。
+    source_id: s0057
+    evidence: secondary
+  - year: 1368
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0057
+    evidence: secondary
+career:
+  highest:
+    office: 参知政事
+    source_id: s0057
+    note: 本传所记最高官
+  last:
+    office: 参知政事
+    source_id: s0057
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1368
+    precision: circa
+    source_id: s0057
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

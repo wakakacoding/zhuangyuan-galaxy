@@ -1,0 +1,65 @@
+id: z0047
+name: 萧遘
+zi: 得圣
+dynasty: tang
+exam_year: 864
+reign: 咸通
+death_year: 887
+native_hist: 兰陵
+native_modern: ""
+ke_ci: 咸通五年甲申科
+bio_short: 兰陵人。咸通五年进士及第，座主王铎。黄巢入长安，从僖宗入蜀，拜相，封楚国公。光启三年被赐死。名录把他放在永泰元年，那是徐松存疑时附的年份，正史写的是咸通五年。
+tags: []
+disputed: true
+dispute_note: 名录与《登科记考》作永泰元年（765）状元，依据是《玉芝堂谈荟》「不知其年，附此俟考」。两《唐书》都写咸通五年（864）登进士第。本档取正史。
+events:
+  - year: 864
+    type: 中举
+    title: 咸通五年登进士第
+    description: 授秘书省校书郎、太原从事。名次正史未写。名录的永泰元年不采用。
+    source_id: s0049
+    evidence: primary
+  - year_label: 咸通中
+    precision: range
+    type: 贬谪
+    title: 贬播州司马
+    description: 与同年韦保衡不睦，韦保衡拜相后贬之。
+    source_id: s0049
+    evidence: secondary
+  - year: 881
+    type: 升迁
+    title: 拜中书侍郎、同平章事
+    description: 从僖宗入蜀。后封楚国公。
+    source_id: s0050
+    office: 中书侍郎、同平章事
+    evidence: secondary
+  - year: 887
+    type: 卒
+    title: 光启三年被赐死
+    description: 朱玫之乱后，宰相孔纬指他接受伪命，赐死于永乐。
+    source_id: s0050
+    evidence: secondary
+career:
+  highest:
+    office: 中书侍郎、同平章事
+    year: 881
+    precision: circa
+    source_id: s0050
+    note: 拜相在中和元年，本轮取通说
+  last:
+    office: 太子太保
+    year: 886
+    precision: circa
+    source_id: s0050
+    note: 朱玫之乱中被罢为太子太保，次年被赐死
+  whereabouts:
+    status: unknown
+    note: 罢相后退居河中永乐，不是致仕
+  death:
+    category: 待核
+    year: 887
+    precision: exact
+    source_id: s0050
+    note: 光启三年赐死于永乐。分类表没有赐死一项，先记待核
+research_status: compiled
+research_checked_at: "2026-10-21"

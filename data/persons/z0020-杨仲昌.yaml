@@ -1,0 +1,63 @@
+id: z0020
+name: 杨仲昌
+zi: 蔓
+dynasty: tang
+exam_year: 715
+reign: 开元
+birth_year: 693
+death_year: 741
+native_hist: 虢州阌乡
+native_modern: ""
+ke_ci: 开元三年制举
+bio_short: 虢州阌乡人，杨元琰之子。以河阳尉应制举，玄宗擢第一，授蒲州法曹参军。终吏部郎中。名录把他写成进士科状元，本传写的是制举。
+tags:
+  - 制举第一
+events:
+  - year: 715
+    type: 夺魁
+    title: 以河阳尉对策，玄宗擢第一
+    description: 制举第一，不是进士科。授蒲州法曹参军。
+    source_id: s0040
+    evidence: primary
+  - year_label: 开元中
+    precision: range
+    type: 升迁
+    title: 判入异等，迁监察御史
+    source_id: s0040
+    office: 监察御史
+    evidence: primary
+  - year_label: 开元中
+    precision: range
+    type: 贬谪
+    title: 坐累为孝义令
+    description: 太守萧恕表其政，徙下邽令。
+    source_id: s0040
+    office: 下邽令
+    evidence: primary
+  - year: 741
+    type: 卒
+    title: 终吏部郎中
+    description: 卒年取日本唐代人物数据库所引墓志，四十九岁，反推生年 693。名录作 668，与此差二十五年，不采用。
+    source_id: s0040
+    office: 吏部郎中
+    evidence: secondary
+career:
+  highest:
+    office: 吏部郎中
+    source_id: s0040
+    note: 新唐书本传「终吏部郎中」，未记年份
+  last:
+    office: 吏部郎中
+    source_id: s0040
+    note: 本传以吏部郎中为终官
+  whereabouts:
+    status: unknown
+    note: 本传只记终官，未见致仕或归里
+  death:
+    category: 待核
+    year: 741
+    precision: exact
+    source_id: s0040
+    note: 卒年据墓志转述，本传未记卒年与死因
+research_status: compiled
+research_checked_at: "2026-10-20"

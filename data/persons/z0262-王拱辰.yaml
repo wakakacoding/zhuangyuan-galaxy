@@ -1,0 +1,46 @@
+id: z0262
+name: 王拱辰
+zi: 君贶
+dynasty: song
+exam_year: 1030
+reign: 天聖八
+birth_year: 1012
+death_year: 1085
+native_hist: 开封咸平
+native_modern: ""
+ke_ci: 1030年进士
+bio_short: 开封咸平人。天圣八年进士第一。累迁翰林学士、御史中丞。卒年七十四。
+tags: []
+events:
+  - year: 1030
+    type: 中举
+    title: 传为1030年进士第一
+    description: 宋史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1085
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 御史中丞
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 御史中丞
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1085
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

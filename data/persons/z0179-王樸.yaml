@@ -20,7 +20,7 @@ events:
     type: 夺魁
     title: 后汉乾祐三年状元
     description: 擢进士第一，拜校书郎，依附枢密使杨邠。见隐帝孱弱、将相交恶，预感内乱将起，辞官东归故里——次年杨邠、王章、史弘肇被诛，门客多被祸，王朴独免。
-    source_id: s0019
+    source_id: s0001
   - year: 954
     type: 升迁
     title: 显德元年入周世宗幕府中枢
@@ -54,3 +54,6 @@ career:
   mid_category: 地方
   final_office: 枢密使、检校太保（赠侍中）
   final_category: 宰辅
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

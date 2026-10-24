@@ -9,6 +9,7 @@ native_modern: 山东省菏泽市鄄城县
 birth_year: 971
 death_year: 1047
 ke_ci: 景德二年乙巳科
+rank_detail: 殿试第一（状元）
 bio_short: 景德二年状元，两度拜相。丁谓擅权构陷寇准时，他当殿怒对真宗：「臣愿与丁谓同时罢相，交御史台劾治」——朝堂为之一震。晚年元昊犯边，以古稀之年自请戍边。卒后仁宗亲题碑首「遗直之碑」，改其葬乡为「遗直乡」。
 tags:
   - 两度拜相
@@ -52,3 +53,6 @@ career:
   mid_category: 部院
   final_office: 太子太傅（赠司空、侍中，谥文定）
   final_category: 宰辅
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

@@ -1,0 +1,46 @@
+id: z0349
+name: 梁克家
+zi: 叔子
+dynasty: song
+exam_year: 1160
+reign: 绍兴三十
+birth_year: 1128
+death_year: 1187
+native_hist: 泉州晋江
+native_modern: ""
+ke_ci: 1160年进士
+bio_short: 泉州晋江人。绍兴三十年进士第一。累迁参知政事、右丞相。卒年六十，谥文靖。
+tags: []
+events:
+  - year: 1160
+    type: 中举
+    title: 传为1160年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1187
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 右丞相
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 右丞相
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1187
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -1,0 +1,46 @@
+id: z0472
+name: 曹鼐
+zi: 万钟
+dynasty: ming
+exam_year: 1433
+reign: 宣德八
+birth_year: 1402
+death_year: 1449
+native_hist: 北直隶宁晋
+native_modern: ""
+ke_ci: 1433年进士
+bio_short: 字万钟，北直隶宁晋人。宣德八年进士第一。授翰林修撰。累迁吏部侍郎、文渊阁大学士。正统十四年死于土木之变。
+tags: []
+events:
+  - year: 1433
+    type: 中举
+    title: 传为1433年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1449
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 文渊阁大学士
+    source_id: s0058
+    note: 明史卷 167
+  last:
+    office: 文渊阁大学士
+    source_id: s0058
+    note: 明史卷 167
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1449
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -19,7 +19,7 @@ events:
     type: 夺魁
     title: 后周广顺二年状元
     description: 进士高第，授校书郎、直史馆，迁监察御史。与堂兄扈蒙同以文学显名，时称「二扈」。
-    source_id: s0020
+    source_id: s0001
   - year_label: 显德初年
     precision: circa
     type: 轶事
@@ -49,3 +49,6 @@ career:
   mid_category: 部院
   final_office: 翰林学士（病卒）
   final_category: 早逝
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

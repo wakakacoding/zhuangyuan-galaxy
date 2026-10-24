@@ -1,0 +1,51 @@
+id: z0143
+name: 崔昭纬
+dynasty: tang
+exam_year: 882
+reign: 中和
+death_year: 896
+native_hist: 清河
+native_modern: ""
+ke_ci: 中和初进士
+bio_short: 清河人。中和初进士及第。乾宁中拜相。后贬梧州司马，被赐死。
+tags: []
+events:
+  - year: 882
+    type: 中举
+    title: 传为中和初进士第一
+    description: 旧唐书卷 179 只言中和初及第，不写名次，也不写定年。
+    source_id: s0052
+    evidence: secondary
+  - year_label: 乾宁中
+    precision: range
+    type: 升迁
+    title: 拜相
+    description: 后贬梧州司马。
+    source_id: s0052
+    evidence: secondary
+  - year: 896
+    type: 卒
+    title: 被赐死
+    description: 赐死于梧州司马任。
+    source_id: s0052
+    evidence: secondary
+career:
+  highest:
+    office: 宰相
+    source_id: s0052
+    note: 乾宁中拜相
+  last:
+    office: 梧州司马
+    source_id: s0052
+    note: 贬后赐死
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 896
+    precision: circa
+    source_id: s0052
+    note: 赐死。记待核
+research_status: compiled
+research_checked_at: "2026-10-21"

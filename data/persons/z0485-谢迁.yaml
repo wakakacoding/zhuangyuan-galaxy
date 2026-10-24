@@ -1,0 +1,46 @@
+id: z0485
+name: 谢迁
+zi: 于乔
+dynasty: ming
+exam_year: 1475
+reign: 成化十一
+birth_year: 1449
+death_year: 1531
+native_hist: 浙江余姚
+native_modern: ""
+ke_ci: 1475年进士
+bio_short: 字于乔，浙江余姚人。成化十一年进士第一。授翰林修撰。弘治中入阁，后为首辅。卒年八十三，谥文正。
+tags: []
+events:
+  - year: 1475
+    type: 中举
+    title: 传为1475年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1531
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 181
+  last:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 181
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1531
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

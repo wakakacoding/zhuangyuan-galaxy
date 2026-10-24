@@ -1,0 +1,35 @@
+id: z0340
+name: 赵逵
+zi: 庄叔
+dynasty: song
+exam_year: 1151
+reign: 绍兴二十一
+native_hist: 资州
+native_modern: ""
+ke_ci: 1151年进士
+bio_short: 资州人。绍兴二十一年进士第一。累迁中书舍人。卒年四十一。
+tags: []
+events:
+  - year: 1151
+    type: 中举
+    title: 传为1151年进士第一
+    description: 宋史卷 381 有传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 中书舍人
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 中书舍人
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

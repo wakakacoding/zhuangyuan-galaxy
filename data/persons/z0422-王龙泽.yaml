@@ -1,0 +1,27 @@
+id: z0422
+name: 王龙泽
+dynasty: song
+exam_year: 1274
+reign: 咸淳十年
+native_hist: 籍贯未详（待考）
+ke_ci: 咸淳十年甲戌科
+bio_short: 宋1274 年状元。本档为 CBDB 骨架档（DB21 批次·第二批），仅收录 CBDB 有据的入仕、任职与卒年条目，叙事性内容待补。
+tags:
+  - DB21骨架档
+events:
+  - year: 1274
+    type: 夺魁
+    title: 咸淳十年甲戌科状元
+    description: 'CBDB 入仕记录：examination: jinshi，科年与本站名录一致。'
+    source_id: s0010
+    evidence: secondary
+  - year: 1291
+    type: 升迁
+    title: 南臺察院監察御史
+    description: CBDB 任职表首条。
+    source_id: s0010
+    evidence: secondary
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: '本档由 CBDB 骨架生成（DB21 批次·第二批）：入仕（examination: jinshi）、任职、卒年均据 CBDB 数据库条目挂 s0010。夺魁名次断言不写 rank_detail（CBDB 只载「进士及第」不载名次）。叙事、籍贯考据与正史复核待后续批次。'
+cbdb_id: 38426

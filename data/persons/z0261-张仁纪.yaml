@@ -16,12 +16,28 @@ events:
     title: 太平九年己巳科状元
     description: 是年八月渤海人大延琳于东京（今辽阳）反辽，张仁纪等协助张杰守沈州；乱平之后，圣宗赐张仁纪等进士及第，以褒其忠——科举与军功在此科合流。
     source_id: s0017
+    evidence: secondary
   - year_label: 其后
     precision: range
     type: 轶事
     title: 余事不详
     description: 籍贯、字号、生卒年均失载，辽代史料稀缺于此可见一斑，诚实留白。
-    source_id: s0018
+    evidence: pending
 career:
   first_category: 其他
   final_category: 其他
+  highest:
+    status: unknown
+    note: 检索本站深档与所挂出处《辽史》（s0017）、《历代状元谱》（s0018），只记太平九年赐进士及第，未见任何任官记载
+  last:
+    status: unknown
+    note: 同上，未见任何实际官职，无法判定末任
+  whereabouts:
+    status: unknown
+    note: 同上，籍贯、字号、生卒年与去向均失载，深档已标「余事不详」
+  death:
+    status: unknown
+    note: 同上，卒年失载；本站未检索到《辽史》以外的可核材料
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

@@ -1,0 +1,46 @@
+id: z0466
+name: 陈循
+zi: 德遵
+dynasty: ming
+exam_year: 1415
+reign: 永乐十三
+birth_year: 1385
+death_year: 1462
+native_hist: 江西泰和
+native_modern: ""
+ke_ci: 1415年进士
+bio_short: 字德遵，江西泰和人。永乐十三年进士第一。授翰林修撰。累迁户部尚书、华盖殿大学士。英宗复辟后谪戍铁岭。卒年七十八。
+tags: []
+events:
+  - year: 1415
+    type: 中举
+    title: 传为1415年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1462
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 华盖殿大学士
+    source_id: s0058
+    note: 明史卷 168
+  last:
+    office: 华盖殿大学士
+    source_id: s0058
+    note: 明史卷 168
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1462
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

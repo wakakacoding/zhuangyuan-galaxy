@@ -1,0 +1,34 @@
+id: z0111
+name: 卢肇
+dynasty: tang
+exam_year: 843
+reign: 会昌
+native_hist: 袁州宜春
+native_modern: ""
+ke_ci: 会昌三年进士
+bio_short: 宜春人。会昌三年进士第一，主考王起。后为歙州刺史、吉州刺史。两唐书无传，科第只见于唐摭言。
+tags: []
+events:
+  - year: 843
+    type: 中举
+    title: 传为会昌三年进士第一
+    description: 唐摭言卷 2，后出文献，没有第二处佐证。
+    source_id: s0053
+    evidence: secondary
+career:
+  highest:
+    office: 吉州刺史
+    source_id: s0053
+    note: 唐摭言记其历歙、吉二州
+  last:
+    office: 吉州刺史
+    source_id: s0053
+    note: 同上
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

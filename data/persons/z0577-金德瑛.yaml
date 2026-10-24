@@ -1,0 +1,46 @@
+id: z0577
+name: 金德瑛
+zi: 汝白
+dynasty: qing
+exam_year: 1736
+reign: 乾隆元
+birth_year: 1701
+death_year: 1762
+native_hist: 浙江仁和（祖籍休宁）
+native_modern: ""
+ke_ci: 1736年进士
+bio_short: 字汝白，浙江仁和人。乾隆元年进士第一。授翰林修撰。累迁都察院左都御史。卒年六十二。祖籍休宁。
+tags: []
+events:
+  - year: 1736
+    type: 中举
+    title: 传为1736年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+  - year: 1762
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+career:
+  highest:
+    office: 左都御史
+    source_id: s0059
+    note: 清史稿卷 305
+  last:
+    office: 左都御史
+    source_id: s0059
+    note: 清史稿卷 305
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1762
+    precision: circa
+    source_id: s0059
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

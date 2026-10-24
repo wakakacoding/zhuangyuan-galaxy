@@ -1,0 +1,46 @@
+id: z0347
+name: 王十朋
+zi: 龟龄
+dynasty: song
+exam_year: 1157
+reign: 绍兴二十七
+birth_year: 1112
+death_year: 1171
+native_hist: 温州乐清
+native_modern: ""
+ke_ci: 1157年进士
+bio_short: 温州乐清人。绍兴二十七年进士第一。历知饶、夔、湖、泉四州。卒年六十。
+tags: []
+events:
+  - year: 1157
+    type: 中举
+    title: 传为1157年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1171
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 知州
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 知州
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1171
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

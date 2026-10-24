@@ -1,0 +1,46 @@
+id: z0363
+name: 张行简
+zi: 敬甫
+dynasty: jin
+exam_year: 1179
+reign: 大定十九
+birth_year: 1146
+death_year: 1215
+native_hist: 莒州日照
+native_modern: ""
+ke_ci: 1179年进士
+bio_short: 字敬甫，莒州日照人。大定十九年进士第一。累迁礼部尚书、太子太傅。卒年六十九。
+tags: []
+events:
+  - year: 1179
+    type: 中举
+    title: 传为1179年进士第一
+    description: 金史卷 106。名次取本传，本轮未逐字核录。
+    source_id: s0056
+    evidence: secondary
+  - year: 1215
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0056
+    evidence: secondary
+career:
+  highest:
+    office: 礼部尚书
+    source_id: s0056
+    note: 本传所记最高官
+  last:
+    office: 礼部尚书
+    source_id: s0056
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1215
+    precision: circa
+    source_id: s0056
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

@@ -1,0 +1,46 @@
+id: z0582
+name: 梁国治
+zi: 阶平
+dynasty: qing
+exam_year: 1748
+reign: 乾隆十三
+birth_year: 1723
+death_year: 1786
+native_hist: 浙江会稽
+native_modern: ""
+ke_ci: 1748年进士
+bio_short: 字阶平，浙江会稽人。乾隆十三年进士第一。授翰林修撰。累迁东阁大学士。卒年六十四，谥文定。
+tags: []
+events:
+  - year: 1748
+    type: 中举
+    title: 传为1748年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+  - year: 1786
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+career:
+  highest:
+    office: 东阁大学士
+    source_id: s0059
+    note: 清史稿卷 320
+  last:
+    office: 东阁大学士
+    source_id: s0059
+    note: 清史稿卷 320
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1786
+    precision: circa
+    source_id: s0059
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

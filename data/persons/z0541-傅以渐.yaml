@@ -22,6 +22,7 @@ events:
     source_id: s0002
     office: 内翰林国史院修撰
     rank_grade: 6.5
+    evidence: secondary
   - year_label: 顺治年间
     precision: range
     type: 升迁
@@ -30,7 +31,34 @@ events:
     source_id: s0005
     office: 武英殿大学士兼兵部尚书
     rank_grade: 1
+    evidence: secondary
   - year: 1665
     type: 卒
     title: 康熙四年卒
     source_id: s0005
+    evidence: secondary
+career:
+  highest:
+    office: 武英殿大学士兼兵部尚书
+    year_label: 顺治年间
+    precision: range
+    source_id: s0005
+    note: 据深档转述《清史稿》：历官国史院侍讲、秘书院大学士，终至武英殿大学士兼兵部尚书；到任年份深档只写「顺治年间」
+  last:
+    office: 武英殿大学士兼兵部尚书
+    year_label: 顺治年间
+    precision: range
+    source_id: s0005
+    note: 据深档转述，此后未见更高或更后实职；末任与最高官重合
+  whereabouts:
+    status: unknown
+    note: 检索本站深档与《清史稿》转述，只记官至大学士、康熙四年卒，未见致仕、归隐或讲学的记载
+  death:
+    category: 待核
+    year: 1665
+    precision: exact
+    source_id: s0005
+    note: 据深档转述卒于康熙四年（1665）；死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-20"
+research_note: T06 试迁：四维按本站深档与已登记出处落库，未逐条复核原文者在 note 中标明「深档转述」。

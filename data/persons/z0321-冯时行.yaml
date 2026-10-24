@@ -1,0 +1,28 @@
+id: z0321
+name: 冯时行
+dynasty: song
+exam_year: 1124
+reign: 宣和六年特恩科状元
+native_hist: 绍兴诸暨县
+native_modern: 浙江省绍兴市诸暨市
+ke_ci: 宣和六年特恩科状元甲辰科
+bio_short: 宋1124 年状元。本档为 CBDB 骨架档（DB21 批次·第二批），仅收录 CBDB 有据的入仕、任职与卒年条目，叙事性内容待补。
+tags:
+  - DB21骨架档
+events:
+  - year: 1124
+    type: 夺魁
+    title: 宣和六年特恩科状元甲辰科状元
+    description: 'CBDB 入仕记录：examination: jinshi，科年与本站名录一致。'
+    source_id: s0010
+    evidence: secondary
+  - year: 1163
+    type: 卒
+    title: 卒
+    description: 卒年据 CBDB。
+    source_id: s0010
+    evidence: secondary
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: '本档由 CBDB 骨架生成（DB21 批次·第二批）：入仕（examination: jinshi）、任职、卒年均据 CBDB 数据库条目挂 s0010。夺魁名次断言不写 rank_detail（CBDB 只载「进士及第」不载名次）。叙事、籍贯考据与正史复核待后续批次。'
+cbdb_id: 13893

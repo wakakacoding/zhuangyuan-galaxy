@@ -1,0 +1,46 @@
+id: z0554
+name: 韩菼
+zi: 元少
+dynasty: qing
+exam_year: 1673
+reign: 康熙十二
+birth_year: 1637
+death_year: 1704
+native_hist: 江南长洲
+native_modern: ""
+ke_ci: 1673年进士
+bio_short: 字元少，江南长洲人。康熙十二年进士第一。授翰林修撰。累迁礼部尚书。卒年六十八，谥文懿。
+tags: []
+events:
+  - year: 1673
+    type: 中举
+    title: 传为1673年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+  - year: 1704
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0059
+    evidence: secondary
+career:
+  highest:
+    office: 礼部尚书
+    source_id: s0059
+    note: 清史稿卷 266
+  last:
+    office: 礼部尚书
+    source_id: s0059
+    note: 清史稿卷 266
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1704
+    precision: circa
+    source_id: s0059
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

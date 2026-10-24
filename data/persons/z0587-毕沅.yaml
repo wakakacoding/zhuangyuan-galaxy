@@ -10,6 +10,7 @@ native_modern: 江苏省苏州市太仓市
 birth_year: 1730
 death_year: 1797
 ke_ci: 乾隆二十五年庚辰科
+rank_detail: 一甲第一名（状元）
 bio_short: 乾隆二十五年状元——殿试前夜在军机处当值，细读陕甘总督新疆屯田奏折，次日策问题正是新疆屯田，胸有成竹一挥而就，乾隆擢为第一。师从沈德潜、惠栋，幕府网罗一代学人，历时二十余年续成《续资治通鉴》。官至湖广总督；生前巴结和珅，死后遭追夺世职、籍没家产——学者名臣与官场泥淖的两面。
 tags:
   - 续资治通鉴
@@ -57,3 +58,6 @@ career:
   mid_category: 地方
   final_office: 湖广总督（赠太子太保，身后夺世职）
   final_category: 地方大员
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

@@ -1,0 +1,44 @@
+id: z0246
+name: 徐奭
+dynasty: song
+exam_year: 1012
+reign: 大中祥符五
+death_year: 1030
+native_hist: 瓯宁（一说迁吴县）
+native_modern: ""
+ke_ci: 1012年进士
+bio_short: 瓯宁人，一说后迁吴县。大中祥符五年进士第一，后通判苏州，卒于任。宋史无单传，依据是宋人笔记。
+tags: []
+events:
+  - year: 1012
+    type: 中举
+    title: 传为1012年进士第一
+    description: 宋史无单传。名次取宋人笔记，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+  - year: 1030
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 通判苏州
+    source_id: s0055
+    note: 本传所记最高官
+  last:
+    office: 通判苏州
+    source_id: s0055
+    note: 本传所记终官
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1030
+    precision: circa
+    source_id: s0055
+    note: 死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

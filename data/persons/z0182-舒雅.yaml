@@ -1,0 +1,35 @@
+id: z0182
+name: 舒雅
+zi: 子正
+dynasty: wudai
+exam_year: 959
+reign: 南唐
+native_hist: 歙州
+native_modern: ""
+ke_ci: 南唐入仕
+bio_short: 歙州人。南唐时入韩熙载门下。入宋为将作监丞，后直昭文馆，终主客郎中。参与编纂文苑英华、续通典。科第名次正史没有写。
+tags: []
+events:
+  - year: 959
+    type: 中举
+    title: 传为南唐时及第
+    description: 宋史文苑传有传，不写名次。名录的状元不采用。
+    source_id: s0055
+    evidence: secondary
+career:
+  highest:
+    office: 主客郎中
+    source_id: s0055
+    note: 本传记其终主客郎中
+  last:
+    office: 主客郎中
+    source_id: s0055
+    note: 同上
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    status: unknown
+    note: 卒年没有可靠记载
+research_status: compiled
+research_checked_at: "2026-10-21"

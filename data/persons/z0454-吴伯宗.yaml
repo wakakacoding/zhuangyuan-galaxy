@@ -10,7 +10,9 @@ native_hist: 江西抚州府金溪县
 native_modern: 江西省抚州市金溪县
 ke_ci: 洪武四年辛亥科
 bio_short: 明代开科第一位状元。洪武四年为明朝首次殿试，吴伯宗夺魁，授礼部员外郎，后因敢谏触怒胡惟庸被贬，遣使安南以不辱使命闻名。
-tags: [明代首科, 谏臣]
+tags:
+  - 明代首科
+  - 谏臣
 events:
   - year: 1371
     type: 夺魁
@@ -27,3 +29,6 @@ events:
     type: 卒
     title: 洪武十七年卒
     source_id: s0004
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: 本档事件与断言逐条挂源；夺魁出处经 2026-10-23/24 落库复核（T02 逐条台账 + 构建守卫 §7d）。

@@ -1,0 +1,46 @@
+id: z0487
+name: 王华
+zi: 德辉
+dynasty: ming
+exam_year: 1481
+reign: 成化十七
+birth_year: 1446
+death_year: 1522
+native_hist: 浙江余姚
+native_modern: ""
+ke_ci: 1481年进士
+bio_short: 字德辉，浙江余姚人。成化十七年进士第一。授翰林修撰。累迁南京吏部尚书。卒年七十七。王守仁之父。
+tags: []
+events:
+  - year: 1481
+    type: 中举
+    title: 传为1481年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1522
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 南京吏部尚书
+    source_id: s0058
+    note: 明史卷 195 附传
+  last:
+    office: 南京吏部尚书
+    source_id: s0058
+    note: 明史卷 195 附传
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1522
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"

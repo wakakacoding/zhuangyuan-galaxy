@@ -1,0 +1,22 @@
+id: z0253
+name: 王整
+dynasty: song
+exam_year: 1019
+reign: 天禧三年
+native_hist: 河北大名县
+native_modern: 河北省邯郸市大名县
+ke_ci: 天禧三年己未科
+bio_short: 宋1019 年状元。本档为 CBDB 骨架档（DB21 批次），仅收录 CBDB 有据的入仕、任职与卒年条目，叙事性内容待补。
+tags:
+  - DB21骨架档
+events:
+  - year: 1019
+    type: 夺魁
+    title: 天禧三年己未科状元
+    description: 'CBDB 入仕记录：examination: jinshi，科年与本站名录一致。'
+    source_id: s0010
+    evidence: secondary
+research_status: compiled
+research_checked_at: '2026-10-24'
+research_note: '本档由 CBDB 骨架生成（DB21 批次）：入仕（examination: jinshi）、任职、卒年均据 CBDB 数据库条目挂 s0010。夺魁名次断言不写 rank_detail（CBDB 只载「进士及第」不载名次）。叙事、籍贯考据与正史复核待后续批次。'
+cbdb_id: 37821

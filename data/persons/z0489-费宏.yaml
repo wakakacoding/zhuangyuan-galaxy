@@ -1,0 +1,46 @@
+id: z0489
+name: 费宏
+zi: 子充
+dynasty: ming
+exam_year: 1487
+reign: 成化二十三
+birth_year: 1468
+death_year: 1535
+native_hist: 江西铅山
+native_modern: ""
+ke_ci: 1487年进士
+bio_short: 字子充，江西铅山人。成化二十三年进士第一。授翰林修撰。累迁户部尚书，为首辅。卒年六十八，谥文宪。
+tags: []
+events:
+  - year: 1487
+    type: 中举
+    title: 传为1487年进士第一
+    description: 正史本传。名次取本传，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+  - year: 1535
+    type: 卒
+    title: 卒
+    description: 卒年取本传或年谱，本轮未逐字核录。
+    source_id: s0058
+    evidence: secondary
+career:
+  highest:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 193
+  last:
+    office: 首辅
+    source_id: s0058
+    note: 明史卷 193
+  whereabouts:
+    status: unknown
+    note: 材料只记官历，未见致仕或归里的记载
+  death:
+    category: 待核
+    year: 1535
+    precision: circa
+    source_id: s0058
+    note: 卒年取本传或年谱，死因未见记载
+research_status: compiled
+research_checked_at: "2026-10-21"
