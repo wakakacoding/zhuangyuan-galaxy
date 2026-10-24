@@ -7,7 +7,7 @@ import * as echarts from 'echarts/core';
 import { GraphChart } from 'echarts/charts';
 import { TooltipComponent } from 'echarts/components';
 import { CanvasRenderer } from 'echarts/renderers';
-import { selectedDynasties, searchQuery, matchEntry } from '../../store/filters';
+import { selectedDynasties, searchQuery, yearFrom, yearTo, selectedTags, areaQuery, depthFilter, currentFilters, matchEntry } from '../../store/filters';
 import { selectPerson } from '../../store/selection';
 import { canOpenPerson } from '../../lib/openable';
 import {
@@ -36,6 +36,11 @@ export default function NetworkGraph() {
 
   const dynFilter = useStore(selectedDynasties);
   const query = useStore(searchQuery);
+  const y0 = useStore(yearFrom);
+  const y1 = useStore(yearTo);
+  const tags = useStore(selectedTags);
+  const area = useStore(areaQuery);
+  const depth = useStore(depthFilter);
 
   // ---------- 数据加载 ----------
   useEffect(() => {
@@ -148,7 +153,7 @@ export default function NetworkGraph() {
       if (externalById.has(id)) return true; // 外延人物不受朝代/搜索筛选影响
       const p = personById.get(id);
       if (!p) return false;
-      return matchEntry(p, dynFilter, query);
+      return matchEntry(p, currentFilters());
     };
 
     const nodes = [...connectedIds].map((id) => {
@@ -233,7 +238,7 @@ export default function NetworkGraph() {
         scaleLimit: { min: 0.4, max: 6 },
       }],
     }, { notMerge: true });
-  }, [data, index, dynasties, connectedIds, activeEdges, dynFilter, query, focusSet, personById, externalById, dynColor, dynName]);
+  }, [data, index, dynasties, connectedIds, activeEdges, dynFilter, query, y0, y1, tags, area, depth, focusSet, personById, externalById, dynColor, dynName]);
 
   // 自适应
   useEffect(() => {
@@ -306,7 +311,7 @@ export default function NetworkGraph() {
           <GuidePopover title="关系网络怎么读">
             <p>
               科举不仅是选官，更是结网：同年登科者互为「年谊」，座主与门生结成政治师生，状元世家代代蝉联。
-              节点颜色为朝代，金边者有深度档案；边色分关系：金=亲属，青绿虚线=师生，灰虚线=同年，朱红=政敌。
+              节点颜色为朝代，金边者有深度档案；边色分关系：金=亲属，青绿系=座主/师承/荐举/师生，灰虚线=同年，朱红=政敌。
               双击任一节点聚焦其二度朋友圈；右侧面板列出算法自动发现的五大「状元朋友圈」。
             </p>
             <p className="mt-2 font-kai text-[11px] text-miDim/70">

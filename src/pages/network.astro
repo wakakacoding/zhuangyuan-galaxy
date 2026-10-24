@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NetworkGraph from '../components/viz/NetworkGraph';
+import NetworkList from '../components/viz/NetworkList';
 import FilterBar from '../components/shell/FilterBar';
 import PersonOverlay from '../components/person/PersonOverlay';
 import { readFileSync } from 'node:fs';
@@ -19,11 +20,17 @@ const derivedCount = edges.edges.length - manualCount;
       <header class="mb-4">
         <h1 class="text-2xl font-bold text-jin">状元朋友圈</h1>
         <p class="mt-1 text-sm text-miDim">
-          科举不只是选官，更是结网——同年、师生、父子、翁婿、政敌，把 1283 年的状元织成一张网。
+          科举不只是选官，更是结网——同年、座主与门生、师承、荐举、父子、翁婿、政敌，把 1283 年的状元织成一张网。
           当前收录关系 {edges.edges.length} 条（人工考据 {manualCount} + 同年派生 {derivedCount}），随考据持续增补。
         </p>
       </header>
       <NetworkGraph client:only="react" />
+      <details open class="mt-4 rounded-lg border border-jin/20 bg-dai/30 p-3">
+        <summary class="cursor-pointer font-serif text-sm text-jin">键盘关系表（与网络图同一批人，可不用鼠标浏览）</summary>
+        <div class="mt-3">
+          <NetworkList client:idle />
+        </div>
+      </details>
     </main>
   </div>
   <PersonOverlay client:load />

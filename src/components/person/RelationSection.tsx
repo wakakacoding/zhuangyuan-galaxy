@@ -6,6 +6,7 @@ import {
 } from '../../lib/data';
 import { pushPerson } from '../../store/selection';
 import { canOpenPerson } from '../../lib/openable';
+import DisputedBadge from './DisputedBadge';
 
 export default function RelationSection({ id, name }: { id: string; name: string }) {
   const [edges, setEdges] = useState<EdgesData | null>(null);
@@ -35,13 +36,18 @@ export default function RelationSection({ id, name }: { id: string; name: string
       if (!byType.has(e.type)) byType.set(e.type, []);
       byType.get(e.type)!.push({ otherId, otherName, note: e.note, derived: e.derived });
     }
-    const order = ['父子', '亲属', '翁婿', '师生', '同年', '同僚', '政敌'];
+    const order = ['父子', '亲属', '翁婿', '座主', '师承', '荐举', '师生', '同年', '同僚', '政敌'];
     return [...byType.entries()].sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]));
   }, [edges, id]);
 
   const dynastyOf = useMemo(() => {
     const m = new Map(index.map((p) => [p.id, p.dynasty]));
     return (pid: string) => m.get(pid) ?? '';
+  }, [index]);
+  // 身份存疑 badge 与人物页/浮层同一文案（DisputedBadge），这里用索引里的 disputed 判定
+  const disputedOf = useMemo(() => {
+    const m = new Map(index.map((p) => [p.id, p.disputed]));
+    return (pid: string) => Boolean(m.get(pid));
   }, [index]);
   const openable = useMemo(() => {
     const ids = new Set(index.map((p) => p.id));
@@ -94,6 +100,7 @@ export default function RelationSection({ id, name }: { id: string; name: string
                   >
                     <span className="font-serif text-sm text-mi group-hover:text-jin">{r.otherName}</span>
                     <DynastyChip dynastyKey={dynastyOf(r.otherId)} />
+                    {disputedOf(r.otherId) && <DisputedBadge />}
                     {r.note && <span className="ml-auto line-clamp-1 text-right font-serif text-[11px] text-miDim/80">{r.note}</span>}
                   </button>
                   );
