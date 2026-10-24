@@ -1,62 +1,62 @@
-// 历史底图构建：CHGIS V6 时间序列 shp → 按朝代切片 → 简化 → 分朝 GeoJSON
-// 输入：data/geo/chgis/raw/v6_time_pref_pgn_utf_wgs84/（下载方式见 data/geo/SOURCES.md）
-// 输出：public/data/maps/{dynasty}.json（府级面，WGS84，字段精简为 name/type/beg/end）
-// 用法：npx tsx scripts/build-geo-maps.ts
-import { execFileSync } from 'node:child_process';
-import { readFileSync, statSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+// 历史底图构建：Cliopatria 疆域轮廓（CC BY 4.0）→ 分朝 GeoJSON
+// 输入：data/geo/cliopatria/dynasty-outlines-v1.geojson（由 Seshat Cliopatria v0.2.1 按切片年截取，
+//       提取与抽稀脚本见 outputs/ai-tasks/2026-10-24-四线推进交接.md；政权→朝代映射内嵌于源文件 properties.dynasty）
+// 输出：public/data/maps/{dynasty}.json（政权级疆域轮廓面，WGS84，字段：polity/beg/end）
+// 用法：npx tsx scripts/build-geo-maps.ts（默认重切，产物入 Git 前需过 C 线评审）
+// 换源记录：2026-10-24 D5 裁定弃用 CHGIS（EULA no redistribution 与公开分发冲突）。
+// 语义降级：府级政区面 → 政权疆域轮廓；辽代由宋图同源改为独立 Liao Dynasty 轮廓。
+import { readFileSync, writeFileSync, statSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const shp = join(root, 'data/geo/chgis/raw/v6_time_pref_pgn_utf_wgs84/v6_time_pref_pgn_utf_wgs84.shp');
+const src = join(root, 'data/geo/cliopatria/dynasty-outlines-v1.geojson');
 const outDir = join(root, 'public', 'data', 'maps');
 mkdirSync(outDir, { recursive: true });
 
-// 无 CHGIS 原始数据时（如新克隆仓库）：切片产物已入 Git 则跳过，否则报错并给下载指引
-if (!existsSync(shp)) {
-  const existing = existsSync(outDir) ? readdirSync(outDir).filter((f) => f.endsWith('.json')) : [];
-  if (existing.length >= 8) {
-    console.log(`未找到 CHGIS 原始数据，但已有 ${existing.length} 份切片产物，跳过重建`);
-    console.log('（如需重建：按 data/geo/SOURCES.md 第 1 节下载解压后重跑）');
-    process.exit(0);
-  }
-  console.error('缺少 CHGIS 原始数据且无切片产物。请按 data/geo/SOURCES.md 第 1 节下载解压。');
+if (!existsSync(src)) {
+  console.error('缺少 Cliopatria 轮廓源文件 data/geo/cliopatria/dynasty-outlines-v1.geojson。');
+  console.error('提取方法见 outputs/ai-tasks/2026-10-24-四线推进交接.md §①；数据许可 CC BY 4.0（Seshat Cliopatria）。');
   process.exit(1);
 }
-const mapshaper = join(root, 'node_modules', '.bin', 'mapshaper');
 
-// 每朝一个建制稳定期切片年（选定依据见 M2 开发计划 §2.1）
-// simplify = mapshaper weighted 简化保留比例，按体积预算 ≤250KB/朝 调整
-const SLICES: { dynasty: string; year: number; simplify: string }[] = [
-  { dynasty: 'tang', year: 741, simplify: '8%' },
-  { dynasty: 'wudai', year: 960, simplify: '8%' },
-  { dynasty: 'song', year: 1111, simplify: '8%' },
-  { dynasty: 'liao', year: 1111, simplify: '8%' },
-  { dynasty: 'jin', year: 1189, simplify: '8%' },
-  { dynasty: 'yuan', year: 1330, simplify: '5%' },
-  { dynasty: 'ming', year: 1582, simplify: '5%' },
-  { dynasty: 'qing', year: 1820, simplify: '5%' },
-];
+const fc = JSON.parse(readFileSync(src, 'utf8'));
+if (fc.name !== 'zhuangyuan-galaxy-dynasty-outlines-v1') {
+  console.error(`源文件标识不符：${fc.name}（期望 zhuangyuan-galaxy-dynasty-outlines-v1）`);
+  process.exit(1);
+}
 
-console.log('朝代切片构建（CHGIS V6 time series，WGS84）\n');
-const audit: { dynasty: string; year: number; features: number; kb: number }[] = [];
+const DYNASTIES = ['tang', 'wudai', 'song', 'liao', 'jin', 'yuan', 'ming', 'qing'];
+console.log('朝代切片构建（Cliopatria 疆域轮廓，CC BY 4.0，WGS84）\n');
+const audit: { dynasty: string; polities: string[]; kb: number }[] = [];
 
-for (const s of SLICES) {
-  const out = join(outDir, `${s.dynasty}.json`);
-  execFileSync(mapshaper, [
-    shp,
-    '-filter', `BEG_YR <= ${s.year} && END_YR >= ${s.year} && TYPE_CH != "非政区国土"`,
-    '-filter-fields', 'NAME_CH,TYPE_CH,BEG_YR,END_YR',
-    '-rename-fields', 'name=NAME_CH,type=TYPE_CH,beg=BEG_YR,end=END_YR',
-    '-simplify', 'weighted', s.simplify, 'keep-shapes',
-    '-o', out, 'format=geojson', 'precision=0.01',
-  ], { stdio: ['ignore', 'ignore', 'inherit'] });
-  const geo = JSON.parse(readFileSync(out, 'utf8'));
-  const kb = Math.round(statSync(out).size / 1024);
-  audit.push({ dynasty: s.dynasty, year: s.year, features: geo.features.length, kb });
-  console.log(`  ✓ ${s.dynasty} (${s.year}年): ${geo.features.length} 面, ${kb}KB`);
+for (const key of DYNASTIES) {
+  const feats = fc.features.filter((f: { properties: { dynasty: string } }) => f.properties.dynasty === key);
+  if (!feats.length) {
+    console.error(`  ✗ ${key}: 源中无轮廓，终止（切片不完整比缺图更危险）`);
+    process.exit(1);
+  }
+  const polities: string[] = [];
+  const out = {
+    type: 'FeatureCollection',
+    features: feats.map((f: { properties: { polity: string; from: number; to: number }; geometry: unknown }) => {
+      polities.push(f.properties.polity);
+      return {
+        type: 'Feature',
+        properties: { name: f.properties.polity, type: '疆域轮廓', beg: f.properties.from, end: f.properties.to },
+        geometry: f.geometry,
+      };
+    }),
+  };
+  // 同一政权同段可能多面（源按 feature 拆），合并为每政权一条记录由 nameProperty 聚合渲染
+  const outPath = join(outDir, `${key}.json`);
+  writeFileSync(outPath, JSON.stringify(out));
+  const kb = Math.round(statSync(outPath).size / 1024);
+  audit.push({ dynasty: key, polities: [...new Set(polities)], kb });
+  console.log(`  ✓ ${key}: ${feats.length} 面（${[...new Set(polities)].join('、')}），${kb}KB`);
 }
 
 const total = audit.reduce((s, a) => s + a.kb, 0);
 console.log(`\n合计 ${total}KB（未压缩），按需懒加载，首屏只载当前朝`);
-console.log('现代底图 modern-china.json 已固化（来源见 SOURCES.md），本脚本不重复下载');
+console.log('署名要求：页脚已固定「疆域轮廓：Cliopatria (Seshat Global History Databank), CC BY 4.0」');
+console.log('旧 CHGIS 切片已由本脚本产物覆盖；CHGIS shp 与许可限制见 data/geo/SOURCES.md 历史段落');

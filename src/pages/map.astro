@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GeoMap from '../components/viz/GeoMap';
+import MapList from '../components/viz/MapList';
 import RegionPanel from '../components/shell/RegionPanel';
 import FilterBar from '../components/shell/FilterBar';
 import PersonOverlay from '../components/person/PersonOverlay';
@@ -22,7 +23,7 @@ const geo = JSON.parse(
       <div class="absolute left-4 top-4 z-10 hidden max-w-xs rounded-lg border border-jin/20 bg-xuan/85 p-4 backdrop-blur md:block">
         <h1 class="text-base font-bold text-jin">状元产地的千年南移</h1>
         <p class="mt-1.5 text-xs leading-6 text-miDim">
-          底图为各朝行政区划（CHGIS 历史切片），点是一位状元的籍贯。
+          底图为各朝政权疆域轮廓（Cliopatria 历史数据集，CC BY 4.0），点是一位状元的籍贯。
           唐宋状元多出于黄河流域，明清则为江浙所半壁——拖动下方朝代滑块，
           看朱色重心如何从北方一步步移向江南。
         </p>
@@ -34,7 +35,7 @@ const geo = JSON.parse(
 
       {/* 合规标注（固定，不可关闭） */}
       <div class="absolute bottom-20 right-3 z-10 rounded bg-xuan/70 px-2.5 py-1.5 text-right text-[10px] leading-4 text-miDim/80 backdrop-blur md:bottom-16">
-        <p>历史疆域示意（CHGIS V6），仅供学术研究，不作国界依据</p>
+        <p>历史疆域示意（Cliopatria, CC BY 4.0），仅供学术研究，不作国界依据</p>
         <p>
           现代对照请以
           <a href="http://bzdt.ch.mnr.gov.cn/" target="_blank" rel="noopener" class="underline hover:text-jin">自然资源部标准地图</a>
@@ -42,6 +43,12 @@ const geo = JSON.parse(
         </p>
       </div>
     </div>
+    <details class="border-t border-jin/20 bg-dai/30 px-4 py-3">
+      <summary class="cursor-pointer font-serif text-sm text-jin">键盘地区表（与当前地图切片、筛选是同一批人）</summary>
+      <div class="mt-3">
+        <MapList client:idle />
+      </div>
+    </details>
   </div>
   <PersonOverlay client:load />
 </BaseLayout>
